@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<S100FC:S100_FC_FeatureCatalogue
+	xmlns:S100Base="http://www.iho.int/S100Base/5.0" 
+	xmlns:S100CI="http://www.iho.int/S100CI/5.0" 
+	xmlns:S100CD="http://www.iho.int/S100CD/5.0"
+	xmlns:S100FC="http://www.iho.int/S100FC/5.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.iho.int/S100FC/5.0 S100FC.xsd">
+	
+	<S100FC:name>eLoran ASF data Product Specification</S100FC:name>
+	<S100FC:scope>Ocean, Coastal, Ports, Harbors and Inland waters</S100FC:scope>
+	<S100FC:fieldOfApplication>Marine Navigation</S100FC:fieldOfApplication>
+	<S100FC:versionNumber>1.0.0</S100FC:versionNumber>
+	<S100FC:versionDate>2022-09-21</S100FC:versionDate>
+	<S100FC:productId>S-102</S100FC:productId>
+	<S100FC:producer>
+		<S100CI:role>pointOfContact</S100CI:role>
+		<S100CI:party>
+			<S100CI:CI_Organisation>
+				<S100CI:name>IALA-AISM</S100CI:name>
+				<S100CI:contactInfo>
+					<S100CI:phone>
+						<S100CI:voice>+33 1 34 51 70 01</S100CI:voice>
+						<S100CI:facsimile>+33 1 34 51 82 05</S100CI:facsimile>
+					</S100CI:phone>
+					<S100CI:address>
+						<S100CI:deliveryPoint>10, rue des Gaudines</S100CI:deliveryPoint>
+						<S100CI:city>78100 Saint Germain en Laye</S100CI:city>
+						<S100CI:country>France</S100CI:country>
+						<S100CI:electronicMailAddress>none</S100CI:electronicMailAddress>
+					</S100CI:address>
+					<S100CI:onlineResource>
+						<S100CI:linkage>www.iala-aism.org</S100CI:linkage>
+					</S100CI:onlineResource>
+				</S100CI:contactInfo>
+			</S100CI:CI_Organisation>
+		</S100CI:party>
+	</S100FC:producer>
+	<S100FC:classification>unclassified</S100FC:classification>
+	<S100FC:S100_FC_SimpleAttributes>
+		<S100FC:S100_FC_SimpleAttribute>
+			<S100FC:name>ASF Measurement Error Value</S100FC:name>
+			<S100FC:definition></S100FC:definition>
+			<S100FC:code>ASFMeasurementErrorValue</S100FC:code>
+			<S100FC:remarks></S100FC:remarks>
+			<S100FC:valueType>real</S100FC:valueType>
+		</S100FC:S100_FC_SimpleAttribute>
+		<S100FC:S100_FC_SimpleAttribute>
+			<S100FC:name>ASF Value</S100FC:name>
+			<S100FC:definition></S100FC:definition>
+			<S100FC:code>ASFValue</S100FC:code>
+			<S100FC:remarks></S100FC:remarks>
+			<S100FC:valueType>real</S100FC:valueType>
+		</S100FC:S100_FC_SimpleAttribute>
+	</S100FC:S100_FC_SimpleAttributes>
+	<S100FC:S100_FC_FeatureTypes>
+		<S100FC:S100_FC_FeatureType isAbstract="false">
+			<S100FC:name>ASF Node</S100FC:name>
+			<S100FC:definition></S100FC:definition>
+			<S100FC:code>ASFNode</S100FC:code>
+			<S100FC:attributeBinding sequential="false">
+				<S100FC:multiplicity>
+					<S100Base:lower>1</S100Base:lower>
+					<S100Base:upper xsi:nil="false" infinite="false">1</S100Base:upper>
+				</S100FC:multiplicity>
+				<S100FC:attribute ref="ASFMeasurementErrorValue"/>
+			</S100FC:attributeBinding>
+			<S100FC:attributeBinding sequential="false">
+				<S100FC:multiplicity>
+					<S100Base:lower>1</S100Base:lower>
+					<S100Base:upper xsi:nil="false" infinite="false">1</S100Base:upper>
+				</S100FC:multiplicity>
+				<S100FC:attribute ref="ASFValue"/>
+			</S100FC:attributeBinding>
+			<S100FC:featureUseType>geographic</S100FC:featureUseType>
+			<S100FC:permittedPrimitives>coverage</S100FC:permittedPrimitives>
+		</S100FC:S100_FC_FeatureType>
+	</S100FC:S100_FC_FeatureTypes>
+</S100FC:S100_FC_FeatureCatalogue>
