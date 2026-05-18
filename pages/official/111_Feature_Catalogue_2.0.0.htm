@@ -1,0 +1,34 @@
+<html><head><title>
+S-111 - S-111 - Feature Catalog v.2.0.0
+</title><meta charset="UTF-8">
+<style>
+body { font-family: Arial; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+.sidebar { width: 250px; background: #f4f4f4; padding: 20px; overflow-y: auto; border-right: 1px solid #ccc; }
+.sidebar h2 { font-size: 1.2em; color: #003366; margin-top: 0; }
+.sidebar ul { list-style: none; padding-left: 0; }
+.sidebar li { margin: 5px 0; }
+.sidebar a { text-decoration: none; color: #003366; }
+.sidebar a:hover { text-decoration: underline; }
+.content { flex: 1; display: flex; flex-direction: column; }
+.columns { display: flex; flex: 1; overflow: hidden; }
+.column { width: 50%; padding: 20px; overflow-y: auto; }
+.top-nav { display: flex; justify-content: space-between; background: #eaeaea; padding: 10px 20px; border-bottom: 1px solid #ccc; font-size: 14px; }
+.top-nav a { margin-right: 10px; color: #003366; text-decoration: none; }
+.top-nav a:hover { text-decoration: underline; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+th { background: #e0e0e0; }
+h1 { padding: 20px; background: #003366; color: white; margin: 0; width: 100%; }
+h4 { background: grey; color: white; padding: 10px;}
+</style></head><body>
+<div style="position: fixed; top: 0; left: 0; right: 0;"><h1>
+S-111 - S-111 - Feature Catalog v.2.0.0
+</h1></div>
+<div style="display: flex; width: 100%; margin-top: 70px;">
+<div class="sidebar" style="resize: horizontal; overflow: auto;"><h2 id="s_features">Feature Types</h2><ul><li><a href="#feature_SurfaceCurrent">Surface Current</a></li></ul><h2 id="s_informations">Information Types</h2><ul></ul></ul><h2 id="s_associations">Associations</h2><ul></ul><h2 id="s_roles">Roles</h2><ul></ul></div>
+<div class="content">
+<div class="top-nav"><div><strong><a href="#s_features">Features:</a></strong> <a href="#f_letter_S">S</a><br><strong><a href="#s_informations">Informations:</a></strong> <br><strong><a href="#s_associations">Associations:</a></strong> <br></div><div><strong><a href="#a_details">Attributes:</a></strong> <a href="#a_letter_D">D</a><a href="#a_letter_S">S</a><br><strong><a href="#s_roles">Roles:</a></strong> </div></div>
+<div class="columns">
+<div class="column"><h2>Feature Details</h2><h3 id="f_letter_S"></h3><h4 id="feature_SurfaceCurrent">Surface Current (SurfaceCurrent ) </h4><p><strong>Definition:</strong> A current that does not extend more than a few (2-3) metres below the surface.</p><p><strong>Primitive:</strong> coverage</p><p><strong>Attributes:</strong><ul><li><a href="#attr_surfaceCurrentSpeed">Surface Current Speed (surfaceCurrentSpeed)</a> [1,1]</li><li><a href="#attr_surfaceCurrentDirection">Surface Current Direction (surfaceCurrentDirection)</a> [1,1]</li><li><a href="#attr_surfaceCurrentTime">Surface Current Time (surfaceCurrentTime)</a> [0,1]</li><li><a href="#attr_speedUncertainty">Speed Uncertainty (speedUncertainty)</a> [0,1]</li><li><a href="#attr_directionUncertainty">Direction Uncertainty (directionUncertainty)</a> [0,1]</li></ul></p><h2>Information Types</h2><h2>Associations</h2></div>
+<div class="column"><h2 id="a_details" >Attributes Details</h2><h3 id="a_letter_D"></h3><h4 id="attr_directionUncertainty">Direction Uncertainty (directionUncertainty)</h4><p><strong>Type:</strong> real<br><strong>Definition:</strong> The best estimate of the accuracy of a bearing.</p></table><p><strong>Used by:</strong><ul><li><a href="#feature_SurfaceCurrent">SurfaceCurrent</a></li></ul><h3 id="a_letter_S"></h3><h4 id="attr_speedUncertainty">Speed Uncertainty (speedUncertainty)</h4><p><strong>Type:</strong> real<br><strong>Definition:</strong> Estimate characterising the accuracy of a speed value, or of the magnitude component of a velocity.</p></table><p><strong>Used by:</strong><ul><li><a href="#feature_SurfaceCurrent">SurfaceCurrent</a></li></ul><h4 id="attr_surfaceCurrentDirection">Surface Current Direction (surfaceCurrentDirection)</h4><p><strong>Type:</strong> real<br><strong>Definition:</strong> The direction toward which a surface current is flowing, called the set of the surface current.</p></table><p><strong>Used by:</strong><ul><li><a href="#feature_SurfaceCurrent">SurfaceCurrent</a></li></ul><h4 id="attr_surfaceCurrentSpeed">Surface Current Speed (surfaceCurrentSpeed)</h4><p><strong>Type:</strong> real<br><strong>Definition:</strong> Magnitude of current velocity at the water surface, measured or calculated at a depth (or range of depths) consistent with the data product.</p></table><p><strong>Used by:</strong><ul><li><a href="#feature_SurfaceCurrent">SurfaceCurrent</a></li></ul><h4 id="attr_surfaceCurrentTime">Surface Current Time (surfaceCurrentTime)</h4><p><strong>Type:</strong> dateTime<br><strong>Definition:</strong> The time of the surface current data, expressed in ISO 8601 Date-time format.</p></table><p><strong>Used by:</strong><ul><li><a href="#feature_SurfaceCurrent">SurfaceCurrent</a></li></ul><h2>Roles</h2></div>
+</div></div></div></body></html>

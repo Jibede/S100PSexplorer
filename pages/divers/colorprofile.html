@@ -1,0 +1,1977 @@
+<html><head><title>
+Color Profile
+</title><meta charset="UTF-8">
+<style>
+body { font-family: Arial; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+.content { flex: 1; display: flex; flex-direction: column; }
+.columns { display: flex; flex: 1; overflow: hidden; }
+.table_container { width: 100%; padding: 0; overflow-y: auto; overflow-x: auto; }
+.table_container thead th { position: sticky; top: 0; z-index: 2;background: #e0e0e0;}
+table.int {border-collapse: collapse; width: 500px; table_layout:fixed;}table.int td {width: 25%; text-align: center; border: 1px solid #ccc; padding: 2px 4px; box-sizing: border-box;word-wrap: break-word;}th, td { border: 1px solid #ccc; padding: 4px; text-align: left; }
+th { background: #e0e0e0; }
+h1 { padding: 20px; background: #003366; color: white; margin: 0; width: 100%; }
+h4 { background: grey; color: white; padding: 10px;}
+</style></head><body>
+<div class="table_container">
+<table>
+   <thead>
+       <tr>
+           <th>code</th>
+           <th>name</th>
+           <th>description</th>
+           <th><table class="int"><tr><center>Day</center></tr>
+           <tr><td>CIE x,y,L</td><td>R,G,B</td><td>HEXA (calculated)</td><td>sample</td></tr></table></th>
+           <th><table class="int"><tr><center>Dusk</center></tr>
+           <tr><td>CIE x,y,L</td><td>R,G,B</td><td>HEXA (calculated)</td><td>sample</td></tr></table></th>
+           <th><table class="int"><tr><center>Night</center></tr>
+           <tr><td>CIE x,y,L</td><td>R,G,B</td><td>HEXA (calculated)</td><td>sample</td></tr></table></th>
+       </tr>
+   </thead>
+   <tbody>
+<tr>
+<td>NODTA</td>
+<td>grey</td>
+<td>No data color</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,40</td>
+<td>147,174,187</td>
+<td>#93AEBB</td>
+<td style="width: 8px;background:#93AEBB";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,7</td>
+<td>64,77,83</td>
+<td>#404D53</td>
+<td style="width: 8px;background:#404D53";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.2</td>
+<td>23,30,33</td>
+<td>#171E21</td>
+<td style="width: 8px;background:#171E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CURSR</td>
+<td>orange</td>
+<td>Cursor color</td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,32</td>
+<td>227,128,57</td>
+<td>#E38039</td>
+<td style="width: 8px;background:#E38039";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,10</td>
+<td>134,73,30</td>
+<td>#86491E</td>
+<td style="width: 8px;background:#86491E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,1.25</td>
+<td>48,23,5</td>
+<td>#301705</td>
+<td style="width: 8px;background:#301705";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHBLK</td>
+<td>black</td>
+<td>Chart black</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,2.5</td>
+<td>37,45,49</td>
+<td>#252D31</td>
+<td style="width: 8px;background:#252D31";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHGRD</td>
+<td>grey</td>
+<td>Chart grey dominant</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,2.5</td>
+<td>37,45,49</td>
+<td>#252D31</td>
+<td style="width: 8px;background:#252D31";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHGRF</td>
+<td>grey</td>
+<td>Chart grey faint</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHRED</td>
+<td>red</td>
+<td>Chart red</td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,25</td>
+<td>234,84,113</td>
+<td>#EA5471</td>
+<td style="width: 8px;background:#EA5471";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,10</td>
+<td>155,53,73</td>
+<td>#9B3549</td>
+<td style="width: 8px;background:#9B3549";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,1.25</td>
+<td>57,14,22</td>
+<td>#390E16</td>
+<td style="width: 8px;background:#390E16";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHGRN</td>
+<td>green</td>
+<td>Chart green</td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,60</td>
+<td>82,232,59</td>
+<td>#52E83B</td>
+<td style="width: 8px;background:#52E83B";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,20</td>
+<td>47,142,32</td>
+<td>#2F8E20</td>
+<td style="width: 8px;background:#2F8E20";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,2.5</td>
+<td>12,52,6</td>
+<td>#0C3406</td>
+<td style="width: 8px;background:#0C3406";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHYLW</td>
+<td>yellow</td>
+<td>Chart yellow</td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,70</td>
+<td>225,225,57</td>
+<td>#E1E139</td>
+<td style="width: 8px;background:#E1E139";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,24</td>
+<td>139,139,31</td>
+<td>#8B8B1F</td>
+<td style="width: 8px;background:#8B8B1F";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,3</td>
+<td>50,50,6</td>
+<td>#323206</td>
+<td style="width: 8px;background:#323206";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHMGD</td>
+<td>magenta</td>
+<td>Chart magenta dominant</td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,20</td>
+<td>192,69,209</td>
+<td>#C045D1</td>
+<td style="width: 8px;background:#C045D1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.24,18</td>
+<td>130,108,161</td>
+<td>#826CA1</td>
+<td style="width: 8px;background:#826CA1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,2</td>
+<td>65,18,71</td>
+<td>#411247</td>
+<td style="width: 8px;background:#411247";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHMGF</td>
+<td>magenta</td>
+<td>Chart magenta faint</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.24,48</td>
+<td>203,169,249</td>
+<td>#CBA9F9</td>
+<td style="width: 8px;background:#CBA9F9";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,7</td>
+<td>119,39,130</td>
+<td>#772782</td>
+<td style="width: 8px;background:#772782";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,2</td>
+<td>65,18,71</td>
+<td>#411247</td>
+<td style="width: 8px;background:#411247";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHBRN</td>
+<td>brown</td>
+<td>Chart brown</td>
+<td><table class="int">
+<tr>
+<td>0.39,0.43,30</td>
+<td>161,150,83</td>
+<td>#A19653</td>
+<td style="width: 8px;background:#A19653";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.39,0.43,8</td>
+<td>87,80,42</td>
+<td>#57502A</td>
+<td style="width: 8px;background:#57502A";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.39,0.43,1.3</td>
+<td>33,30,12</td>
+<td>#211E0C</td>
+<td style="width: 8px;background:#211E0C";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHWHT</td>
+<td>white</td>
+<td>Chart white</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,80</td>
+<td>201,237,255</td>
+<td>#C9EDFF</td>
+<td style="width: 8px;background:#C9EDFF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,36</td>
+<td>140,166,179</td>
+<td>#8CA6B3</td>
+<td style="width: 8px;background:#8CA6B3";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,5</td>
+<td>54,65,71</td>
+<td>#364147</td>
+<td style="width: 8px;background:#364147";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>SCLBR</td>
+<td>orange</td>
+<td>Scale bar color</td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,32</td>
+<td>227,128,57</td>
+<td>#E38039</td>
+<td style="width: 8px;background:#E38039";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,10</td>
+<td>134,73,30</td>
+<td>#86491E</td>
+<td style="width: 8px;background:#86491E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,1.25</td>
+<td>48,23,5</td>
+<td>#301705</td>
+<td style="width: 8px;background:#301705";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CHCOR</td>
+<td>orange</td>
+<td>Chart correction</td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,32</td>
+<td>227,128,57</td>
+<td>#E38039</td>
+<td style="width: 8px;background:#E38039";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,10</td>
+<td>134,73,30</td>
+<td>#86491E</td>
+<td style="width: 8px;background:#86491E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,1.25</td>
+<td>48,23,5</td>
+<td>#301705</td>
+<td style="width: 8px;background:#301705";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>LITRD</td>
+<td>red</td>
+<td>Light red</td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,25</td>
+<td>234,84,113</td>
+<td>#EA5471</td>
+<td style="width: 8px;background:#EA5471";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,10</td>
+<td>155,53,73</td>
+<td>#9B3549</td>
+<td style="width: 8px;background:#9B3549";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,1.25</td>
+<td>57,14,22</td>
+<td>#390E16</td>
+<td style="width: 8px;background:#390E16";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>LITGN</td>
+<td>green</td>
+<td>Light green</td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,60</td>
+<td>82,232,59</td>
+<td>#52E83B</td>
+<td style="width: 8px;background:#52E83B";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,20</td>
+<td>47,142,32</td>
+<td>#2F8E20</td>
+<td style="width: 8px;background:#2F8E20";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,2.5</td>
+<td>12,52,6</td>
+<td>#0C3406</td>
+<td style="width: 8px;background:#0C3406";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>LITYW</td>
+<td>yellow</td>
+<td>Light yellow</td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,70</td>
+<td>225,225,57</td>
+<td>#E1E139</td>
+<td style="width: 8px;background:#E1E139";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,24</td>
+<td>139,139,31</td>
+<td>#8B8B1F</td>
+<td style="width: 8px;background:#8B8B1F";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,3</td>
+<td>50,50,6</td>
+<td>#323206</td>
+<td style="width: 8px;background:#323206";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>ISDNG</td>
+<td>magenta</td>
+<td>Isolated danger</td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,20</td>
+<td>192,69,209</td>
+<td>#C045D1</td>
+<td style="width: 8px;background:#C045D1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.24,18</td>
+<td>130,108,161</td>
+<td>#826CA1</td>
+<td style="width: 8px;background:#826CA1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,2</td>
+<td>65,18,71</td>
+<td>#411247</td>
+<td style="width: 8px;background:#411247";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DNGHL</td>
+<td>red</td>
+<td>Danger highlight red</td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,25</td>
+<td>234,84,113</td>
+<td>#EA5471</td>
+<td style="width: 8px;background:#EA5471";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,10</td>
+<td>155,53,73</td>
+<td>#9B3549</td>
+<td style="width: 8px;background:#9B3549";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,1.25</td>
+<td>57,14,22</td>
+<td>#390E16</td>
+<td style="width: 8px;background:#390E16";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>TRFCD</td>
+<td>magenta</td>
+<td>Traffic dominant magenta</td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,20</td>
+<td>192,69,209</td>
+<td>#C045D1</td>
+<td style="width: 8px;background:#C045D1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.24,18</td>
+<td>130,108,161</td>
+<td>#826CA1</td>
+<td style="width: 8px;background:#826CA1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,2</td>
+<td>65,18,71</td>
+<td>#411247</td>
+<td style="width: 8px;background:#411247";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>TRFCF</td>
+<td>magenta</td>
+<td>Traffic faint magenta</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.24,48</td>
+<td>203,169,249</td>
+<td>#CBA9F9</td>
+<td style="width: 8px;background:#CBA9F9";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,7</td>
+<td>119,39,130</td>
+<td>#772782</td>
+<td style="width: 8px;background:#772782";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,2</td>
+<td>65,18,71</td>
+<td>#411247</td>
+<td style="width: 8px;background:#411247";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>LANDA</td>
+<td>brown</td>
+<td>Land area</td>
+<td><table class="int">
+<tr>
+<td>0.35,0.39,50</td>
+<td>191,190,143</td>
+<td>#BFBE8F</td>
+<td style="width: 8px;background:#BFBE8F";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.35,0.39,5</td>
+<td>64,64,46</td>
+<td>#40402E</td>
+<td style="width: 8px;background:#40402E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.35,0.39,0.8</td>
+<td>23,22,14</td>
+<td>#17160E</td>
+<td style="width: 8px;background:#17160E";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>LANDF</td>
+<td>brown</td>
+<td>Land Feature</td>
+<td><table class="int">
+<tr>
+<td>0.45,0.42,15</td>
+<td>141,100,46</td>
+<td>#8D642E</td>
+<td style="width: 8px;background:#8D642E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.45,0.42,12</td>
+<td>127,90,41</td>
+<td>#7F5A29</td>
+<td style="width: 8px;background:#7F5A29";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.45,0.42,1.6</td>
+<td>47,31,10</td>
+<td>#2F1F0A</td>
+<td style="width: 8px;background:#2F1F0A";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>CSTLN</td>
+<td>grey</td>
+<td>Coastline</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,2.5</td>
+<td>37,45,49</td>
+<td>#252D31</td>
+<td style="width: 8px;background:#252D31";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>SNDG1</td>
+<td>grey</td>
+<td>Sounding deep</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>SNDG2</td>
+<td>black</td>
+<td>Sounding shallow</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,36</td>
+<td>140,166,179</td>
+<td>#8CA6B3</td>
+<td style="width: 8px;background:#8CA6B3";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,5</td>
+<td>54,65,71</td>
+<td>#364147</td>
+<td style="width: 8px;background:#364147";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPSC</td>
+<td>grey</td>
+<td>Safety contour</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,2.5</td>
+<td>37,45,49</td>
+<td>#252D31</td>
+<td style="width: 8px;background:#252D31";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPCN</td>
+<td>grey</td>
+<td>depth contour</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPDW</td>
+<td>white</td>
+<td>deep water</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,80</td>
+<td>201,237,255</td>
+<td>#C9EDFF</td>
+<td style="width: 8px;background:#C9EDFF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPMD</td>
+<td>pale_blue</td>
+<td>Medium deep water</td>
+<td><table class="int">
+<tr>
+<td>0.26,0.29,65</td>
+<td>167,217,251</td>
+<td>#A7D9FB</td>
+<td style="width: 8px;background:#A7D9FB";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.25,0.29,1</td>
+<td>15,27,33</td>
+<td>#0F1B21</td>
+<td style="width: 8px;background:#0F1B21";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.25,0.29,0.2</td>
+<td>3,7,10</td>
+<td>#03070A</td>
+<td style="width: 8px;background:#03070A";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPMS</td>
+<td>light_blue</td>
+<td>Medium shallow water</td>
+<td><table class="int">
+<tr>
+<td>0.23,0.25,55</td>
+<td>130,202,255</td>
+<td>#82CAFF</td>
+<td style="width: 8px;background:#82CAFF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.23,0.25,3</td>
+<td>29,50,70</td>
+<td>#1D3246</td>
+<td style="width: 8px;background:#1D3246";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.23,0.25,0.4</td>
+<td>5,14,22</td>
+<td>#050E16</td>
+<td style="width: 8px;background:#050E16";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPVS</td>
+<td>medium_blue</td>
+<td>Very shallow water</td>
+<td><table class="int">
+<tr>
+<td>0.21,0.22,45</td>
+<td>97,183,255</td>
+<td>#61B7FF</td>
+<td style="width: 8px;background:#61B7FF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.21,0.22,5</td>
+<td>30,65,101</td>
+<td>#1E4165</td>
+<td style="width: 8px;background:#1E4165";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.21,0.22,0.8</td>
+<td>7,23,39</td>
+<td>#071727</td>
+<td style="width: 8px;background:#071727";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>DEPIT</td>
+<td>yellow_green</td>
+<td>Intertidal</td>
+<td><table class="int">
+<tr>
+<td>0.26,0.36,35</td>
+<td>88,175,156</td>
+<td>#58AF9C</td>
+<td style="width: 8px;background:#58AF9C";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.26,0.36,6</td>
+<td>35,76,68</td>
+<td>#234C44</td>
+<td style="width: 8px;background:#234C44";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.26,0.36,1.2</td>
+<td>11,32,28</td>
+<td>#0B201C</td>
+<td style="width: 8px;background:#0B201C";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RADHI</td>
+<td>green</td>
+<td>Radar high intensity</td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,60</td>
+<td>82,232,59</td>
+<td>#52E83B</td>
+<td style="width: 8px;background:#52E83B";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,20</td>
+<td>47,142,32</td>
+<td>#2F8E20</td>
+<td style="width: 8px;background:#2F8E20";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,2.5</td>
+<td>12,52,6</td>
+<td>#0C3406</td>
+<td style="width: 8px;background:#0C3406";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RADLO</td>
+<td>green</td>
+<td>Radar low intensity</td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,20</td>
+<td>47,142,32</td>
+<td>#2F8E20</td>
+<td style="width: 8px;background:#2F8E20";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,7</td>
+<td>25,87,16</td>
+<td>#195710</td>
+<td style="width: 8px;background:#195710";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,0.8</td>
+<td>4,27,2</td>
+<td>#041B02</td>
+<td style="width: 8px;background:#041B02";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>ARPAT</td>
+<td>blue_green</td>
+<td>ARPA target</td>
+<td><table class="int">
+<tr>
+<td>0.26,0.42,30</td>
+<td>45,168,121</td>
+<td>#2DA879</td>
+<td style="width: 8px;background:#2DA879";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.26,0.42,17</td>
+<td>33,130,92</td>
+<td>#21825C</td>
+<td style="width: 8px;background:#21825C";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.26,0.42,1.75</td>
+<td>5,42,27</td>
+<td>#052A1B</td>
+<td style="width: 8px;background:#052A1B";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>NINFO</td>
+<td>orange</td>
+<td>Navigators notes</td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,32</td>
+<td>227,128,57</td>
+<td>#E38039</td>
+<td style="width: 8px;background:#E38039";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,10</td>
+<td>134,73,30</td>
+<td>#86491E</td>
+<td style="width: 8px;background:#86491E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,1.25</td>
+<td>48,23,5</td>
+<td>#301705</td>
+<td style="width: 8px;background:#301705";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RESBL</td>
+<td>blue</td>
+<td>AIS features and symbols</td>
+<td><table class="int">
+<tr>
+<td>0.18,0.15,22</td>
+<td>46,123,255</td>
+<td>#2E7BFF</td>
+<td style="width: 8px;background:#2E7BFF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.18,0.15,10</td>
+<td>29,85,180</td>
+<td>#1D55B4</td>
+<td style="width: 8px;background:#1D55B4";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.18,0.15,1.25</td>
+<td>5,27,68</td>
+<td>#051B44</td>
+<td style="width: 8px;background:#051B44";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>ADINF</td>
+<td>yellow</td>
+<td>Additional info, mariners</td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,35</td>
+<td>165,165,39</td>
+<td>#A5A527</td>
+<td style="width: 8px;background:#A5A527";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,12</td>
+<td>100,101,20</td>
+<td>#646514</td>
+<td style="width: 8px;background:#646514";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.41,0.49,1.5</td>
+<td>34,34,3</td>
+<td>#222203</td>
+<td style="width: 8px;background:#222203";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RESGR</td>
+<td>grey</td>
+<td>Reserved grey</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>SHIPS</td>
+<td>black</td>
+<td>Own ship symbol</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,36</td>
+<td>140,166,179</td>
+<td>#8CA6B3</td>
+<td style="width: 8px;background:#8CA6B3";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,5</td>
+<td>54,65,71</td>
+<td>#364147</td>
+<td style="width: 8px;background:#364147";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>PSTRK</td>
+<td>black</td>
+<td>Past track</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,36</td>
+<td>140,166,179</td>
+<td>#8CA6B3</td>
+<td style="width: 8px;background:#8CA6B3";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,5</td>
+<td>54,65,71</td>
+<td>#364147</td>
+<td style="width: 8px;background:#364147";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>SYTRK</td>
+<td>grey</td>
+<td>Secondary track</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>PLRTE</td>
+<td>red</td>
+<td>Planned route</td>
+<td><table class="int">
+<tr>
+<td>0.58,0.35,18</td>
+<td>214,63,36</td>
+<td>#D63F24</td>
+<td style="width: 8px;background:#D63F24";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.58,0.35,8</td>
+<td>149,41,22</td>
+<td>#952916</td>
+<td style="width: 8px;background:#952916";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.58,0.35,0.9</td>
+<td>51,8,3</td>
+<td>#330803</td>
+<td style="width: 8px;background:#330803";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>APLRT</td>
+<td>orange</td>
+<td>Alternate planned route</td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,32</td>
+<td>227,128,57</td>
+<td>#E38039</td>
+<td style="width: 8px;background:#E38039";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,10</td>
+<td>134,73,30</td>
+<td>#86491E</td>
+<td style="width: 8px;background:#86491E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,1.25</td>
+<td>48,23,5</td>
+<td>#301705</td>
+<td style="width: 8px;background:#301705";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFD</td>
+<td>black</td>
+<td>User interface Bold text</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,36</td>
+<td>140,166,179</td>
+<td>#8CA6B3</td>
+<td style="width: 8px;background:#8CA6B3";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,5</td>
+<td>54,65,71</td>
+<td>#364147</td>
+<td style="width: 8px;background:#364147";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFF</td>
+<td>grey</td>
+<td>User interface normal text</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,2.5</td>
+<td>37,45,49</td>
+<td>#252D31</td>
+<td style="width: 8px;background:#252D31";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UIBCK</td>
+<td>white</td>
+<td>User interface background</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,80</td>
+<td>201,237,255</td>
+<td>#C9EDFF</td>
+<td style="width: 8px;background:#C9EDFF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UIAFD</td>
+<td>medium_blue</td>
+<td>User interface Area fill water</td>
+<td><table class="int">
+<tr>
+<td>0.21,0.22,45</td>
+<td>97,183,255</td>
+<td>#61B7FF</td>
+<td style="width: 8px;background:#61B7FF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.21,0.22,5</td>
+<td>30,65,101</td>
+<td>#1E4165</td>
+<td style="width: 8px;background:#1E4165";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.21,0.22,0.8</td>
+<td>7,23,39</td>
+<td>#071727</td>
+<td style="width: 8px;background:#071727";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFR</td>
+<td>red</td>
+<td>User interface red</td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,25</td>
+<td>234,84,113</td>
+<td>#EA5471</td>
+<td style="width: 8px;background:#EA5471";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,10</td>
+<td>155,53,73</td>
+<td>#9B3549</td>
+<td style="width: 8px;background:#9B3549";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.48,0.3,1.25</td>
+<td>57,14,22</td>
+<td>#390E16</td>
+<td style="width: 8px;background:#390E16";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFG</td>
+<td>green</td>
+<td>User interface green</td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,60</td>
+<td>82,232,59</td>
+<td>#52E83B</td>
+<td style="width: 8px;background:#52E83B";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,20</td>
+<td>47,142,32</td>
+<td>#2F8E20</td>
+<td style="width: 8px;background:#2F8E20";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.31,0.56,2.5</td>
+<td>12,52,6</td>
+<td>#0C3406</td>
+<td style="width: 8px;background:#0C3406";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFO</td>
+<td>orange</td>
+<td>User interface orange</td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,32</td>
+<td>227,128,57</td>
+<td>#E38039</td>
+<td style="width: 8px;background:#E38039";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,10</td>
+<td>134,73,30</td>
+<td>#86491E</td>
+<td style="width: 8px;background:#86491E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.5,0.4,1.25</td>
+<td>48,23,5</td>
+<td>#301705</td>
+<td style="width: 8px;background:#301705";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFB</td>
+<td>blue</td>
+<td>User interface blue</td>
+<td><table class="int">
+<tr>
+<td>0.18,0.15,22</td>
+<td>46,123,255</td>
+<td>#2E7BFF</td>
+<td style="width: 8px;background:#2E7BFF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.18,0.15,10</td>
+<td>29,85,180</td>
+<td>#1D55B4</td>
+<td style="width: 8px;background:#1D55B4";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.18,0.15,1.25</td>
+<td>5,27,68</td>
+<td>#051B44</td>
+<td style="width: 8px;background:#051B44";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UINFM</td>
+<td>magenta</td>
+<td>User interface magenta</td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,20</td>
+<td>192,69,209</td>
+<td>#C045D1</td>
+<td style="width: 8px;background:#C045D1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.24,18</td>
+<td>130,108,161</td>
+<td>#826CA1</td>
+<td style="width: 8px;background:#826CA1";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.3,0.17,2</td>
+<td>65,18,71</td>
+<td>#411247</td>
+<td style="width: 8px;background:#411247";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UIBDR</td>
+<td>grey</td>
+<td>User interface border grey</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,20</td>
+<td>107,127,137</td>
+<td>#6B7F89</td>
+<td style="width: 8px;background:#6B7F89";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,2.5</td>
+<td>37,45,49</td>
+<td>#252D31</td>
+<td style="width: 8px;background:#252D31";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>UIAFF</td>
+<td>brown</td>
+<td>User interface Area fill Land</td>
+<td><table class="int">
+<tr>
+<td>0.35,0.39,50</td>
+<td>191,190,143</td>
+<td>#BFBE8F</td>
+<td style="width: 8px;background:#BFBE8F";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.45,0.42,12</td>
+<td>127,90,41</td>
+<td>#7F5A29</td>
+<td style="width: 8px;background:#7F5A29";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.45,0.42,3.2</td>
+<td>68,46,18</td>
+<td>#442E12</td>
+<td style="width: 8px;background:#442E12";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>OUTLW</td>
+<td>black</td>
+<td>Outline for symbols on water</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>OUTLL</td>
+<td>brown</td>
+<td>Outline for symbols on land</td>
+<td><table class="int">
+<tr>
+<td>0.45,0.42,15</td>
+<td>141,100,46</td>
+<td>#8D642E</td>
+<td style="width: 8px;background:#8D642E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.35,0.39,5</td>
+<td>64,64,46</td>
+<td>#40402E</td>
+<td style="width: 8px;background:#40402E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.35,0.39,0.8</td>
+<td>23,22,14</td>
+<td>#17160E</td>
+<td style="width: 8px;background:#17160E";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RES01</td>
+<td>grey</td>
+<td>Reserved</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RES02</td>
+<td>grey</td>
+<td>Reserved</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>RES03</td>
+<td>grey</td>
+<td>Reserved</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,25</td>
+<td>118,140,151</td>
+<td>#768C97</td>
+<td style="width: 8px;background:#768C97";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,10</td>
+<td>76,91,99</td>
+<td>#4C5B63</td>
+<td style="width: 8px;background:#4C5B63";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.25</td>
+<td>24,30,33</td>
+<td>#181E21</td>
+<td style="width: 8px;background:#181E21";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>BKAJ1</td>
+<td>black</td>
+<td>black colour of black-adjust symbol</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0.6</td>
+<td>14,19,21</td>
+<td>#0E1315</td>
+<td style="width: 8px;background:#0E1315";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0</td>
+<td>0,0,0</td>
+<td>#000000</td>
+<td style="width: 8px;background:#000000";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>BKAJ2</td>
+<td>grey</td>
+<td>grey colour of black-adjust symbol</td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,1.6</td>
+<td>28,35,39</td>
+<td>#1C2327</td>
+<td style="width: 8px;background:#1C2327";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0.72</td>
+<td>16,21,24</td>
+<td>#101518</td>
+<td style="width: 8px;background:#101518";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.28,0.31,0.1</td>
+<td>2,3,4</td>
+<td>#020304</td>
+<td style="width: 8px;background:#020304";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>MARBL</td>
+<td>blue</td>
+<td>mariner blue</td>
+<td><table class="int">
+<tr>
+<td>0.145,0.14,20</td>
+<td>0,128,255</td>
+<td>#0080FF</td>
+<td style="width: 8px;background:#0080FF";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.145,0.14,17</td>
+<td>0,119,243</td>
+<td>#0077F3</td>
+<td style="width: 8px;background:#0077F3";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.145,0.14,1.75</td>
+<td>0,38,85</td>
+<td>#002655</td>
+<td style="width: 8px;background:#002655";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>MARCY</td>
+<td>cyan</td>
+<td>mariner cyan</td>
+<td><table class="int">
+<tr>
+<td>0.2,0.355,20</td>
+<td>0,143,132</td>
+<td>#008F84</td>
+<td style="width: 8px;background:#008F84";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.2,0.355,17</td>
+<td>0,133,122</td>
+<td>#00857A</td>
+<td style="width: 8px;background:#00857A";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.2,0.355,1.75</td>
+<td>0,43,39</td>
+<td>#002B27</td>
+<td style="width: 8px;background:#002B27";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>MARMG</td>
+<td>magenta</td>
+<td>mariner magenta</td>
+<td><table class="int">
+<tr>
+<td>0.36,0.22,20</td>
+<td>198,77,166</td>
+<td>#C64DA6</td>
+<td style="width: 8px;background:#C64DA6";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.36,0.22,17</td>
+<td>184,71,154</td>
+<td>#B8479A</td>
+<td style="width: 8px;background:#B8479A";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.36,0.22,1.75</td>
+<td>63,19,51</td>
+<td>#3F1333</td>
+<td style="width: 8px;background:#3F1333";></td>
+</tr>
+</table></td>
+       </tr>
+<tr>
+<td>MARWH</td>
+<td>white</td>
+<td>mariner white</td>
+<td><table class="int">
+<tr>
+<td>0.305,0.344,20</td>
+<td>113,127,119</td>
+<td>#717F77</td>
+<td style="width: 8px;background:#717F77";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.305,0.344,17</td>
+<td>105,118,110</td>
+<td>#69766E</td>
+<td style="width: 8px;background:#69766E";></td>
+</tr>
+</table></td>
+<td><table class="int">
+<tr>
+<td>0.305,0.344,1.75</td>
+<td>32,37,34</td>
+<td>#202522</td>
+<td style="width: 8px;background:#202522";></td>
+</tr>
+</table></td>
+       </tr>
+   </tbody>
+</table>
+</div>
+</body>
