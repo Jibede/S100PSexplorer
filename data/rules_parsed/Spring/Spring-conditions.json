@@ -1,0 +1,15 @@
+[
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:SPRING02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "SPRING02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  }
+]

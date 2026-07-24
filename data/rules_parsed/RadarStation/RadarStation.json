@@ -1,0 +1,155 @@
+[
+  {
+    "node_type": "function",
+    "name": "RadarStation",
+    "line": 5,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 6,
+        "code": "local viewingGroup = 38010",
+        "value": 38010
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 8,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 10,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 13,
+            "children": []
+          },
+          {
+            "node_type": "if",
+            "condition": "contains(2, feature.categoryOfRadarStation)",
+            "line": 16,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "communicationChannels",
+                "instruction_type": "LocalAssign",
+                "line": 18,
+                "code": "local communicationChannels = ''",
+                "value": ""
+              },
+              {
+                "node_type": "var",
+                "name": "contactDetails",
+                "instruction_type": "LocalAssign",
+                "line": 19,
+                "code": "local contactDetails = feature:GetInformationAssociation('AdditionalInformation', 'theInformation', 'ContactDetails')",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "contactDetails",
+                "line": 20,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "communicationChannels",
+                    "instruction_type": "Assign",
+                    "line": 21,
+                    "code": "communicationChannels = safeConcat(contactDetails.communicationChannel, \",\") .. safeConcat(feature.communicationChannel, \",\")",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 23,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "communicationChannels",
+                    "instruction_type": "Assign",
+                    "line": 23,
+                    "code": "communicationChannels = safeConcat(feature.communicationChannel, \",\")",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "if",
+                "condition": "communicationChannels ~= ''",
+                "line": 25,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "communicationChannels",
+                    "instruction_type": "Assign",
+                    "line": 26,
+                    "code": "communicationChannels = 'ch ' .. communicationChannels",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "hit",
+                "line": 29,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RDOSTA02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RDOSTA02"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "if",
+                "condition": "communicationChannels ~= ''",
+                "line": 30,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 31,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "0"
+                      },
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 36,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 36,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN01')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "POSGEN01"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 39,
+        "children": []
+      }
+    ]
+  }
+]

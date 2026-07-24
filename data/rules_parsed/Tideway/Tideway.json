@@ -1,0 +1,111 @@
+[
+  {
+    "node_type": "function",
+    "name": "Tideway",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 7,
+            "code": "viewingGroup = 32070",
+            "value": 32070
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 8,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 13,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHGRF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "tickness": 0.32,
+              "color": "CHGRF"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 15,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 17,
+            "code": "viewingGroup = 32070",
+            "value": 32070
+          },
+          {
+            "node_type": "hit",
+            "line": 19,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.32,
+              "color": "CHGRF"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.featureName[1] and feature.featureName[1].name",
+            "line": 21,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 22,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "0",
+                    "y": "0"
+                  },
+                  "TextAlignHorizontal": "Center",
+                  "TextAlignVertical": "Center",
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 26,
+        "children": []
+      }
+    ]
+  }
+]

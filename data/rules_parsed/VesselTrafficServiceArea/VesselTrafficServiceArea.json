@@ -1,0 +1,71 @@
+[
+  {
+    "node_type": "function",
+    "name": "VesselTrafficServiceArea",
+    "line": 8,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 9,
+        "code": "local viewingGroup = 36050",
+        "value": 36050
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 11,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 13,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.64,
+              "color": "CHMGD"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 15,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 19,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and feature.featureName[1] and feature.featureName[1].name",
+        "line": 22,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 23,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHMGD')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "0",
+                "y": "0"
+              },
+              "TextAlignHorizontal": "Center",
+              "TextAlignVertical": "Center",
+              "FontSize": "10",
+              "FontColor": "CHMGD"
+            },
+            "has_var": false
+          }
+        ]
+      }
+    ]
+  }
+]

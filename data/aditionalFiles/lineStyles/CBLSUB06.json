@@ -1,0 +1,31 @@
+{
+  "intervalLength": "30.9",
+  "pen": {
+    "width": "0.32",
+    "color": "CHMGD"
+  },
+  "dash": [
+    {
+      "start": "0.6",
+      "length": "2"
+    },
+    {
+      "start": "23.8",
+      "length": "2"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMCBLSU1",
+      "position": "7.7"
+    },
+    {
+      "code": "EMCBLAR1",
+      "position": "13.8"
+    },
+    {
+      "code": "EMCBLSU1",
+      "position": "19.5"
+    }
+  ]
+}

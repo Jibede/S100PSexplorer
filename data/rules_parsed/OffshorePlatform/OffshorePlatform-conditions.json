@@ -1,0 +1,110 @@
+[
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:OFSPLF01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "OFSPLF01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 27,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,0;TextAlignHorizontal:Start;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Start",
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.flareStack"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 40,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 1.28, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 1.28,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 43,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 50,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.flareStack"
+    ]
+  }
+]

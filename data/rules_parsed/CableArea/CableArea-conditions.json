@@ -1,0 +1,43 @@
+[
+  {
+    "node_type": "hit",
+    "line": 12,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CBLARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CBLARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.64,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CBLARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CBLARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

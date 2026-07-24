@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

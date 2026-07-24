@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 9,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.64,
+      "color": "CHMGF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

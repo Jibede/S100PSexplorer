@@ -1,0 +1,76 @@
+[
+  {
+    "node_type": "function",
+    "name": "RadarLine",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 7,
+            "code": "viewingGroup = 25040",
+            "value": 25040
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 8,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 13,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'TRFCD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.64,
+              "color": "TRFCD"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 15,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "0",
+                "y": "3.51"
+              },
+              "TextAlignHorizontal": "Center",
+              "FontSize": "10",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 18,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Analyseur des règles d'affichage — LUA S-101</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    {% block page_styles %}{% endblock %}
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot"></span>S-101
+        <small>ANALYSEUR DES RÈGLES D'AFFICHAGE LUA</small>
+      </div>
+      <nav class="topnav" id="topnav">
+        <button
+          data-page="features"
+          class="{% if name_page == 'features' %}active{% endif %}"
+          onclick="window.location.href = '/features'"
+        >
+          Features
+        </button>
+        <button
+          data-page="attributes"
+          class="{% if name_page == 'attributes' %}active{% endif %}"
+          onclick="window.location.href = '/attributes'"
+        >
+          Attributes
+        </button>
+        <button
+          data-page="symbols"
+          class="{% if name_page == 'symbols' %}active{% endif %}"
+          onclick="window.location.href = '/symbols'"
+        >
+          Symbols
+        </button>
+        <button
+          data-page="rules"
+          class="{% if name_page == 'rules' %}active{% endif %}"
+          onclick="window.location.href = '/rules'"
+        >
+          Rules
+        </button>
+      </nav>
+    </div>
+
+    <div class="shell">
+      <aside class="sidebar">
+        <input type="text" id="search" placeholder="Rechercher…" />
+        <div class="label">{{ name_page | capitalize }}</div>
+
+        <ul class="side-list">
+          {% for item in data %}
+          <li
+            class="{% if item['code'] == actual_element %}active{% endif %}"
+            onclick="window.location.href='/{{ name_page }}/{{ item['code'] }}'"
+          >
+            <span>{{item['name']}}</span
+            ><span class="code">{{item['code']}}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
+
+      <main id="main">{% block conteudo %}{% endblock %}</main>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("search");
+        const listItems = document.querySelectorAll(".side-list li");
+
+        const scrollContainer = document.querySelector(".side-list");
+
+        const savedScroll = sessionStorage.getItem("sidebarScrollPosition");
+        if (savedScroll) {
+          scrollContainer.scrollTop = savedScroll;
+        }
+
+        if (scrollContainer) {
+          scrollContainer.addEventListener("scroll", () => {
+            sessionStorage.setItem(
+              "sidebarScrollPosition",
+              scrollContainer.scrollTop,
+            );
+          });
+        }
+
+        searchInput.addEventListener("input", (e) => {
+          const filter = e.target.value.toLowerCase();
+
+          listItems.forEach((li) => {
+            const text = li.textContent.toLowerCase();
+            if (text.includes(filter)) {
+              li.style.display = "flex";
+            } else {
+              li.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

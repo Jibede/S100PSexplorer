@@ -1,0 +1,298 @@
+{% extends "base.html" %} {% block page_styles %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/nightSvgStyle.css') }}"
+/>
+{% endblock %} {% block conteudo %}
+
+<div class="crumb">
+  Features &nbsp;/&nbsp; <b>{{selected_feature['code']}}</b>
+</div>
+<div class="header-card">
+  <h1>{{selected_feature['name']}}</h1>
+
+  <div class="tag-row">
+    <div class="tag">
+      <b>Code</b><span>{{ selected_feature['code'] }}</span>
+    </div>
+    <div class="tag">
+      <b>Primitive</b
+      ><span>{{ ' | '.join(selected_feature['permitted_primitives'])}}</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="sub">{{selected_feature['definition']}}</div>
+
+  <br />
+
+  <section class="block">
+    <h2>Attributes</h2>
+
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Code</th>
+          <th>Type</th>
+          <th>Multiplicité</th>
+          <th>Permitted Values</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for attr_binding in selected_feature['attr_binding'] %} {% set attr =
+        get_attr_info(attr_binding['attribute']) %}
+
+        <tr
+          class="clickable"
+          onclick="window.location.href='/attributes/{{ attr['code']}}'"
+        >
+          <td class="mono">{{attr['name']}}</td>
+          <td>{{attr['code']}}</td>
+          <td>{{attr['value_type']}}</td>
+          <td>
+            {{attr_binding['multiplicity']['lower']}}..{{'*' if
+            attr_binding['multiplicity']['upper']['infinite'] else '1'}}
+          </td>
+          <td>{{attr_binding['permitted_values']}}</td>
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% set symbols = get_info(selected_feature['code'])['symbol'] %} {% set
+  lineStyles = get_info(selected_feature['code'])['line_style'] %} {% set
+  areaFills = get_info(selected_feature['code'])['area_fill'] %} {% if symbols
+  %}
+
+  <section class="block">
+    <h2>Symboles</h2>
+
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Aperçu</th>
+          <th>Nom</th>
+          <th>Condition</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for symbol in symbols %}
+
+        <tr
+          class="clickable"
+          onclick="window.location.href='/symbols/{{symbol['value']}}'"
+        >
+          <td>
+            <span class="swatch"
+              >{% include 'symbols/' ~ symbol['value'] ~ '.svg' %}</span
+            >
+          </td>
+          <td>{{ symbol['value']}}</td>
+
+          <td class="mono">
+            {% for condition in symbol['conditions'] %}
+
+            <ul>
+              <li>{{condition}}</li>
+            </ul>
+
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% endif%} {% if areaFills %}
+
+  <section class="block">
+    <h2>Area Fills</h2>
+
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Aperçu</th>
+          <th>Nom</th>
+          <th>Condition</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for areafill in areaFills %}
+          <tr>
+          <td>
+            <span class="swatch_area_fills">
+              <canvas
+                class="cartoCanvas"
+                width="100"
+                height="100"
+                data-symbol="{{ url_for('static', filename='symbols/' ~ areafill['symbol'] ~ '.svg') }}"
+                data-v1_x="{{ areafill['v1']['x'] }}"
+                data-v1_y="{{ areafill['v1']['y'] }}"
+                data-v2_x="{{ areafill['v2']['x'] }}"
+                data-v2_y="{{ areafill['v2']['y'] }}"
+              >
+                >
+              </canvas>
+            </span>
+          </td>
+
+          <td>{{ areafill['value']}}</td>
+
+          <td class="mono">
+            {% for condition in areafill['conditions'] %}
+
+            <ul>
+              <li>{{condition}}</li>
+            </ul>
+
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% endif%}
+
+  <section class="block">
+    <h2>Règles</h2>
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Règle</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable">
+          <td class="mono">{{linked_rule['file_name']}}</td>
+          <td>{{linked_rule['description']}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script>
+  // 1. On récupère l'URL de votre fichier CSS S-101
+  const cssUrl = "{{ url_for('static', filename='css/nightSvgStyle.css') }}";
+
+  // 2. On télécharge le contenu du CSS UNE SEULE FOIS pour toute la page
+  fetch(cssUrl)
+    .then(response => response.text())
+    .then(cssText => {
+      
+      // 3. On boucle sur tous les canvas de la page
+      document.querySelectorAll(".cartoCanvas").forEach(canvas => {
+        const ctx = canvas.getContext("2d");
+        const svgUrl = canvas.dataset.symbol;
+
+        // 4. On télécharge le code source (XML) du fichier SVG
+        fetch(svgUrl)
+          .then(res => res.text())
+          .then(svgText => {
+            
+            // 5. On analyse le texte SVG pour le transformer en un vrai document (DOM)
+            const parser = new DOMParser();
+            const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
+            
+            // 6. On crée une balise <style>, on y met le CSS, et on l'injecte dans le SVG
+            const styleElement = svgDoc.createElementNS("http://www.w3.org/2000/svg", "style");
+            styleElement.textContent = cssText;
+            svgDoc.documentElement.prepend(styleElement);
+            
+            // 7. On re-transforme le document SVG enrichi en texte
+            const serializer = new XMLSerializer();
+            const finalSvgText = serializer.serializeToString(svgDoc);
+            
+            // 8. On le charge dans l'objet Image via une Data URI
+            const symbolImage = new Image();
+            symbolImage.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(finalSvgText);
+
+            // 9. Une fois chargé, on procède au dessin normal
+            symbolImage.onload = function () {
+              // Lecture des attributs d'espacement
+              const v1_x = parseFloat(canvas.dataset.v1_x) || 0;
+              const v1_y = parseFloat(canvas.dataset.v1_y) || 0;
+              const v2_x = parseFloat(canvas.dataset.v2_x) || 0;
+              const v2_y = parseFloat(canvas.dataset.v2_y) || 0;
+
+              // Fond du canvas
+              ctx.fillStyle = "white";
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+              // Centre de départ
+              const p0 = { x: canvas.width / 2, y: canvas.height / 2 };
+
+              const v1 = { x: v1_x, y: v1_y };
+              const v2 = { x: v2_x, y: v2_y };
+
+              // Calcul des 4 points pour l'échantillon Area Fill
+              const points = [
+                { x: p0.x, y: p0.y }, // Índice 0: Ponto inicial
+                { x: p0.x + v1.x, y: p0.y + v1.y }, // Índice 1: p0 + v1
+                { x: p0.x + v2.x, y: p0.y + v2.y }, // Índice 2: p0 + v2
+                { x: p0.x + v2.x + v1.x, y: p0.y + v2.y + v1.y }, // Índice 3: p0 + v1 + v2
+              ];
+
+              // Dessin de l'image (désormais colorée par le CSS !)
+              points.forEach((point) => {
+                const drawX = point.x - symbolImage.width / 2;
+                const drawY = point.y - symbolImage.height / 2;
+                ctx.drawImage(symbolImage, drawX, drawY);
+              });
+
+              // =========================================================
+              // NOVO CÓDIGO: APLICANDO O LINESTYLE (BORDA DO POLÍGONO)
+              // =========================================================
+              
+              // A. Definimos o caminho (Path) conectando os 4 pontos
+              ctx.beginPath();
+              ctx.moveTo(points[0].x, points[0].y); // Vai para p0
+              ctx.lineTo(points[1].x, points[1].y); // Linha até p0+v1
+              ctx.lineTo(points[3].x, points[3].y); // Linha até p0+v1+v2
+              ctx.lineTo(points[2].x, points[2].y); // Linha até p0+v2
+              ctx.closePath(); // Fecha o polígono voltando ao p0
+
+              // B. Configurações do LineStyle (Parâmetros S-101)
+              // IMPORTANTE: Futuramente, você pode puxar esses valores via dataset do HTML
+              // ex: canvas.dataset.lineWidth, canvas.dataset.lineColor, etc.
+              const espessuraMm = 0.32; 
+              const estiloTraco = 'dash';
+              const lineColorCode = 'CHGRD'; 
+              
+              // Dicionário de conversão de cores (Adicione as cores necessárias)
+              const s101Colors = {
+                  "CHGRD": "#556B2F",
+                  "LANDF": "#D2B48C",
+                  "CHBLK": "#000000"
+              };
+
+              // C. Aplicação no Canvas
+              const MM_TO_PX = 96 / 25.4;
+              ctx.lineWidth = espessuraMm * MM_TO_PX;
+              ctx.strokeStyle = s101Colors[lineColorCode] || "#333333";
+
+              if (estiloTraco === 'dash') {
+                  ctx.setLineDash([8, 5]); // Tracejado
+              } else if (estiloTraco === 'dot') {
+                  ctx.setLineDash([2, 3]); // Pontilhado
+              } else {
+                  ctx.setLineDash([]); // Contínuo
+              }
+
+              // D. O comando final que efetivamente desenha a borda por cima do Area Fill
+              ctx.stroke();
+            };
+          });
+      });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "INFARE01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "INFARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

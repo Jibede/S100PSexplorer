@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 12,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 1.92, 'TRFCF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 1.92,
+      "color": "TRFCF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

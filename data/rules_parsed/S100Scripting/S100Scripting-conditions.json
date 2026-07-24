@@ -1,0 +1,42 @@
+[
+  {
+    "node_type": "hit",
+    "line": 95,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;LinePlacement:Relative,0.5;AreaPlacement:VisibleParts;AreaCRS:GlobalGeometry;Rotation:PortrayalCRS,0;ScaleFactor:1;ClearGeometry')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "LinePlacement": "Relative,0.5",
+      "AreaPlacement": "VisibleParts",
+      "AreaCRS": "GlobalGeometry",
+      "Rotation": "PortrayalCRS,0",
+      "ScaleFactor": "1"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
+    "line": 149,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;LinePlacement:Relative,0.5;AreaPlacement:VisibleParts;AreaCRS:GlobalGeometry;Rotation:PortrayalCRS,0;ScaleFactor:1;ClearGeometry')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "LinePlacement": "Relative,0.5",
+      "AreaPlacement": "VisibleParts",
+      "AreaCRS": "GlobalGeometry",
+      "Rotation": "PortrayalCRS,0",
+      "ScaleFactor": "1"
+    },
+    "has_var": false,
+    "conditions": [
+      "vg90020 or vg90021"
+    ]
+  }
+]

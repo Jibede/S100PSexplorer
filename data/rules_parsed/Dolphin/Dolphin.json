@@ -1,0 +1,100 @@
+[
+  {
+    "node_type": "function",
+    "name": "Dolphin",
+    "line": 1,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 2,
+        "code": "local viewingGroup = 12410",
+        "value": 12410
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "var",
+            "name": "categoryOfDolphin",
+            "instruction_type": "LocalAssign",
+            "line": 16,
+            "code": "local categoryOfDolphin = feature.categoryOfDolphin",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "contains(2, categoryOfDolphin)",
+            "line": 18,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 20,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:MORFAC04')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "MORFAC04"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 23,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 23,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:MORFAC03')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "MORFAC03"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 27,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 31,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "tickness": 0.32,
+              "color": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 34,
+        "children": []
+      }
+    ]
+  }
+]

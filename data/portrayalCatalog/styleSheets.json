@@ -1,0 +1,29 @@
+[
+  {
+    "id": "daySvgStyle",
+    "name": "Day",
+    "description": "CSS file for day palette",
+    "language": "eng",
+    "file_name": "daySvgStyle.css",
+    "file_type": "StyleSheet",
+    "file_format": "XML"
+  },
+  {
+    "id": "duskSvgStyle",
+    "name": "Dusk",
+    "description": "CSS file for dusk palette",
+    "language": "eng",
+    "file_name": "duskSvgStyle.css",
+    "file_type": "StyleSheet",
+    "file_format": "XML"
+  },
+  {
+    "id": "nightSvgStyle",
+    "name": "Night",
+    "description": "CSS file for night palette",
+    "language": "eng",
+    "file_name": "nightSvgStyle.css",
+    "file_type": "StyleSheet",
+    "file_format": "XML"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "node_type": "function",
+    "name": "Pile",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 5,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 11,
+            "code": "viewingGroup = 12410",
+            "value": 12410
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 15,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 17,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:PILPNT02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "PILPNT02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 19,
+            "code": "viewingGroup = 12410",
+            "value": 12410
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 20,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 23,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 26,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 27,
+            "code": "viewingGroup = 12410",
+            "value": 12410
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 28,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 31,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 35,
+        "children": []
+      }
+    ]
+  }
+]

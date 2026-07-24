@@ -1,0 +1,49 @@
+[
+  {
+    "node_type": "hit",
+    "line": 29,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RDOSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RDOSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(2, feature.categoryOfRadarStation)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(2, feature.categoryOfRadarStation)",
+      "communicationChannels ~= ''"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  }
+]

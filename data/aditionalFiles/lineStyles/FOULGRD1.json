@@ -1,0 +1,35 @@
+{
+  "intervalLength": "32",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "dash": [
+    {
+      "start": "0",
+      "length": "3"
+    },
+    {
+      "start": "5",
+      "length": "3"
+    },
+    {
+      "start": "17",
+      "length": "3"
+    },
+    {
+      "start": "22",
+      "length": "3"
+    },
+    {
+      "start": "27",
+      "length": "3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMFOULGD",
+      "position": "12.5"
+    }
+  ]
+}

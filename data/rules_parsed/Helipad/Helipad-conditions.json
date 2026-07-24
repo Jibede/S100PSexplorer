@@ -1,0 +1,15 @@
+[
+  {
+    "node_type": "hit",
+    "line": 12,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:HELIPD02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "HELIPD02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  }
+]

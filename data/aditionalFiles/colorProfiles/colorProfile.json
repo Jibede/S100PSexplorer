@@ -1,0 +1,1275 @@
+{
+  "NODTA": {
+    "name": "grey",
+    "description": "No data color",
+    "rgbDay": {
+      "red": "147",
+      "green": "174",
+      "blue": "187"
+    },
+    "rgbDusk": {
+      "red": "64",
+      "green": "77",
+      "blue": "83"
+    },
+    "rgbNight": {
+      "red": "23",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "CURSR": {
+    "name": "orange",
+    "description": "Cursor color",
+    "rgbDay": {
+      "red": "227",
+      "green": "128",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "134",
+      "green": "73",
+      "blue": "30"
+    },
+    "rgbNight": {
+      "red": "48",
+      "green": "23",
+      "blue": "5"
+    }
+  },
+  "CHBLK": {
+    "name": "black",
+    "description": "Chart black",
+    "rgbDay": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "37",
+      "green": "45",
+      "blue": "49"
+    }
+  },
+  "CHGRD": {
+    "name": "grey",
+    "description": "Chart grey dominant",
+    "rgbDay": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "37",
+      "green": "45",
+      "blue": "49"
+    }
+  },
+  "CHGRF": {
+    "name": "grey",
+    "description": "Chart grey faint",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "CHRED": {
+    "name": "red",
+    "description": "Chart red",
+    "rgbDay": {
+      "red": "234",
+      "green": "84",
+      "blue": "113"
+    },
+    "rgbDusk": {
+      "red": "155",
+      "green": "53",
+      "blue": "73"
+    },
+    "rgbNight": {
+      "red": "57",
+      "green": "14",
+      "blue": "22"
+    }
+  },
+  "CHGRN": {
+    "name": "green",
+    "description": "Chart green",
+    "rgbDay": {
+      "red": "82",
+      "green": "232",
+      "blue": "59"
+    },
+    "rgbDusk": {
+      "red": "47",
+      "green": "142",
+      "blue": "32"
+    },
+    "rgbNight": {
+      "red": "12",
+      "green": "52",
+      "blue": "6"
+    }
+  },
+  "CHYLW": {
+    "name": "yellow",
+    "description": "Chart yellow",
+    "rgbDay": {
+      "red": "225",
+      "green": "225",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "139",
+      "green": "139",
+      "blue": "31"
+    },
+    "rgbNight": {
+      "red": "50",
+      "green": "50",
+      "blue": "6"
+    }
+  },
+  "CHMGD": {
+    "name": "magenta",
+    "description": "Chart magenta dominant",
+    "rgbDay": {
+      "red": "192",
+      "green": "69",
+      "blue": "209"
+    },
+    "rgbDusk": {
+      "red": "130",
+      "green": "108",
+      "blue": "161"
+    },
+    "rgbNight": {
+      "red": "65",
+      "green": "18",
+      "blue": "71"
+    }
+  },
+  "CHMGF": {
+    "name": "magenta",
+    "description": "Chart magenta faint",
+    "rgbDay": {
+      "red": "203",
+      "green": "169",
+      "blue": "249"
+    },
+    "rgbDusk": {
+      "red": "119",
+      "green": "39",
+      "blue": "130"
+    },
+    "rgbNight": {
+      "red": "65",
+      "green": "18",
+      "blue": "71"
+    }
+  },
+  "CHBRN": {
+    "name": "brown",
+    "description": "Chart brown",
+    "rgbDay": {
+      "red": "161",
+      "green": "150",
+      "blue": "83"
+    },
+    "rgbDusk": {
+      "red": "87",
+      "green": "80",
+      "blue": "42"
+    },
+    "rgbNight": {
+      "red": "33",
+      "green": "30",
+      "blue": "12"
+    }
+  },
+  "CHWHT": {
+    "name": "white",
+    "description": "Chart white",
+    "rgbDay": {
+      "red": "201",
+      "green": "237",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "140",
+      "green": "166",
+      "blue": "179"
+    },
+    "rgbNight": {
+      "red": "54",
+      "green": "65",
+      "blue": "71"
+    }
+  },
+  "SCLBR": {
+    "name": "orange",
+    "description": "Scale bar color",
+    "rgbDay": {
+      "red": "227",
+      "green": "128",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "134",
+      "green": "73",
+      "blue": "30"
+    },
+    "rgbNight": {
+      "red": "48",
+      "green": "23",
+      "blue": "5"
+    }
+  },
+  "CHCOR": {
+    "name": "orange",
+    "description": "Chart correction",
+    "rgbDay": {
+      "red": "227",
+      "green": "128",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "134",
+      "green": "73",
+      "blue": "30"
+    },
+    "rgbNight": {
+      "red": "48",
+      "green": "23",
+      "blue": "5"
+    }
+  },
+  "LITRD": {
+    "name": "red",
+    "description": "Light red",
+    "rgbDay": {
+      "red": "234",
+      "green": "84",
+      "blue": "113"
+    },
+    "rgbDusk": {
+      "red": "155",
+      "green": "53",
+      "blue": "73"
+    },
+    "rgbNight": {
+      "red": "57",
+      "green": "14",
+      "blue": "22"
+    }
+  },
+  "LITGN": {
+    "name": "green",
+    "description": "Light green",
+    "rgbDay": {
+      "red": "82",
+      "green": "232",
+      "blue": "59"
+    },
+    "rgbDusk": {
+      "red": "47",
+      "green": "142",
+      "blue": "32"
+    },
+    "rgbNight": {
+      "red": "12",
+      "green": "52",
+      "blue": "6"
+    }
+  },
+  "LITYW": {
+    "name": "yellow",
+    "description": "Light yellow",
+    "rgbDay": {
+      "red": "225",
+      "green": "225",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "139",
+      "green": "139",
+      "blue": "31"
+    },
+    "rgbNight": {
+      "red": "50",
+      "green": "50",
+      "blue": "6"
+    }
+  },
+  "ISDNG": {
+    "name": "magenta",
+    "description": "Isolated danger",
+    "rgbDay": {
+      "red": "192",
+      "green": "69",
+      "blue": "209"
+    },
+    "rgbDusk": {
+      "red": "130",
+      "green": "108",
+      "blue": "161"
+    },
+    "rgbNight": {
+      "red": "65",
+      "green": "18",
+      "blue": "71"
+    }
+  },
+  "DNGHL": {
+    "name": "red",
+    "description": "Danger highlight red",
+    "rgbDay": {
+      "red": "234",
+      "green": "84",
+      "blue": "113"
+    },
+    "rgbDusk": {
+      "red": "155",
+      "green": "53",
+      "blue": "73"
+    },
+    "rgbNight": {
+      "red": "57",
+      "green": "14",
+      "blue": "22"
+    }
+  },
+  "TRFCD": {
+    "name": "magenta",
+    "description": "Traffic dominant magenta",
+    "rgbDay": {
+      "red": "192",
+      "green": "69",
+      "blue": "209"
+    },
+    "rgbDusk": {
+      "red": "130",
+      "green": "108",
+      "blue": "161"
+    },
+    "rgbNight": {
+      "red": "65",
+      "green": "18",
+      "blue": "71"
+    }
+  },
+  "TRFCF": {
+    "name": "magenta",
+    "description": "Traffic faint magenta",
+    "rgbDay": {
+      "red": "203",
+      "green": "169",
+      "blue": "249"
+    },
+    "rgbDusk": {
+      "red": "119",
+      "green": "39",
+      "blue": "130"
+    },
+    "rgbNight": {
+      "red": "65",
+      "green": "18",
+      "blue": "71"
+    }
+  },
+  "LANDA": {
+    "name": "brown",
+    "description": "Land area",
+    "rgbDay": {
+      "red": "191",
+      "green": "190",
+      "blue": "143"
+    },
+    "rgbDusk": {
+      "red": "64",
+      "green": "64",
+      "blue": "46"
+    },
+    "rgbNight": {
+      "red": "23",
+      "green": "22",
+      "blue": "14"
+    }
+  },
+  "LANDF": {
+    "name": "brown",
+    "description": "Land Feature",
+    "rgbDay": {
+      "red": "141",
+      "green": "100",
+      "blue": "46"
+    },
+    "rgbDusk": {
+      "red": "127",
+      "green": "90",
+      "blue": "41"
+    },
+    "rgbNight": {
+      "red": "47",
+      "green": "31",
+      "blue": "10"
+    }
+  },
+  "CSTLN": {
+    "name": "grey",
+    "description": "Coastline",
+    "rgbDay": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "37",
+      "green": "45",
+      "blue": "49"
+    }
+  },
+  "SNDG1": {
+    "name": "grey",
+    "description": "Sounding deep",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "SNDG2": {
+    "name": "black",
+    "description": "Sounding shallow",
+    "rgbDay": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbDusk": {
+      "red": "140",
+      "green": "166",
+      "blue": "179"
+    },
+    "rgbNight": {
+      "red": "54",
+      "green": "65",
+      "blue": "71"
+    }
+  },
+  "DEPSC": {
+    "name": "grey",
+    "description": "Safety contour",
+    "rgbDay": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "37",
+      "green": "45",
+      "blue": "49"
+    }
+  },
+  "DEPCN": {
+    "name": "grey",
+    "description": "depth contour",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "DEPDW": {
+    "name": "white",
+    "description": "deep water",
+    "rgbDay": {
+      "red": "201",
+      "green": "237",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbNight": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    }
+  },
+  "DEPMD": {
+    "name": "pale_blue",
+    "description": "Medium deep water",
+    "rgbDay": {
+      "red": "167",
+      "green": "217",
+      "blue": "251"
+    },
+    "rgbDusk": {
+      "red": "15",
+      "green": "27",
+      "blue": "33"
+    },
+    "rgbNight": {
+      "red": "3",
+      "green": "7",
+      "blue": "10"
+    }
+  },
+  "DEPMS": {
+    "name": "light_blue",
+    "description": "Medium shallow water",
+    "rgbDay": {
+      "red": "130",
+      "green": "202",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "29",
+      "green": "50",
+      "blue": "70"
+    },
+    "rgbNight": {
+      "red": "5",
+      "green": "14",
+      "blue": "22"
+    }
+  },
+  "DEPVS": {
+    "name": "medium_blue",
+    "description": "Very shallow water",
+    "rgbDay": {
+      "red": "97",
+      "green": "183",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "30",
+      "green": "65",
+      "blue": "101"
+    },
+    "rgbNight": {
+      "red": "7",
+      "green": "23",
+      "blue": "39"
+    }
+  },
+  "DEPIT": {
+    "name": "yellow_green",
+    "description": "Intertidal",
+    "rgbDay": {
+      "red": "88",
+      "green": "175",
+      "blue": "156"
+    },
+    "rgbDusk": {
+      "red": "35",
+      "green": "76",
+      "blue": "68"
+    },
+    "rgbNight": {
+      "red": "11",
+      "green": "32",
+      "blue": "28"
+    }
+  },
+  "RADHI": {
+    "name": "green",
+    "description": "Radar high intensity",
+    "rgbDay": {
+      "red": "82",
+      "green": "232",
+      "blue": "59"
+    },
+    "rgbDusk": {
+      "red": "47",
+      "green": "142",
+      "blue": "32"
+    },
+    "rgbNight": {
+      "red": "12",
+      "green": "52",
+      "blue": "6"
+    }
+  },
+  "RADLO": {
+    "name": "green",
+    "description": "Radar low intensity",
+    "rgbDay": {
+      "red": "47",
+      "green": "142",
+      "blue": "32"
+    },
+    "rgbDusk": {
+      "red": "25",
+      "green": "87",
+      "blue": "16"
+    },
+    "rgbNight": {
+      "red": "4",
+      "green": "27",
+      "blue": "2"
+    }
+  },
+  "ARPAT": {
+    "name": "blue_green",
+    "description": "ARPA target",
+    "rgbDay": {
+      "red": "45",
+      "green": "168",
+      "blue": "121"
+    },
+    "rgbDusk": {
+      "red": "33",
+      "green": "130",
+      "blue": "92"
+    },
+    "rgbNight": {
+      "red": "5",
+      "green": "42",
+      "blue": "27"
+    }
+  },
+  "NINFO": {
+    "name": "orange",
+    "description": "Navigators notes",
+    "rgbDay": {
+      "red": "227",
+      "green": "128",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "134",
+      "green": "73",
+      "blue": "30"
+    },
+    "rgbNight": {
+      "red": "48",
+      "green": "23",
+      "blue": "5"
+    }
+  },
+  "RESBL": {
+    "name": "blue",
+    "description": "AIS features and symbols",
+    "rgbDay": {
+      "red": "46",
+      "green": "123",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "29",
+      "green": "85",
+      "blue": "180"
+    },
+    "rgbNight": {
+      "red": "5",
+      "green": "27",
+      "blue": "68"
+    }
+  },
+  "ADINF": {
+    "name": "yellow",
+    "description": "Additional info, mariners ",
+    "rgbDay": {
+      "red": "165",
+      "green": "165",
+      "blue": "39"
+    },
+    "rgbDusk": {
+      "red": "100",
+      "green": "101",
+      "blue": "20"
+    },
+    "rgbNight": {
+      "red": "34",
+      "green": "34",
+      "blue": "3"
+    }
+  },
+  "RESGR": {
+    "name": "grey",
+    "description": "Reserved grey",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "SHIPS": {
+    "name": "black",
+    "description": "Own ship symbol",
+    "rgbDay": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbDusk": {
+      "red": "140",
+      "green": "166",
+      "blue": "179"
+    },
+    "rgbNight": {
+      "red": "54",
+      "green": "65",
+      "blue": "71"
+    }
+  },
+  "PSTRK": {
+    "name": "black",
+    "description": "Past track",
+    "rgbDay": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbDusk": {
+      "red": "140",
+      "green": "166",
+      "blue": "179"
+    },
+    "rgbNight": {
+      "red": "54",
+      "green": "65",
+      "blue": "71"
+    }
+  },
+  "SYTRK": {
+    "name": "grey",
+    "description": "Secondary track",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "PLRTE": {
+    "name": "red",
+    "description": "Planned route",
+    "rgbDay": {
+      "red": "214",
+      "green": "63",
+      "blue": "36"
+    },
+    "rgbDusk": {
+      "red": "149",
+      "green": "41",
+      "blue": "22"
+    },
+    "rgbNight": {
+      "red": "51",
+      "green": "8",
+      "blue": "3"
+    }
+  },
+  "APLRT": {
+    "name": "orange",
+    "description": "Alternate planned route",
+    "rgbDay": {
+      "red": "227",
+      "green": "128",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "134",
+      "green": "73",
+      "blue": "30"
+    },
+    "rgbNight": {
+      "red": "48",
+      "green": "23",
+      "blue": "5"
+    }
+  },
+  "UINFD": {
+    "name": "black",
+    "description": "User interface Bold text",
+    "rgbDay": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbDusk": {
+      "red": "140",
+      "green": "166",
+      "blue": "179"
+    },
+    "rgbNight": {
+      "red": "54",
+      "green": "65",
+      "blue": "71"
+    }
+  },
+  "UINFF": {
+    "name": "grey",
+    "description": "User interface normal text",
+    "rgbDay": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "37",
+      "green": "45",
+      "blue": "49"
+    }
+  },
+  "UIBCK": {
+    "name": "white",
+    "description": "User interface background",
+    "rgbDay": {
+      "red": "201",
+      "green": "237",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbNight": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    }
+  },
+  "UIAFD": {
+    "name": "medium_blue",
+    "description": "User interface Area fill water",
+    "rgbDay": {
+      "red": "97",
+      "green": "183",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "30",
+      "green": "65",
+      "blue": "101"
+    },
+    "rgbNight": {
+      "red": "7",
+      "green": "23",
+      "blue": "39"
+    }
+  },
+  "UINFR": {
+    "name": "red",
+    "description": "User interface red",
+    "rgbDay": {
+      "red": "234",
+      "green": "84",
+      "blue": "113"
+    },
+    "rgbDusk": {
+      "red": "155",
+      "green": "53",
+      "blue": "73"
+    },
+    "rgbNight": {
+      "red": "57",
+      "green": "14",
+      "blue": "22"
+    }
+  },
+  "UINFG": {
+    "name": "green",
+    "description": "User interface green",
+    "rgbDay": {
+      "red": "82",
+      "green": "232",
+      "blue": "59"
+    },
+    "rgbDusk": {
+      "red": "47",
+      "green": "142",
+      "blue": "32"
+    },
+    "rgbNight": {
+      "red": "12",
+      "green": "52",
+      "blue": "6"
+    }
+  },
+  "UINFO": {
+    "name": "orange",
+    "description": "User interface orange",
+    "rgbDay": {
+      "red": "227",
+      "green": "128",
+      "blue": "57"
+    },
+    "rgbDusk": {
+      "red": "134",
+      "green": "73",
+      "blue": "30"
+    },
+    "rgbNight": {
+      "red": "48",
+      "green": "23",
+      "blue": "5"
+    }
+  },
+  "UINFB": {
+    "name": "blue",
+    "description": "User interface blue",
+    "rgbDay": {
+      "red": "46",
+      "green": "123",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "29",
+      "green": "85",
+      "blue": "180"
+    },
+    "rgbNight": {
+      "red": "5",
+      "green": "27",
+      "blue": "68"
+    }
+  },
+  "UINFM": {
+    "name": "magenta",
+    "description": "User interface magenta",
+    "rgbDay": {
+      "red": "192",
+      "green": "69",
+      "blue": "209"
+    },
+    "rgbDusk": {
+      "red": "130",
+      "green": "108",
+      "blue": "161"
+    },
+    "rgbNight": {
+      "red": "65",
+      "green": "18",
+      "blue": "71"
+    }
+  },
+  "UIBDR": {
+    "name": "grey",
+    "description": "User interface border grey",
+    "rgbDay": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbDusk": {
+      "red": "107",
+      "green": "127",
+      "blue": "137"
+    },
+    "rgbNight": {
+      "red": "37",
+      "green": "45",
+      "blue": "49"
+    }
+  },
+  "UIAFF": {
+    "name": "brown",
+    "description": "User interface Area fill Land",
+    "rgbDay": {
+      "red": "191",
+      "green": "190",
+      "blue": "143"
+    },
+    "rgbDusk": {
+      "red": "127",
+      "green": "90",
+      "blue": "41"
+    },
+    "rgbNight": {
+      "red": "68",
+      "green": "46",
+      "blue": "18"
+    }
+  },
+  "OUTLW": {
+    "name": "black",
+    "description": "Outline for symbols on water",
+    "rgbDay": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbDusk": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbNight": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    }
+  },
+  "OUTLL": {
+    "name": "brown",
+    "description": "Outline for symbols on land",
+    "rgbDay": {
+      "red": "141",
+      "green": "100",
+      "blue": "46"
+    },
+    "rgbDusk": {
+      "red": "64",
+      "green": "64",
+      "blue": "46"
+    },
+    "rgbNight": {
+      "red": "23",
+      "green": "22",
+      "blue": "14"
+    }
+  },
+  "RES01": {
+    "name": "grey",
+    "description": "Reserved",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "RES02": {
+    "name": "grey",
+    "description": "Reserved",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "RES03": {
+    "name": "grey",
+    "description": "Reserved",
+    "rgbDay": {
+      "red": "118",
+      "green": "140",
+      "blue": "151"
+    },
+    "rgbDusk": {
+      "red": "76",
+      "green": "91",
+      "blue": "99"
+    },
+    "rgbNight": {
+      "red": "24",
+      "green": "30",
+      "blue": "33"
+    }
+  },
+  "BKAJ1": {
+    "name": "black",
+    "description": "black colour of black-adjust symbol",
+    "rgbDay": {
+      "red": "14",
+      "green": "19",
+      "blue": "21"
+    },
+    "rgbDusk": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    },
+    "rgbNight": {
+      "red": "0",
+      "green": "0",
+      "blue": "0"
+    }
+  },
+  "BKAJ2": {
+    "name": "grey",
+    "description": "grey colour of black-adjust symbol",
+    "rgbDay": {
+      "red": "28",
+      "green": "35",
+      "blue": "39"
+    },
+    "rgbDusk": {
+      "red": "16",
+      "green": "21",
+      "blue": "24"
+    },
+    "rgbNight": {
+      "red": "2",
+      "green": "3",
+      "blue": "4"
+    }
+  },
+  "MARBL": {
+    "name": "blue",
+    "description": "mariner blue",
+    "rgbDay": {
+      "red": "0",
+      "green": "128",
+      "blue": "255"
+    },
+    "rgbDusk": {
+      "red": "0",
+      "green": "119",
+      "blue": "243"
+    },
+    "rgbNight": {
+      "red": "0",
+      "green": "38",
+      "blue": "85"
+    }
+  },
+  "MARCY": {
+    "name": "cyan",
+    "description": "mariner cyan",
+    "rgbDay": {
+      "red": "0",
+      "green": "143",
+      "blue": "132"
+    },
+    "rgbDusk": {
+      "red": "0",
+      "green": "133",
+      "blue": "122"
+    },
+    "rgbNight": {
+      "red": "0",
+      "green": "43",
+      "blue": "39"
+    }
+  },
+  "MARMG": {
+    "name": "magenta",
+    "description": "mariner magenta",
+    "rgbDay": {
+      "red": "198",
+      "green": "77",
+      "blue": "166"
+    },
+    "rgbDusk": {
+      "red": "184",
+      "green": "71",
+      "blue": "154"
+    },
+    "rgbNight": {
+      "red": "63",
+      "green": "19",
+      "blue": "51"
+    }
+  },
+  "MARWH": {
+    "name": "white",
+    "description": "mariner white",
+    "rgbDay": {
+      "red": "113",
+      "green": "127",
+      "blue": "119"
+    },
+    "rgbDusk": {
+      "red": "105",
+      "green": "118",
+      "blue": "110"
+    },
+    "rgbNight": {
+      "red": "32",
+      "green": "37",
+      "blue": "34"
+    }
+  }
+}

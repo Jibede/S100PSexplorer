@@ -1,0 +1,49 @@
+[
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYMOR11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYINB01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYINB01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "-3.51",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  }
+]

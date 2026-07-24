@@ -1,0 +1,41 @@
+[
+  {
+    "node_type": "hit",
+    "line": 12,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSRON51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSRON51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:TSSJCT02')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "TSSJCT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSRON51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSRON51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

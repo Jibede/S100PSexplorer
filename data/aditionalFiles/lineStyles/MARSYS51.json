@@ -1,0 +1,35 @@
+{
+  "intervalLength": "25.5",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "dash": [
+    {
+      "start": "2",
+      "length": "3"
+    },
+    {
+      "start": "10",
+      "length": "3"
+    },
+    {
+      "start": "15.2",
+      "length": "3"
+    },
+    {
+      "start": "22.5",
+      "length": "3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMMARS01",
+      "position": "7.31"
+    },
+    {
+      "code": "EMMARS02",
+      "position": "20.44"
+    }
+  ]
+}

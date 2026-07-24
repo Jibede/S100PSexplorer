@@ -1,0 +1,343 @@
+[
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RACNSP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RACNSP01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue",
+      "feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 30,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 32,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RACNSP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RACNSP01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue",
+      "feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 46,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RACNSP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RACNSP01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 48,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue",
+      "feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 58,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 60,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RACNSP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RACNSP01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 62,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous and feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue",
+      "feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 72,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 74,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RACNSP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RACNSP01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 82,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 84,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RACNSP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RACNSP01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 92,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 95,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue",
+      "feature.verticalClearanceSafe and feature.verticalClearanceSafe.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 105,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 108,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue",
+      "feature.verticalClearanceFixed and feature.verticalClearanceFixed.verticalClearanceValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 118,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

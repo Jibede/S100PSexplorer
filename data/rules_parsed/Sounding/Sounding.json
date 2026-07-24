@@ -1,0 +1,48 @@
+[
+  {
+    "node_type": "function",
+    "name": "Sounding",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.MultiPoint",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 11,
+            "code": "viewingGroup = 33010",
+            "value": 33010
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 15,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 19,
+        "children": []
+      }
+    ]
+  }
+]

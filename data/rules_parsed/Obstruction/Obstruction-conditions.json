@@ -1,0 +1,562 @@
+[
+  {
+    "node_type": "hit",
+    "line": 25,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 8 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 33,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "ACHARE02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 9 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 41,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 10 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 49,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 57,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "ACHARE02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 65,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 81,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:VEGATN04P')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "VEGATN04P"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfObstruction == 23"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 107,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 8 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 115,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "ACHARE02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 9 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 123,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 10 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 131,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 139,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "ACHARE02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 147,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 163,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:VEGATN04P')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "VEGATN04P"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfObstruction == 23"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 189,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 198,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 207,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 223,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.waterLevelEffect == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 238,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 239,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 244,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "ACHARE02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 245,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 250,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 251,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 259,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 23"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 261,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:VEGATN04')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "VEGATN04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfObstruction == 23"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 265,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 266,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 277,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 278,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 283,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "ACHARE02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 284,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 289,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 290,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 299,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 23"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 301,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:VEGATN04')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "VEGATN04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.categoryOfObstruction == 23"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 305,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLTHAZ02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLTHAZ02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 306,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 7"
+    ]
+  }
+]

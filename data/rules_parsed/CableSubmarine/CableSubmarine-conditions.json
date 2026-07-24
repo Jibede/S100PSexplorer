@@ -1,0 +1,34 @@
+[
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHMGF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfCable == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfCable == 6 or feature.categoryOfCable == 7"
+    ]
+  }
+]

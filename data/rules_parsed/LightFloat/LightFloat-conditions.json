@@ -1,0 +1,68 @@
+[
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:LITFLT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "LITFLT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "-3.51",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:LITFLT01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "LITFLT01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "-3.51",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  }
+]

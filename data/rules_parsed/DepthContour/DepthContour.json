@@ -1,0 +1,48 @@
+[
+  {
+    "node_type": "function",
+    "name": "DepthContour",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 10,
+            "code": "viewingGroup = 33020",
+            "value": 33020
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 14,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 18,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "intervalLength": "22",
+  "pen": {
+    "width": "0.32",
+    "color": "CHMGD"
+  },
+  "dash": [
+    {
+      "start": "14.2",
+      "length": "2.9"
+    },
+    {
+      "start": "5.1",
+      "length": "-3.1"
+    },
+    {
+      "start": "19.1",
+      "length": "2.9"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMFEYRT1",
+      "position": "9.6"
+    }
+  ]
+}

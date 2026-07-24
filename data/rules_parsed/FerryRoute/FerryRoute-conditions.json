@@ -1,0 +1,87 @@
+[
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FRYARE52')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FRYARE52"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(2, feature.categoryOfFerry)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 37,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.64,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(2, feature.categoryOfFerry)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FRYARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FRYARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 43,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.64,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 50,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FRYARE52')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FRYARE52"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(2, feature.categoryOfFerry)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FRYARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FRYARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

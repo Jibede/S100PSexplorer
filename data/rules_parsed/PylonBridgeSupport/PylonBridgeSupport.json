@@ -1,0 +1,85 @@
+[
+  {
+    "node_type": "function",
+    "name": "PylonBridgeSupport",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 8,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 10,
+            "code": "viewingGroup = 12210",
+            "value": 12210
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 14,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 16,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "POSGEN03"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 17,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 19,
+            "code": "viewingGroup = 12210",
+            "value": 12210
+          },
+          {
+            "node_type": "hit",
+            "line": 22,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "tickness": 0.64,
+              "color": "CSTLN"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 25,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FOULGND1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FOULGND1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfWreck and feature.categoryOfWreck == 3 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 28,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FOULGND1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FOULGND1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.categoryOfWreck and feature.categoryOfWreck == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 46,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FOULGND1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FOULGND1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfWreck and feature.categoryOfWreck == 3 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 54,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FOULGND1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FOULGND1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfWreck and feature.categoryOfWreck == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 68,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfWreck and feature.categoryOfWreck == 3 and feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 73,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.categoryOfWreck and feature.categoryOfWreck == 3"
+    ]
+  }
+]

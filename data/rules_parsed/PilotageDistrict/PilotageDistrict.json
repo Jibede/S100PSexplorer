@@ -1,0 +1,47 @@
+[
+  {
+    "node_type": "function",
+    "name": "PilotageDistrict",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup = 28010",
+        "value": 28010
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 11,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.64,
+              "color": "CHGRF"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 13,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 17,
+        "children": []
+      }
+    ]
+  }
+]

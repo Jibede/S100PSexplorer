@@ -1,0 +1,1381 @@
+[
+  {
+    "node_type": "var",
+    "name": "orig_error",
+    "instruction_type": "LocalAssign",
+    "line": 10,
+    "code": "local orig_error = error",
+    "value": 1
+  },
+  {
+    "node_type": "function",
+    "name": "error",
+    "line": 12,
+    "children": []
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeString",
+    "line": 18,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "str == nil",
+        "line": 19,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "fmt",
+        "line": 21,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "type(str) == 'table' and str.Type == 'ScaledDecimal'",
+            "line": 22,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 23,
+                "code": "str = str:ToNumber()",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "node_type": "var",
+            "name": "str",
+            "instruction_type": "Assign",
+            "line": 26,
+            "code": "str = string.format(fmt, str)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 28,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "str",
+            "instruction_type": "Assign",
+            "line": 28,
+            "code": "str = tostring(str)",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "ProcessPeriodicDateRanges",
+    "line": 38,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "dateDependent",
+        "instruction_type": "LocalAssign",
+        "line": 39,
+        "code": "local dateDependent = false",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "periodicDateRanges and #periodicDateRanges > 0",
+        "line": 41,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "dateDependent",
+            "instruction_type": "Assign",
+            "line": 54,
+            "code": "dateDependent = true",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "ProcessFixedDateRange",
+    "line": 60,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "dateDependent",
+        "instruction_type": "LocalAssign",
+        "line": 61,
+        "code": "local dateDependent = false",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "fixedDateRange",
+        "line": 63,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "dateStart",
+            "instruction_type": "LocalAssign",
+            "line": 64,
+            "code": "local dateStart = fixedDateRange.dateStart",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "dateEnd",
+            "instruction_type": "LocalAssign",
+            "line": 65,
+            "code": "local dateEnd = fixedDateRange.dateEnd",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "dateStart and dateEnd",
+            "line": 67,
+            "children": []
+          },
+          {
+            "node_type": "elseif",
+            "condition": "dateStart",
+            "line": 69,
+            "children": []
+          },
+          {
+            "node_type": "elseif",
+            "condition": "dateEnd",
+            "line": 71,
+            "children": []
+          },
+          {
+            "node_type": "var",
+            "name": "dateDependent",
+            "instruction_type": "Assign",
+            "line": 75,
+            "code": "dateDependent = true",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "ProcessFixedAndPeriodicDates",
+    "line": 81,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "periodicDependent",
+        "instruction_type": "LocalAssign",
+        "line": 82,
+        "code": "local periodicDependent = ProcessPeriodicDateRanges(feature, featurePortrayal, feature['!periodicDateRange'])",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "fixedDependent",
+        "instruction_type": "LocalAssign",
+        "line": 83,
+        "code": "local fixedDependent = ProcessFixedDateRange(featurePortrayal, feature['!fixedDateRange'])",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "AddDateDependentSymbol",
+    "line": 88,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.None",
+        "line": 91,
+        "children": []
+      },
+      {
+        "node_type": "hit",
+        "line": 95,
+        "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;LinePlacement:Relative,0.5;AreaPlacement:VisibleParts;AreaCRS:GlobalGeometry;Rotation:PortrayalCRS,0;ScaleFactor:1;ClearGeometry')",
+        "instruction_type": "text",
+        "values": {
+          "LocalOffset": {
+            "x": "0",
+            "y": "0"
+          },
+          "LinePlacement": "Relative,0.5",
+          "AreaPlacement": "VisibleParts",
+          "AreaCRS": "GlobalGeometry",
+          "Rotation": "PortrayalCRS,0",
+          "ScaleFactor": "1"
+        },
+        "has_var": false
+      },
+      {
+        "node_type": "var",
+        "name": "displayPlane",
+        "instruction_type": "LocalAssign",
+        "line": 99,
+        "code": "local displayPlane = contextParameters.RadarOverlay and 'DisplayPlane:OverRadar' or 'DisplayPlane:UnderRadar'",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "ProcessNauticalInformation",
+    "line": 109,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "vg90020",
+        "instruction_type": "LocalAssign",
+        "line": 140,
+        "code": "local vg90020, vg90021",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "vg90020",
+        "instruction_type": "Assign",
+        "line": 142,
+        "code": "vg90020, vg90021 = GetViewingGroups(feature, vg90020, vg90021)",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "vg90020",
+        "instruction_type": "Assign",
+        "line": 143,
+        "code": "vg90020, vg90021 = GetViewingGroups(feature:GetInformationAssociation('AdditionalInformation', 'theInformation', 'NauticalInformation'), vg90020, vg90021)",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "vg90020",
+        "instruction_type": "Assign",
+        "line": 144,
+        "code": "vg90020, vg90021 = GetViewingGroups(feature:GetInformationAssociation('AdditionalInformation', 'theInformation', 'NonStandardWorkingDay'), vg90020, vg90021)",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "vg90020",
+        "instruction_type": "Assign",
+        "line": 145,
+        "code": "vg90020, vg90021 = GetViewingGroups(feature:GetInformationAssociation('AdditionalInformation', 'theInformation', 'ServiceHours'), vg90020, vg90021)",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "vg90020 or vg90021",
+        "line": 147,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 149,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;LinePlacement:Relative,0.5;AreaPlacement:VisibleParts;AreaCRS:GlobalGeometry;Rotation:PortrayalCRS,0;ScaleFactor:1;ClearGeometry')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "0",
+                "y": "0"
+              },
+              "LinePlacement": "Relative,0.5",
+              "AreaPlacement": "VisibleParts",
+              "AreaCRS": "GlobalGeometry",
+              "Rotation": "PortrayalCRS,0",
+              "ScaleFactor": "1"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "var",
+            "name": "displayPlane",
+            "instruction_type": "LocalAssign",
+            "line": 153,
+            "code": "local displayPlane = contextParameters.RadarOverlay and 'DisplayPlane:OverRadar' or 'DisplayPlane:UnderRadar'",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "vg90020",
+            "line": 155,
+            "children": []
+          },
+          {
+            "node_type": "if",
+            "condition": "vg90021",
+            "line": 160,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "valueTypes",
+    "instruction_type": "LocalAssign",
+    "line": 171,
+    "code": "local valueTypes = {\n    'boolean',\n    'enumeration',\n    'integer',\n    'real',\n    'text',\n    'date',\n    'time',\n    'dateTime',\n    'URI',\n    'URL',\n    'URN',\n    'S100_CodeList',\n    'S100_TruncatedDate',\n}",
+    "value": {}
+  },
+  {
+    "node_type": "function",
+    "name": "ConvertEncodedValue",
+    "line": 173,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "value == unknownAttributeValueString",
+        "line": 174,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "not contains(valueType, valueTypes)",
+        "line": 178,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "valueType == 'boolean'",
+        "line": 182,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "valueType == 'enumeration'",
+        "line": 184,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "valueType == 'integer'",
+        "line": 186,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "valueType == 'real'",
+        "line": 188,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 191,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "StringToScaledDecimal",
+    "line": 199,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "value",
+        "line": 200,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "i",
+            "instruction_type": "LocalAssign",
+            "line": 201,
+            "code": "local i = value:find('%.')",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "i == nil",
+            "line": 203,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 206,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "a",
+                "instruction_type": "LocalAssign",
+                "line": 206,
+                "code": "local a = value:sub(1, i - 1)",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "value",
+                "instruction_type": "Assign",
+                "line": 207,
+                "code": "value = value:sub(1, i - 1) .. value:sub(i + 1, #value)",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "NormalizeScaledDecimals",
+    "line": 214,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "sd1",
+        "instruction_type": "LocalAssign",
+        "line": 215,
+        "code": "local sd1 = scaledDecimal1",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "sd2",
+        "instruction_type": "LocalAssign",
+        "line": 216,
+        "code": "local sd2 = scaledDecimal2",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "sd1.Scale > sd2.Scale",
+        "line": 218,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "sd1",
+            "instruction_type": "Assign",
+            "line": 219,
+            "code": "sd1, sd2 = sd2, sd1",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "ScaledDecimalCompare",
+    "instruction_type": "LocalAssign",
+    "line": 299,
+    "code": "local ScaledDecimalCompare = EqMetaMethodGuarantee and ScaledDecimalCompare_EqMetaMethodGuarantee or ScaledDecimalCompare_NotEqMetaMethodGuarantee",
+    "value": 1
+  },
+  {
+    "node_type": "var",
+    "name": "scaledDecimalMetatable",
+    "instruction_type": "LocalAssign",
+    "line": 301,
+    "code": "local scaledDecimalMetatable = {\n    __eq = function(lhs, rhs)\n    return ScaledDecimalCompare(lhs, rhs) == 0\n    end,\n    __lt = function(lhs, rhs)\n    return ScaledDecimalCompare(lhs, rhs) < 0\n    end,\n    __le = function(lhs, rhs)\n    return ScaledDecimalCompare(lhs, rhs) <= 0\n    end,\n    __add = function(scaledDecimal1, scaledDecimal2)\n    local sd1 = {\n        Value = scaledDecimal1.Value,\n        Scale = scaledDecimal1.Scale,\n    }\n    local sd2 = {\n        Value = scaledDecimal2.Value,\n        Scale = scaledDecimal2.Scale,\n    }\n    NormalizeScaledDecimals(sd1, sd2)\n    return CreateScaledDecimal(sd1.Value + sd2.Value, sd1.Scale)\n    end,\n    __sub = function(scaledDecimal1, scaledDecimal2)\n    local sd1 = {\n        Value = scaledDecimal1.Value,\n        Scale = scaledDecimal1.Scale,\n    }\n    local sd2 = {\n        Value = scaledDecimal2.Value,\n        Scale = scaledDecimal2.Scale,\n    }\n    NormalizeScaledDecimals(sd1, sd2)\n    return CreateScaledDecimal(sd1.Value - sd2.Value, sd1.Scale)\n    end,\n    __mul = function(scaledDecimal1, scaledDecimal2)\n    local sd1 = {\n        Value = scaledDecimal1.Value,\n        Scale = scaledDecimal1.Scale,\n    }\n    local sd2 = {\n        Value = scaledDecimal2.Value,\n        Scale = scaledDecimal2.Scale,\n    }\n    NormalizeScaledDecimals(sd1, sd2)\n    return CreateScaledDecimal(sd1.Value * sd2.Value, sd1.Scale + sd2.Scale)\n    end,\n    __div = function(scaledDecimal1, scaledDecimal2)\n\n    end,\n    __tostring = function(t)\n    if t.Scale == 0 then\n        return tostring(t.Value)\n    end\n    local sign\n    local value\n    if t.Value < 0 then\n        sign = '-'\n        value = tostring(-t.Value)\n    else\n        sign = ''\n        value = tostring(t.Value)\n    end\n    local scaleLeft = #value - t.Scale\n    if scaleLeft <= 0 then\n        local leading = string.rep('0', -scaleLeft)\n        return sign .. '0.' .. leading .. value\n    else\n        local left = value:sub(1, scaleLeft)\n        local right = value:sub(scaleLeft + 1, #value)\n        return sign .. left .. '.' .. right\n    end\n    end,\n}",
+    "value": {}
+  },
+  {
+    "node_type": "function",
+    "name": "CreateScaledDecimal",
+    "line": 376,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "scale",
+        "instruction_type": "Assign",
+        "line": 377,
+        "code": "scale = scale or 0",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "scaledDecimal",
+        "instruction_type": "LocalAssign",
+        "line": 382,
+        "code": "local scaledDecimal = {\n    Type = 'ScaledDecimal',\n    Value = value,\n    Scale = scale,\n    Split = ScaledDecimalSplit,\n    ToNumber = ScaledDecimalToNumber,\n}",
+        "value": {}
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "scaledDecimalsScale",
+    "instruction_type": "LocalAssign",
+    "line": 391,
+    "code": "local scaledDecimalsScale = {\n}",
+    "value": {}
+  },
+  {
+    "node_type": "function",
+    "name": "SD",
+    "line": 393,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "scale",
+        "instruction_type": "Assign",
+        "line": 394,
+        "code": "scale = scale or 0",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "scaledDecimals",
+        "instruction_type": "LocalAssign",
+        "line": 396,
+        "code": "local scaledDecimals = scaledDecimalsScale[scale]",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not scaledDecimals",
+        "line": 398,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "scaledDecimals",
+            "instruction_type": "Assign",
+            "line": 399,
+            "code": "scaledDecimals = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "scale",
+            "instruction_type": "Assign",
+            "line": 400,
+            "code": "scaledDecimalsScale[scale] = scaledDecimals",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "sd",
+        "instruction_type": "LocalAssign",
+        "line": 403,
+        "code": "local sd = scaledDecimals[value]",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not sd",
+        "line": 405,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "sd",
+            "instruction_type": "Assign",
+            "line": 406,
+            "code": "sd = CreateScaledDecimal(value, scale)",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "value",
+            "instruction_type": "Assign",
+            "line": 408,
+            "code": "scaledDecimals[value] = sd",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "DerivedType",
+    "line": 418,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "derivedMetatable",
+        "instruction_type": "LocalAssign",
+        "line": 419,
+        "code": "local derivedMetatable = {\n    __index = function(t, k)\n    local value = rawget(t, k)\n    while value == nil and t.Base ~= nil do\n        t = t.Base\n        value = rawget(t, k)\n    end\n    return value\n    end,\n}",
+        "value": {}
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "typeSystemChecksEnabled",
+    "instruction_type": "LocalAssign",
+    "line": 439,
+    "code": "local typeSystemChecksEnabled",
+    "value": 1
+  },
+  {
+    "node_type": "function",
+    "name": "TypeSystemChecks",
+    "line": 441,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "typeSystemChecksEnabled == enabled",
+        "line": 442,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "typeSystemChecksEnabled",
+        "instruction_type": "Assign",
+        "line": 446,
+        "code": "typeSystemChecksEnabled = enabled",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "enabled",
+        "line": 448,
+        "children": [
+          {
+            "node_type": "function",
+            "name": "CheckSelf",
+            "line": 449,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "objectType",
+                "instruction_type": "LocalAssign",
+                "line": 450,
+                "code": "local objectType = type(object)",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "objectType == 'table' and object.Type == typeName",
+                "line": 452,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "function",
+            "name": "CheckNotSelf",
+            "line": 459,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "objectType",
+                "instruction_type": "LocalAssign",
+                "line": 460,
+                "code": "local objectType = type(object)",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "objectType == 'table' and object.Type == typeName",
+                "line": 462,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "function",
+            "name": "CheckType",
+            "line": 467,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "objectType",
+                "instruction_type": "LocalAssign",
+                "line": 468,
+                "code": "local objectType = type(object)",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "colon",
+                "instruction_type": "LocalAssign",
+                "line": 469,
+                "code": "local colon = string.find(typeName, ':')",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "objectType == 'table' and colon",
+                "line": 471,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "highType",
+                    "instruction_type": "LocalAssign",
+                    "line": 472,
+                    "code": "local highType = string.sub(typeName, 1, colon - 1)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "typeName",
+                    "instruction_type": "Assign",
+                    "line": 473,
+                    "code": "typeName = string.sub(typeName, colon + 1)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "highType ~= 'array' and highType ~= 'array+'",
+                    "line": 475,
+                    "children": []
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "#object ~= 0 or highType == 'array+'",
+                    "line": 480,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "objectType ~= 'table'",
+                "line": 483,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "objectType ~= typeName",
+                    "line": 484,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "object == nil or object.Type ~= typeName",
+                "line": 487,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "function",
+            "name": "CheckTypeOrNil",
+            "line": 492,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "object ~= nil",
+                "line": 493,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "errorDepth",
+                    "instruction_type": "Assign",
+                    "line": 494,
+                    "code": "errorDepth = errorDepth or 3",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "function",
+            "name": "CheckTypeOneOf",
+            "line": 501,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "type(object) ~= 'table'",
+                "line": 502,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "function",
+            "name": "CheckTypeOneOfOrNil",
+            "line": 516,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "object ~= nil",
+                "line": 517,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "type(object) ~= 'table'",
+                    "line": 518,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 532,
+        "children": [
+          {
+            "node_type": "function",
+            "name": "CheckSelf",
+            "line": 532,
+            "children": []
+          },
+          {
+            "node_type": "function",
+            "name": "CheckNotSelf",
+            "line": 535,
+            "children": []
+          },
+          {
+            "node_type": "function",
+            "name": "CheckType",
+            "line": 538,
+            "children": []
+          },
+          {
+            "node_type": "function",
+            "name": "CheckTypeOrNil",
+            "line": 541,
+            "children": []
+          },
+          {
+            "node_type": "function",
+            "name": "CheckTypeOneOf",
+            "line": 544,
+            "children": []
+          },
+          {
+            "node_type": "function",
+            "name": "CheckTypeOneOfOrNil",
+            "line": 547,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "typeInfo",
+    "instruction_type": "Assign",
+    "line": 557,
+    "code": "typeInfo = nil",
+    "value": 1
+  },
+  {
+    "node_type": "function",
+    "name": "GetTypeInfo",
+    "line": 559,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "not typeInfo",
+        "line": 560,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "ti",
+            "instruction_type": "LocalAssign",
+            "line": 561,
+            "code": "local ti = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "featureTypeCodes",
+            "instruction_type": "LocalAssign",
+            "line": 563,
+            "code": "local featureTypeCodes = HostGetFeatureTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "informationTypeCodes",
+            "instruction_type": "LocalAssign",
+            "line": 564,
+            "code": "local informationTypeCodes = HostGetInformationTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "simpleAttributeCodes",
+            "instruction_type": "LocalAssign",
+            "line": 565,
+            "code": "local simpleAttributeCodes = HostGetSimpleAttributeTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "complexAttributeCodes",
+            "instruction_type": "LocalAssign",
+            "line": 566,
+            "code": "local complexAttributeCodes = HostGetComplexAttributeTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "roleCodes",
+            "instruction_type": "LocalAssign",
+            "line": 567,
+            "code": "local roleCodes = HostGetRoleTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "informationAssociationCodes",
+            "instruction_type": "LocalAssign",
+            "line": 568,
+            "code": "local informationAssociationCodes = HostGetInformationAssociationTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "featureAssociationCodes",
+            "instruction_type": "LocalAssign",
+            "line": 569,
+            "code": "local featureAssociationCodes = HostGetFeatureAssociationTypeCodes()",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "FeatureTypeInfos",
+            "instruction_type": "Assign",
+            "line": 573,
+            "code": "ti.FeatureTypeInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "InformationTypeInfos",
+            "instruction_type": "Assign",
+            "line": 579,
+            "code": "ti.InformationTypeInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "SimpleAttributeInfos",
+            "instruction_type": "Assign",
+            "line": 585,
+            "code": "ti.SimpleAttributeInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "ComplexAttributeInfos",
+            "instruction_type": "Assign",
+            "line": 591,
+            "code": "ti.ComplexAttributeInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "RoleInfos",
+            "instruction_type": "Assign",
+            "line": 597,
+            "code": "ti.RoleInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "InformationAssociationInfos",
+            "instruction_type": "Assign",
+            "line": 603,
+            "code": "ti.InformationAssociationInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "FeatureAssociationInfos",
+            "instruction_type": "Assign",
+            "line": 609,
+            "code": "ti.FeatureAssociationInfos = {\n}",
+            "value": {}
+          },
+          {
+            "node_type": "var",
+            "name": "typeInfo",
+            "instruction_type": "Assign",
+            "line": 615,
+            "code": "typeInfo = ti",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "GetFeatureTypeInfo",
+    "line": 621,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "typeInfo",
+        "instruction_type": "LocalAssign",
+        "line": 622,
+        "code": "local typeInfo = GetTypeInfo()",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.FeatureTypeInfos[code]",
+        "line": 624,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.FeatureTypeInfos[code].TypeInfo",
+        "line": 630,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "TypeInfo",
+            "instruction_type": "Assign",
+            "line": 632,
+            "code": "typeInfo.FeatureTypeInfos[code].TypeInfo = HostGetFeatureTypeInfo(code)",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "GetInformationTypeInfo",
+    "line": 639,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "typeInfo",
+        "instruction_type": "LocalAssign",
+        "line": 640,
+        "code": "local typeInfo = GetTypeInfo()",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.InformationTypeInfos[code]",
+        "line": 642,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.InformationTypeInfos[code].TypeInfo",
+        "line": 646,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "TypeInfo",
+            "instruction_type": "Assign",
+            "line": 648,
+            "code": "typeInfo.InformationTypeInfos[code].TypeInfo = HostGetInformationTypeInfo(code)",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "GetSimpleAttributeTypeInfo",
+    "line": 655,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "typeInfo",
+        "instruction_type": "LocalAssign",
+        "line": 656,
+        "code": "local typeInfo = GetTypeInfo()",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.SimpleAttributeInfos[code]",
+        "line": 658,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.SimpleAttributeInfos[code].TypeInfo",
+        "line": 662,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "TypeInfo",
+            "instruction_type": "Assign",
+            "line": 664,
+            "code": "typeInfo.SimpleAttributeInfos[code].TypeInfo = HostGetSimpleAttributeTypeInfo(code)",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "GetComplexAttributeTypeInfo",
+    "line": 671,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "typeInfo",
+        "instruction_type": "LocalAssign",
+        "line": 672,
+        "code": "local typeInfo = GetTypeInfo()",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.ComplexAttributeInfos[code]",
+        "line": 674,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "not typeInfo.ComplexAttributeInfos[code].TypeInfo",
+        "line": 678,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "TypeInfo",
+            "instruction_type": "Assign",
+            "line": 680,
+            "code": "typeInfo.ComplexAttributeInfos[code].TypeInfo = HostGetComplexAttributeTypeInfo(code)",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "unknownAttributeValueString",
+    "instruction_type": "Assign",
+    "line": 687,
+    "code": "unknownAttributeValueString = '13BD40516CF742E886D5B4125DBB89742A043D0050E44B568CBB1FDDA8B464FF'",
+    "value": "13BD40516CF742E886D5B4125DBB89742A043D0050E44B568CBB1FDDA8B464FF"
+  },
+  {
+    "node_type": "function",
+    "name": "contains",
+    "line": 693,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "type(value) == 'table'",
+        "line": 700,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "safeConcat",
+    "line": 714,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "t == nil",
+        "line": 715,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "Debug",
+    "instruction_type": "Assign",
+    "line": 726,
+    "code": "Debug = {\n}",
+    "value": {}
+  },
+  {
+    "node_type": "function",
+    "name": "Debug.Break",
+    "line": 728,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "HostDebuggerEntry",
+        "line": 729,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "Debug.Trace",
+    "line": 734,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "HostDebuggerEntry",
+        "line": 735,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "Debug.StartPerformance",
+    "line": 740,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "HostDebuggerEntry",
+        "line": 741,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "Debug.StopPerformance",
+    "line": 746,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "HostDebuggerEntry",
+        "line": 747,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "Debug.ResetPerformance",
+    "line": 752,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "HostDebuggerEntry",
+        "line": 753,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "Debug.FirstChanceError",
+    "line": 758,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "HostDebuggerEntry",
+        "line": 759,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "var",
+    "name": "scaledDecimalZero",
+    "instruction_type": "Assign",
+    "line": 768,
+    "code": "scaledDecimalZero = CreateScaledDecimal(0, 0)",
+    "value": 1
+  },
+  {
+    "node_type": "var",
+    "name": "scaledDecimalOne",
+    "instruction_type": "Assign",
+    "line": 769,
+    "code": "scaledDecimalOne = CreateScaledDecimal(1, 0)",
+    "value": 1
+  },
+  {
+    "node_type": "function",
+    "name": "RunUnitTests",
+    "line": 775,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "scaledDecimals",
+        "instruction_type": "LocalAssign",
+        "line": 776,
+        "code": "local scaledDecimals = {\n    '.01',\n    '00.001',\n    '42',\n    '1.0',\n    '1',\n    '.12010',\n    '20.13',\n    '0.103',\n    '0.11',\n    '.1',\n    '0.1',\n    '0.10',\n    '00.1',\n    '-23',\n    '-0.1',\n    '-2.2',\n    '-.1',\n    '-.0010',\n    '-1.002',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "scaledDecimalsAnswers",
+        "instruction_type": "LocalAssign",
+        "line": 777,
+        "code": "local scaledDecimalsAnswers = {\n    '0.01',\n    '0.001',\n    '42',\n    '1.0',\n    '1',\n    '0.12010',\n    '20.13',\n    '0.103',\n    '0.11',\n    '0.1',\n    '0.1',\n    '0.10',\n    '0.1',\n    '-23',\n    '-0.1',\n    '-2.2',\n    '-0.1',\n    '-0.0010',\n    '-1.002',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "wholePartSigns",
+        "instruction_type": "LocalAssign",
+        "line": 779,
+        "code": "local wholePartSigns = {\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '+',\n    '-',\n    '-',\n    '-',\n    '-',\n    '-',\n    '-',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "wholeParts",
+        "instruction_type": "LocalAssign",
+        "line": 780,
+        "code": "local wholeParts = {\n    '0',\n    '0',\n    '42',\n    '1',\n    '1',\n    '0',\n    '20',\n    '0',\n    '0',\n    '0',\n    '0',\n    '0',\n    '0',\n    '23',\n    '0',\n    '2',\n    '0',\n    '0',\n    '1',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "fractionalParts",
+        "instruction_type": "LocalAssign",
+        "line": 781,
+        "code": "local fractionalParts = {\n    '01',\n    '001',\n    '',\n    '0',\n    '',\n    '12010',\n    '13',\n    '103',\n    '11',\n    '1',\n    '1',\n    '10',\n    '1',\n    '',\n    '1',\n    '2',\n    '1',\n    '0010',\n    '002',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "operand1",
+        "instruction_type": "LocalAssign",
+        "line": 799,
+        "code": "local operand1 = {\n    '1',\n    '1.0',\n    '-1',\n    '0.002',\n    '0',\n    '3',\n    '-6',\n    '-7',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "operand2",
+        "instruction_type": "LocalAssign",
+        "line": 800,
+        "code": "local operand2 = {\n    '2',\n    '2',\n    '2.2',\n    '3',\n    '-1',\n    '7',\n    '5',\n    '-8',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "addTestsAnswers",
+        "instruction_type": "LocalAssign",
+        "line": 801,
+        "code": "local addTestsAnswers = {\n    '3',\n    '3',\n    '1.2',\n    '3.002',\n    '-1',\n    '10',\n    '-1',\n    '-15',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "mulTestsAnswers",
+        "instruction_type": "LocalAssign",
+        "line": 802,
+        "code": "local mulTestsAnswers = {\n    '2',\n    '2',\n    '-2.2',\n    '0.006',\n    '0',\n    '21',\n    '-30',\n    '56',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "inputStrings",
+        "instruction_type": "LocalAssign",
+        "line": 825,
+        "code": "local inputStrings = {\n    'Hello, World!',\n    'Foo:bar',\n    'This & that',\n    'Emdedded &c colon code',\n    'Double ampersand &&',\n    'Mish mash: &e &&& &m, blah;',\n    'Normal Text',\n}",
+        "value": {}
+      },
+      {
+        "node_type": "var",
+        "name": "encodedStrings",
+        "instruction_type": "LocalAssign",
+        "line": 826,
+        "code": "local encodedStrings = {\n    'Hello&m World!',\n    'Foo&cbar',\n    'This &a that',\n    'Emdedded &ac colon code',\n    'Double ampersand &a&a',\n    'Mish mash&c &ae &a&a&a &am&m blah&s',\n    'Normal Text',\n}",
+        "value": {}
+      }
+    ]
+  }
+]

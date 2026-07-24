@@ -1,0 +1,15 @@
+[
+  {
+    "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:DIAMOND1')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "DIAMOND1"
+    },
+    "has_var": false,
+    "conditions": [
+      "Shallow"
+    ]
+  }
+]

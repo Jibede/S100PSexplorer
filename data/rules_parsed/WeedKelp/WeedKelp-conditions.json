@@ -1,0 +1,43 @@
+[
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WEDKLP03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WEDKLP03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WEDKLP03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WEDKLP03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHGRF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

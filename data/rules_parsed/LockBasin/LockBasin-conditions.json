@@ -1,0 +1,36 @@
+[
+  {
+    "node_type": "hit",
+    "line": 11,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "featureName or HasHorizontalClearance(feature)"
+    ]
+  }
+]

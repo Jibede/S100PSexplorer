@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'TRFCD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 1.28,
+      "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

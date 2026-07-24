@@ -1,0 +1,19 @@
+{
+  "intervalLength": "9.5",
+  "pen": {
+    "width": "0.32",
+    "color": "CHMGD"
+  },
+  "dash": [
+    {
+      "start": "3.6",
+      "length": "4"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMPIPSL1",
+      "position": "7.6"
+    }
+  ]
+}

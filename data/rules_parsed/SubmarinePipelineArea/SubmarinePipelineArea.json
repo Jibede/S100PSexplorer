@@ -1,0 +1,318 @@
+[
+  {
+    "node_type": "function",
+    "name": "SubmarinePipelineArea",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 11,
+            "code": "viewingGroup = 34030",
+            "value": 34030
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 15,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 17,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:CHINFO07')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "CHINFO07"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(2, feature.categoryOfPipelinePipe)",
+            "line": 19,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 20,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 22,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 23,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.64,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(3, feature.categoryOfPipelinePipe)",
+            "line": 26,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 27,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 29,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 30,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.64,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(3, feature.product)",
+            "line": 33,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 34,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 36,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 37,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.64,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 41,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 41,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 43,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 44,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.64,
+                  "color": "CHMGD"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 48,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(2, feature.categoryOfPipelinePipe)",
+            "line": 49,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 50,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 52,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(3, feature.categoryOfPipelinePipe)",
+            "line": 55,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 56,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 58,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(3, feature.product)",
+            "line": 61,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 62,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 64,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 68,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 68,
+                "code": "viewingGroup = 34030",
+                "value": 34030
+              },
+              {
+                "node_type": "hit",
+                "line": 70,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "INFARE51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 75,
+        "children": []
+      }
+    ]
+  }
+]

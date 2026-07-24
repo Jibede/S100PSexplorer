@@ -1,0 +1,1141 @@
+{
+  "ACHARE02": [
+    "AnchorageArea",
+    "Obstruction"
+  ],
+  "ACHARE03": [
+    "AnchorageArea"
+  ],
+  "ACHARE51": [
+    "AnchorageArea"
+  ],
+  "ACHBRT07": [
+    "AnchorBerth"
+  ],
+  "ACHRES51": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "ACHRES61": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "ACHRES71": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "AIRARE02": [
+    "AirportAirfield"
+  ],
+  "ANCBDNG2": [
+    "AnchorBerth"
+  ],
+  "BCNCAR01": [
+    "CardinalBeacon"
+  ],
+  "BCNCAR02": [
+    "CardinalBeacon"
+  ],
+  "BCNCAR03": [
+    "CardinalBeacon"
+  ],
+  "BCNCAR04": [
+    "CardinalBeacon"
+  ],
+  "BCNDEF13": [
+    "CardinalBeacon",
+    "LateralBeacon"
+  ],
+  "BCNGEN01": [
+    "CardinalBeacon",
+    "IsolatedDangerBeacon",
+    "LateralBeacon",
+    "SafeWaterBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNGEN03": [
+    "CardinalBeacon",
+    "IsolatedDangerBeacon",
+    "LateralBeacon",
+    "SafeWaterBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNGEN10": [
+    "LateralBeacon"
+  ],
+  "BCNGEN11": [
+    "LateralBeacon"
+  ],
+  "BCNGEN12": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNGEN13": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNGEN22": [
+    "CardinalBeacon"
+  ],
+  "BCNGEN23": [
+    "CardinalBeacon"
+  ],
+  "BCNGEN24": [
+    "CardinalBeacon"
+  ],
+  "BCNGEN25": [
+    "CardinalBeacon"
+  ],
+  "BCNGEN30": [
+    "LateralBeacon"
+  ],
+  "BCNGEN31": [
+    "LateralBeacon"
+  ],
+  "BCNGEN40": [
+    "IsolatedDangerBeacon"
+  ],
+  "BCNGEN50": [
+    "SafeWaterBeacon"
+  ],
+  "BCNISD21": [
+    "IsolatedDangerBeacon"
+  ],
+  "BCNLAT15": [
+    "LateralBeacon"
+  ],
+  "BCNLAT16": [
+    "LateralBeacon"
+  ],
+  "BCNLAT21": [
+    "LateralBeacon"
+  ],
+  "BCNLAT22": [
+    "LateralBeacon"
+  ],
+  "BCNLTC01": [
+    "CardinalBeacon",
+    "IsolatedDangerBeacon",
+    "LateralBeacon",
+    "SafeWaterBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNSAW13": [
+    "SafeWaterBeacon"
+  ],
+  "BCNSAW21": [
+    "SafeWaterBeacon"
+  ],
+  "BCNSPP13": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNSPP21": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNSTK02": [
+    "CardinalBeacon",
+    "IsolatedDangerBeacon",
+    "LateralBeacon",
+    "SafeWaterBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNTOW01": [
+    "CardinalBeacon",
+    "IsolatedDangerBeacon",
+    "LateralBeacon",
+    "SafeWaterBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNTOW10": [
+    "LateralBeacon"
+  ],
+  "BCNTOW11": [
+    "LateralBeacon"
+  ],
+  "BCNTOW12": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNTOW13": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "BCNTOW22": [
+    "CardinalBeacon"
+  ],
+  "BCNTOW23": [
+    "CardinalBeacon"
+  ],
+  "BCNTOW24": [
+    "CardinalBeacon"
+  ],
+  "BCNTOW25": [
+    "CardinalBeacon"
+  ],
+  "BCNTOW30": [
+    "LateralBeacon"
+  ],
+  "BCNTOW31": [
+    "LateralBeacon"
+  ],
+  "BCNTOW40": [
+    "IsolatedDangerBeacon"
+  ],
+  "BCNTOW50": [
+    "SafeWaterBeacon"
+  ],
+  "BOYBAR01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SafeWaterBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYBAR10": [
+    "LateralBuoy"
+  ],
+  "BOYBAR11": [
+    "LateralBuoy"
+  ],
+  "BOYBAR12": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYCAN01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYCAN10": [
+    "LateralBuoy"
+  ],
+  "BOYCAN11": [
+    "LateralBuoy"
+  ],
+  "BOYCAN12": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYCAN30": [
+    "LateralBuoy"
+  ],
+  "BOYCAN31": [
+    "LateralBuoy"
+  ],
+  "BOYCAR01": [
+    "CardinalBuoy"
+  ],
+  "BOYCAR02": [
+    "CardinalBuoy"
+  ],
+  "BOYCAR03": [
+    "CardinalBuoy"
+  ],
+  "BOYCAR04": [
+    "CardinalBuoy"
+  ],
+  "BOYCON01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYCON10": [
+    "LateralBuoy"
+  ],
+  "BOYCON11": [
+    "LateralBuoy"
+  ],
+  "BOYCON12": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYCON30": [
+    "LateralBuoy"
+  ],
+  "BOYCON31": [
+    "LateralBuoy"
+  ],
+  "BOYDEF03": [
+    "CardinalBuoy",
+    "LateralBuoy"
+  ],
+  "BOYGEN03": [
+    "CardinalBuoy",
+    "EmergencyWreckMarkingBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SafeWaterBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYINB01": [
+    "InstallationBuoy"
+  ],
+  "BOYISD12": [
+    "IsolatedDangerBuoy"
+  ],
+  "BOYLAT13": [
+    "LateralBuoy"
+  ],
+  "BOYLAT14": [
+    "LateralBuoy"
+  ],
+  "BOYLAT23": [
+    "LateralBuoy"
+  ],
+  "BOYLAT24": [
+    "LateralBuoy"
+  ],
+  "BOYMOR01": [
+    "MooringBuoy"
+  ],
+  "BOYMOR02": [
+    "MooringArea"
+  ],
+  "BOYMOR03": [
+    "MooringBuoy"
+  ],
+  "BOYMOR11": [
+    "InstallationBuoy",
+    "MooringBuoy"
+  ],
+  "BOYMOR51": [
+    "MooringArea"
+  ],
+  "BOYNDM02": [
+    "EmergencyWreckMarkingBuoy"
+  ],
+  "BOYPIL01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SafeWaterBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYPIL10": [
+    "LateralBuoy"
+  ],
+  "BOYPIL11": [
+    "LateralBuoy"
+  ],
+  "BOYPIL12": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYPIL22": [
+    "CardinalBuoy"
+  ],
+  "BOYPIL23": [
+    "CardinalBuoy"
+  ],
+  "BOYPIL24": [
+    "CardinalBuoy"
+  ],
+  "BOYPIL25": [
+    "CardinalBuoy"
+  ],
+  "BOYPIL30": [
+    "LateralBuoy"
+  ],
+  "BOYPIL31": [
+    "LateralBuoy"
+  ],
+  "BOYPIL40": [
+    "IsolatedDangerBuoy"
+  ],
+  "BOYPIL50": [
+    "SafeWaterBuoy"
+  ],
+  "BOYPIL60": [
+    "EmergencyWreckMarkingBuoy"
+  ],
+  "BOYSAW12": [
+    "SafeWaterBuoy"
+  ],
+  "BOYSPH01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SafeWaterBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPH10": [
+    "LateralBuoy"
+  ],
+  "BOYSPH11": [
+    "LateralBuoy"
+  ],
+  "BOYSPH12": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPH50": [
+    "SafeWaterBuoy"
+  ],
+  "BOYSPH60": [
+    "EmergencyWreckMarkingBuoy"
+  ],
+  "BOYSPP11": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPP15": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPP25": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPP35": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPR01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SafeWaterBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPR10": [
+    "LateralBuoy"
+  ],
+  "BOYSPR11": [
+    "LateralBuoy"
+  ],
+  "BOYSPR12": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSPR22": [
+    "CardinalBuoy"
+  ],
+  "BOYSPR23": [
+    "CardinalBuoy"
+  ],
+  "BOYSPR24": [
+    "CardinalBuoy"
+  ],
+  "BOYSPR25": [
+    "CardinalBuoy"
+  ],
+  "BOYSPR30": [
+    "LateralBuoy"
+  ],
+  "BOYSPR31": [
+    "LateralBuoy"
+  ],
+  "BOYSPR40": [
+    "IsolatedDangerBuoy"
+  ],
+  "BOYSPR50": [
+    "SafeWaterBuoy"
+  ],
+  "BOYSPR60": [
+    "EmergencyWreckMarkingBuoy"
+  ],
+  "BOYSUP01": [
+    "CardinalBuoy",
+    "IsolatedDangerBuoy",
+    "LateralBuoy",
+    "SafeWaterBuoy",
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSUP02": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BOYSUP03": [
+    "SpecialPurposeGeneralBuoy"
+  ],
+  "BRIDGE01": [
+    "Bridge",
+    "SpanOpening"
+  ],
+  "BRTHDNG1": [
+    "Berth"
+  ],
+  "BRTHNO01": [
+    "Berth"
+  ],
+  "BUAARE02": [
+    "BuiltUpArea"
+  ],
+  "BUIREL01": [
+    "Building",
+    "Landmark"
+  ],
+  "BUIREL04": [
+    "Building"
+  ],
+  "BUIREL05": [
+    "Building"
+  ],
+  "BUIREL13": [
+    "Building",
+    "Landmark"
+  ],
+  "BUIREL14": [
+    "Building"
+  ],
+  "BUIREL15": [
+    "Building",
+    "Landmark"
+  ],
+  "BUISGL01": [
+    "Building"
+  ],
+  "BUISGL11": [
+    "Building"
+  ],
+  "CAIRNS01": [
+    "Landmark",
+    "LateralBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "CAIRNS11": [
+    "Landmark",
+    "LateralBeacon",
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "CBLARE51": [
+    "CableArea"
+  ],
+  "CGUSTA02": [
+    "CoastGuardStation"
+  ],
+  "CHIMNY01": [
+    "Landmark"
+  ],
+  "CHIMNY11": [
+    "Landmark"
+  ],
+  "CHINFO06": [
+    "CautionArea",
+    "MilitaryPracticeArea",
+    "SeaplaneLandingArea"
+  ],
+  "CHINFO07": [
+    "CargoTranshipmentArea",
+    "DumpingGround",
+    "HarbourFacility",
+    "SubmarinePipelineArea"
+  ],
+  "CHKPNT01": [
+    "Checkpoint"
+  ],
+  "CHRVDEL1": [
+    "UpdateInformation"
+  ],
+  "CHRVID01": [
+    "UpdateInformation"
+  ],
+  "CRANES01": [
+    "Crane"
+  ],
+  "CRANES03": [
+    "Crane"
+  ],
+  "CTNARE51": [
+    "CautionArea",
+    "TrafficSeparationSchemeLanePart"
+  ],
+  "CTYARE51": [
+    "MilitaryPracticeArea",
+    "OffshoreProductionArea",
+    "RESARE04",
+    "RESCSP03",
+    "SeaplaneLandingArea",
+    "SubmarineTransitLane"
+  ],
+  "CTYARE71": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "CURDEF01": [
+    "CurrentNonGravitational",
+    "TidalStreamFloodEbb"
+  ],
+  "CURENT01": [
+    "CurrentNonGravitational",
+    "TidalStreamFloodEbb"
+  ],
+  "DANGER01": [
+    "OBSTRN07",
+    "WRECKS05"
+  ],
+  "DANGER02": [
+    "OBSTRN07",
+    "WRECKS05"
+  ],
+  "DANGER03": [
+    "OBSTRN07"
+  ],
+  "DAYSQR01": [
+    "Daymark"
+  ],
+  "DAYSQR21": [
+    "Daymark"
+  ],
+  "DAYTRI01": [
+    "Daymark"
+  ],
+  "DAYTRI05": [
+    "Daymark"
+  ],
+  "DAYTRI21": [
+    "Daymark"
+  ],
+  "DAYTRI25": [
+    "Daymark"
+  ],
+  "DISMAR06": [
+    "DistanceMark"
+  ],
+  "DISMAR07": [
+    "DistanceMark"
+  ],
+  "DOMES001": [
+    "Landmark"
+  ],
+  "DOMES011": [
+    "Landmark"
+  ],
+  "DRFSTA02": [
+    "RadioStation"
+  ],
+  "DSCWTR51": [
+    "DiscolouredWater"
+  ],
+  "DSHAER01": [
+    "Landmark"
+  ],
+  "DSHAER11": [
+    "Landmark"
+  ],
+  "DWRTPT51": [
+    "DeepWaterRoutePart"
+  ],
+  "DWRUTE51": [
+    "DeepWaterRoutePart"
+  ],
+  "EBBSTR01": [
+    "TidalStreamFloodEbb"
+  ],
+  "EMDSCWTR": [
+    "DiscolouredWater"
+  ],
+  "ENTRES51": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "ENTRES61": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "ENTRES71": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "ESSARE01": [
+    "RestrictedArea"
+  ],
+  "FAIRWY51": [
+    "Fairway"
+  ],
+  "FAIRWY52": [
+    "Fairway"
+  ],
+  "FERWHL03": [
+    "Landmark"
+  ],
+  "FERWHL04": [
+    "Landmark"
+  ],
+  "FLASTK01": [
+    "Landmark",
+    "ProductionStorageArea"
+  ],
+  "FLASTK11": [
+    "Landmark",
+    "ProductionStorageArea"
+  ],
+  "FLDSTR01": [
+    "TidalStreamFloodEbb"
+  ],
+  "FLGSTF01": [
+    "Landmark"
+  ],
+  "FLGSTF02": [
+    "Landmark"
+  ],
+  "FLTHAZ02": [
+    "LogPond",
+    "Obstruction"
+  ],
+  "FOGSIG01": [
+    "FogSignal"
+  ],
+  "FORSTC01": [
+    "FortifiedStructure"
+  ],
+  "FORSTC11": [
+    "FortifiedStructure"
+  ],
+  "FOULGD51": [
+    "FoulGround"
+  ],
+  "FOULGND1": [
+    "FoulGround",
+    "Wreck"
+  ],
+  "FRYARE51": [
+    "FerryRoute"
+  ],
+  "FRYARE52": [
+    "FerryRoute"
+  ],
+  "FSHFAC02": [
+    "FishingFacility"
+  ],
+  "FSHFAC03": [
+    "FishingFacility"
+  ],
+  "FSHGRD01": [
+    "FishingGround"
+  ],
+  "FSHHAV01": [
+    "FishingFacility"
+  ],
+  "FSHRES51": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "FSHRES61": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "FSHRES71": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "GATCON03": [
+    "Gate"
+  ],
+  "GATCON04": [
+    "Gate"
+  ],
+  "HELIPD02": [
+    "AirportAirfield",
+    "Helipad"
+  ],
+  "HILTOP01": [
+    "SlopingGround"
+  ],
+  "HILTOP11": [
+    "SlopingGround"
+  ],
+  "HRBFAC09": [
+    "HarbourFacility"
+  ],
+  "HULKES01": [
+    "Hulk"
+  ],
+  "INFARE01": [
+    "InformationArea"
+  ],
+  "INFARE51": [
+    "CargoTranshipmentArea",
+    "DumpingGround",
+    "InformationArea",
+    "RESARE04",
+    "RESCSP03",
+    "SubmarinePipelineArea"
+  ],
+  "ITZARE51": [
+    "InshoreTrafficZone"
+  ],
+  "LIGHTS11": [
+    "LightFlareAndDescription"
+  ],
+  "LIGHTS12": [
+    "LightFlareAndDescription"
+  ],
+  "LIGHTS13": [
+    "LightFlareAndDescription"
+  ],
+  "LIGHTS81": [
+    "LightAllAround"
+  ],
+  "LIGHTS82": [
+    "LightAllAround"
+  ],
+  "LITDEF11": [
+    "LightFlareAndDescription"
+  ],
+  "LITFLT01": [
+    "LightFloat"
+  ],
+  "LITFLT02": [
+    "LightFloat"
+  ],
+  "LITVES01": [
+    "LightVessel"
+  ],
+  "LITVES02": [
+    "LightVessel"
+  ],
+  "LNDARE01": [
+    "LandArea"
+  ],
+  "LOCMAG01": [
+    "LocalMagneticAnomaly"
+  ],
+  "LOCMAG51": [
+    "LocalMagneticAnomaly"
+  ],
+  "MAGVAR01": [
+    "MagneticVariation"
+  ],
+  "MAGVAR51": [
+    "MagneticVariation"
+  ],
+  "MARCUL02": [
+    "MarineFarmCulture"
+  ],
+  "MARSHE01": [
+    "Vegetation"
+  ],
+  "MONUMT02": [
+    "Landmark"
+  ],
+  "MONUMT12": [
+    "Landmark"
+  ],
+  "MORFAC03": [
+    "Dolphin",
+    "ShorelineConstruction"
+  ],
+  "MORFAC04": [
+    "Dolphin"
+  ],
+  "MSTCON04": [
+    "Landmark"
+  ],
+  "MSTCON14": [
+    "Landmark"
+  ],
+  "NOTBRD11": [
+    "SpecialPurposeGeneralBeacon"
+  ],
+  "OBSTRN01": [
+    "OBSTRN07"
+  ],
+  "OBSTRN03": [
+    "OBSTRN07"
+  ],
+  "OBSTRN11": [
+    "OBSTRN07"
+  ],
+  "OFSPLF01": [
+    "OffshorePlatform"
+  ],
+  "PILBARE51": [
+    "PilotBoardingPlace"
+  ],
+  "PILBOP02": [
+    "PilotBoardingPlace"
+  ],
+  "PILPNT02": [
+    "Bollard",
+    "Pile"
+  ],
+  "POSGEN01": [
+    "Landmark",
+    "RadarStation"
+  ],
+  "POSGEN03": [
+    "Building",
+    "Landmark",
+    "PylonBridgeSupport"
+  ],
+  "POSGEN04": [
+    "Checkpoint",
+    "LandElevation",
+    "LandRegion"
+  ],
+  "POSGEN05": [
+    "Landmark"
+  ],
+  "PRCARE12": [
+    "PrecautionaryArea"
+  ],
+  "PRCARE51": [
+    "PrecautionaryArea"
+  ],
+  "PRDINS02": [
+    "ProductionStorageArea"
+  ],
+  "PRICKE03": [
+    "LateralBeacon"
+  ],
+  "PRICKE04": [
+    "LateralBeacon"
+  ],
+  "PSSARE01": [
+    "RestrictedArea"
+  ],
+  "QUARRY01": [
+    "ProductionStorageArea"
+  ],
+  "QUESMRK1": [
+    "Default"
+  ],
+  "RACNSP01": [
+    "CableOverhead",
+    "Conveyor",
+    "PipelineOverhead"
+  ],
+  "RADRFL03": [
+    "RadarReflector"
+  ],
+  "RASCAN01": [
+    "Landmark"
+  ],
+  "RASCAN11": [
+    "Landmark"
+  ],
+  "RCLDEF01": [
+    "RadioCallingInPoint"
+  ],
+  "RCTLPT52": [
+    "RecommendedTrafficLanePart"
+  ],
+  "RDOCAL02": [
+    "RadioCallingInPoint"
+  ],
+  "RDOCAL03": [
+    "RadioCallingInPoint"
+  ],
+  "RDOSTA02": [
+    "RadarStation",
+    "RadioStation"
+  ],
+  "RENERG51": [
+    "OffshoreProductionArea"
+  ],
+  "RETRFL01": [
+    "Retroreflector"
+  ],
+  "RETRFL02": [
+    "Retroreflector"
+  ],
+  "RFNERY01": [
+    "ProductionStorageArea"
+  ],
+  "RFNERY11": [
+    "ProductionStorageArea"
+  ],
+  "ROLROL01": [
+    "HarbourFacility"
+  ],
+  "RSCSTA02": [
+    "RescueStation"
+  ],
+  "RSRDEF51": [
+    "RESARE04",
+    "RESCSP03"
+  ],
+  "RTLDEF51": [
+    "RecommendedTrafficLanePart"
+  ],
+  "RTPBCN02": [
+    "RadarTransponderBeacon"
+  ],
+  "SEAGRASS": [
+    "Seagrass"
+  ],
+  "SILBUI01": [
+    "SiloTank"
+  ],
+  "SILBUI11": [
+    "SiloTank"
+  ],
+  "SISTAT03": [
+    "SignalStationTraffic"
+  ],
+  "SISTAW03": [
+    "SignalStationWarning"
+  ],
+  "SMCFAC02": [
+    "HarbourFacility",
+    "SmallCraftFacility"
+  ],
+  "SNDWAV02": [
+    "Sandwave"
+  ],
+  "SPRING02": [
+    "Spring"
+  ],
+  "SWPARE51": [
+    "SweptArea"
+  ],
+  "TIDSTR01": [
+    "TidalStreamPanelData"
+  ],
+  "TMBYRD01": [
+    "ProductionStorageArea"
+  ],
+  "TNKCON02": [
+    "Building",
+    "ProductionStorageArea",
+    "SiloTank"
+  ],
+  "TNKCON12": [
+    "Building",
+    "ProductionStorageArea",
+    "SiloTank"
+  ],
+  "TNKFRM": [
+    "OffshoreProductionArea"
+  ],
+  "TNKFRM01": [
+    "ProductionStorageArea"
+  ],
+  "TNKFRM11": [
+    "ProductionStorageArea"
+  ],
+  "TORII01": [
+    "Landmark"
+  ],
+  "TORII11": [
+    "Landmark"
+  ],
+  "TOWERS01": [
+    "Landmark",
+    "SiloTank"
+  ],
+  "TOWERS02": [
+    "SiloTank"
+  ],
+  "TOWERS03": [
+    "Landmark",
+    "SiloTank"
+  ],
+  "TOWERS05": [
+    "Landmark"
+  ],
+  "TOWERS12": [
+    "SiloTank"
+  ],
+  "TOWERS15": [
+    "Landmark"
+  ],
+  "TREPNT04": [
+    "Vegetation"
+  ],
+  "TREPNT05": [
+    "Vegetation"
+  ],
+  "TSLDEF51": [
+    "DeepWaterRoutePart"
+  ],
+  "TSSCRS51": [
+    "TrafficSeparationSchemeCrossing"
+  ],
+  "TSSLPT51": [
+    "DeepWaterRoutePart",
+    "TrafficSeparationSchemeLanePart"
+  ],
+  "TSSRON51": [
+    "TrafficSeparationSchemeRoundabout"
+  ],
+  "TWRDEF51": [
+    "TwoWayRoutePart"
+  ],
+  "TWRTPT52": [
+    "TwoWayRoutePart"
+  ],
+  "TWRTPT53": [
+    "TwoWayRoutePart"
+  ],
+  "UWTROC03": [
+    "OBSTRN07"
+  ],
+  "UWTROC04": [
+    "OBSTRN07"
+  ],
+  "VATON00": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON01": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON02": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON03": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON04": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON05": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON06": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON07": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON08": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON09": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON10": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON11": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VATON12": [
+    "VirtualAISAidToNavigation"
+  ],
+  "VEGATN04P": [
+    "Obstruction"
+  ],
+  "WATFAL01": [
+    "Waterfall"
+  ],
+  "WATFAL02": [
+    "Waterfall"
+  ],
+  "WATTUR02": [
+    "WaterTurbulence"
+  ],
+  "WEDKLP03": [
+    "WeedKelp"
+  ],
+  "WIMCON01": [
+    "ProductionStorageArea",
+    "WindTurbine"
+  ],
+  "WIMCON11": [
+    "ProductionStorageArea",
+    "WindTurbine"
+  ],
+  "WNDFRM51": [
+    "ProductionStorageArea"
+  ],
+  "WNDFRM52": [
+    "OffshoreProductionArea"
+  ],
+  "WNDFRM61": [
+    "ProductionStorageArea"
+  ],
+  "WNDMIL02": [
+    "Landmark"
+  ],
+  "WNDMIL12": [
+    "Landmark"
+  ],
+  "WRECKS01": [
+    "WRECKS05"
+  ],
+  "WRECKS04": [
+    "WRECKS05"
+  ],
+  "WRECKS05": [
+    "WRECKS05"
+  ]
+}

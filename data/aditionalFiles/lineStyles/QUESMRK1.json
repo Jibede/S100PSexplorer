@@ -1,0 +1,27 @@
+{
+  "intervalLength": "17.5",
+  "pen": {
+    "width": "0.64",
+    "color": "CHMGD"
+  },
+  "dash": [
+    {
+      "start": "2",
+      "length": "3"
+    },
+    {
+      "start": "7",
+      "length": "3"
+    },
+    {
+      "start": "14.6",
+      "length": "3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMQUESM1",
+      "position": "11.4"
+    }
+  ]
+}

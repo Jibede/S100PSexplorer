@@ -1,0 +1,385 @@
+[
+  {
+    "node_type": "function",
+    "name": "LocalMagneticAnomaly",
+    "line": 7,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 8,
+        "code": "local viewingGroup = 31080",
+        "value": 31080
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 10,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 15,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 17,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:LOCMAG01')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "LOCMAG01"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 20,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 22,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.32,
+              "color": "CHMGF"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 24,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:LOCMAG01')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "LOCMAG01"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 25,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 27,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:LOCMAG51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "LOCMAG51"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 28,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.32,
+              "color": "CHMGD"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 30,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 32,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:LOCMAG51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "LOCMAG51"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 35,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "valueOfLocalMagneticAnomaly",
+        "instruction_type": "LocalAssign",
+        "line": 40,
+        "code": "local valueOfLocalMagneticAnomaly = feature.valueOfLocalMagneticAnomaly",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "magCount",
+        "instruction_type": "LocalAssign",
+        "line": 42,
+        "code": "local magCount = #valueOfLocalMagneticAnomaly",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 44,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 46,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,-22.64;FontSize:10;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "3.51",
+                "y": "-22.64"
+              },
+              "FontSize": "10",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 48,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 48,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "3.51",
+                "y": "3.51"
+              },
+              "FontSize": "10",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "magCount == 1",
+        "line": 51,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "valueOfLocalMagneticAnomaly[1].magneticAnomalyValue ~= nil",
+            "line": 52,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "valueOfLocalMagneticAnomaly[1].magneticAnomalyValue ~= unknownValue",
+                "line": 53,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "valueOfLocalMagneticAnomaly[1].referenceDirection ~= nil",
+                    "line": 54,
+                    "children": [
+                      {
+                        "node_type": "if",
+                        "condition": "valueOfLocalMagneticAnomaly[1].referenceDirection == 5",
+                        "line": 55,
+                        "children": []
+                      },
+                      {
+                        "node_type": "elseif",
+                        "condition": "valueOfLocalMagneticAnomaly[1].referenceDirection == 13",
+                        "line": 57,
+                        "children": []
+                      },
+                      {
+                        "node_type": "elseif",
+                        "condition": "valueOfLocalMagneticAnomaly[1].referenceDirection == unknownValue",
+                        "line": 59,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 63,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 67,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "magCount == 2",
+        "line": 71,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "valueOfLocalMagneticAnomaly[1].magneticAnomalyValue ~= nil and valueOfLocalMagneticAnomaly[2].magneticAnomalyValue ~= nil",
+            "line": 72,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "txtStr",
+                "instruction_type": "LocalAssign",
+                "line": 74,
+                "code": "local txtStr",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "dir1",
+                "instruction_type": "LocalAssign",
+                "line": 75,
+                "code": "local dir1 = ''",
+                "value": ""
+              },
+              {
+                "node_type": "var",
+                "name": "dir2",
+                "instruction_type": "LocalAssign",
+                "line": 76,
+                "code": "local dir2 = ''",
+                "value": ""
+              },
+              {
+                "node_type": "if",
+                "condition": "valueOfLocalMagneticAnomaly[1].magneticAnomalyValue ~= unknownValue and valueOfLocalMagneticAnomaly[2].magneticAnomalyValue ~= unknownValue",
+                "line": 78,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "(valueOfLocalMagneticAnomaly[1].referenceDirection ~= unknownValue and valueOfLocalMagneticAnomaly[2].referenceDirection ~= unknownValue) and (valueOfLocalMagneticAnomaly[1].referenceDirection ~= nil and valueOfLocalMagneticAnomaly[2].referenceDirection ~= nil)",
+                    "line": 79,
+                    "children": [
+                      {
+                        "node_type": "if",
+                        "condition": "valueOfLocalMagneticAnomaly[1].referenceDirection == 5",
+                        "line": 81,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "dir1",
+                            "instruction_type": "Assign",
+                            "line": 81,
+                            "code": "dir1 = 'E'",
+                            "value": "E"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "if",
+                        "condition": "valueOfLocalMagneticAnomaly[2].referenceDirection == 5",
+                        "line": 82,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "dir2",
+                            "instruction_type": "Assign",
+                            "line": 82,
+                            "code": "dir2 = 'E'",
+                            "value": "E"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "if",
+                        "condition": "valueOfLocalMagneticAnomaly[1].referenceDirection == 13",
+                        "line": 83,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "dir1",
+                            "instruction_type": "Assign",
+                            "line": 83,
+                            "code": "dir1 = 'W'",
+                            "value": "W"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "if",
+                        "condition": "valueOfLocalMagneticAnomaly[2].referenceDirection == 13",
+                        "line": 84,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "dir2",
+                            "instruction_type": "Assign",
+                            "line": 84,
+                            "code": "dir2 = 'W'",
+                            "value": "W"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "var",
+                        "name": "txtStr",
+                        "instruction_type": "Assign",
+                        "line": 86,
+                        "code": "txtStr = string.format('(%.0f\u00b0%s/%.0f\u00b0%s)', valueOfLocalMagneticAnomaly[1].magneticAnomalyValue:ToNumber(), dir1, valueOfLocalMagneticAnomaly[2].magneticAnomalyValue:ToNumber(), dir2)",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 90,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "txtStr",
+                        "instruction_type": "Assign",
+                        "line": 90,
+                        "code": "txtStr = string.format('(%.0f\u00b0%s/%.0f\u00b0%s)', valueOfLocalMagneticAnomaly[1].magneticAnomalyValue:ToNumber(), dir1, valueOfLocalMagneticAnomaly[2].magneticAnomalyValue:ToNumber(), dir2)",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "valueOfLocalMagneticAnomaly[1].magneticAnomalyValue == unknownValue or valueOfLocalMagneticAnomaly[2].magneticAnomalyValue == unknownValue",
+                "line": 94,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 99,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

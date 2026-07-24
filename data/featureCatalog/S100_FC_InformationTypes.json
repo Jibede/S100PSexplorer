@@ -1,0 +1,310 @@
+[
+  {
+    "is_abstract": "false",
+    "name": "Contact Details",
+    "definition": "Information on how to reach a person or organisation by postal, internet, telephone, telex and radio systems.",
+    "definition_reference": {
+      "scr_identifier": "27",
+      "definition_ref": "IHOREG"
+    },
+    "attribute_binding": [
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "callSign"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "communicationChannel"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "contactInstructions"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "fixedDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "frequencyPair"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "mMSICode"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "onlineResource"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "telecommunications"
+      }
+    ]
+  },
+  {
+    "is_abstract": "false",
+    "name": "Service Hours",
+    "definition": "The time when a service is available and known exceptions.",
+    "definition_reference": {
+      "scr_identifier": "28",
+      "definition_ref": "IHOREG"
+    },
+    "attribute_binding": [
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "fixedDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "periodicDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "1",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "scheduleByDayOfWeek"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "information"
+      }
+    ]
+  },
+  {
+    "is_abstract": "false",
+    "name": "Non-Standard Working Day",
+    "definition": "Days when many services are not available. Often days of festivity or recreation or public holidays when normal working hours are limited, especially a national or religious festival, etc.",
+    "definition_reference": {
+      "scr_identifier": "29",
+      "definition_ref": "IHOREG"
+    },
+    "attribute_binding": [
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "dateFixed"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "dateVariable"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "fixedDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "periodicDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "information"
+      }
+    ]
+  },
+  {
+    "is_abstract": "false",
+    "name": "Nautical Information",
+    "definition": "Nautical information about a related area or facility.",
+    "definition_reference": {
+      "scr_identifier": "30",
+      "definition_ref": "IHOREG"
+    },
+    "attribute_binding": [
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "fixedDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "periodicDateRange"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "information"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "pictorialRepresentation"
+      }
+    ]
+  },
+  {
+    "is_abstract": "false",
+    "name": "Spatial Quality",
+    "definition": "The indication of the quality of the locational information for features in a dataset.",
+    "definition_reference": {
+      "scr_identifier": "31",
+      "definition_ref": "IHOREG"
+    },
+    "attribute_binding": [
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "false",
+            "infinite": "false",
+            "value": "1"
+          }
+        },
+        "attribute": "qualityOfHorizontalMeasurement"
+      },
+      {
+        "multiplicity": {
+          "lower": "0",
+          "upper": {
+            "xsi:nil": "true",
+            "infinite": "true",
+            "value": null
+          }
+        },
+        "attribute": "spatialAccuracy"
+      }
+    ]
+  }
+]

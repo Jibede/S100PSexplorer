@@ -1,0 +1,130 @@
+[
+  {
+    "node_type": "function",
+    "name": "PrecautionaryArea",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 11,
+            "code": "viewingGroup = 25010",
+            "value": 25010
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 15,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 17,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:PRCARE12')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "PRCARE12"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 19,
+            "code": "viewingGroup = 25010",
+            "value": 25010
+          },
+          {
+            "node_type": "hit",
+            "line": 21,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:PRCARE51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "PRCARE51"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 22,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'TRFCD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.64,
+              "color": "TRFCD"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 25,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 26,
+            "code": "viewingGroup = 25010",
+            "value": 25010
+          },
+          {
+            "node_type": "hit",
+            "line": 28,
+            "code": "featurePortrayal:AddInstructions('AreaFillReference:TSSJCT02')",
+            "instruction_type": "area_fill",
+            "values": {
+              "AreaFillReference": "TSSJCT02"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 29,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:PRCARE51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "PRCARE51"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 33,
+        "children": []
+      }
+    ]
+  }
+]

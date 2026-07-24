@@ -1,0 +1,154 @@
+[
+  {
+    "node_type": "hit",
+    "line": 25,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": [
+        {
+          "value": "BRTHDNG1",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(7, categoryOfCargo)"
+          ]
+        },
+        {
+          "value": "BRTHNO01",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,0;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "0"
+      },
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 35,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.96, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.96,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 37,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": [
+        {
+          "value": "BRTHDNG1",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Curve",
+            "contains(7, categoryOfCargo)"
+          ]
+        },
+        {
+          "value": "BRTHNO01",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Curve"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 38,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": [
+        {
+          "value": "BRTHDNG1",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(7, categoryOfCargo)"
+          ]
+        },
+        {
+          "value": "BRTHNO01",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 45,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,0;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "0"
+      },
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

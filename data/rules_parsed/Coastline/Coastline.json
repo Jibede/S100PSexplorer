@@ -1,0 +1,206 @@
+[
+  {
+    "node_type": "function",
+    "name": "Coastline",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfCoastline == 6",
+            "line": 10,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 11,
+                "code": "viewingGroup = 12410",
+                "value": 12410
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 12,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 15,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 17,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CSTLN"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfCoastline == 7",
+            "line": 19,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 20,
+                "code": "viewingGroup = 12410",
+                "value": 12410
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 21,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 24,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 26,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CSTLN"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfCoastline == 8",
+            "line": 28,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 29,
+                "code": "viewingGroup = 12410",
+                "value": 12410
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 30,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 33,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 35,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CSTLN"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfCoastline == 10",
+            "line": 37,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 38,
+                "code": "viewingGroup = 12410",
+                "value": 12410
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 39,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 42,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 44,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CSTLN')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CSTLN"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 47,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 47,
+                "code": "viewingGroup = 12410",
+                "value": 12410
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 48,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 51,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 56,
+        "children": []
+      }
+    ]
+  }
+]

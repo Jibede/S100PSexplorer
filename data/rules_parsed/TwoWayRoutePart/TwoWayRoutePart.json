@@ -1,0 +1,344 @@
+[
+  {
+    "node_type": "function",
+    "name": "TwoWayRoutePart",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue and feature.trafficFlow == 1",
+            "line": 7,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 8,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 11,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT53')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT53"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 13,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'TRFCD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 1.28,
+                  "color": "TRFCD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.orientationValue and feature.trafficFlow == 2",
+            "line": 15,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 16,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 19,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT53')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT53"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 21,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'TRFCD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 1.28,
+                  "color": "TRFCD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.orientationValue and feature.trafficFlow == 3",
+            "line": 23,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 24,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 27,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT53')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT53"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 29,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'TRFCD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 1.28,
+                  "color": "TRFCD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.orientationValue and feature.trafficFlow == 4",
+            "line": 31,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 32,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 35,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT52')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT52"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 37,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'TRFCD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 1.28,
+                  "color": "TRFCD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 40,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 40,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 42,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRDEF51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRDEF51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 43,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 1.28, 'TRFCD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 1.28,
+                  "color": "TRFCD"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 46,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue and feature.trafficFlow == 1",
+            "line": 47,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 48,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 51,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT53')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT53"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.orientationValue and feature.trafficFlow == 2",
+            "line": 54,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 55,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 58,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT53')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT53"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.orientationValue and feature.trafficFlow == 3",
+            "line": 61,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 62,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 65,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT53')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT53"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.orientationValue and feature.trafficFlow == 4",
+            "line": 68,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 69,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 72,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRTPT52')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRTPT52"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 76,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 76,
+                "code": "viewingGroup = 25010",
+                "value": 25010
+              },
+              {
+                "node_type": "hit",
+                "line": 78,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TWRDEF51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TWRDEF51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 82,
+        "children": []
+      }
+    ]
+  }
+]

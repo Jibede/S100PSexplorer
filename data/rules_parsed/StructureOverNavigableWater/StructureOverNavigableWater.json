@@ -1,0 +1,94 @@
+[
+  {
+    "node_type": "function",
+    "name": "StructureOverNavigableWater",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup = 12210",
+        "value": 12210
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 8,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "tickness": 0.32,
+              "color": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 17,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "featureName",
+        "instruction_type": "LocalAssign",
+        "line": 21,
+        "code": "local featureName = GetFeatureName(feature, contextParameters)",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "featureName or HasClearance(feature)",
+        "line": 22,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 23,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "0",
+                "y": "0"
+              },
+              "TextAlignHorizontal": "Center",
+              "TextAlignVertical": "Center",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "if",
+            "condition": "featureName",
+            "line": 24,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 28,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

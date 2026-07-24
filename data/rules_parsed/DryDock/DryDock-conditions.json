@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 11,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

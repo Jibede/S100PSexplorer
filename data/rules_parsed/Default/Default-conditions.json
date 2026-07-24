@@ -1,0 +1,56 @@
+[
+  {
+    "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "QUESMRK1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point or feature.PrimitiveType == PrimitiveType.MultiPoint"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "QUESMRK1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 27,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "QUESMRK1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

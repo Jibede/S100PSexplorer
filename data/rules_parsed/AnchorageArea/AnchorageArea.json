@@ -1,0 +1,242 @@
+[
+  {
+    "node_type": "function",
+    "name": "AnchorageArea",
+    "line": 11,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 12,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "COA",
+        "instruction_type": "LocalAssign",
+        "line": 14,
+        "code": "local COA = feature.categoryOfAnchorage",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 20,
+            "code": "viewingGroup = 26220",
+            "value": 26220
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 21,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 24,
+            "children": []
+          },
+          {
+            "node_type": "if",
+            "condition": "contains(15, COA)",
+            "line": 27,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 28,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE03')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHARE03"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 30,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 30,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHARE02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.featureName[1] and feature.featureName[1].name",
+            "line": 33,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 34,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,-7.02;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "-3.51",
+                    "y": "-7.02"
+                  },
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 37,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(15, COA)",
+            "line": 38,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 41,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 41,
+                "code": "viewingGroup = 26220",
+                "value": 26220
+              },
+              {
+                "node_type": "hit",
+                "line": 43,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHARE51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 44,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGF')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.64,
+                  "color": "CHMGF"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.featureName[1] and feature.featureName[1].name",
+                "line": 47,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 48,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,-7.02;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "-3.51",
+                        "y": "-7.02"
+                      },
+                      "TextAlignHorizontal": "End",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 53,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(15, COA)",
+            "line": 54,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 57,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 57,
+                "code": "viewingGroup = 26220",
+                "value": 26220
+              },
+              {
+                "node_type": "hit",
+                "line": 59,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHARE51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.featureName[1] and feature.featureName[1].name",
+                "line": 62,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 63,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,7.02;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "-3.51",
+                        "y": "7.02"
+                      },
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 70,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "intervalLength": "11.4",
+  "pen": {
+    "width": "0.96",
+    "color": "CHCOR"
+  },
+  "symbol": [
+    {
+      "code": "EMCHRV01",
+      "position": "7"
+    }
+  ]
+}

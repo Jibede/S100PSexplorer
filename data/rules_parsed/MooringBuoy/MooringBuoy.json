@@ -1,0 +1,107 @@
+[
+  {
+    "node_type": "function",
+    "name": "MooringBuoy",
+    "line": 1,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 2,
+        "code": "local viewingGroup = 27010",
+        "value": 27010
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 4,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 6,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.SimplifiedSymbols",
+            "line": 12,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 13,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR11')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "BOYMOR11"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.buoyShape == 3",
+            "line": 14,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 15,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR01')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "BOYMOR01"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.buoyShape == 6",
+            "line": 16,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 17,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR03')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "BOYMOR03"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 19,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 19,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR11')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "BOYMOR11"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 23,
+        "children": []
+      }
+    ]
+  }
+]

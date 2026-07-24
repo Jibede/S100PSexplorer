@@ -1,0 +1,222 @@
+[
+  {
+    "node_type": "var",
+    "name": "categoryOfLights",
+    "instruction_type": "LocalAssign",
+    "line": 4,
+    "code": "local categoryOfLights = {\n    [1] = 'Dir ',\n    [5] = 'Aero ',\n    [7] = 'Fog Det Lt ',\n}",
+    "value": {}
+  },
+  {
+    "node_type": "var",
+    "name": "lightCharacteristics",
+    "instruction_type": "LocalAssign",
+    "line": 11,
+    "code": "local lightCharacteristics = {\n    [1] = {\n        [1] = 'F',\n    },\n    [2] = {\n        [1] = 'Fl',\n    },\n    [3] = {\n        [1] = 'LFl',\n    },\n    [4] = {\n        [1] = 'Q',\n    },\n    [5] = {\n        [1] = 'VQ',\n    },\n    [6] = {\n        [1] = 'UQ',\n    },\n    [7] = {\n        [1] = 'Iso',\n    },\n    [8] = {\n        [1] = 'Oc',\n    },\n    [9] = {\n        [1] = 'IQ',\n    },\n    [10] = {\n        [1] = 'IVQ',\n    },\n    [11] = {\n        [1] = 'IUQ',\n    },\n    [12] = {\n        [1] = 'Mo',\n    },\n    [13] = {\n        [1] = 'FFl',\n    },\n    [14] = {\n        [1] = 'Fl',\n        [2] = 'LFl',\n    },\n    [15] = {\n        [1] = 'OcFl',\n    },\n    [16] = {\n        [1] = 'FLFl',\n    },\n    [17] = {\n        [1] = 'AlOc',\n    },\n    [18] = {\n        [1] = 'AlLFl',\n    },\n    [19] = {\n        [1] = 'AlFl',\n    },\n    [20] = {\n        [1] = 'Al',\n    },\n    [25] = {\n        [1] = 'Q',\n        [2] = 'LFl',\n    },\n    [26] = {\n        [1] = 'VQ',\n        [2] = 'LFl',\n    },\n    [27] = {\n        [1] = 'UQ',\n        [2] = 'LFl',\n    },\n    [28] = {\n        [1] = 'Al',\n    },\n    [29] = {\n        [1] = 'AlF Fl',\n    },\n}",
+    "value": {}
+  },
+  {
+    "node_type": "var",
+    "name": "colours",
+    "instruction_type": "LocalAssign",
+    "line": 40,
+    "code": "local colours = {\n    [1] = 'W',\n    [2] = 'B',\n    [3] = 'R',\n    [4] = 'G',\n    [5] = 'Bu',\n    [6] = 'Y',\n    [7] = 'Gy',\n    [8] = 'Br',\n    [9] = 'Y',\n    [10] = 'Vi',\n    [11] = 'Y',\n    [12] = 'Mag',\n    [13] = 'R',\n}",
+    "value": {}
+  },
+  {
+    "node_type": "var",
+    "name": "statuses",
+    "instruction_type": "LocalAssign",
+    "line": 57,
+    "code": "local statuses = {\n    [2] = '(occas)',\n    [7] = '(temp)',\n    [8] = '(priv)',\n    [11] = '(exting)',\n    [17] = '(U)',\n}",
+    "value": {}
+  },
+  {
+    "node_type": "function",
+    "name": "LITDSN02",
+    "line": 67,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "description",
+        "instruction_type": "LocalAssign",
+        "line": 70,
+        "code": "local description = categoryOfLights[categoryOfLight] or ''",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "statusString",
+        "instruction_type": "LocalAssign",
+        "line": 71,
+        "code": "local statusString = statuses[status] or ''",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "rhythmOfLight",
+        "line": 73,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "lightCharacteristic",
+            "instruction_type": "LocalAssign",
+            "line": 75,
+            "code": "local lightCharacteristic = lightCharacteristics[rhythmOfLight.lightCharacteristic] or {\n}",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "signalGroup",
+            "instruction_type": "LocalAssign",
+            "line": 76,
+            "code": "local signalGroup = rhythmOfLight.signalGroup",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "colourFound",
+        "instruction_type": "LocalAssign",
+        "line": 92,
+        "code": "local colourFound = false",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "prevColour",
+        "instruction_type": "LocalAssign",
+        "line": 93,
+        "code": "local prevColour",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "space",
+        "instruction_type": "LocalAssign",
+        "line": 108,
+        "code": "local space = ' '",
+        "value": " "
+      },
+      {
+        "node_type": "if",
+        "condition": "rhythmOfLight",
+        "line": 110,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "signalPeriod",
+            "instruction_type": "LocalAssign",
+            "line": 112,
+            "code": "local signalPeriod = rhythmOfLight.signalPeriod",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "signalPeriod",
+            "line": 114,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "Assign",
+                "line": 115,
+                "code": "description = string.format('%s%s%gs', description, space, signalPeriod:ToNumber())",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "space",
+                "instruction_type": "Assign",
+                "line": 116,
+                "code": "space = ''",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "height",
+        "line": 121,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "description",
+            "instruction_type": "Assign",
+            "line": 122,
+            "code": "description = string.format('%s%s%gm', description, space, height:ToNumber())",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "space",
+            "instruction_type": "Assign",
+            "line": 123,
+            "code": "space = ''",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "valueOfNominalRange",
+        "line": 127,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "valueOfNominalRange2 and valueOfNominalRange ~= valueOfNominalRange2",
+            "line": 128,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "numRanges and numRanges == 2",
+                "line": 129,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 130,
+                    "code": "description = string.format('%s%s%g/%gM', description, space, valueOfNominalRange:ToNumber(), valueOfNominalRange2:ToNumber())",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 132,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 132,
+                    "code": "description = string.format('%s%s%g-%gM', description, space, valueOfNominalRange:ToNumber(), valueOfNominalRange2:ToNumber())",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 135,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "Assign",
+                "line": 135,
+                "code": "description = string.format('%s%s%gM', description, space, valueOfNominalRange:ToNumber())",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

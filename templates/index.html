@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Analyseur des règles d'affichage — LUA S-101</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="dot"></span>S-101 <small>ANALYSEUR DES RÈGLES D'AFFICHAGE LUA</small></div>
+  <nav class="topnav" id="topnav">
+    <button data-page="features">Features</button>
+    <button data-page="attributes">Attributes</button>
+    <button data-page="symbols">Symbols</button>
+    <button data-page="rules">Rules</button>
+  </nav>
+</div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <input type="text" id="search" placeholder="Rechercher…">
+    <div class="label" id="side-label">Features</div>
+    <ul class="side-list" id="side-list">
+    {% for item in data %}
+      <li><span>{{item['name']}}</span><span class="code">{{item['code']}}</span></li>
+    {% endfor %}
+    </ul>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

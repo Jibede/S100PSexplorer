@@ -1,0 +1,28 @@
+[
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RSCSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RSCSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RSCSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RSCSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

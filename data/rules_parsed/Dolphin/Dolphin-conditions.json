@@ -1,0 +1,44 @@
+[
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MORFAC04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MORFAC04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(2, categoryOfDolphin)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MORFAC03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MORFAC03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

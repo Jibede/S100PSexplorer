@@ -1,0 +1,670 @@
+[
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP15"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(19, feature.categoryOfSpecialPurposeMark) and feature.buoyShape == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP25')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP25"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(19, feature.categoryOfSpecialPurposeMark) and feature.buoyShape == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 28,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP15"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(54, feature.categoryOfSpecialPurposeMark) and feature.buoyShape == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 30,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP25')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP25"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(54, feature.categoryOfSpecialPurposeMark) and feature.buoyShape == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 32,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP35')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP35"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(54, feature.categoryOfSpecialPurposeMark) and feature.buoyShape == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP35')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP35"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(54, feature.categoryOfSpecialPurposeMark) and feature.buoyShape == 5"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSUP02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSUP02"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(9, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 38,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSUP02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSUP02"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(15, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 40,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP15"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP25')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP25"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP11"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 46,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP35')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP35"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 48,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP35')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP35"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 5"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 50,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP11"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 52,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSUP02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSUP02"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 54,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP35')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP35"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.buoyShape == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 56,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPP11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPP11"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 59,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "-3.51",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 65,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYCON12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYCON12"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 1 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 67,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYCAN12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYCAN12"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 2 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 69,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPH12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPH12"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 3 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 71,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYPIL12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYPIL12"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 4 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 73,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPR12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPR12"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 5 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 75,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYBAR12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYBAR12"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 6 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 77,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSUP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSUP01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(9, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 80,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSUP03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSUP03"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(15, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 83,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYCON01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYCON01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 85,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYCAN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYCAN01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 87,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPH01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPH01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 89,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYPIL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYPIL01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 91,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPR01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPR01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 5"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 93,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYBAR01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYBAR01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 95,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSUP01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSUP01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 98,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYSPR01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYSPR01"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 101,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYGEN03"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 105,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:' .. textOffsetX .. ',3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": [
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 1 and feature.colour[1] == 6"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 2 and feature.colour[1] == 6"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 3 and feature.colour[1] == 6"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 4 and feature.colour[1] == 6"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 5 and feature.colour[1] == 6"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 6 and feature.colour[1] == 6"
+            ]
+          },
+          {
+            "value": -7.02,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "contains(9, feature.categoryOfSpecialPurposeMark)"
+            ]
+          },
+          {
+            "value": -7.02,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "contains(15, feature.categoryOfSpecialPurposeMark)"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 1"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 2"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 3"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 4"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 5"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 6"
+            ]
+          },
+          {
+            "value": -7.02,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 7"
+            ]
+          },
+          {
+            "value": -7.02,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name",
+              "feature.buoyShape == 8"
+            ]
+          },
+          {
+            "value": -3.51,
+            "conditions": [
+              "feature.PrimitiveType == PrimitiveType.Point",
+              "feature.featureName[1] and feature.featureName[1].name"
+            ]
+          }
+        ],
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "node_type": "hit",
+    "line": 248,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      }
+    },
+    "has_var": false,
+    "conditions": [
+      "informationFound"
+    ]
+  }
+]

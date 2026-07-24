@@ -1,0 +1,357 @@
+[
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSLPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.96, 'TRFCD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.96,
+      "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSLPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 27,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.96, 'TRFCD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.96,
+      "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSLPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 37,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.96, 'TRFCD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.96,
+      "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRUTE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRUTE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 46,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 47,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.96, 'TRFCD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.96,
+      "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 53,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSLDEF51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSLDEF51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 54,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.96, 'TRFCD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.96,
+      "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 64,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSLPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 66,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 73,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSLPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 75,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 82,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSLPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 84,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 91,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRUTE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRUTE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 93,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 99,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSLDEF51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSLDEF51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 100,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DWRTPT51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DWRTPT51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

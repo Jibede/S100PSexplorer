@@ -1,0 +1,88 @@
+[
+  {
+    "node_type": "hit",
+    "line": 22,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHRVID01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHRVID01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "updateType == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 25,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHRVDEL1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHRVDEL1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "updateType == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 28,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHRVDEL1;PointInstruction:CHRVID01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHRVID01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "updateType == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 50,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHCOR')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHCOR"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "updateType == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 68,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHRVID01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHRVID01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "updateType == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 69,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHRVDEL1')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHRVDEL1"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "updateType == 3"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "node_type": "hit",
+    "line": 10,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHKPNT01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHKPNT01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

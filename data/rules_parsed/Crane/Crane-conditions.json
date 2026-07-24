@@ -1,0 +1,58 @@
+[
+  {
+    "node_type": "hit",
+    "line": 37,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CRANES0' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": [
+        {
+          "value": "CRANES03",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": "CRANES01",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, colour)",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.32,
+      "color": [
+        {
+          "value": "CHBLK",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": "LANDF",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

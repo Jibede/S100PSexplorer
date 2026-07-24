@@ -1,0 +1,786 @@
+[
+  {
+    "node_type": "function",
+    "name": "FishingFacility",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 5,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfFishingFacility == 1",
+            "line": 10,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 11,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 12,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 15,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 17,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC03')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC03"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 2",
+            "line": 18,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 19,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 20,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 23,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 25,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 3",
+            "line": 26,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 27,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 28,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 31,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 33,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 4",
+            "line": 34,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 35,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 36,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 39,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 41,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 43,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 43,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 44,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 47,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 49,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHHAV01')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHHAV01"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 51,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfFishingFacility == 1",
+            "line": 52,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 53,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 54,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 57,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 59,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC03')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC03"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 2",
+            "line": 60,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 61,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 62,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 65,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 67,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 3",
+            "line": 68,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 69,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 70,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 73,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 75,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 4",
+            "line": 76,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 77,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 78,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 81,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 83,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 85,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 85,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 86,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 89,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 91,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHHAV01')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHHAV01"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 93,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfFishingFacility == 1",
+            "line": 94,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 95,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 96,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 99,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 103,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 103,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 104,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 107,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 109,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.64,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 112,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfFishingFacility == 1",
+            "line": 113,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 114,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 116,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:FSHFAC03')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "FSHFAC03"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 117,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 2",
+            "line": 119,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 120,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 122,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:FSHFAC04')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "FSHFAC04"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 123,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 3",
+            "line": 125,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 126,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 128,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:FSHFAC04')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "FSHFAC04"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 129,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 4",
+            "line": 131,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 132,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 134,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:FSHFAC04')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "FSHFAC04"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 135,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 138,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 138,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 140,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:FSHHAV02')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "FSHHAV02"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 141,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "tickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 144,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfFishingFacility == 1",
+            "line": 145,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 146,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 148,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC03')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC03"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 2",
+            "line": 150,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 151,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 153,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 3",
+            "line": 155,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 156,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 158,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfFishingFacility == 4",
+            "line": 160,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 161,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 163,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 166,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 166,
+                "code": "viewingGroup = 26210",
+                "value": 26210
+              },
+              {
+                "node_type": "hit",
+                "line": 168,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHFAC02')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHFAC02"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 172,
+        "children": []
+      }
+    ]
+  }
+]

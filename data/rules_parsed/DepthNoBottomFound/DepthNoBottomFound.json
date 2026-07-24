@@ -1,0 +1,40 @@
+[
+  {
+    "node_type": "function",
+    "name": "DepthNoBottomFound",
+    "line": 9,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.MultiPoint",
+        "line": 10,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 14,
+            "children": []
+          },
+          {
+            "node_type": "var",
+            "name": "points",
+            "instruction_type": "LocalAssign",
+            "line": 16,
+            "code": "local points = feature.MultiPoint.Points",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 29,
+        "children": []
+      }
+    ]
+  }
+]

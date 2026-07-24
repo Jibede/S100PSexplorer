@@ -1,0 +1,32 @@
+[
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.96, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.96,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.64,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:TSSJCT02')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "TSSJCT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TSSCRS51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TSSCRS51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

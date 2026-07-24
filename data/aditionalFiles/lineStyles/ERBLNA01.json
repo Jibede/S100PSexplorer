@@ -1,0 +1,17 @@
+{
+  "intervalLength": "24.2",
+  "pen": {
+    "width": "0.64",
+    "color": "NINFO"
+  },
+  "dash": [
+    {
+      "start": "2.2",
+      "length": "10"
+    },
+    {
+      "start": "14.2",
+      "length": "10"
+    }
+  ]
+}

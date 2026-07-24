@@ -1,0 +1,109 @@
+[
+  {
+    "node_type": "function",
+    "name": "DredgedArea",
+    "line": 8,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 9,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 11,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 13,
+            "code": "viewingGroup = 13030",
+            "value": 13030
+          },
+          {
+            "node_type": "hit",
+            "line": 18,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:0,-3.51;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontSlant:Italics;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "0",
+                "y": "-3.51"
+              },
+              "TextAlignHorizontal": "Center",
+              "TextAlignVertical": "Center",
+              "FontSize": "10",
+              "FontSlant": "Italics",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "var",
+            "name": "drmv",
+            "instruction_type": "LocalAssign",
+            "line": 20,
+            "code": "local drmv = ''",
+            "value": ""
+          },
+          {
+            "node_type": "var",
+            "name": "date",
+            "instruction_type": "LocalAssign",
+            "line": 21,
+            "code": "local date = ''",
+            "value": ""
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.depthRangeMinimumValue ~= nil",
+            "line": 29,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "drmv",
+                "instruction_type": "Assign",
+                "line": 32,
+                "code": "drmv = EncodeString(feature.depthRangeMinimumValue, '%gm')",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.dredgedDate",
+                "line": 34,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "date",
+                    "instruction_type": "Assign",
+                    "line": 35,
+                    "code": "date = EncodeString(feature.dredgedDate, ' (%s)')",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "var",
+            "name": "daDate",
+            "instruction_type": "LocalAssign",
+            "line": 40,
+            "code": "local daDate = drmv .. date",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 44,
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "is_abstract": "false",
+    "name": "Additional information",
+    "definition": "A feature association for the binding between at least one instance of a geo feature and an instance of an information type.",
+    "code": "AdditionalInformation",
+    "definition_reference": {
+      "scr_identifier": "8000001",
+      "definition_ref": "IHOREG"
+    },
+    "role": "theInformation"
+  },
+  {
+    "is_abstract": "false",
+    "name": "Quality of bathymetric data composition",
+    "definition": "The mandatory association between the quality-related characteristics of bathymetric data and the horizontal position and vertical uncertainties of the data.",
+    "code": "QualityOfBathymetricDataComposition",
+    "definition_reference": {
+      "scr_identifier": "8000020",
+      "definition_ref": "IHOREG"
+    },
+    "role": "theQualityInformation"
+  },
+  {
+    "is_abstract": "false",
+    "name": "Spatial Association",
+    "definition": "An association for the binding between a spatial type and its spatial quality information.",
+    "code": "SpatialAssociation",
+    "definition_reference": {
+      "scr_identifier": "8000019",
+      "definition_ref": "IHOREG"
+    },
+    "role": "theQualityInformation"
+  }
+]

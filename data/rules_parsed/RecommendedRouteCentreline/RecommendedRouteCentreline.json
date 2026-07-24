@@ -1,0 +1,665 @@
+[
+  {
+    "node_type": "function",
+    "name": "RecommendedRouteCentreline",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 5,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.basedOnFixedMarks and feature.trafficFlow == 1",
+            "line": 8,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 9,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 10,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 13,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 16,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 17,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.basedOnFixedMarks and feature.trafficFlow == 2",
+            "line": 20,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 21,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 22,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 25,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 28,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 29,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.basedOnFixedMarks and feature.trafficFlow == 3",
+            "line": 32,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 33,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 34,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 37,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 40,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 41,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.basedOnFixedMarks and feature.trafficFlow == 4",
+            "line": 44,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 45,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 46,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 49,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 52,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 53,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "not feature.basedOnFixedMarks and feature.trafficFlow == 1",
+            "line": 56,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 57,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 58,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 61,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 64,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 65,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "not feature.basedOnFixedMarks and feature.trafficFlow == 2",
+            "line": 68,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 69,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 70,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 73,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 76,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 77,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "not feature.basedOnFixedMarks and feature.trafficFlow == 3",
+            "line": 80,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 81,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 82,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 85,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 88,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 89,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "not feature.basedOnFixedMarks and feature.trafficFlow == 4",
+            "line": 92,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 93,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 94,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 97,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 100,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 101,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.trafficFlow == 1",
+            "line": 104,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 105,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 106,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 109,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 112,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 113,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.trafficFlow == 2",
+            "line": 116,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 117,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 118,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 121,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 124,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 125,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.trafficFlow == 3",
+            "line": 128,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 129,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 130,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 133,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 136,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 137,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.trafficFlow == 4",
+            "line": 140,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 141,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 142,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 145,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 148,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 149,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 153,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 153,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 154,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 157,
+                "children": []
+              },
+              {
+                "node_type": "if",
+                "condition": "feature.orientationValue",
+                "line": 160,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 161,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "0",
+                        "y": "3.51"
+                      },
+                      "TextAlignHorizontal": "Center",
+                      "FontSize": "10",
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 166,
+        "children": []
+      }
+    ]
+  }
+]

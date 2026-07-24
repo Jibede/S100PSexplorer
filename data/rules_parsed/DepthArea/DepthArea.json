@@ -1,0 +1,71 @@
+[
+  {
+    "node_type": "function",
+    "name": "DepthArea",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 11,
+            "code": "viewingGroup = 13030",
+            "value": 13030
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.depthRangeMinimumValue or feature.depthRangeMaximumValue",
+            "line": 14,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 18,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 19,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:PRTSUR01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "PRTSUR01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 20,
+                "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "solid",
+                  "tickness": 0.64,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 24,
+        "children": []
+      }
+    ]
+  }
+]

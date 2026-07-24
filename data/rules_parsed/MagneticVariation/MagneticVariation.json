@@ -1,0 +1,161 @@
+[
+  {
+    "node_type": "function",
+    "name": "MagneticVariation",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 8,
+            "code": "viewingGroup = 31080",
+            "value": 31080
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:MAGVAR01')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "MAGVAR01"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 15,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "3.51",
+                "y": "3.51"
+              },
+              "FontSize": "10",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 17,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 18,
+            "code": "viewingGroup = 31080",
+            "value": 31080
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 19,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 22,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 24,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CHMGF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "tickness": 0.64,
+              "color": "CHMGF"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 26,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:MAGVAR51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "MAGVAR51"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 27,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "3.51",
+                "y": "3.51"
+              },
+              "FontSize": "10",
+              "FontColor": "CHBLK"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 29,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 31,
+            "code": "viewingGroup = 31080",
+            "value": 31080
+          },
+          {
+            "node_type": "hit",
+            "line": 33,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:MAGVAR51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "MAGVAR51"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 35,
+        "children": []
+      }
+    ]
+  }
+]

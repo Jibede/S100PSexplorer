@@ -1,0 +1,188 @@
+[
+  {
+    "node_type": "function",
+    "name": "OffshorePlatform",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 8,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 10,
+            "code": "viewingGroup = 12210",
+            "value": 12210
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 14,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 16,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:OFSPLF01')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "OFSPLF01"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.featureName[1] and feature.featureName[1].name",
+            "line": 17,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 18,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "3.51",
+                    "y": "3.51"
+                  },
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.flareStack",
+            "line": 25,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 27,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,0;TextAlignHorizontal:Start;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "3.51",
+                    "y": "0"
+                  },
+                  "TextAlignHorizontal": "Start",
+                  "TextAlignVertical": "Center",
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 31,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 33,
+            "code": "viewingGroup = 12210",
+            "value": 12210
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 34,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 37,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 40,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 1.28, 'CSTLN')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "tickness": 1.28,
+              "color": "CSTLN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.featureName[1] and feature.featureName[1].name",
+            "line": 42,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 43,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "3.51",
+                    "y": "3.51"
+                  },
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.flareStack",
+            "line": 49,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 50,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "0",
+                    "y": "0"
+                  },
+                  "TextAlignHorizontal": "Center",
+                  "TextAlignVertical": "Center",
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 56,
+        "children": []
+      }
+    ]
+  }
+]

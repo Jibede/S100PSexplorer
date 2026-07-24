@@ -1,0 +1,39 @@
+{
+  "intervalLength": "33.3",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "dash": [
+    {
+      "start": "2",
+      "length": "6"
+    },
+    {
+      "start": "19.2",
+      "length": "6"
+    },
+    {
+      "start": "27.3",
+      "length": "6"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMAREGR1",
+      "position": "5"
+    },
+    {
+      "code": "EMTIDIN1",
+      "position": "13.6"
+    },
+    {
+      "code": "EMAREGR1",
+      "position": "22.2"
+    },
+    {
+      "code": "EMAREGR1",
+      "position": "29.8"
+    }
+  ]
+}

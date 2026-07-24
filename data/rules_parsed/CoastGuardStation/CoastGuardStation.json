@@ -1,0 +1,75 @@
+[
+  {
+    "node_type": "function",
+    "name": "CoastGuardStation",
+    "line": 7,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 8,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "Assign",
+        "line": 10,
+        "code": "viewingGroup = 38030",
+        "value": 38030
+      },
+      {
+        "node_type": "if",
+        "condition": "contextParameters.RadarOverlay",
+        "line": 12,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 15,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 20,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:CGUSTA02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "CGUSTA02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 22,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 24,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:CGUSTA02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "CGUSTA02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 26,
+        "children": []
+      }
+    ]
+  }
+]

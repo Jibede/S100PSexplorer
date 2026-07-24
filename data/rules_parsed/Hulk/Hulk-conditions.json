@@ -1,0 +1,30 @@
+[
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:HULKES01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "HULKES01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 22,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.64,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

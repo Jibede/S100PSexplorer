@@ -1,0 +1,290 @@
+[
+  {
+    "node_type": "function",
+    "name": "RecommendedTrafficLanePart",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 5,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue",
+            "line": 8,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 9,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 10,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 13,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 16,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RCTLPT52')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RCTLPT52"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 19,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 19,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 20,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 23,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 25,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RTLDEF51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RTLDEF51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 27,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue",
+            "line": 28,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 29,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 30,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 33,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 36,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RCTLPT52')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RCTLPT52"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 39,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 39,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 40,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 43,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 45,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RTLDEF51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RTLDEF51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 47,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue",
+            "line": 48,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 49,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "hit",
+                "line": 52,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RCTLPT52')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RCTLPT52"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 55,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 55,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "hit",
+                "line": 57,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RTLDEF51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RTLDEF51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 59,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue",
+            "line": 60,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 61,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "hit",
+                "line": 64,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RCTLPT52')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RCTLPT52"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 67,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 67,
+                "code": "viewingGroup = 25020",
+                "value": 25020
+              },
+              {
+                "node_type": "hit",
+                "line": 69,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:RTLDEF51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "RTLDEF51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 72,
+        "children": []
+      }
+    ]
+  }
+]

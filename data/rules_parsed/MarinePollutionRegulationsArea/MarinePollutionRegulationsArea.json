@@ -1,0 +1,64 @@
+[
+  {
+    "node_type": "function",
+    "name": "MarinePollutionRegulationsArea",
+    "line": 5,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 6,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 8,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 10,
+            "code": "viewingGroup = 36060",
+            "value": 36060
+          },
+          {
+            "node_type": "hit",
+            "line": 12,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.64,
+              "color": "CHGRF"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 14,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 15,
+            "code": "viewingGroup = 36060",
+            "value": 36060
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 19,
+        "children": []
+      }
+    ]
+  }
+]

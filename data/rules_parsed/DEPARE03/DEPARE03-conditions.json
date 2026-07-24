@@ -1,0 +1,30 @@
+[
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:DRGARE01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "DRGARE01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.Code == 'DredgedArea'"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 22,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.32,
+      "color": "CHGRF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.Code == 'DredgedArea'"
+    ]
+  }
+]

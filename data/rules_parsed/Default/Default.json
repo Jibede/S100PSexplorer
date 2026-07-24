@@ -1,0 +1,101 @@
+[
+  {
+    "node_type": "function",
+    "name": "Default",
+    "line": 5,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point or feature.PrimitiveType == PrimitiveType.MultiPoint",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 15,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "QUESMRK1"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 16,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 17,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 20,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 24,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 26,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "QUESMRK1"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 27,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "tickness": 0.32,
+              "color": "CHMGD"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 29,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 31,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "QUESMRK1"
+            },
+            "has_var": false
+          }
+        ]
+      }
+    ]
+  }
+]

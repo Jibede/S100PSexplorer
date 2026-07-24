@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 5,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "tickness": 0.64,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

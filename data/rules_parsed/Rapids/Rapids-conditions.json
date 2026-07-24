@@ -1,0 +1,17 @@
+[
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.96, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "tickness": 0.96,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

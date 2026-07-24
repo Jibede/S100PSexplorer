@@ -1,0 +1,56 @@
+[
+  {
+    "node_type": "hit",
+    "line": 16,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DRFSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DRFSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(10, feature.categoryOfRadioStation)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RDOSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RDOSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DRFSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DRFSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(10, feature.categoryOfRadioStation)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RDOSTA02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RDOSTA02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  }
+]
