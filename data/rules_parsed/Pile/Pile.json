@@ -71,6 +71,16 @@
             "node_type": "else",
             "line": 23,
             "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 25,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:PILPNT01')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "PILPNT01"
+            },
+            "has_var": false
           }
         ]
       },
@@ -97,6 +107,16 @@
             "node_type": "else",
             "line": 31,
             "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 33,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:PILPNT01')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "PILPNT01"
+            },
+            "has_var": false
           }
         ]
       },

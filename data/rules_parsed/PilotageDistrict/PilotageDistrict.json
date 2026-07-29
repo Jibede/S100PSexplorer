@@ -24,8 +24,18 @@
             "instruction_type": "line_style",
             "values": {
               "style": "dash",
-              "tickness": 0.64,
+              "thickness": 0.64,
               "color": "CHGRF"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 12,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
             },
             "has_var": false
           }
@@ -35,7 +45,18 @@
         "node_type": "elseif",
         "condition": "feature.PrimitiveType == PrimitiveType.Surface",
         "line": 13,
-        "children": []
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 15,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:ADMARE01')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "ADMARE01"
+            },
+            "has_var": false
+          }
+        ]
       },
       {
         "node_type": "else",

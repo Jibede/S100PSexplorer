@@ -1,6 +1,20 @@
 [
   {
     "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 16,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -17,6 +31,20 @@
     "conditions": [
       "feature.PrimitiveType == PrimitiveType.Curve",
       "feature.basedOnFixedMarks and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 25,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 2"
     ]
   },
   {
@@ -41,6 +69,20 @@
   },
   {
     "node_type": "hit",
+    "line": 35,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 36,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -57,6 +99,20 @@
     "conditions": [
       "feature.PrimitiveType == PrimitiveType.Curve",
       "feature.basedOnFixedMarks and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 45,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC10')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC10"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 4"
     ]
   },
   {
@@ -81,6 +137,20 @@
   },
   {
     "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 56,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -97,6 +167,20 @@
     "conditions": [
       "feature.PrimitiveType == PrimitiveType.Curve",
       "not feature.basedOnFixedMarks and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 65,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 2"
     ]
   },
   {
@@ -121,6 +205,20 @@
   },
   {
     "node_type": "hit",
+    "line": 75,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 76,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -137,6 +235,20 @@
     "conditions": [
       "feature.PrimitiveType == PrimitiveType.Curve",
       "not feature.basedOnFixedMarks and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 85,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC09')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC09"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 4"
     ]
   },
   {
@@ -161,6 +273,20 @@
   },
   {
     "node_type": "hit",
+    "line": 95,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 96,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -177,6 +303,20 @@
     "conditions": [
       "feature.PrimitiveType == PrimitiveType.Curve",
       "feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 105,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 2"
     ]
   },
   {
@@ -201,6 +341,20 @@
   },
   {
     "node_type": "hit",
+    "line": 115,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 116,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -221,6 +375,20 @@
   },
   {
     "node_type": "hit",
+    "line": 125,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECTRC09')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECTRC09"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 126,
     "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
     "instruction_type": "text",
@@ -237,6 +405,19 @@
     "conditions": [
       "feature.PrimitiveType == PrimitiveType.Curve",
       "feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 135,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RECDEF02')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RECDEF02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
     ]
   },
   {

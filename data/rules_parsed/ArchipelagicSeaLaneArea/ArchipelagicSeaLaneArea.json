@@ -24,6 +24,16 @@
             "line": 8,
             "code": "viewingGroup = 26260",
             "value": 26260
+          },
+          {
+            "node_type": "hit",
+            "line": 10,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:ARCSLN01')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "ARCSLN01"
+            },
+            "has_var": false
           }
         ]
       },

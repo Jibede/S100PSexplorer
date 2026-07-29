@@ -782,8 +782,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.32,
+                  "thickness": 0.32,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 187,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -866,8 +876,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.32,
+                  "thickness": 0.32,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 206,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -950,8 +970,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.32,
+                  "thickness": 0.32,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 225,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -1034,8 +1064,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.32,
+                  "thickness": 0.32,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 244,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -1117,8 +1157,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.32,
+                  "thickness": 0.32,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 263,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },

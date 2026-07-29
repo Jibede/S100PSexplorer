@@ -135,7 +135,7 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.32,
+                  "thickness": 0.32,
                   "color": "CHCOR"
                 },
                 "has_var": false

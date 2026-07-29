@@ -28,12 +28,39 @@
   },
   {
     "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('ColorFill:' .. fillColor)",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": [
+        {
+          "value": "CHGRD",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "feature.visualProminence == 1 or feature.radarConspicuous == true"
+          ]
+        },
+        {
+          "value": "LANDF",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 37,
     "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, lineColor)",
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": [
         {
           "value": "CHBLK",
@@ -49,6 +76,19 @@
           ]
         }
       ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 38,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": true,
     "conditions": [

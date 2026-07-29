@@ -448,13 +448,34 @@
             "children": [
               {
                 "node_type": "hit",
+                "line": 138,
+                "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS;AreaFillReference:FOULAR01')",
+                "instruction_type": "color_fill",
+                "values": {
+                  "ColorFill": "DEPVS",
+                  "AreaFillReference": "FOULAR01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
                 "line": 139,
                 "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CHBLK')",
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dot",
-                  "tickness": 0.64,
+                  "thickness": 0.64,
                   "color": "CHBLK"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 140,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -487,8 +508,18 @@
                     "instruction_type": "line_style",
                     "values": {
                       "style": "dot",
-                      "tickness": 0.64,
+                      "thickness": 0.64,
                       "color": "CHBLK"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 145,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
                     },
                     "has_var": false
                   }
@@ -505,8 +536,18 @@
                     "instruction_type": "line_style",
                     "values": {
                       "style": "dash",
-                      "tickness": 0.64,
+                      "thickness": 0.64,
                       "color": "CHGRD"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 149,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
                     },
                     "has_var": false
                   }
@@ -548,8 +589,18 @@
                     "instruction_type": "line_style",
                     "values": {
                       "style": "dot",
-                      "tickness": 0.64,
+                      "thickness": 0.64,
                       "color": "CHBLK"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 161,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
                     },
                     "has_var": false
                   }
@@ -562,13 +613,33 @@
                 "children": [
                   {
                     "node_type": "hit",
+                    "line": 163,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "CHBRN"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
                     "line": 165,
                     "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
                     "instruction_type": "line_style",
                     "values": {
                       "style": "solid",
-                      "tickness": 0.64,
+                      "thickness": 0.64,
                       "color": "CSTLN"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 166,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
                     },
                     "has_var": false
                   }
@@ -581,13 +652,33 @@
                 "children": [
                   {
                     "node_type": "hit",
+                    "line": 168,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:DEPIT')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "DEPIT"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
                     "line": 170,
                     "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CSTLN')",
                     "instruction_type": "line_style",
                     "values": {
                       "style": "dash",
-                      "tickness": 0.64,
+                      "thickness": 0.64,
                       "color": "CSTLN"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 171,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
                     },
                     "has_var": false
                   }
@@ -599,13 +690,33 @@
                 "children": [
                   {
                     "node_type": "hit",
+                    "line": 173,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "DEPVS"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
                     "line": 174,
                     "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CHBLK')",
                     "instruction_type": "line_style",
                     "values": {
                       "style": "dot",
-                      "tickness": 0.64,
+                      "thickness": 0.64,
                       "color": "CHBLK"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 175,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
                     },
                     "has_var": false
                   }

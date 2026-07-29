@@ -6,7 +6,7 @@ from xml.etree.ElementTree import Element
 
 from src.utils.logger import config_logger
 
-logger = config_logger(__name__)
+LOGGER = config_logger(__name__)
 
 _SIMPLE_GROUPS = ["colorProfiles", "symbols", "styleSheets", "lineStyles", "areaFills", "rules"]
 
@@ -17,10 +17,12 @@ class XMLReaderPortrayal:
         self.output_dir = Path(output_dir)
         
         if not self.file:
-            logger.warning("No file found for this the pattern: %s", path)
+            LOGGER.warning("No file found for this the pattern: %s", path)
     
     def get_info(self) -> None:
-        logger.info("Processing %s", self.file)
+        LOGGER.info(f'{'#' * 30} GETTING PORTRAYAL CATALOG DATA {'#' * 30}')
+        
+        LOGGER.info(f'PROCESSING {self.file}')
         
         root = ET.parse(self.file).getroot()
         
@@ -33,6 +35,9 @@ class XMLReaderPortrayal:
             data = handler(element)
             self.save_json(data, tag)
             
+        LOGGER.info(f'{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM PORTRAYAL CATALOG WAS COMPLETED {'*' * 10}')
+
+            
     def save_json(self, data: Any, file_name: str) -> None:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         json_file = self.output_dir / f"{file_name}.json"
@@ -40,7 +45,7 @@ class XMLReaderPortrayal:
         with open(json_file, 'w', encoding='utf-8') as fp:
             json.dump(data, fp, indent=2)
             
-        logger.info("Wrote %s", json_file)
+        LOGGER.info("Wrote %s", json_file)
     
     
     def _dispatch(self, tag: str):
@@ -175,7 +180,3 @@ class XMLReaderPortrayal:
             })
 
         return result
-                            
-if __name__ == "__main__":
-    xml_reader = XMLReaderPortrayal("source/xml/portrayal_catalogue.xml")
-    xml_reader.get_info()

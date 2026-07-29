@@ -6,8 +6,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfCoastline == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -22,8 +36,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfCoastline == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 27,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -38,8 +66,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfCoastline == 8"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -54,8 +96,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfCoastline == 10"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 45,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [

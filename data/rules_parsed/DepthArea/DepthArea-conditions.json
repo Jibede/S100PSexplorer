@@ -1,6 +1,19 @@
 [
   {
     "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('ColorFill:NODTA')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "NODTA"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
     "line": 19,
     "code": "featurePortrayal:AddInstructions('AreaFillReference:PRTSUR01')",
     "instruction_type": "area_fill",
@@ -19,8 +32,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [

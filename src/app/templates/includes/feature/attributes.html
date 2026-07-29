@@ -1,0 +1,28 @@
+<section class="block">
+  <h2>Attributes</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Code</th>
+        <th>Type</th>
+        <th>Multiplicité</th>
+        <th>Permitted Values</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for attr_binding in selected_feature['attr_binding'] %} 
+        {% set attr = get_attr_info(attr_binding['attribute']) %}
+      <tr class="clickable" onclick="window.location.href='/attributes/{{ attr['code']}}'">
+        <td class="mono">{{attr['name']}}</td>
+        <td>{{attr['code']}}</td>
+        <td>{{attr['value_type']}}</td>
+        <td>
+          {{attr_binding['multiplicity']['lower']}}..{{'*' if attr_binding['multiplicity']['upper']['infinite'] else '1'}}
+        </td>
+        <td>{{attr_binding['permitted_values']}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

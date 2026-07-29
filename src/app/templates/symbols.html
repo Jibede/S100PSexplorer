@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block page_styles %}
+<link
+  id="theme-stylesheet"
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/daySvgStyle.css') }}"
+/>
+{% endblock %} {% block conteudo %}
+
+{% include 'includes/symbol/dropdown.html' %}
+
+<section>
+  <h2>Détail du symbole sélectionné</h2>
+  <div class="symbol-detail">
+    <div class="glyph-big">
+      {{ get_svg(selected_symbol['code']) }}
+    </div>
+
+    <div class="info">
+      <h3>{{selected_symbol['name']}}</h3>
+      <p>{{selected_symbol['description'].capitalize()}}</p>
+
+      {% if linked_rules%}
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Règle</th>
+            <th>Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for rule in linked_rules%}
+          <tr class="clickable">
+            <td class="mono">{{ rule }}.lua</td>
+
+            {% set conditions = get_symbol_conditions(rule, selected_symbol['name']) %}
+
+            <td class="mono">{{conditions}}</td>
+          </tr>
+
+          {%endfor%}
+        </tbody>
+      </table>
+      {% endif %}
+
+      
+
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/dropdown.js') }}"></script>
+
+{% endblock %}

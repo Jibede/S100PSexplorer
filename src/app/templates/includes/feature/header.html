@@ -1,0 +1,22 @@
+<div class="crumb">
+  Features &nbsp;/&nbsp; <b>{{selected_feature['code']}}</b>
+</div>
+<div class="header-card">
+  <h1>{{selected_feature['name']}}</h1>
+
+  <div class="tag-row">
+    <div class="tag">
+      <b>Code</b><span>{{ selected_feature['code'] }}</span>
+    </div>
+    <div class="tag">
+      <b>Primitive</b
+      ><span>{{ ' | '.join(selected_feature['permitted_primitives'])}}</span>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="sub">{{selected_feature['definition']}}</div>
+
+  <br />
+</div>

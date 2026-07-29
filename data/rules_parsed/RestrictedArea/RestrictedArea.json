@@ -57,6 +57,16 @@
                   "PointInstruction": "ESSARE01"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 23,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:ESSARE01')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "ESSARE01"
+                },
+                "has_var": false
               }
             ]
           },
@@ -72,6 +82,16 @@
                 "instruction_type": "symbol",
                 "values": {
                   "PointInstruction": "PSSARE01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 26,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:ESSARE01')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "ESSARE01"
                 },
                 "has_var": false
               }

@@ -40,6 +40,16 @@
                 "node_type": "else",
                 "line": 12,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 14,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
               }
             ]
           },
@@ -66,6 +76,16 @@
                 "node_type": "else",
                 "line": 20,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 22,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
               }
             ]
           },
@@ -92,6 +112,16 @@
                 "node_type": "else",
                 "line": 28,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 30,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
               }
             ]
           },
@@ -118,6 +148,16 @@
                 "node_type": "else",
                 "line": 36,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 38,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
               }
             ]
           },
@@ -144,6 +184,16 @@
                 "node_type": "else",
                 "line": 44,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 46,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
               }
             ]
           },
@@ -170,6 +220,16 @@
                 "node_type": "else",
                 "line": 55,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 57,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
               }
             ]
           },
@@ -195,6 +255,16 @@
                 "node_type": "else",
                 "line": 64,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 66,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL05')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL05"
+                },
+                "has_var": false
               }
             ]
           }

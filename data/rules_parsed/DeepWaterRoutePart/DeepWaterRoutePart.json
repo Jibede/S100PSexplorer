@@ -57,8 +57,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 18,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -104,8 +114,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 28,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -151,8 +171,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 38,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -198,8 +228,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 48,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -244,8 +284,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "TRFCD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 56,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -290,6 +340,16 @@
                   "PointInstruction": "DWRTPT51"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 67,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:DWRUTE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "DWRUTE51"
+                },
+                "has_var": false
               }
             ]
           },
@@ -323,6 +383,16 @@
                 "instruction_type": "symbol",
                 "values": {
                   "PointInstruction": "DWRTPT51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 76,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:DWRUTE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "DWRUTE51"
                 },
                 "has_var": false
               }
@@ -360,6 +430,16 @@
                   "PointInstruction": "DWRTPT51"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 85,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:DWRUTE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "DWRUTE51"
+                },
+                "has_var": false
               }
             ]
           },
@@ -395,6 +475,16 @@
                   "PointInstruction": "DWRTPT51"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 94,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:DWRUTE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "DWRUTE51"
+                },
+                "has_var": false
               }
             ]
           },
@@ -427,6 +517,16 @@
                 "instruction_type": "symbol",
                 "values": {
                   "PointInstruction": "DWRTPT51"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 101,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:DWRUTE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "DWRUTE51"
                 },
                 "has_var": false
               }

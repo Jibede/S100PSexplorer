@@ -1,0 +1,45 @@
+{% extends "base.html" %} 
+
+{% block page_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nightSvgStyle.css') }}" />
+{% endblock %} 
+
+{% block conteudo %}
+
+{% set feature_info = get_info(selected_feature['code']) %}
+{% set symbols = feature_info.get('symbol') %}
+{% set lineStyles = feature_info.get('line_style') %}
+{% set areaFills = feature_info.get('area_fill') %}
+{% set colorFills = feature_info.get('color_fill') %}
+
+{% include 'includes/feature/header.html' %}
+
+{% include 'includes/feature/attributes.html' %}
+
+{% if symbols %}
+  {% include 'includes/feature/symbols.html' %}
+{% endif %}
+
+{% if areaFills %}
+  {% include 'includes/feature/area_fills.html' %}
+{% endif %}
+
+{% if colorFills %}
+  {% include 'includes/feature/color_fills.html' %}
+{% endif %}
+
+{% if lineStyles %}
+  {% include 'includes/feature/line_styles.html' %}
+{% endif %}
+
+{% include 'includes/feature/rules.html' %}
+
+{% endblock %}
+
+{% block page_scripts %}
+<script>
+  window.S101_NIGHT_CSS_URL = "{{ url_for('static', filename='css/nightSvgStyle.css') }}";
+</script>
+
+<script src="{{ url_for('static', filename='js/canvas_renderer.js') }}"></script>
+{% endblock %}

@@ -270,18 +270,51 @@
                 "node_type": "if",
                 "condition": "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2",
                 "line": 113,
-                "children": []
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 114,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "CHBRN"
+                    },
+                    "has_var": false
+                  }
+                ]
               },
               {
                 "node_type": "elseif",
                 "condition": "feature.waterLevelEffect == 4",
                 "line": 115,
-                "children": []
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 116,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:DEPIT')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "DEPIT"
+                    },
+                    "has_var": false
+                  }
+                ]
               },
               {
                 "node_type": "else",
                 "line": 118,
-                "children": []
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 118,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "DEPVS"
+                    },
+                    "has_var": false
+                  }
+                ]
               },
               {
                 "node_type": "if",

@@ -8,7 +8,11 @@ def config_logger(name: str) -> Logger:
     
     # Création d'un handler pour la console
     handler = logging.StreamHandler()
-    format = logging.Formatter('[%(levelname)s] (%(asctime)s) # %(message)s')
+    
+    format_msg = '[%(levelname)s] (%(asctime)s): %(message)s'
+    format_date = "%Y/%m/%d %H:%M:%S"
+    format = logging.Formatter(fmt=format_msg, datefmt=format_date)
+    
     handler.setFormatter(format)
     
     if not logger.handlers:

@@ -1,0 +1,26 @@
+{% if linked_objs %}
+<section class="block">
+  <h2>Objets liés</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Nom</th>
+        <th>Primitive</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for feature in linked_objs %}
+      <tr
+        class="clickable"
+        onclick="window.location.href='/features/{{feature['code']}}'"
+      >
+        <td class="mono">{{feature['code']}}</td>
+        <td>{{feature['name']}}</td>
+        <td>{{feature['permitted_primitives'] | join(' | ')}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}

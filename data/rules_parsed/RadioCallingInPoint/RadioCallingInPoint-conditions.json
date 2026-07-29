@@ -504,8 +504,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 1 and feature.orientationValue[1]"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 187,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -574,8 +588,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 2 and feature.orientationValue[1]"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 206,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -644,8 +672,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 3 and feature.orientationValue[1]"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 225,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -714,8 +756,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 4 and feature.orientationValue[1]"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 244,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -784,8 +840,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.32,
+      "thickness": 0.32,
       "color": "TRFCD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 263,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [

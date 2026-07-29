@@ -48,8 +48,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 17,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -117,8 +127,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 31,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -186,8 +206,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 45,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -255,8 +285,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 59,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -324,8 +364,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 73,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -372,8 +422,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 83,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -420,8 +480,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 93,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -479,8 +549,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 106,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -537,8 +617,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 119,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }

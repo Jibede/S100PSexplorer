@@ -348,8 +348,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.64,
+                  "thickness": 0.64,
                   "color": "CSTLN"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 83,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -386,8 +396,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.64,
+                  "thickness": 0.64,
                   "color": "CSTLN"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 92,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -434,8 +454,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.64,
+                  "thickness": 0.64,
                   "color": "CSTLN"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 102,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -482,8 +512,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.64,
+                  "thickness": 0.64,
                   "color": "CSTLN"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 112,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -519,8 +559,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.64,
+                  "thickness": 0.64,
                   "color": "CSTLN"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 121,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -543,13 +593,33 @@
           },
           {
             "node_type": "hit",
+            "line": 127,
+            "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+            "instruction_type": "color_fill",
+            "values": {
+              "ColorFill": "CHBRN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
             "line": 128,
             "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
             "instruction_type": "line_style",
             "values": {
               "style": "solid",
-              "tickness": 0.64,
+              "thickness": 0.64,
               "color": "CSTLN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 129,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
             },
             "has_var": false
           }

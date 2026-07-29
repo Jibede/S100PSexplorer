@@ -32,8 +32,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 1.28,
+      "thickness": 1.28,
       "color": "OUTLW"
+    },
+    "has_var": false,
+    "conditions": [
+      "majorLight"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 61,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -47,7 +60,7 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": [
         {
           "value": "LITRD",
@@ -100,6 +113,19 @@
       ]
     },
     "has_var": true,
+    "conditions": [
+      "majorLight"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 63,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
     "conditions": [
       "majorLight"
     ]

@@ -48,8 +48,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 19,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -118,8 +128,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 33,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -188,8 +208,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 47,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -248,8 +278,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 60,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -308,8 +348,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 73,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -377,8 +427,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 87,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -476,8 +536,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 107,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -535,8 +605,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 120,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -612,8 +692,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 136,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -671,8 +761,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 0.96,
+                  "thickness": 0.96,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 149,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }

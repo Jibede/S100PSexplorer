@@ -1,0 +1,24 @@
+{% if attr_val_list%}
+
+<section class="block">
+  <h2>Dictionnaire des valeurs</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th style="width: 80px">Valeur</th>
+        <th>Code</th>
+        <th>Définition</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for attr_val in attr_val_list %}
+      <tr>
+        <td class="mono">{{ attr_val['label'] }}</td>
+        <td>{{ attr_val['code'] }}</td>
+        <td>{{ attr_val['definition'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}

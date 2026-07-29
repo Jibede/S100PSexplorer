@@ -52,6 +52,16 @@
           },
           {
             "node_type": "hit",
+            "line": 15,
+            "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+            "instruction_type": "color_fill",
+            "values": {
+              "ColorFill": "CHBRN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
             "line": 16,
             "code": "featurePortrayal:AddInstructions('PointInstruction:SMCFAC02')",
             "instruction_type": "symbol",
@@ -67,10 +77,20 @@
             "instruction_type": "line_style",
             "values": {
               "style": "solid",
-              "tickness": 0.32,
+              "thickness": 0.32,
               "color": "LANDF"
             },
             "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 18,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": true
           }
         ]
       },

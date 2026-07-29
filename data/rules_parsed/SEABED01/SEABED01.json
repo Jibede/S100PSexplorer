@@ -154,6 +154,16 @@
         "children": []
       },
       {
+        "node_type": "hit",
+        "line": 49,
+        "code": "featurePortrayal:AddInstructions('ColorFill:' .. Colour)",
+        "instruction_type": "color_fill",
+        "values": {
+          "ColorFill": "Colour"
+        },
+        "has_var": true
+      },
+      {
         "node_type": "if",
         "condition": "Shallow",
         "line": 51,

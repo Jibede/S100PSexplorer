@@ -24,6 +24,16 @@
             "line": 11,
             "code": "viewingGroup = 25001",
             "value": 25001
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:COLREG01')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "COLREG01"
+            },
+            "has_var": false
           }
         ]
       },

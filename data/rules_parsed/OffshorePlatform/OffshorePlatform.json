@@ -120,13 +120,33 @@
           },
           {
             "node_type": "hit",
+            "line": 39,
+            "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+            "instruction_type": "color_fill",
+            "values": {
+              "ColorFill": "CHBRN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
             "line": 40,
             "code": "featurePortrayal:SimpleLineStyle('solid', 1.28, 'CSTLN')",
             "instruction_type": "line_style",
             "values": {
               "style": "solid",
-              "tickness": 1.28,
+              "thickness": 1.28,
               "color": "CSTLN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 41,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
             },
             "has_var": false
           },

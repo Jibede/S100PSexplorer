@@ -47,10 +47,20 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "TRFCD"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 14,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": true
               }
             ]
           },
@@ -84,10 +94,20 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "TRFCD"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 22,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": true
               }
             ]
           },
@@ -121,10 +141,20 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "TRFCD"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 30,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": true
               }
             ]
           },
@@ -158,10 +188,20 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "TRFCD"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 38,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": true
               }
             ]
           },
@@ -194,10 +234,20 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "dash",
-                  "tickness": 1.28,
+                  "thickness": 1.28,
                   "color": "TRFCD"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 44,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": true
               }
             ]
           }
@@ -230,6 +280,16 @@
                   "PointInstruction": "TWRTPT53"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 53,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "CTYARE51"
+                },
+                "has_var": true
               }
             ]
           },
@@ -255,6 +315,16 @@
                   "PointInstruction": "TWRTPT53"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 60,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "CTYARE51"
+                },
+                "has_var": true
               }
             ]
           },
@@ -280,6 +350,16 @@
                   "PointInstruction": "TWRTPT53"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 67,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "CTYARE51"
+                },
+                "has_var": true
               }
             ]
           },
@@ -305,6 +385,16 @@
                   "PointInstruction": "TWRTPT52"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 74,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "CTYARE51"
+                },
+                "has_var": true
               }
             ]
           },
@@ -329,6 +419,16 @@
                   "PointInstruction": "TWRDEF51"
                 },
                 "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 79,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "CTYARE51"
+                },
+                "has_var": true
               }
             ]
           }

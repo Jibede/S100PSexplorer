@@ -51,8 +51,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "TRFCF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -66,6 +79,19 @@
     "instruction_type": "symbol",
     "values": {
       "PointInstruction": "PILBARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "CTYARE51"
     },
     "has_var": false,
     "conditions": [

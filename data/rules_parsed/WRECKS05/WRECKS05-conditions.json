@@ -146,6 +146,43 @@
   },
   {
     "node_type": "hit",
+    "line": 114,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 116,
+    "code": "featurePortrayal:AddInstructions('ColorFill:DEPIT')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "DEPIT"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 118,
+    "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "DEPVS"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
     "line": 122,
     "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
     "instruction_type": "symbol",

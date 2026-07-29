@@ -6,8 +6,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 1.28,
+      "thickness": 1.28,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfConveyor == 1 and feature.radarConspicuous == true"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -56,8 +70,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.96,
+      "thickness": 0.96,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfConveyor == 2 and feature.radarConspicuous == true"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 33,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -106,8 +134,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 1.28,
+      "thickness": 1.28,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfConveyor == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 47,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -142,8 +184,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.96,
+      "thickness": 0.96,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.categoryOfConveyor == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 60,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -178,8 +234,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 1.28,
+      "thickness": 1.28,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.radarConspicuous == true"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 73,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -228,8 +298,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 1.28,
+      "thickness": 1.28,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 87,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -296,8 +379,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.96,
+      "thickness": 0.96,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.radarConspicuous"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 107,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -331,8 +428,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.96,
+      "thickness": 0.96,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 120,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -380,8 +490,22 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.96,
+      "thickness": 0.96,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.radarConspicuous"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 136,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [
@@ -415,8 +539,21 @@
     "instruction_type": "line_style",
     "values": {
       "style": "solid",
-      "tickness": 0.96,
+      "thickness": 0.96,
       "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 149,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
     },
     "has_var": false,
     "conditions": [

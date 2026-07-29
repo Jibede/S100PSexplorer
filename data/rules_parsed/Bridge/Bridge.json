@@ -46,8 +46,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 1.6,
+                  "thickness": 1.6,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 23,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -74,8 +84,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 1.6,
+                  "thickness": 1.6,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 27,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -100,8 +120,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 1.6,
+                  "thickness": 1.6,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 32,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -128,8 +158,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 1.6,
+                  "thickness": 1.6,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 36,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }
@@ -154,8 +194,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 1.6,
+                  "thickness": 1.6,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 41,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               },
@@ -182,8 +232,18 @@
                 "instruction_type": "line_style",
                 "values": {
                   "style": "solid",
-                  "tickness": 1.6,
+                  "thickness": 1.6,
                   "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 45,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
                 },
                 "has_var": false
               }

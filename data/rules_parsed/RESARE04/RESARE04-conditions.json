@@ -80,7 +80,7 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHMGD"
     },
     "has_var": false,
@@ -88,6 +88,35 @@
       "restriction",
       "contains(restriction, {\n    7,\n    8,\n    14,\n})",
       "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    7,\n    8,\n    14,\n})",
+      "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 33,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:ENTRES51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "ENTRES51"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    7,\n    8,\n    14,\n})"
     ]
   },
   {
@@ -171,7 +200,7 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHMGD"
     },
     "has_var": false,
@@ -179,6 +208,35 @@
       "restriction",
       "contains(restriction, {\n    1,\n    2,\n})",
       "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    1,\n    2,\n})",
+      "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 57,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:ACHRES51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "ACHRES51"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    1,\n    2,\n})"
     ]
   },
   {
@@ -262,7 +320,7 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHMGD"
     },
     "has_var": false,
@@ -270,6 +328,35 @@
       "restriction",
       "contains(restriction, {\n    3,\n    4,\n    5,\n    6,\n    24,\n})",
       "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 79,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    3,\n    4,\n    5,\n    6,\n    24,\n})",
+      "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 81,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:FSHRES51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "FSHRES51"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    3,\n    4,\n    5,\n    6,\n    24,\n})"
     ]
   },
   {
@@ -323,7 +410,7 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHMGD"
     },
     "has_var": false,
@@ -331,6 +418,35 @@
       "restriction",
       "contains(restriction, {\n    13,\n    16,\n    17,\n    23,\n    25,\n    26,\n    27,\n})",
       "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 99,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    13,\n    16,\n    17,\n    23,\n    25,\n    26,\n    27,\n})",
+      "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 101,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "CTYARE51"
+    },
+    "has_var": true,
+    "conditions": [
+      "restriction",
+      "contains(restriction, {\n    13,\n    16,\n    17,\n    23,\n    25,\n    26,\n    27,\n})"
     ]
   },
   {
@@ -367,13 +483,40 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHMGD"
     },
     "has_var": false,
     "conditions": [
       "restriction",
       "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 113,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "restriction",
+      "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 115,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "CTYARE51"
+    },
+    "has_var": true,
+    "conditions": [
+      "restriction"
     ]
   },
   {
@@ -450,12 +593,36 @@
     "instruction_type": "line_style",
     "values": {
       "style": "dash",
-      "tickness": 0.64,
+      "thickness": 0.64,
       "color": "CHMGD"
     },
     "has_var": false,
     "conditions": [
       "contextParameters.PlainBoundaries"
     ]
+  },
+  {
+    "node_type": "hit",
+    "line": 141,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 143,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "CTYARE51"
+    },
+    "has_var": true,
+    "conditions": []
   }
 ]

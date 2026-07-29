@@ -1,0 +1,33 @@
+<div class="topbar">
+  <div class="brand">
+    <span class="dot"></span>S-101
+    <small>ANALYSEUR DES RÈGLES D'AFFICHAGE LUA</small>
+  </div>
+  
+  <nav class="topnav" id="topnav">
+    <button
+      class="{% if name_page == 'features' %}active{% endif %}"
+      onclick="window.location.href = '{{ url_for('features.view_features') }}'"
+    >
+      Features
+    </button>
+    <button
+      class="{% if name_page == 'attributes' %}active{% endif %}"
+      onclick="window.location.href = '{{ url_for('attributes.view_attributes') }}'"
+    >
+      Attributes
+    </button>
+    <button
+      class="{% if name_page == 'symbols' %}active{% endif %}"
+      onclick="window.location.href = '{{ url_for('symbols.view_symbols') }}'"
+    >
+      Symbols
+    </button>
+    <button
+      class="{% if name_page == 'rules' %}active{% endif %}"
+      onclick="window.location.href = '{{ url_for('rules.view_rules') }}'"
+    >
+      Rules
+    </button>
+  </nav>
+</div>

@@ -5,10 +5,10 @@ import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 from pathlib import Path
 
-# from src.utils.logger import config_logger
+from src.utils.logger import config_logger
 
 
-# logger = config_logger(__name__)
+LOGGER = config_logger(__name__)
 
 
 class XMLReaderAditionalFiles:
@@ -20,6 +20,8 @@ class XMLReaderAditionalFiles:
         self.data_line = []
 
     def get_info(self, file_path: str):
+        LOGGER.info(f'{'#' * 30} GETTING ADITIONAL FILES DATA {'#' * 30}')
+        
         files = glob.glob(file_path)
         
         for file in files:
@@ -30,7 +32,7 @@ class XMLReaderAditionalFiles:
             self.file = path.stem
             self.dir = path.parent.name
 
-            # logger.info("Processing %s", file)
+            LOGGER.info(f'PROCESSING {self.dir} -> {self.file}')
 
             root = ET.parse(file).getroot()
 
@@ -39,6 +41,8 @@ class XMLReaderAditionalFiles:
 
             
             self.save_json(self.data_line if self.data_line else self.data)
+            
+        LOGGER.info(f'{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM ADITIONAL FILES OF {self.dir.upper()} WAS COMPLETED {'*' * 10}')
 
     def save_json(
         self, data: List[Dict], output: str = "./data/aditionalFiles"
@@ -127,10 +131,3 @@ class XMLReaderAditionalFiles:
                     "green": rgb.find("green").text,
                     "blue": rgb.find("blue").text,
                 }
-
-
-if __name__ == "__main__":
-    xml_reader = XMLReaderAditionalFiles()
-    xml_reader.get_info("source/lineStyles/*.xml")
-    # xml_reader.get_info("source/areaFills/*.xml")
-    # xml_reader.get_info("source/colorProfiles/*.xml")

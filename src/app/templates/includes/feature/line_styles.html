@@ -1,0 +1,113 @@
+{% if lineStyles %}
+<section class="block">
+  <h2>Line Styles</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Aperçu</th>
+        <th>Nom</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for line in lineStyles %}
+      <tr>
+        <td>
+          <!-- ============================================== -->
+          <!-- 1. SE FOR DO TIPO "SIMPLE"                     -->
+          <!-- ============================================== -->
+          {% if line['type'] == 'simple' %}
+          <!-- DAY -->
+          <span class="swatch_area_fills">
+            <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg">
+              {% if line['style'] == 'dash' %}
+              <line
+                x1="0"
+                y1="15"
+                x2="100"
+                y2="15"
+                stroke="rgb({{line['color']['day']['red']}},{{line['color']['night']['green']}},{{line['color']['night']['blue']}})"
+                stroke-width="{{line['thickness']}}"
+                stroke-dasharray="8 5"
+              />
+              {% elif line['style'] == 'dot' %}
+              <line
+                x1="0"
+                y1="15"
+                x2="100"
+                y2="15"
+                stroke="rgb({{line['color']['night']['red']}},{{line['color']['night']['green']}},{{line['color']['night']['blue']}})"
+                stroke-width="{{line['thickness']}}"
+                stroke-dasharray="2 3"
+              />
+              {% else %}
+              <line
+                x1="0"
+                y1="15"
+                x2="100"
+                y2="15"
+                stroke="rgb({{line['color']['night']['red']}},{{line['color']['night']['green']}},{{line['color']['night']['blue']}})"
+                stroke-width="{{line['thickness']}}"
+              />
+              {% endif %}
+            </svg>
+          </span>
+          <!-- ============================================== -->
+          <!-- 2. SE FOR DO TIPO "INSTRUCTION" (Complexo)     -->
+          <!-- ============================================== -->
+          {% elif line['type'] == 'instruction' %}
+
+          <!-- DAY -->
+          <span class="swatch_area_fills">
+            <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg">
+              {% if line['dash'] %}
+              <line
+                x1="0"
+                y1="15"
+                x2="100"
+                y2="15"
+                stroke="rgb({{line['pen']['color']['night']['red']}},{{line['pen']['color']['night']['green']}},{{line['pen']['color']['night']['blue']}})"
+                stroke-width="{{line['pen']['width']}}"
+                stroke-dashoffset="-{{line['dash'][0]['start']}}"
+                stroke-dasharray="{{line['dash'][0]['length']}} {{line['intervalLength'] | float - line['dash'][0]['length'] | float}}"
+              />
+              {% else %}
+              <line
+                x1="0"
+                y1="15"
+                x2="100"
+                y2="15"
+                stroke="rgb({{line['pen']['color']['night']['red']}},{{line['pen']['color']['night']['green']}},{{line['pen']['color']['night']['blue']}})"
+                stroke-width="{{line['pen']['width']}}"
+              />
+              {% endif %} {% if line['symbol'] %} {% for sym in line['symbol']
+              %} {% set pos_x = (sym['position'] | float /
+              line['intervalLength'] | float) * 100 if line['intervalLength']
+              else 50 %}
+              <!-- Subtraímos 10 do X e usamos Y=5 para centralizar um símbolo de 20x20 no meio da linha (Y=15) -->
+              <svg x="{{ pos_x - 10 }}" y="10">
+                {% include 'symbols/' ~ sym['code'] ~ '.svg' ignore missing %}
+              </svg>
+              {% endfor %} {% endif %}
+            </svg>
+          </span>
+          {% endif %}
+        </td>
+
+        <!-- Coluna Código (fallback para caso não tenha código na complexa) -->
+        <td>{{ line['code'] if line['code'] else '-' }}</td>
+
+        <!-- Coluna Condições -->
+        <td class="mono">
+          {% for condition in line['conditions'] %}
+          <ul>
+            <li>{{condition}}</li>
+          </ul>
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}

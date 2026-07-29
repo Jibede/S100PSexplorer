@@ -42,6 +42,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 15,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL14')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL14"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 16,
@@ -89,6 +99,16 @@
                 "node_type": "else",
                 "line": 25,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 27,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL14')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL14"
+                },
+                "has_var": false
               },
               {
                 "node_type": "if",
@@ -140,6 +160,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 39,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL14')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL14"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 40,
@@ -187,6 +217,16 @@
                 "node_type": "else",
                 "line": 49,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 51,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL13')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL13"
+                },
+                "has_var": false
               },
               {
                 "node_type": "if",
@@ -238,6 +278,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 63,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL12"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 64,
@@ -285,6 +335,16 @@
                 "node_type": "else",
                 "line": 73,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 75,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL12"
+                },
+                "has_var": false
               },
               {
                 "node_type": "if",
@@ -336,6 +396,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 87,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL12"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 88,
@@ -383,6 +453,16 @@
                 "node_type": "else",
                 "line": 97,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 99,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL11')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL11"
+                },
+                "has_var": false
               },
               {
                 "node_type": "if",
@@ -434,6 +514,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 111,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL12"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 112,
@@ -481,6 +571,16 @@
                 "node_type": "else",
                 "line": 121,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 123,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL12"
+                },
+                "has_var": false
               },
               {
                 "node_type": "if",
@@ -532,6 +632,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 135,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL12"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 136,
@@ -581,6 +691,16 @@
                 "children": []
               },
               {
+                "node_type": "hit",
+                "line": 147,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL11')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRTCL11"
+                },
+                "has_var": false
+              },
+              {
                 "node_type": "if",
                 "condition": "feature.orientationValue",
                 "line": 148,
@@ -627,6 +747,16 @@
                 "node_type": "else",
                 "line": 157,
                 "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 159,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:RCRDEF11')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "RCRDEF11"
+                },
+                "has_var": false
               },
               {
                 "node_type": "if",

@@ -1,0 +1,28 @@
+<aside class="sidebar">
+  <input type="text" id="search" placeholder="Rechercher…" />
+  <div class="label">{{ name_page | capitalize }}</div>
+
+  <ul class="side-list">
+  {% for item in data.values() %}
+    
+    {% if name_page == 'features' %}
+      {% set link_url = url_for('features.view_features', feature_code=item['code']) %}
+    {% elif name_page == 'attributes' %}
+      {% set link_url = url_for('attributes.view_attributes', attr_code=item['code']) %}
+    {% elif name_page == 'symbols' %}
+      {% set link_url = url_for('symbols.view_symbols', symbol_id=item['code']) %}
+    {% else %}
+      {% set link_url = '#' %}
+    {% endif %}
+
+    <li
+      class="{% if item['code'] == actual_element %}active{% endif %}"
+      onclick="window.location.href='{{ link_url }}'"
+    >
+      <span><b>{{ item['name'] }}</b></span>
+      <span class="code">{{ item['code'] }}</span>
+    </li>
+    
+  {% endfor %}
+</ul>
+</aside>
