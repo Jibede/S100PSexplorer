@@ -1,3 +1,5 @@
+import json
+
 from flask import Blueprint, redirect, render_template
 from ..data_manager import DATA_FT, DATA_RULES, get_attr_info, get_ft_info
 

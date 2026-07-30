@@ -1,0 +1,24 @@
+{% if 'rules' in linked_rules %}
+<h3>Linked Rules</h3>
+<table class="data">
+  <thead>
+    <tr>
+      <th>Rule</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for rule in linked_rules['rules'] %}
+    <tr class="clickable">
+      <td class="mono">
+        {{ data_rules.get(rule, {}).get('file_name', 'N/A') }}
+      </td>
+
+      <td class="mono">
+        {{ data_rules.get(rule, {}).get('description', 'N/A') }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%endif%}

@@ -68,14 +68,14 @@ def _get_linked_attrs() -> dict[str, list[dict]]:
     """
     linked_attrs = {}
 
-    for name, ft_dt in DATA_FT.items():
+    for ft_dt in DATA_FT.values():
         for binding_attr in ft_dt.get("attr_binding", []):
             attr_name = binding_attr.get("attribute")
 
             if attr_name:
                 linked_attrs.setdefault(attr_name, []).append(
                     {
-                        "name": name,
+                        "name": ft_dt.get('name'),
                         "code": ft_dt.get("code"),
                         "permitted_primitives": ft_dt.get("permitted_primitives"),
                     }
@@ -87,6 +87,7 @@ def _get_linked_attrs() -> dict[str, list[dict]]:
 #############################################################
 
 # PATH DIRECTORIES
+base_dir = Path('data')
 feature_dir = Path("data/featureCatalog")
 portrayal_dir = Path("data/portrayalCatalog")
 condition_dir = Path("data/rules_parsed")
@@ -98,6 +99,8 @@ _data_simple_attrs = _load_data(feature_dir / "S100_FC_SimpleAttributes.json")
 _data_complex_attrs = _load_data(feature_dir / "S100_FC_ComplexAttributes.json")
 _data_symbols = _load_data(portrayal_dir / "symbols.json")
 _data_rules = _load_data(portrayal_dir / "rules.json")
+_data_line_styles = _load_data(portrayal_dir / 'lineStyles.json')
+_data_area_fills = _load_data(portrayal_dir / 'areaFills.json')
 
 _all_attrs = _data_simple_attrs + [
     {**attr, "value_type": "complex"} for attr in _data_complex_attrs
@@ -105,10 +108,12 @@ _all_attrs = _data_simple_attrs + [
 DATA_ATTRS = _process_data(_all_attrs)
 DATA_FT = _process_data(_data_ft_types)
 DATA_RULES = _process_data(_data_rules, "id")
+DATA_LINE_STYLES = _process_data(_data_line_styles, 'id')
+DATA_AREA_FILLS = _process_data(_data_area_fills, 'id')
 DATA_SYMBOLS = _process_data(_data_symbols, "id")
 LINKED_ATTRS = _get_linked_attrs()
 DATA_COLOR_PROFILES = _load_data(aditional_dir / "colorProfiles" / "colorProfile.json")
-DATA_CONDITIONS = _load_data(condition_dir / "symbol_rules.json")
+DATA_CONDITIONS = _load_data(base_dir / "symbol_related.json")
 
 ################### DATA TRANSFORM FUNCTIONS ###################
 
@@ -122,6 +127,20 @@ def get_svg(symbol_id: str):
     except FileNotFoundError:
         LOGGER.error(f'Path {svg_path} does not found !')
         return Markup(f'<span> File {symbol_id} does not found !</span>')
+    
+def get_line_style(line_code: str):
+    line_path = aditional_dir / "lineStyles" / f"{line_code}.json"
+
+    line_file = _load_data(line_path)
+
+    line_color = line_file["pen"]["color"]
+    line_file["pen"]["color"] = get_color_styles(line_color)
+    
+    return line_file
+
+def get_area_fill(area_code: str):
+    area_path = aditional_dir / "areaFills" / f"{area_code}.json"
+    return _load_data(area_path)
 
 def get_color_styles(color_code: str) -> Dict[str, Dict]:
     """Defines a dictionary with the RGB values for each day style
@@ -183,7 +202,7 @@ def get_ft_info(ft_code: str) -> Dict[str, Dict]:
 
         elif instruction_type == "line_instruction":
             _get_ft_line_instruction(stmt, info)
-            
+
     return info
 
 def get_symbol_conditions(rule_code: str, symbol_code: str) -> List[str] | None:
@@ -232,7 +251,7 @@ def _get_ft_line_info(stmt: Dict[str, Dict], info: Dict):
                     color_data = {
                         **color_data,
                         **e,
-                        "code": e["value"],
+                        "code": e['value'],
                         "color": get_color_styles(e["value"]),
                     }
 
@@ -243,7 +262,7 @@ def _get_ft_line_info(stmt: Dict[str, Dict], info: Dict):
 
         else:
             if key == "color":
-                info_line.setdefault("code", val)
+                info_line.setdefault("code", 'SIMPLE LINE')
                 val = get_color_styles(val)
 
             info_line.setdefault(key, val)
@@ -255,11 +274,9 @@ def _get_ft_line_info(stmt: Dict[str, Dict], info: Dict):
 
 def _get_ft_area_fill(stmt: Dict[str, Dict], info: Dict):
     area_code = stmt.get("values").get("AreaFillReference")
-    area_path = aditional_dir / "areaFills" / f"{area_code}.json"
-    area_file = _load_data(area_path)
 
     info.setdefault("area_fill", []).append(
-        {**area_file, "value": area_code, "conditions": stmt.get("conditions")}
+        {**get_area_fill(area_code), "value": area_code, "conditions": stmt.get("conditions")}
     )
 
 
@@ -291,16 +308,9 @@ def _get_ft_line_instruction(stmt: Dict[str, Dict], info: Dict):
     line_instruction = stmt.get("values").get("LineInstruction")
 
     if not line_instruction == "_simple_":
-        line_path = aditional_dir / "lineStyles" / f"{line_instruction}.json"
-
-        line_file = _load_data(line_path)
-
-        line_color = line_file["pen"]["color"]
-        line_file["pen"]["color"] = get_color_styles(line_color)
-
         info.setdefault("line_style", []).append(
             {
-                **line_file,
+                **get_line_style(line_instruction),
                 'type': 'instruction',
                 "code": line_instruction,
                 "conditions": stmt.get("conditions"),

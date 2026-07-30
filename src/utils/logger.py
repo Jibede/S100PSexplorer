@@ -6,7 +6,6 @@ def config_logger(name: str) -> Logger:
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
     
-    # Création d'un handler pour la console
     handler = logging.StreamHandler()
     
     format_msg = '[%(levelname)s] (%(asctime)s): %(message)s'
@@ -19,3 +18,10 @@ def config_logger(name: str) -> Logger:
         logger.addHandler(handler)
         
     return logger
+
+def set_flask_logger(logger: Logger) -> None:
+    wer_logger = logging.getLogger('werkzeug')
+    wer_logger.handlers.clear()
+    wer_logger.addHandler(logger.handlers[0])
+    wer_logger.setLevel(logger.level)
+    wer_logger.propagate = False

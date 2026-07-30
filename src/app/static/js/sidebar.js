@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const searchInput = document.getElementById("search");
     const listItems = document.querySelectorAll(".side-list li");
-    const scrollContainer = document.querySelector(".side-list");
+    const scrollContainer = document.querySelector(".side-list"); 
+    const itemAtivo = document.querySelector(".sidebar li.active");
 
-    // Mantém a posição do scroll
+    if (itemAtivo) {
+        const dropdownPai = itemAtivo.closest("details");
+        if (dropdownPai) {
+            dropdownPai.setAttribute("open", "");
+        }
+        
+        itemAtivo.scrollIntoView({ behavior: "instant", block: "nearest" });
+    }
+
     const savedScroll = sessionStorage.getItem("sidebarScrollPosition");
     if (savedScroll && scrollContainer) {
         scrollContainer.scrollTop = savedScroll;
@@ -15,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Lógica de filtro da barra de busca
     if (searchInput) {
         searchInput.addEventListener("input", (e) => {
             const filter = e.target.value.toLowerCase();

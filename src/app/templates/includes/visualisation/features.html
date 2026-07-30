@@ -1,0 +1,25 @@
+{% set match_rules = namespace(found=false) %} {% if 'rules' in linked_rules %}
+{% for rule in linked_rules['rules'] %} {% if rule in data_ft %} {% set
+match_rules.found = true %} {% endif %} {% endfor %} {% endif %} {% if
+match_rules.found %}
+<br />
+<h3>Linked Features</h3>
+<table class="data">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for rule in linked_rules['rules'] %} {# On n'affiche la ligne que si la
+    règle existe vraiment dans data_ft #} {% if rule in data_ft %}
+    <tr class="clickable" onclick="window.location.href='/features/{{rule}}'">
+      <!-- Usando .get() para segurança dos dados da Feature -->
+      <td class="mono">{{ data_ft.get(rule, {}).get('name', 'N/A') }}</td>
+      <td class="mono">{{ data_ft.get(rule, {}).get('definition', 'N/A') }}</td>
+    </tr>
+    {% endif %} {% endfor %}
+  </tbody>
+</table>
+{% endif %}

@@ -1,6 +1,6 @@
 from flask import Blueprint, redirect, render_template
 
-from ..data_manager import DATA_ATTRS, LINKED_ATTRS
+from ..data_manager import DATA_ATTRS, DATA_FT, LINKED_ATTRS
 
 
 attributes_bp = Blueprint('attributes', __name__, url_prefix='/attributes')

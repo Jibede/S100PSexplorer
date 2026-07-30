@@ -18,10 +18,10 @@
       Attributes
     </button>
     <button
-      class="{% if name_page == 'symbols' %}active{% endif %}"
-      onclick="window.location.href = '{{ url_for('symbols.view_symbols') }}'"
+      class="{% if name_page == 'visualisation' %}active{% endif %}"
+      onclick="window.location.href = '{{ url_for('visualisation.view_visualisation')}}'"
     >
-      Symbols
+      Visualisation
     </button>
     <button
       class="{% if name_page == 'rules' %}active{% endif %}"

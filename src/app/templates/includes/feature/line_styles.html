@@ -11,11 +11,17 @@
     </thead>
     <tbody>
       {% for line in lineStyles %}
-      <tr>
+
+      {% if line['type'] != 'simple' %}
+        <tr
+        class="clickable"
+        onclick="window.location.href='/visualisation/line_style/{{line['code']}}'"
+        >
+      {% else %}
+        <tr>
+      {% endif %}
+
         <td>
-          <!-- ============================================== -->
-          <!-- 1. SE FOR DO TIPO "SIMPLE"                     -->
-          <!-- ============================================== -->
           {% if line['type'] == 'simple' %}
           <!-- DAY -->
           <span class="swatch_area_fills">
@@ -52,9 +58,7 @@
               {% endif %}
             </svg>
           </span>
-          <!-- ============================================== -->
-          <!-- 2. SE FOR DO TIPO "INSTRUCTION" (Complexo)     -->
-          <!-- ============================================== -->
+
           {% elif line['type'] == 'instruction' %}
 
           <!-- DAY -->
@@ -80,11 +84,10 @@
                 stroke="rgb({{line['pen']['color']['night']['red']}},{{line['pen']['color']['night']['green']}},{{line['pen']['color']['night']['blue']}})"
                 stroke-width="{{line['pen']['width']}}"
               />
-              {% endif %} {% if line['symbol'] %} {% for sym in line['symbol']
-              %} {% set pos_x = (sym['position'] | float /
-              line['intervalLength'] | float) * 100 if line['intervalLength']
-              else 50 %}
-              <!-- Subtraímos 10 do X e usamos Y=5 para centralizar um símbolo de 20x20 no meio da linha (Y=15) -->
+              {% endif %} 
+              {% if line['symbol'] %} 
+              {% for sym in line['symbol']%} 
+              {% set pos_x = (sym['position'] | float / line['intervalLength'] | float) * 100 if line['intervalLength'] else 50 %}
               <svg x="{{ pos_x - 10 }}" y="10">
                 {% include 'symbols/' ~ sym['code'] ~ '.svg' ignore missing %}
               </svg>

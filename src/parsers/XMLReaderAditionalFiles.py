@@ -7,9 +7,7 @@ from pathlib import Path
 
 from src.utils.logger import config_logger
 
-
 LOGGER = config_logger(__name__)
-
 
 class XMLReaderAditionalFiles:
     def __init__(self):
@@ -18,33 +16,46 @@ class XMLReaderAditionalFiles:
         self.output_dir = None
         self.data = {}
         self.data_line = []
+        self.symbols_related = {}
 
     def get_info(self, file_path: str):
-        LOGGER.info(f'{'#' * 30} GETTING ADITIONAL FILES DATA {'#' * 30}')
-        
+        LOGGER.info(f"{'#' * 30} GETTING ADITIONAL FILES DATA {'#' * 30}")
+
+        self.symbols_related = self._read_json('data/symbol_related.json')
+
         files = glob.glob(file_path)
-        
+
         for file in files:
             self.data = {}
             self.data_line = []
-            
+
             path = Path(file)
             self.file = path.stem
             self.dir = path.parent.name
 
-            LOGGER.info(f'PROCESSING {self.dir} -> {self.file}')
+            LOGGER.info(f"PROCESSING {self.dir} -> {self.file}")
 
+            
             root = ET.parse(file).getroot()
 
             for e in root:
                 self._dispatch(e)
 
-            
-            self.save_json(self.data_line if self.data_line else self.data)
-            
-        LOGGER.info(f'{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM ADITIONAL FILES OF {self.dir.upper()} WAS COMPLETED {'*' * 10}')
+            self._save_json(self.data_line if self.data_line else self.data)
 
-    def save_json(
+        
+        with open('./data/symbol_related.json', 'w', encoding='utf-8') as fp:
+            json.dump(self.symbols_related, fp, indent=2)
+        
+        LOGGER.info(
+            f"{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM ADITIONAL FILES OF {self.dir.upper()} WAS COMPLETED {'*' * 10}"
+        )
+
+    def _read_json(self, path_file: str) -> None:
+        with open(Path(path_file), "r", encoding="utf-8") as fp:
+            return json.load(fp)
+
+    def _save_json(
         self, data: List[Dict], output: str = "./data/aditionalFiles"
     ) -> None:
         output_dir = Path(output)
@@ -56,55 +67,77 @@ class XMLReaderAditionalFiles:
         with open(json_file, "w", encoding="utf-8") as fp:
             json.dump(data, fp, indent=2)
 
+    def _set_symbol_related(self, symbol_code: str, name_group: str) -> None:
+        self.symbols_related.setdefault(symbol_code, {})
+        self.symbols_related[symbol_code].setdefault(name_group, [])
+        if self.file not in self.symbols_related[symbol_code][name_group]:
+            self.symbols_related[symbol_code][name_group].append(self.file)
+
     def _dispatch(self, e: Element):
         if self.dir == "lineStyles":
-            self.get_lineStyle(e)
+            self._get_lineStyle(e)
 
         if self.dir == "areaFills":
-            self.get_areFills(e)
+            self._get_areFills(e)
 
         if self.dir == "colorProfiles":
-            self.get_colorProfile(e)
+            self._get_colorProfile(e)
 
-    def get_lineStyle(self, e: Element):
+    def _get_lineStyle(self, e: Element):
         tag = e.tag
 
         if tag == "intervalLength":
             self.data[tag] = e.text
 
         if tag == "pen":
-            self.data[tag] = {"width": e.attrib.get("width"), "color": e.find("color").text}
+            self.data[tag] = {
+                "width": e.attrib.get("width"),
+                "color": e.find("color").text,
+            }
 
         if tag == "dash":
-            self.data.setdefault(tag, []).append({"start": e.find("start").text, "length": e.find("length").text})
+            self.data.setdefault(tag, []).append(
+                {"start": e.find("start").text, "length": e.find("length").text}
+            )
 
         if tag == "symbol":
-            self.data.setdefault(tag, []).append({"code": e.attrib.get("reference"), "position": e.find("position").text,})
+            ref = e.attrib.get("reference")
+            self.data.setdefault(tag, []).append(
+                {
+                    "code": ref,
+                    "position": e.find("position").text,
+                }
+            )
+            self._set_symbol_related(ref, 'line_styles')
 
         if tag == "lineStyle":
             self.data = {}
             for sub_e in e:
-                self.get_lineStyle(sub_e)
-            
-            offset = e.attrib.get('offset')
-            
+                self._get_lineStyle(sub_e)
+
+            offset = e.attrib.get("offset")
+
             if offset:
-                self.data['offset'] = offset
+                self.data["offset"] = offset
             self.data_line.append(self.data)
 
-    def get_areFills(self, e: Element):
+    def _get_areFills(self, e: Element):
         tag = e.tag
 
         if tag == "areaCRS":
             self.data[tag] = e.text
 
         if tag == "symbol":
-            self.data[tag] = e.attrib.get("reference")
+            ref = e.attrib.get("reference")
+            
+            self.data[tag] = ref
+            
+            self._set_symbol_related(ref, 'area_fills')
 
         if tag in ["v1", "v2"]:
             self.data[tag] = {"x": e.find("x").text, "y": e.find("y").text}
 
-    def get_colorProfile(self, e: Element):
+    def _get_colorProfile(self, e: Element):
         tag = e.tag
 
         if tag == "colors":

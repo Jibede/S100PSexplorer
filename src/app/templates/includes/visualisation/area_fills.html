@@ -1,0 +1,23 @@
+{% if 'area_fills' in linked_rules%}
+<h3>Linked Area Fills</h3>
+<table class="data">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for area_code in linked_rules['area_fills']%}
+
+    {% set area = data_area.get(area_code)%}
+
+    <tr>
+      <td class="mono">{{ area_code }}</td>
+      <td class="mono">{{ area.get('description').capitalize()}}</td>
+    </tr>
+
+    {%endfor%}
+  </tbody>
+</table>
+{% endif %}

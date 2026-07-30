@@ -1,19 +1,60 @@
 <aside class="sidebar">
   <input type="text" id="search" placeholder="Rechercher…" />
+
+  {% if name_page == 'visualisation'%}
+
+  <details class="dropdown-group">
+    <summary class="label">Symbols</summary>
+    <ul class="side-list">
+      {% for item in data_symbols.values() %} 
+      {% set link_url = url_for('visualisation.view_visualisation', visu_type='symbol',item_id=item['code']) %}
+      <li
+        class="{% if item['code'] == actual_element and visu_type == 'symbol' %}active{% endif %}"
+        onclick="window.location.href='{{ link_url }}'"
+      >
+        <span><b>{{ item['name'] }}</b></span>
+        <span class="code"><b>{{ item['code'] }}</b></span>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+
+  <details class="dropdown-group">
+    <summary class="label">Line Styles</summary>
+    <ul class="side-list">
+      {% for item in data_line.values() %}
+      {% set link_url = url_for('visualisation.view_visualisation', visu_type='line_style',item_id=item['code']) %}
+      <li class="{% if item['code'] == actual_element and visu_type == 'line_style' %}active{% endif %}" onclick="window.location.href='{{ link_url }}'">
+        <span><b>{{ item['name'] }}</b></span>
+        <span class="code"><b>{{ item['code'] }}</b></span>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+
+  <details class="dropdown-group">
+    <summary class="label">Area Fills</summary>
+    <ul class="side-list">
+      {% for item in data_area.values() %}
+      {% set link_url = url_for('visualisation.view_visualisation', visu_type='area_fill',item_id=item['code']) %}
+      <li class="{% if item['code'] == actual_element and visu_type == 'area_fill' %}active{% endif %}" onclick="window.location.href='{{ link_url }}'">
+        <span><b>{{ item['name'] }}</b></span>
+        <span class="code"><b>{{ item['code'] }}</b></span>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+
+  {% else %}
+
   <div class="label">{{ name_page | capitalize }}</div>
 
   <ul class="side-list">
-  {% for item in data.values() %}
-    
-    {% if name_page == 'features' %}
-      {% set link_url = url_for('features.view_features', feature_code=item['code']) %}
-    {% elif name_page == 'attributes' %}
-      {% set link_url = url_for('attributes.view_attributes', attr_code=item['code']) %}
-    {% elif name_page == 'symbols' %}
-      {% set link_url = url_for('symbols.view_symbols', symbol_id=item['code']) %}
-    {% else %}
-      {% set link_url = '#' %}
-    {% endif %}
+    {% for item in data.values() %} {% if name_page == 'features' %} {% set
+    link_url = url_for('features.view_features', feature_code=item['code']) %}
+    {% elif name_page == 'attributes' %} {% set link_url =
+    url_for('attributes.view_attributes', attr_code=item['code']) %} {% else %}
+    {% set link_url = '#' %} {% endif %}
 
     <li
       class="{% if item['code'] == actual_element %}active{% endif %}"
@@ -22,7 +63,8 @@
       <span><b>{{ item['name'] }}</b></span>
       <span class="code">{{ item['code'] }}</span>
     </li>
-    
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
 </aside>

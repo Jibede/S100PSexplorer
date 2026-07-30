@@ -6,7 +6,7 @@ from ..data_manager import get_svg
 from .main import main_bp
 from .features import features_bp
 from .attributes import attributes_bp
-from .symbols import symbols_bp
+from .visualisation import visualisation_bp
 from .rules import rules_bp
 
 
@@ -22,7 +22,7 @@ def create_app():
     app.register_blueprint(main_bp)
     app.register_blueprint(features_bp)
     app.register_blueprint(attributes_bp)
-    app.register_blueprint(symbols_bp)
+    app.register_blueprint(visualisation_bp)
     app.register_blueprint(rules_bp)
     
     return app
