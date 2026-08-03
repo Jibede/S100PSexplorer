@@ -3,6 +3,7 @@ import json
 import os
 from collections import defaultdict
 from pathlib import Path
+from typing import List
 
 from luaparser import ast
 from luaparser.astnodes import (
@@ -27,7 +28,6 @@ LOGGER = config_logger(__name__)
 
 class LuaInterpreter:
 
-    # Nome do 1o parâmetro de AddInstructions -> tipo de instrução gerado
     TARGET_PREFIXES = {
         "PointInstruction": "symbol",
         "LocalOffset": "text",
@@ -36,106 +36,73 @@ class LuaInterpreter:
         "LineInstruction": "line_instruction",
     }
 
-    # Prefixo usado internamente para marcar condições negadas
-    # (ramo "NOT (...)" de um if/elseif não satisfeito). Essas condições
-    # nunca aparecem no resultado final, servem só para resolver o valor
-    # correto de variáveis.
     NEGATION_PREFIX = "NOT ("
 
     def __init__(self, path: str):
         self.files = glob.glob(path)
         self.local_var = []
-
-    # ------------------------------------------------------------------
-    # API pública
-    # ------------------------------------------------------------------
+        self.related = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
 
     def get_json_analyses(self, output_dir: str = "./data/rules_parsed"):
         LOGGER.info(f"{'#' * 30} GETTING RULES DATA {'#' * 30}")
-        symbol_rules = defaultdict(set)
 
         for file in self.files:
-            base_name, root_nodes, conditions = self._process_file(file)
+            self.local_var = []
+
+            path = Path(file)
+            tree = self.get_lua_code(path)
+
+            base_name = path.stem
+            root_nodes = self.build_tree(tree)
+            conditions = self.map_conditions(root_nodes)
+
             LOGGER.info(f"PROCESSING {base_name}.lua")
 
             file_output_dir = Path(output_dir) / base_name
             os.makedirs(file_output_dir, exist_ok=True)
 
-            self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
+            ################### JUST FOR TESTS AND DEBUGS########################
+            # self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
+            #####################################################################
+
             self._write_json(
-                file_output_dir / f"{base_name}-conditions.json", conditions
+                file_output_dir / f"{base_name}-conditions.json", data=conditions
             )
 
-            self._collect_symbol_rules(conditions, base_name, symbol_rules)
+            self._collect_related(conditions, base_name)
 
-        self._write_symbol_rules_map(symbol_rules)
+        self._write_json(Path("data") / "related.json", data=self.related)
 
         LOGGER.info(
             f"{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM RULES FILE "
             f"WAS COMPLETED {'*' * 10}"
         )
 
-    def get_symbol_rules_map(self) -> dict:
-        """Processa todos os arquivos e retorna {simbolo: [rule, ...]},
-        sem gravar nada em disco."""
-        symbol_rules = defaultdict(set)
-
-        for file in self.files:
-            base_name, _, conditions = self._process_file(file)
-            self._collect_symbol_rules(conditions, base_name, symbol_rules)
-
-        return self._sorted_symbol_rules(symbol_rules)
-
-    # ------------------------------------------------------------------
-    # Processamento de arquivo (compartilhado pelos dois métodos acima)
-    # ------------------------------------------------------------------
-
-    def _process_file(self, file: str):
-        """Faz o parsing de um arquivo .lua e devolve
-        (nome_base, arvore_json, conditions).
-
-        IMPORTANTE: reseta `self.local_var` a cada arquivo. Sem isso,
-        variáveis de um arquivo continuariam "visíveis" ao processar o
-        próximo arquivo da lista.
-        """
-        self.local_var = []
-
-        path = Path(file)
-        tree = self.get_lua_code(path)
-        root_nodes = self.build_tree(tree)
-        conditions = self.map_conditions(root_nodes)
-
-        return path.stem, root_nodes, conditions
-
     def _write_json(self, path, data) -> None:
         with open(path, "w") as fp:
-            json.dump(data, fp, indent=2)
+            json.dump(data, fp, indent=2, default=list)
 
-    # ------------------------------------------------------------------
-    # Mapa {simbolo: [regras]}
-    # ------------------------------------------------------------------
+    def _collect_related(self, conditions: list, rule_name: str) -> None:
 
-    def _collect_symbol_rules(
-        self, conditions: list, rule_name: str, symbol_rules: dict
-    ) -> None:
         for item in conditions:
-            if (
-                item.get("node_type") != "hit"
-                or item.get("instruction_type") != "symbol"
-            ):
+            if item.get("node_type") != "hit" or item.get("instruction_type") not in [
+                "symbol",
+                "line_instruction",
+                "area_fill",
+            ]:
                 continue
 
-            values = item.get("values") or {}
-            symbol_value = values.get("PointInstruction")
+            values = {
+                "symbol": item.get("values").get("PointInstruction"),
+                "line_style": item.get("values").get("LineInstruction"),
+                "area_fill": item.get("values").get("AreaFillReference"),
+            }
 
-            for symbol in self._flatten_symbol_values(symbol_value):
-                symbol_rules[symbol].add(rule_name)
+            for visu_name in ["symbol", "line_style", "area_fill"]:
+                for visu in self._flatten_values(values[visu_name]):
+                    self.related[visu_name][visu]['rule'].add(rule_name)
 
-    def _flatten_symbol_values(self, value) -> list:
-        """Normaliza o valor (já resolvido) de um símbolo numa lista
-        simples de nomes, cobrindo os 3 formatos possíveis: valor fixo
-        (str), lista de possibilidades ({'value':..., 'conditions':...})
-        ou algo inesperado (ignorado)."""
+    def _flatten_values(self, value) -> List:
         if isinstance(value, str):
             return [value]
 
@@ -143,28 +110,12 @@ class LuaInterpreter:
             symbols = []
             for item in value:
                 if isinstance(item, dict) and "value" in item:
-                    symbols.extend(self._flatten_symbol_values(item["value"]))
+                    symbols.extend(self._flatten_values(item["value"]))
                 else:
-                    symbols.extend(self._flatten_symbol_values(item))
+                    symbols.extend(self._flatten_values(item))
             return symbols
 
         return []
-
-    def _sorted_symbol_rules(self, symbol_rules: dict) -> dict:
-        return {
-            symbol: {"rules": sorted(rules)}
-            for symbol, rules in sorted(symbol_rules.items())
-        }
-
-    def _write_symbol_rules_map(self, symbol_rules: dict) -> None:
-        self._write_json(
-            Path("data") / "symbol_related.json",
-            self._sorted_symbol_rules(symbol_rules),
-        )
-
-    # ==================================================================
-    # PARTE 1 — Parsing: AST do luaparser -> árvore de dicts (JSON)
-    # ==================================================================
 
     def get_lua_code(self, file: str) -> Chunk:
         with open(file, "r", encoding="utf-8") as fp:
@@ -381,19 +332,6 @@ class LuaInterpreter:
 
         return chain
 
-    # ==================================================================
-    # PARTE 2 — Resolução de condições e variáveis (reaching definitions)
-    # ==================================================================
-    #
-    # Ideia geral: percorremos a árvore em ordem de execução mantendo um
-    # `var_state` = {nome_var: [(valor, condicoes), ...]}, isto é, todos
-    # os valores possíveis de cada variável até este ponto e sob quais
-    # condições cada um se aplica. Ao entrar num ramo if/elseif/else,
-    # acumulamos a condição do ramo (ou a negação dos ramos anteriores)
-    # no caminho. Ao sair do bloco, juntamos (merge) o var_state de todos
-    # os ramos possíveis. Cada "hit" é então resolvido usando o
-    # var_state vigente no ponto em que ele aparece.
-
     def map_conditions(self, nodes: list, base_path: list = None, obj: list = None):
         if base_path is None:
             base_path = []
@@ -432,8 +370,6 @@ class LuaInterpreter:
                 i = j
                 continue
 
-            # nós sem tratamento explícito (ex.: 'function') -> desce nos
-            # filhos mantendo o mesmo caminho de condições
             children = node.get("children")
             if children:
                 var_state = self._walk(children, base_path, var_state, obj)
@@ -458,7 +394,6 @@ class LuaInterpreter:
         )
 
         if not has_else:
-            # nenhuma das condições do bloco foi satisfeita
             none_path = base_path + self._all_negations(chain)
             branch_results.append((none_path, dict(var_state_in)))
 
@@ -467,8 +402,6 @@ class LuaInterpreter:
     def _collect_branch_results(
         self, chain: list, base_path: list, var_state_in: dict, obj: list
     ):
-        """Percorre cada ramo da cadeia if/elseif/else, acumulando a
-        negação dos ramos anteriores no caminho de condições de cada um."""
         branch_results = []
         prior_negations = []
         has_else = False
@@ -493,8 +426,6 @@ class LuaInterpreter:
         return branch_results, has_else
 
     def _all_negations(self, chain: list) -> list:
-        """Reconstrói a lista de negações de todas as condições if/elseif
-        da cadeia (usada para o caminho 'nenhum ramo satisfeito')."""
         return [
             self._negate(branch["condition"])
             for branch in chain
@@ -507,9 +438,6 @@ class LuaInterpreter:
     def _merge_branch_states(
         self, chain: list, var_state_in: dict, branch_results: list
     ) -> dict:
-        """Junta o var_state de cada ramo possível: para cada variável
-        alterada em algum ramo, mantém todas as suas possibilidades de
-        valor com o caminho de condições combinado."""
         changed_vars = set()
         for branch in chain:
             changed_vars |= self._collect_assigned_names(branch.get("children") or [])
@@ -544,11 +472,9 @@ class LuaInterpreter:
         if not isinstance(val, str):
             return val
 
-        # val É o nome de uma variável conhecida
         if val in var_state:
             return self._value_from_entries(var_state[val], base_path)
 
-        # val CONTÉM o nome de uma variável conhecida (ex.: interpolação)
         for key, entries in var_state.items():
             if key in val:
                 substituted = [(val.replace(key, str(v)), path) for v, path in entries]
@@ -557,10 +483,6 @@ class LuaInterpreter:
         return val
 
     def _value_from_entries(self, entries, base_path: list):
-        """Combina `base_path` com o caminho de cada entrada (valor,
-        condições), remove as condições negativas e des-duplica. Se
-        sobrar só um valor possível e sem condição alguma, retorna o
-        valor puro; senão, a lista de possibilidades {value, conditions}."""
         combined = [
             (value, self._dedup(list(base_path) + list(path)))
             for value, path in entries

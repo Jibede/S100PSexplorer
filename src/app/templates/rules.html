@@ -1,0 +1,67 @@
+{% extends "base.html" %} 
+{% block conteudo %}
+
+<div class="crumb">
+  Attributes &nbsp;/&nbsp; <b>{{selected_rule['file_name']}}</b>
+</div>
+
+<div class="header-card">
+  <h1>{{selected_rule['file_name']}}</h1>
+
+  <div class="tag-row">
+    <div class="tag"><b>Code</b><span>{{ selected_rule['code'] }}</span></div>
+    <div class="tag"><b>Rule Type</b><span>{{ selected_rule['rule_type'] }}</span></div>
+  </div>
+
+  <br />
+  <div class="sub">{{selected_rule['description']}}</div>
+  <br />
+</div>
+
+  <section class="block">
+    <h2>Modifiable Parameters</h2>
+  
+    <div class="param-grid">
+    {% for info in info_rule.get('text') %}
+    <div class="param-field">
+      <div class="param-grid">
+
+        <label>Text</label>
+        <br>
+        <label for="">Local Offset X</label>
+        <input type="text" value="{{info['LocalOffset'][0]['value']['x']}}">
+        <label for="">Local Offset Y</label>
+        <input type="text" value="{{info['LocalOffset'][0]['value']['y']}}">
+      </div>
+      <div class="param-grid">
+
+      </div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Linked Features</h2>
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr 
+        class="clickable"
+        onclick="window.location.href='/features/{{linked_ft['code']}}'">
+          <td class="mono">{{linked_ft['name']}}</td>
+          <td class="mono">{{linked_ft['definition']}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+{% endblock %}
+

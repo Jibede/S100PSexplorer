@@ -6,14 +6,14 @@
   <details class="dropdown-group">
     <summary class="label">Symbols</summary>
     <ul class="side-list">
-      {% for item in data_symbols.values() %} 
-      {% set link_url = url_for('visualisation.view_visualisation', visu_type='symbol',item_id=item['code']) %}
+      {% for item in data_symbols %} 
+      {% set link_url = url_for('visualisation.view_visualisation', visu_type='symbol',item_id=item, theme=theme) %}
       <li
-        class="{% if item['code'] == actual_element and visu_type == 'symbol' %}active{% endif %}"
+        class="{% if item == actual_element and visu_type == 'symbol' %}active{% endif %}"
         onclick="window.location.href='{{ link_url }}'"
       >
-        <span><b>{{ item['name'] }}</b></span>
-        <span class="code"><b>{{ item['code'] }}</b></span>
+        <span><b>{{ item }}</b></span>
+        <span class="code"><b>{{ item }}</b></span>
       </li>
       {% endfor %}
     </ul>
@@ -22,11 +22,11 @@
   <details class="dropdown-group">
     <summary class="label">Line Styles</summary>
     <ul class="side-list">
-      {% for item in data_line.values() %}
-      {% set link_url = url_for('visualisation.view_visualisation', visu_type='line_style',item_id=item['code']) %}
-      <li class="{% if item['code'] == actual_element and visu_type == 'line_style' %}active{% endif %}" onclick="window.location.href='{{ link_url }}'">
-        <span><b>{{ item['name'] }}</b></span>
-        <span class="code"><b>{{ item['code'] }}</b></span>
+      {% for item in data_line %}
+      {% set link_url = url_for('visualisation.view_visualisation', visu_type='line_style',item_id=item, theme=theme) %}
+      <li class="{% if item == actual_element and visu_type == 'line_style' %}active{% endif %}" onclick="window.location.href='{{ link_url }}'">
+        <span><b>{{ item }}</b></span>
+        <span class="code"><b>{{ item }}</b></span>
       </li>
       {% endfor %}
     </ul>
@@ -35,11 +35,11 @@
   <details class="dropdown-group">
     <summary class="label">Area Fills</summary>
     <ul class="side-list">
-      {% for item in data_area.values() %}
-      {% set link_url = url_for('visualisation.view_visualisation', visu_type='area_fill',item_id=item['code']) %}
-      <li class="{% if item['code'] == actual_element and visu_type == 'area_fill' %}active{% endif %}" onclick="window.location.href='{{ link_url }}'">
-        <span><b>{{ item['name'] }}</b></span>
-        <span class="code"><b>{{ item['code'] }}</b></span>
+      {% for item in data_area %}
+      {% set link_url = url_for('visualisation.view_visualisation', visu_type='area_fill',item_id=item, theme=theme) %}
+      <li class="{% if item == actual_element and visu_type == 'area_fill' %}active{% endif %}" onclick="window.location.href='{{ link_url }}'">
+        <span><b>{{ item }}</b></span>
+        <span class="code"><b>{{ item }}</b></span>
       </li>
       {% endfor %}
     </ul>
@@ -50,19 +50,34 @@
   <div class="label">{{ name_page | capitalize }}</div>
 
   <ul class="side-list">
-    {% for item in data.values() %} {% if name_page == 'features' %} {% set
-    link_url = url_for('features.view_features', feature_code=item['code']) %}
-    {% elif name_page == 'attributes' %} {% set link_url =
-    url_for('attributes.view_attributes', attr_code=item['code']) %} {% else %}
-    {% set link_url = '#' %} {% endif %}
+    {% for item in data.values() %}
 
-    <li
-      class="{% if item['code'] == actual_element %}active{% endif %}"
-      onclick="window.location.href='{{ link_url }}'"
-    >
-      <span><b>{{ item['name'] }}</b></span>
-      <span class="code">{{ item['code'] }}</span>
-    </li>
+      {% set first_info = item['name']%}
+      {% set second_info = item['code']%}
+
+      {% if name_page == 'features' %}
+        {% set link_url = url_for('features.view_features', feature_code=item['code']) %}
+
+      {% elif name_page == 'attributes' %} 
+        {% set link_url = url_for('attributes.view_attributes', attr_code=item['code']) %}
+
+      {% elif name_page == 'rules' %} 
+        {% set link_url = url_for('rules.view_rules', rule_code=item['code']) %}
+        {% set first_info = item['file_name']%}
+        {% set second_info = ''%}
+
+      {% else %}
+        {% set link_url = '#' %}
+         
+      {% endif %}
+
+      <li
+        class="{% if item['code'] == actual_element %}active{% endif %}"
+        onclick="window.location.href='{{ link_url }}'"
+      >
+        <span><b>{{ first_info }}</b></span>
+        <span class="code">{{ second_info }}</span>
+      </li>
     {% endfor %}
   </ul>
 

@@ -14,7 +14,9 @@
 
     <tbody>
       {% for areafill in areaFills %}
-      <tr>
+      <tr 
+      class="clickable"
+      onclick="window.location.href='/visualisation/area_fill/{{areafill['value']}}'">
         <td>
           <span class="swatch_area_fills">
             <canvas

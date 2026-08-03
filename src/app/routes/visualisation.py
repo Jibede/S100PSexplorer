@@ -20,6 +20,7 @@ def view_visualisation(visu_type='symbol', item_id=list(DATA_SYMBOLS.keys())[0])
     selected_item = dataset.get(item_id)
     theme = request.args.get('theme', 'day')
 
+    
     return render_template(
         "visualisation.html",
         data_symbols=DATA_SYMBOLS,
@@ -31,7 +32,7 @@ def view_visualisation(visu_type='symbol', item_id=list(DATA_SYMBOLS.keys())[0])
         actual_element=item_id,
         visu_type=visu_type,
         selected_item=selected_item,
-        linked_rules=DATA_CONDITIONS.get(item_id, []),
+        linked_rules=DATA_CONDITIONS.get(visu_type).get(item_id, []),
         
         get_line=get_line_style,
         get_area=get_area_fill,

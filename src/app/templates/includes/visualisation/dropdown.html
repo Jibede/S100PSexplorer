@@ -1,10 +1,10 @@
 <div class="dropdown-container">
-  <!-- Sugestão: deixe o texto inicial combinando com o CSS padrão carregado no <head> -->
-  <button class="dropdown-trigger">Day ▾</button>
+  <button class="dropdown-trigger">{{ theme | capitalize }} ▾</button>
 
   <div class="dropdown-menu">
-    <a href="#" class="change-theme" data-theme="daySvgStyle.css">Day</a>
-    <a href="#" class="change-theme" data-theme="duskSvgStyle.css">Dusk</a>
-    <a href="#" class="change-theme" data-theme="nightSvgStyle.css">Night</a>
+    <!-- On demande à Flask de recharger la même page avec le nouveau thème -->
+    <a href="{{ url_for('visualisation.view_visualisation', visu_type=visu_type, item_id=actual_element, theme='day') }}">Day</a>
+    <a href="{{ url_for('visualisation.view_visualisation', visu_type=visu_type, item_id=actual_element, theme='dusk') }}">Dusk</a>
+    <a href="{{ url_for('visualisation.view_visualisation', visu_type=visu_type, item_id=actual_element, theme='night') }}">Night</a>
   </div>
 </div>

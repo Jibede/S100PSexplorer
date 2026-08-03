@@ -1,0 +1,71 @@
+{% set line = get_line(actual_element) %}
+
+<div class="glyph-big">
+  <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg">
+    {% if line['dash'] %}
+    <line
+      x1="0"
+      y1="15"
+      x2="100"
+      y2="15"
+      stroke="rgb({{line['pen']['color'][theme]['red']}},{{line['pen']['color'][theme]['green']}},{{line['pen']['color'][theme]['blue']}})"
+      stroke-width="{{line['pen']['width']}}"
+      stroke-dashoffset="-{{line['dash'][0]['start']}}"
+      stroke-dasharray="{{line['dash'][0]['length']}} {{line['intervalLength'] | float - line['dash'][0]['length'] | float}}"
+    />
+    {% else %}
+    <line
+      x1="0"
+      y1="15"
+      x2="100"
+      y2="15"
+      stroke="rgb({{line['pen']['color'][theme]['red']}},{{line['pen']['color'][theme]['green']}},{{line['pen']['color'][theme]['blue']}})"
+      stroke-width="{{line['pen']['width']}}"
+    />
+    {% endif %} {% if line['symbol'] %} {% for sym in line['symbol'] %} {% set
+    pos_x = (sym['position'] | float / line['intervalLength'] | float) * 100 if
+    line['intervalLength'] else 50 %}
+    <svg x="{{ pos_x - 10 }}" y="10">
+      {% include 'symbols/' ~ sym['code'] ~ '.svg' ignore missing %}
+    </svg>
+    {% endfor %} {% endif %}
+  </svg>
+</div>
+
+<div class="info">
+  <h3>{{selected_item['name']}}</h3>
+  <p>{{selected_item['description'].capitalize()}}</p>
+
+
+  {% set match_rules = namespace(found=false) %}
+  {% if 'rule' in linked_rules %}
+    {% for rule in linked_rules['rule'] %} 
+      {% if rule in data_ft %} 
+        {% set match_rules.found = true %} 
+      {% endif %} 
+    {% endfor %} 
+  {% endif %} 
+  
+  {% if match_rules.found %}
+  <h3>Linked Features</h3>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rule in linked_rules['rule'] | sort %} {% if rule in data_ft %}
+      <tr class="clickable" onclick="window.location.href='/features/{{rule}}'">
+        <td class="mono">{{ data_ft.get(rule, {}).get('name', 'N/A') }}</td>
+        <td class="mono">
+          {{ data_ft.get(rule, {}).get('definition', 'N/A') }}
+        </td>
+      </tr>
+      {% endif %} {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+</div>
