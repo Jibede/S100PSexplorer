@@ -1,0 +1,20 @@
+<section class="block">
+  <h2>Linked Features</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Definition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="clickable"
+        onclick="window.location.href='/features/{{linked_ft['code']}}'"
+      >
+        <td class="mono">{{linked_ft['name']}}</td>
+        <td class="mono">{{linked_ft['definition']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

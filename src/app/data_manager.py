@@ -3,6 +3,7 @@
 import json
 from multiprocessing.util import LOGGER_NAME
 from pathlib import Path
+from turtle import color
 from typing import Dict, List
 
 from markupsafe import Markup
@@ -299,16 +300,33 @@ def _get_ft_area_fill(stmt: Dict[str, Dict], info: Dict):
 
 
 def _get_ft_color_fill(stmt: Dict[str, Dict], info: Dict):
-    color_code: List[str] = stmt.get("values").get("ColorFill").split(",")
+    data = stmt.get("values").get("ColorFill")
     transparency = 1
-
-    # There's more parameters than just the color code
-    if len(color_code) > 1:
-        color_code, transparency = color_code
+    
+    if isinstance(data, str):
+        color_code = data.split(',')
+        
+        # There's more parameters than just the color code
+        if len(color_code) > 1:
+            color_code, transparency = color_code
+        else:
+            color_code = color_code.pop()
     else:
-        color_code = color_code.pop()
+        color_code: List[Dict] = data
+    
 
     if isinstance(color_code, list):
+        for color in color_code:
+            
+            color['code'] = color['value']
+            color['transparency'] = transparency
+            
+            
+            color.update({
+                'value': get_color_styles(color['code'])
+            })
+        
+        
         info.setdefault("color_fill", []).extend(color_code)
 
     else:
@@ -354,7 +372,7 @@ def _get_ft_text(stmt: Dict[str, Dict], info: Dict):
             info_text.setdefault(key, []).append(
                 {'value': val, 'conditions': stmt.get('conditions')}
             )
-            
-    info.setdefault('text', []).append(info_text)
+    
+    info.setdefault('text', []).append(info_text | {'line': stmt['line'], 'code': stmt['code']})
 
 #############################################################

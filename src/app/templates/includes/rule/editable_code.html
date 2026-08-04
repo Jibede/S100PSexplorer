@@ -1,0 +1,24 @@
+  {% for info in info_rule.get('text') %}
+
+<br>
+{% set condition = info.get('LocalOffset')[0].get('conditions') %}
+<h2>To conditions [{{' | '.join(condition)}}]</h2>
+
+<div class="code-preview" id="code-preview-box">
+  <div class="line">
+    <span class="line-num">{{info.get('line')}}</span>
+
+    {% set function = info.get('code').split("'")[0] %}
+     {% set string = info.get('code').split("'")[1] %}
+
+    <span class="var">{{function}}</span>
+    <span class="str" id="instruction-string_{{loop.index}}">'{{string}}'</span>
+    <span class="var">)</span>
+  </div>
+</div>
+
+<div class="save-row">
+  <span class="save-msg" id="save-msg">Modifications enregistrées</span>
+  <button onclick="saveParams()">Enregistrer les modifications</button>
+</div>
+{% endfor %}

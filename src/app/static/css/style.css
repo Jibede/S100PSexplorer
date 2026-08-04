@@ -470,6 +470,23 @@ table.data tr.clickable:hover td {
   outline: none;
   border-color: var(--teal);
 }
+
+.param-field input,
+.param-field select {
+  width: 100%;
+  border: 1px solid var(--chart-line);
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  background: #fbfaf4;
+}
+
+.param-field input:focus,
+.param-field select:focus {
+  outline: none;
+  border-color: var(--teal);
+}
 .code-preview {
   margin-top: 14px;
   background: var(--navy-deep);
@@ -481,14 +498,35 @@ table.data tr.clickable:hover td {
   line-height: 1.6;
   overflow-x: auto;
 }
-.code-preview .kw {
-  color: #e6a664;
-}
 .code-preview .var {
   color: #7fd1c8;
 }
 .code-preview .str {
   color: #c7d98a;
+}
+
+.code-preview .line {
+  display: flex;
+  padding: 2px 0;
+  border-radius: 2px;
+  transition: background 0.15s;
+}
+
+/* Effet de survol (hover) pour mettre en évidence la ligne lue */
+.code-preview .line:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Style pour le numéro de ligne */
+.code-preview .line-num {
+  color: #4a6583; /* Une couleur discrète qui ressort sur le fond navy */
+  min-width: 32px; /* Largeur fixe pour que les numéros (1, 10, 100) soient bien alignés */
+  text-align: right;
+  margin-right: 16px;
+  padding-right: 12px;
+  border-right: 1px solid #1e3e63; /* Une fine ligne de séparation verticale */
+  user-select: none; /* Empêche l'utilisateur de copier les numéros quand il copie le code */
+  flex-shrink: 0; /* Empêche le numéro de ligne de s'écraser si le code est très long */
 }
 .save-row {
   display: flex;

@@ -1,0 +1,74 @@
+{% for info in info_rule.get('text') %}
+  <div class="param-grid">
+    <div class="param-field" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div>
+        
+        {% if info.get('LocalOffset') %}
+        <label>Coordinate X</label>
+        <input type="number" id="coordX_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('LocalOffset')[0].get('value').get('x')}}" max="30" min="-30"/>
+        <br /><br />
+
+        <label>Coordinate Y</label>
+        <input type="number" id="coordY_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('LocalOffset')[0].get('value').get('y')}}" max="30" min="-30" />
+        <br /><br />
+        {% set conditions = info.get('LocalOffset')[0].get('conditions') %}
+        {% endif %} 
+        
+        {% if info.get('TextAlignHorizontal') %}
+        {% set text_align_hor = info.get('TextAlignHorizontal')[0].get('value') %}
+        <label>Text Align Horizontal</label>
+        <select id="alignH_{{loop.index}}" onchange="updatePreview({{loop.index}})">
+          <option value="Start" {% if text_align_hor == 'Start'%} selected {% endif %}>Start</option>
+          <option value="Center" {% if text_align_hor == 'Center'%} selected {% endif %}>Center</option>
+          <option value="End" {% if text_align_hor == 'End'%} selected {% endif %}>End</option>
+        </select>
+        <br /><br />
+        {% endif %} 
+          
+        {% if info.get('TextAlignVertical') %}
+        <label>Text Align Vertical</label>
+        {% set text_align_ver = info.get('TextAlignVertical')[0].get('value') %}
+        <select id="alignV_{{loop.index}}" onchange="updatePreview({{loop.index}})">
+          <option value="Start" {% if text_align_ver == 'Start'%} selected {% endif %}>Start</option>
+          <option value="Center" {% if text_align_ver == 'Center'%} selected {% endif %}>Center</option>
+          <option value="End" {% if text_align_ver == 'End'%} selected {% endif %}>End</option>
+        </select>
+        <br /><br />
+        {% endif %} 
+
+        {% if info.get('FontSize') %}
+        <label>Font Size</label>
+        <input type="number" id="fontSize_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('FontSize')[0].get('value')}}" max="30" min="0" />
+        <br /><br />
+        {% set conditions = info.get('FontSize')[0].get('conditions') %} 
+        {% endif %} 
+
+        {% if info.get('FontColor') %}
+        <label>Font Color</label>
+        <select id="fontColor_{{loop.index}}" onchange="updatePreview({{loop.index}})">
+          {% set chosen_color = info.get('FontColor')[0].get('value').get('code') %} 
+          {% for code, color in colors | dictsort %}
+            <option value="{{ code }}" {% if code == chosen_color %} selected {% endif %}>
+              {{ code }} [{{ color['name'].capitalize() }}]
+            </option>
+          {% endfor %}
+        </select>
+        {% set conditions = info.get('FontColor')[0].get('conditions') %} 
+        {% endif %}
+        
+      </div>
+
+      <div>
+        <label>Conditions</label>
+        <ul>
+        {% for condition in conditions %}
+          <li style="font-size: 13px; color: var(--ink-soft); margin-top: 5px">
+            {{condition}}
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <br />
+  </div>
+{% endfor %}
