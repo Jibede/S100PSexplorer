@@ -1,0 +1,77 @@
+.dropdown-trigger {
+  background: var(--white);
+  border: 1px solid var(--chart-line);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.dropdown-trigger:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+/* ---------- Dropdown (Mesmo comportamento de antes) ---------- */
+.dropdown-container {
+  position: relative;
+  display: inline-flex;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0; /* Garante que o menu se expanda para a esquerda e não vase a tela */
+  background: var(--white);
+  border: 1px solid var(--chart-line);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+  z-index: 30;
+
+  /* Efeito de revelar */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition:
+    opacity 0.2s,
+    transform 0.2s,
+    visibility 0.2s;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  color: var(--ink);
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.dropdown-menu .dropdown-divider {
+  height: 1px;
+  background: var(--chart-line);
+  margin: 6px 0;
+}

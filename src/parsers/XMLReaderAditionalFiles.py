@@ -48,7 +48,7 @@ class XMLReaderAditionalFiles:
             self.dir = path.parent.name
 
             root = self._get_root(file)
-            if root is not None:
+            if root is None:
                 LOGGER.warning(
                     f"THE FILE {self.dir} -> {self.file} WON'T BE PROCESSED DUE TO AN ERROR"
                 )
@@ -61,8 +61,8 @@ class XMLReaderAditionalFiles:
 
             self._save_json(
                 self.data_line if self.data_line else self.data,
-                output=f"./data/aditionalFiles/{self.dir}.json",
-                file_name=self.file,
+                output=f"./data/aditionalFiles/{self.dir}",
+                file_name=f'{self.file}.json',
             )
 
         self._save_json(dt_related, output="./data", file_name="related.json")

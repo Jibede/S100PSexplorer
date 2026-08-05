@@ -49,6 +49,36 @@
   </table>
   {% endif %}
 
+  {% if areafill['symbol'] %}
+  <br>
+  <h3>Linked Symbols</h3>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Preview</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="clickable" onclick="window.location.href='/visualisation/symbol/{{areafill['symbol']}}'">
+          <td>
+            <span class="swatch">
+              {{ get_svg(areafill['symbol']) }}
+            </span>
+          </td>
+
+          <td class="mono">{{areafill['symbol']}}</td>
+          
+          <td class="mono">{{ data_symbols.get(areafill['symbol']).get('description') }}</td>
+        </tr>
+
+    </tbody>
+
+  </table>
+  {% endif %}
+
 </div>
 
 <script src="{{ url_for('static', filename='js/canvas_renderer.js') }}"></script>

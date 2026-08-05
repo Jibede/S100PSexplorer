@@ -1,7 +1,7 @@
 {% extends "base.html" %} 
 
 {% block page_styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/nightSvgStyle.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/themes/nightSvgStyle.css') }}" />
 {% endblock %} 
 
 {% block conteudo %}
@@ -38,7 +38,7 @@
 
 {% block page_scripts %}
 <script>
-  window.S101_NIGHT_CSS_URL = "{{ url_for('static', filename='css/nightSvgStyle.css') }}";
+  window.S101_NIGHT_CSS_URL = "{{ url_for('static', filename='css/themes/nightSvgStyle.css') }}";
 </script>
 
 <script src="{{ url_for('static', filename='js/canvas_renderer.js') }}"></script>

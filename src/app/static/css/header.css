@@ -1,0 +1,37 @@
+.header-card {
+  background: var(--white);
+  border: 1px solid var(--chart-line);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 26px;
+}
+.header-card h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.header-card .sub {
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.tag-row {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.tag-row .tag b {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.tag-row .tag span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+}

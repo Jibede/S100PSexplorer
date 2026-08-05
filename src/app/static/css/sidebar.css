@@ -1,0 +1,129 @@
+.sidebar {
+  width: 360px;
+  flex-shrink: 0;
+  background: var(--navy-deep);
+  color: #e6ebf0;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+.sidebar .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7c90a3;
+  font-weight: 600;
+  margin-top: 6px;
+}
+.sidebar input[type="text"] {
+  background: #0f2c4e;
+  border: 1px solid #1e3e63;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  outline: none;
+}
+.sidebar input[type="text"]::placeholder {
+  color: #6e86a0;
+}
+.sidebar input[type="text"]:focus {
+  border-color: var(--amber);
+}
+.side-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.side-list li {
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  align-items: baseline;
+}
+.side-list li:hover {
+  background: #12335a;
+}
+.side-list li.active {
+  background: var(--teal);
+  color: var(--white);
+}
+.side-list li .code {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  color: #8ca4bb;
+}
+.side-list li.active .code {
+  color: #d7f0ee;
+}
+
+/* ---------- Sidebar Dropdowns (details / summary) ---------- */
+.dropdown-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sidebar details summary.label {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0;
+  transition: color 0.15s;
+}
+
+.sidebar details summary.label:hover {
+  color: #e6ebf0;
+}
+
+.sidebar details summary.label::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar details summary.label::before {
+  content: "▶";
+  font-size: 8px;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  color: #7c90a3;
+}
+
+.sidebar details[open] summary.label::before {
+  transform: rotate(90deg);
+}
+
+.sidebar details[open] .side-list {
+  animation: slideDown 0.2s ease-in-out;
+}
+
+.sidebar > .side-list {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

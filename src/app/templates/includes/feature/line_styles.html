@@ -23,7 +23,8 @@
 
         <td>
           {% if line['type'] == 'simple' %}
-          <!-- DAY -->
+          
+          <!-- SIMPLE LINE  -->
           <span class="swatch_area_fills">
             <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg">
               {% if line['style'] == 'dash' %}
@@ -61,7 +62,7 @@
 
           {% elif line['type'] == 'instruction' %}
 
-          <!-- DAY -->
+          <!-- COMPLEX LINE -->
           <span class="swatch_area_fills">
             <svg width="100" height="30" xmlns="http://www.w3.org/2000/svg">
               {% if line['dash'] %}
@@ -89,7 +90,7 @@
               {% for sym in line['symbol']%} 
               {% set pos_x = (sym['position'] | float / line['intervalLength'] | float) * 100 if line['intervalLength'] else 50 %}
               <svg x="{{ pos_x - 10 }}" y="10">
-                {% include 'symbols/' ~ sym['code'] ~ '.svg' ignore missing %}
+                {{ get_svg(sym['code']) }}
               </svg>
               {% endfor %} {% endif %}
             </svg>

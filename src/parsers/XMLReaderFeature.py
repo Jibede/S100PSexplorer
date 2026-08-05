@@ -51,7 +51,7 @@ class XMLReaderFeature:
         LOGGER.info(f"{'#' * 30} GETTING FEATURE CATALOG DATA {'#' * 30}")
 
         root = self._get_root(self.file)
-        if root is not None:
+        if root is None:
             LOGGER.warning("ERROR GETTING THE ROOT TREE. INTERRUPTING PROCESS !")
             return
 
@@ -67,7 +67,7 @@ class XMLReaderFeature:
                 data = data | handler(element, tag)
 
                 if tag == self._GENREAL_GROUPS[-1]:
-                    self._save_json(data, "genral_info.json")
+                    self._save_json(data, "general_info.json")
 
                 continue
 
@@ -121,7 +121,7 @@ class XMLReaderFeature:
 
         try:
             self.output_dir.mkdir(parents=True, exist_ok=True)
-            json_file = self.output_dir / f"{file_name}.json"
+            json_file = self.output_dir / f"{file_name}"
 
             with open(json_file, "w", encoding="utf-8") as fp:
                 json.dump(data, fp, indent=2)
@@ -150,7 +150,7 @@ class XMLReaderFeature:
             if name:
                 return getattr(self, name)
 
-            LOGGER.error(f"Parsing handler was not found for the tag [{tag}] !")
+            LOGGER.warning(f"Parsing handler was not found for the tag [{tag}] !")
             return None
 
         except Exception as err:
@@ -173,11 +173,11 @@ class XMLReaderFeature:
         try:
             for base in [_BASE, _BASE2]:
                 found = e.find(f"{base}{tag}")
-
+                
                 if found is not None:
                     return found
 
-            LOGGER.error(f"Element with tag [{tag}] was not found !")
+            LOGGER.warning(f"Element with tag [{tag}] was not found in the element [{e.tag}]!")
             return None
 
         except TypeError as err:

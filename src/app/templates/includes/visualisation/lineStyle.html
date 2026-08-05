@@ -22,13 +22,13 @@
       stroke="rgb({{line['pen']['color'][theme]['red']}},{{line['pen']['color'][theme]['green']}},{{line['pen']['color'][theme]['blue']}})"
       stroke-width="{{line['pen']['width']}}"
     />
-    {% endif %} {% if line['symbol'] %} {% for sym in line['symbol'] %} {% set
-    pos_x = (sym['position'] | float / line['intervalLength'] | float) * 100 if
-    line['intervalLength'] else 50 %}
-    <svg x="{{ pos_x - 10 }}" y="10">
-      {% include 'symbols/' ~ sym['code'] ~ '.svg' ignore missing %}
-    </svg>
-    {% endfor %} {% endif %}
+    {% endif %} 
+    {% if line['symbol'] %} 
+      {% for sym in line['symbol'] %} 
+        {% set pos_x = (sym['position'] | float / line['intervalLength'] | float) * 100 if line['intervalLength'] else 50 %}
+        <svg x="{{ pos_x - 10 }}" y="10">{{ get_svg(sym['code']) }}</svg>
+      {% endfor %} 
+    {% endif %}
   </svg>
 </div>
 
@@ -66,6 +66,48 @@
       {% endif %} {% endfor %}
     </tbody>
   </table>
+
+  <br>
+  
   {% endif %}
+
+{% if line['symbol'] %}
+<h3>Linked Symbols</h3>
+<table class="data">
+  <thead>
+    <tr>
+      <th>Preview</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% set state = namespace(symbols_code=[])%}
+
+    {% for symbol in line['symbol'] %}
+      {% if symbol['code'] not in state.symbols_code %}
+        <tr class="clickable" onclick="window.location.href='/visualisation/symbol/{{symbol['code']}}'">
+          <td>
+            <span class="swatch">
+              {{ get_svg(symbol['code']) }}
+            </span>
+          </td>
+
+          <td class="mono">{{symbol['code']}}</td>
+          
+          <td class="mono">{{data_symbols.get(symbol['code']).get('description')}}</td>
+
+        </tr>
+
+      {% endif %}
+      
+      {% set state.symbols_code = state.symbols_code + [symbol['code']] %}
+    {% endfor %}
+  </tbody>
+
+
+</table>
+{% endif %}
 
 </div>

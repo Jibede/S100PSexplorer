@@ -2,13 +2,13 @@
 <link
   id="theme-stylesheet"
   rel="stylesheet"
-  href="{{ url_for('static', filename='css/' ~ theme ~ 'SvgStyle.css') }}"
+  href="{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}"
 />
 {% endblock %} {% block conteudo %} {% include
 'includes/visualisation/dropdown.html' %}
 
   <h2>Details of the selected {{visu_type.replace('_', ' ')}}</h2>
-  <div class="symbol-detail">
+  <div class="box-detail">
     {% if visu_type == 'symbol' %}
       {% include 'includes/visualisation/symbols.html' %}
     {% endif %}
@@ -23,6 +23,6 @@
   </div>
 
 <script>
-  window.S101_NIGHT_CSS_URL = "{{ url_for('static', filename='css/nightSvgStyle.css') }}";
+  window.S101_NIGHT_CSS_URL = "{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}";
 </script>
 {% endblock %}

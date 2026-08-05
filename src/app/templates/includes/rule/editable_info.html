@@ -5,11 +5,11 @@
         
         {% if info.get('LocalOffset') %}
         <label>Coordinate X</label>
-        <input type="number" id="coordX_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('LocalOffset')[0].get('value').get('x')}}" max="30" min="-30"/>
+        <input type="number" id="coordX_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('LocalOffset')[0].get('value').get('x')}}"/>
         <br /><br />
 
         <label>Coordinate Y</label>
-        <input type="number" id="coordY_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('LocalOffset')[0].get('value').get('y')}}" max="30" min="-30" />
+        <input type="number" id="coordY_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('LocalOffset')[0].get('value').get('y')}}" />
         <br /><br />
         {% set conditions = info.get('LocalOffset')[0].get('conditions') %}
         {% endif %} 
@@ -38,7 +38,7 @@
 
         {% if info.get('FontSize') %}
         <label>Font Size</label>
-        <input type="number" id="fontSize_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('FontSize')[0].get('value')}}" max="30" min="0" />
+        <input type="number" id="fontSize_{{loop.index}}" oninput="updatePreview({{loop.index}})" value="{{info.get('FontSize')[0].get('value')}}" min="0"/>
         <br /><br />
         {% set conditions = info.get('FontSize')[0].get('conditions') %} 
         {% endif %} 
@@ -48,7 +48,12 @@
         <select id="fontColor_{{loop.index}}" onchange="updatePreview({{loop.index}})">
           {% set chosen_color = info.get('FontColor')[0].get('value').get('code') %} 
           {% for code, color in colors | dictsort %}
-            <option value="{{ code }}" {% if code == chosen_color %} selected {% endif %}>
+            {% set r = color.get('rgbDay').get('red') %}
+            {% set g = color.get('rgbDay').get('green') %}
+            {% set b = color.get('rgbDay').get('blue') %}
+            {% set rgb = 'rgb(%s, %s, %s)' | format(r, g, b) %}
+
+            <option value="{{code}}" data-rgb="{{rgb}}" {% if code == chosen_color %} selected {% endif %}>
               {{ code }} [{{ color['name'].capitalize() }}]
             </option>
           {% endfor %}

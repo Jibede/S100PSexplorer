@@ -1,0 +1,50 @@
+.param-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.param-field {
+  background: var(--white);
+  border: 1px solid var(--chart-line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.param-field label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.param-field input {
+  width: 100%;
+  border: 1px solid var(--chart-line);
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  background: #fbfaf4;
+}
+.param-field input:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+
+.param-field input,
+.param-field select {
+  width: 100%;
+  border: 1px solid var(--chart-line);
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  background: #fbfaf4;
+}
+
+.param-field input:focus,
+.param-field select:focus {
+  outline: none;
+  border-color: var(--teal);
+}

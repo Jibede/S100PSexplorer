@@ -24,7 +24,7 @@ def config_logger(name: str) -> Logger:
 
         handler.addFilter(color_filter)
         
-        format_msg = '%(color)s[%(levelname)s] (%(asctime)s): %(message)s'
+        format_msg = '%(color)s[%(levelname)s] (%(filename)s:%(lineno)d) (%(asctime)s): %(message)s'
         format_date = "%Y/%m/%d %H:%M:%S"
         
         format = logging.Formatter(fmt=format_msg, datefmt=format_date)

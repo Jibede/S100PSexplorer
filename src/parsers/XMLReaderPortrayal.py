@@ -25,7 +25,7 @@ class XMLReaderPortrayal:
         LOGGER.info(f'{'#' * 30} GETTING PORTRAYAL CATALOG DATA {'#' * 30}')
         
         root = self._get_root(self.file)
-        if root is not None:
+        if root is None:
             LOGGER.warning("ERROR GETTING THE ROOT TREE. INTERRUPTING PROCESS !")
             return
         
@@ -38,7 +38,7 @@ class XMLReaderPortrayal:
             if handler is None: continue
             
             data = handler(element)
-            self.save_json(data, f'{tag}.json')
+            self._save_json(data, f'{tag}.json')
             
         LOGGER.info(f'{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM PORTRAYAL CATALOG WAS COMPLETED {'*' * 10}')
 
