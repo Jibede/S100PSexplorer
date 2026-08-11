@@ -30,7 +30,6 @@ body {
 main {
   flex: 1;
   padding: 28px 36px 60px;
-  max-width: 1040px;
 }
 .crumb {
   font-size: 11px;

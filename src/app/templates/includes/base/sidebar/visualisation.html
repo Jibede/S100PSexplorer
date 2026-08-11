@@ -1,0 +1,50 @@
+<details class="dropdown-group">
+  <summary class="label">Symbols</summary>
+  <ul class="side-list">
+    {% for item in data_symbols %} {% set link_url =
+    url_for('visualisation.view_visualisation', visu_type='symbol',item_id=item,
+    theme=theme) %}
+    <li
+      class="{% if item == actual_element and visu_type == 'symbol' %}active{% endif %}"
+      onclick="window.location.href='{{ link_url }}'"
+    >
+      <span><b>{{ item }}</b></span>
+      <span class="code"><b>{{ item }}</b></span>
+    </li>
+    {% endfor %}
+  </ul>
+</details>
+
+<details class="dropdown-group">
+  <summary class="label">Line Styles</summary>
+  <ul class="side-list">
+    {% for item in data_line %} {% set link_url =
+    url_for('visualisation.view_visualisation',
+    visu_type='line_style',item_id=item, theme=theme) %}
+    <li
+      class="{% if item == actual_element and visu_type == 'line_style' %}active{% endif %}"
+      onclick="window.location.href='{{ link_url }}'"
+    >
+      <span><b>{{ item }}</b></span>
+      <span class="code"><b>{{ item }}</b></span>
+    </li>
+    {% endfor %}
+  </ul>
+</details>
+
+<details class="dropdown-group">
+  <summary class="label">Area Fills</summary>
+  <ul class="side-list">
+    {% for item in data_area %} {% set link_url =
+    url_for('visualisation.view_visualisation',
+    visu_type='area_fill',item_id=item, theme=theme) %}
+    <li
+      class="{% if item == actual_element and visu_type == 'area_fill' %}active{% endif %}"
+      onclick="window.location.href='{{ link_url }}'"
+    >
+      <span><b>{{ item }}</b></span>
+      <span class="code"><b>{{ item }}</b></span>
+    </li>
+    {% endfor %}
+  </ul>
+</details>

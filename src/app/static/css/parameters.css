@@ -9,6 +9,14 @@
   border-radius: var(--radius);
   padding: 10px 12px;
 }
+.param-field h3 {
+  display: block;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 800;
+  margin-top: 0px;
+}
 .param-field label {
   display: block;
   font-size: 10px;

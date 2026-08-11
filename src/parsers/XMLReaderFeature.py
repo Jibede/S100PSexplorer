@@ -1,14 +1,17 @@
+# src/parsers/XMLReaderFeature.py
+
 import json
 from pathlib import Path
-from typing import Any
-from venv import logger
+from typing import Any, Dict, List
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element, ParseError
 import xml.etree.ElementTree as ET
 from src.utils.logger import config_logger
 
+# Persoanlised Logging
 LOGGER = config_logger(__name__)
 
+# Bases Prefixes
 _BASE = "{http://www.iho.int/S100FC/5.2}"
 _BASE2 = "{http://www.iho.int/S100Base/5.0}"
 _XSI = "{http://www.w3.org/2001/XMLSchema-instance}"
@@ -45,6 +48,10 @@ class XMLReaderFeature:
         if not self.file.exists():
             LOGGER.error("No file found for this pattern: %s", path)
 
+    ###################################################################################
+    #                            MAIN FUNCTION                                        #
+    ###################################################################################
+    
     def get_info(self) -> None:
         """The main function that gets the information from Feature Catalog and genarate parsed JSON files based on them"""
 
@@ -78,10 +85,13 @@ class XMLReaderFeature:
             self._save_json(data, f"{tag}.json")
 
         LOGGER.info(
-            f"{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM FEATURE CATALOG WAS COMPLETED {'*' * 10}"
+            f"{'#' * 10} THE CAPTURE OF ALL INFORMATION FROM FEATURE CATALOG WAS COMPLETED {'#' * 10}"
         )
 
-    ############################################## TREE FUNCTIONS ###############################################################
+    ###################################################################################
+    #                        TREE FUNCTIONS                                           #
+    ###################################################################################
+    
     def _get_root(self, file: str) -> ElementTree:
         """Get the root element of a XML tree
 
@@ -110,7 +120,10 @@ class XMLReaderFeature:
             )
             return None
 
-    ########################################## READ AND WRITE FILES FUNCTION ############################################
+    ###################################################################################
+    #                        READ AND WRITE FILES FUNCTION                            #
+    ###################################################################################
+    
     def _save_json(self, data: Any, file_name: str) -> None:
         """Save the data into a JSON file
 
@@ -133,8 +146,10 @@ class XMLReaderFeature:
                 f"Error writing the file [{json_file}]. Error description: {err}"
             )
 
-    ################################################################################################################
-
+    ###################################################################################
+    #                            XML TRAVERSAL UTILITIES                              #
+    ###################################################################################
+    
     def _dispatch(self, tag: str) -> callable:
         """Retrieves the appropriaten parsing handler for a given XML tag
 
@@ -173,11 +188,13 @@ class XMLReaderFeature:
         try:
             for base in [_BASE, _BASE2]:
                 found = e.find(f"{base}{tag}")
-                
+
                 if found is not None:
                     return found
 
-            LOGGER.warning(f"Element with tag [{tag}] was not found in the element [{e.tag}]!")
+            LOGGER.warning(
+                f"Element with tag [{tag}] was not found in the element [{e.tag}]!"
+            )
             return None
 
         except TypeError as err:
@@ -192,7 +209,7 @@ class XMLReaderFeature:
             )
             return None
 
-    def _findall(self, e: Element, tag: str) -> list[Element] | None:
+    def _findall(self, e: Element, tag: str) -> List[Element] | None:
         """Finds all matching subelements with the specified tag
 
         Args:
@@ -200,7 +217,7 @@ class XMLReaderFeature:
             tag (str): The name of the tah to search for
 
         Returns:
-            list[Element] | None: A list of matching subelements
+            List[Element] | None: A list of matching subelements
         """
         try:
             for base in [_BASE, _BASE2]:
@@ -274,10 +291,30 @@ class XMLReaderFeature:
             return None
 
     ###################################################################################
-    def _parse_general_groups(self, e: Element, tag: str) -> dict:
+    #                          FEATURE CATALOG PARSERS                                #
+    ###################################################################################
+    
+    def _parse_general_groups(self, e: Element, tag: str) -> Dict:
+        """Parses a general group element [name, scope, fieldOfApplication, versionNumber, versionDate, productId] into a dictionary
+
+        Args:
+            e (Element): The XML element to parse
+            tag (str): The tag name to be used as the dicitonary key
+
+        Returns:
+            Dict: A dictionay mapping the tag name to the element's text content
+        """
         return {tag: e.text}
 
-    def _parse_simple_attr(self, element: Element) -> list[dict]:
+    def _parse_simple_attr(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_SimpleAttributes XML element
+
+        Args:
+            element (Element): The simple attributes XML element
+
+        Returns:
+            List[Dict]: A list of dictionaires containing simple attribute details and their listed values
+        """
         result = []
         list_val_arr = []
 
@@ -293,7 +330,7 @@ class XMLReaderFeature:
                             "label": self._text(val, "label"),
                             "definition": self._text(val, "definition"),
                             "code": self._text(val, "code"),
-                            "definition_reference": self.get_defenition_ref(val),
+                            "definition_reference": self._get_defenition_ref(val),
                         }
                     )
 
@@ -304,14 +341,22 @@ class XMLReaderFeature:
                     "code": self._text(e, "code"),
                     "alias": self._text(e, "alias"),
                     "value_type": self._text(e, "valueType"),
-                    "definition_reference": self.get_defenition_ref(e),
+                    "definition_reference": self._get_defenition_ref(e),
                     "listed_value": list_val_arr,
                 }
             )
 
         return result
 
-    def _parse_complex_attr(self, element: Element) -> list[dict]:
+    def _parse_complex_attr(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_ComplexAttributes XML element
+
+        Args:
+            element (Element): The complex attributes XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing complex attribute details and their sub-attribute bindings
+        """
         result = []
 
         for e in element:
@@ -321,8 +366,8 @@ class XMLReaderFeature:
                     "name": self._text(e, "name"),
                     "definition": self._text(e, "definition"),
                     "code": self._text(e, "code"),
-                    "definition_reference": self.get_defenition_ref(e),
-                    "sub_attr_binding": self.get_sub_attr_binding(
+                    "definition_reference": self._get_defenition_ref(e),
+                    "sub_attr_binding": self._get_sub_attr_binding(
                         e, "subAttributeBinding"
                     ),
                 }
@@ -330,7 +375,15 @@ class XMLReaderFeature:
 
         return result
 
-    def _parse_roles(self, element: Element) -> list[dict]:
+    def _parse_roles(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_Roles XML element
+
+        Args:
+            element (Element): The roles XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing role definitions and codes
+        """
         result = []
 
         for e in element:
@@ -344,7 +397,15 @@ class XMLReaderFeature:
 
         return result
 
-    def _parse_info_association(self, element: Element) -> list[dict]:
+    def _parse_info_association(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_InformationAssociations XML element
+
+        Args:
+            element (Element): The information associations XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing information association metada and roles
+        """
         result = []
 
         for e in element:
@@ -357,14 +418,22 @@ class XMLReaderFeature:
                     "name": self._text(e, "name"),
                     "definition": self._text(e, "definition"),
                     "code": self._text(e, "code"),
-                    "definition_reference": self.get_defenition_ref(e),
+                    "definition_reference": self._get_defenition_ref(e),
                     "role": self._get_attr(e, "role", "ref"),
                 }
             )
 
         return result
 
-    def _parse_feature_association(self, element: Element) -> list[dict]:
+    def _parse_feature_association(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_FeatureAssociations XML element
+
+        Args:
+            element (Element): The feature associations XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing feature association details and roles
+        """
         result = []
 
         for e in element:
@@ -377,7 +446,7 @@ class XMLReaderFeature:
                     "name": self._text(e, "name"),
                     "definition": self._text(e, "definition"),
                     "code": self._text(e, "code"),
-                    "definition_reference": self.get_defenition_ref(e),
+                    "definition_reference": self._get_defenition_ref(e),
                     "role": [
                         attr.attrib.get("ref") for attr in self._findall(e, "role")
                     ],
@@ -386,7 +455,15 @@ class XMLReaderFeature:
 
         return result
 
-    def _parse_info_type(self, element: Element) -> list[dict]:
+    def _parse_info_type(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_InformationTypes XML element
+
+        Args:
+            element (Element): The information types XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing information type details and attribute bindings
+        """
         result = []
 
         for e in element:
@@ -398,14 +475,22 @@ class XMLReaderFeature:
                     ),
                     "name": self._text(e, "name"),
                     "definition": self._text(e, "definition"),
-                    "definition_reference": self.get_defenition_ref(e),
-                    "attribute_binding": self.get_attr_binding(e),
+                    "definition_reference": self._get_defenition_ref(e),
+                    "attribute_binding": self._get_attr_binding(e),
                 }
             )
 
         return result
 
-    def _parse_feature_type(self, element: Element) -> list[dict]:
+    def _parse_feature_type(self, element: Element) -> List[Dict]:
+        """Parses the S100_FC_FeatureTypes XML element
+
+        Args:
+            element (Element): The feature types XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing feature type details, primitives and bindings
+        """
         result = []
 
         for e in element:
@@ -419,22 +504,32 @@ class XMLReaderFeature:
                         primitive.text
                         for primitive in self._findall(e, "permittedPrimitives")
                     ],
-                    "definition_reference": self.get_defenition_ref(e),
-                    "information_binding": self.get_info_binding(e),
-                    "feature_binding": self.get_feature_binding(e),
+                    "definition_reference": self._get_defenition_ref(e),
+                    "information_binding": self._get_info_binding(e),
+                    "feature_binding": self._get_feature_binding(e),
                     "feature_use_type": self._text(e, "featureUseType"),
-                    "attr_binding": self.get_sub_attr_binding(e, "attributeBinding"),
+                    "attr_binding": self._get_sub_attr_binding(e, "attributeBinding"),
                 }
             )
 
         return result
 
     ###################################################################################
+    #                       BINDING & REFERENCE EXTRACTORS                            #
+    ###################################################################################
 
-    def get_defenition_ref(self, e: Element) -> dict | None:
+    def _get_defenition_ref(self, e: Element) -> Dict | None:
+        """Extracts definition reference information from a given XML element
+
+        Args:
+            e (Element): The parent XML element
+
+        Returns:
+            Dict | None: A dictionary containing the source identifier and definition reference
+        """
         def_ref_group = self._find(e, "definitionReference")
 
-        return (
+        return(
             {
                 "scr_identifier": self._text(def_ref_group, "sourceIdentifier"),
                 "definition_ref": self._get_attr(
@@ -445,7 +540,15 @@ class XMLReaderFeature:
             else None
         )
 
-    def get_multiplicity(self, e: Element) -> dict | None:
+    def _get_multiplicity(self, e: Element) -> Dict | None:
+        """Extracts multiplicity constraints (lower and upper bounds) from a given XML element
+
+        Args:
+            e (Element): The parent XML element
+
+        Returns:
+            Dict | None: A dictionary containing the lower and upper bounds of multiplicity
+        """
         multiplicity_group = self._find(e, "multiplicity")
 
         return {
@@ -463,7 +566,15 @@ class XMLReaderFeature:
             ),
         }
 
-    def get_attr_binding(self, e: Element) -> list[dict]:
+    def _get_attr_binding(self, e: Element) -> List[Dict]:
+        """Extracts attribute binding information from a given XML element
+
+        Args:
+            e (Element): The parent XML element
+
+        Returns:
+            List[Dict]: A list of dictionaries containing multiplicity and attribute reference
+        """
         result = []
         attrs_group = self._findall(e, "attributeBinding")
 
@@ -471,14 +582,23 @@ class XMLReaderFeature:
 
             result.append(
                 {
-                    "multiplicity": self.get_multiplicity(attr),
+                    "multiplicity": self._get_multiplicity(attr),
                     "attribute": self._get_attr(attr, "attribute", "ref"),
                 }
             )
 
         return result
 
-    def get_sub_attr_binding(self, e: Element, name) -> dict:
+    def _get_sub_attr_binding(self, e: Element, name) -> Dict:
+        """Extracts sub-attribute binding information based on a specified tag name
+
+        Args:
+            e (Element): The parent XML element
+            name (str): The tag name of the sub-attributes to retrieve
+
+        Returns:
+            Dict: A list of dictionaries containing sub-attribute binding details like sequence and permitted values
+        """
         result = []
 
         sub_attrs_group = self._findall(e, name)
@@ -492,7 +612,7 @@ class XMLReaderFeature:
                         e, "subAttributeBinding", "sequential"
                     ),
                     "attribute": self._get_attr(sub_attr, "attribute", "ref"),
-                    "multiplicity": self.get_multiplicity(sub_attr),
+                    "multiplicity": self._get_multiplicity(sub_attr),
                     "permitted_values": (
                         [permited_val.text for permited_val in permited_vals]
                         if permited_vals is not None
@@ -504,7 +624,15 @@ class XMLReaderFeature:
 
         return result
 
-    def get_info_binding(self, e: Element):
+    def _get_info_binding(self, e: Element) -> Dict:
+        """Extracts information binding metadata from a given XML element
+
+        Args:
+            e (Element): The parent XML element
+
+        Returns:
+            Dict: A dictionary containing information binding details
+        """
         info_binding = self._find(e, "informationBinding")
 
         if info_binding is None:
@@ -512,13 +640,21 @@ class XMLReaderFeature:
 
         return {
             "role_type": self._get_attr(e, "informationBinding", "roleType"),
-            "multiplicity": self.get_multiplicity(info_binding),
+            "multiplicity": self._get_multiplicity(info_binding),
             "association": self._get_attr(info_binding, "association", "ref"),
             "role": self._get_attr(info_binding, "role", "ref"),
             "feature_type": self._get_attr(info_binding, "featureType", "ref"),
         }
 
-    def get_feature_binding(self, e: Element):
+    def _get_feature_binding(self, e: Element) -> Dict:
+        """Extracts feature binding metadata from a given XML element
+
+        Args:
+            e (Element): The parent XML element
+
+        Returns:
+            Dict: A dictionary containing feature binding details
+        """
         feature_binding = self._find(e, "featureBinding")
 
         if feature_binding is None:
@@ -526,7 +662,7 @@ class XMLReaderFeature:
 
         return {
             "role_type": self._get_attr(e, "featureBinding", "roleType"),
-            "multiplicity": self.get_multiplicity(feature_binding),
+            "multiplicity": self._get_multiplicity(feature_binding),
             "association": self._get_attr(feature_binding, "association", "ref"),
             "role": self._get_attr(feature_binding, "role", "ref"),
             "feature_type": self._get_attr(feature_binding, "featureType", "ref"),

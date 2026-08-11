@@ -12,6 +12,8 @@
 }
 
 .swatch_area_fills {
+  min-width: 120px;
+  min-height: 80;
   border: 1px solid var(--chart-line);
   border-radius: 2px;
   padding: 10px;

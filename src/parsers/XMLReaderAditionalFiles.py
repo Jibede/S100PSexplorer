@@ -1,6 +1,6 @@
+# src/parsers/XMLReaderAditionalFiles.py
+
 import json
-from multiprocessing.util import LOGGER_NAME
-from os import path
 from typing import Dict, List
 import glob
 from xml.etree import ElementTree
@@ -24,7 +24,9 @@ class XMLReaderAditionalFiles:
         self.data_line = []
         self.symbols_related = {}
 
-    ###################################################### MAIN FUNCTION ##########################################################
+    ###################################################################################
+    #                            MAIN FUNCTION                                        #
+    ###################################################################################
 
     def get_info(self, file_path: str):
         """The main function that gets the information from [areaFills, colorProfiles and lineStyles] and generate JSON files for each
@@ -71,7 +73,9 @@ class XMLReaderAditionalFiles:
             f"{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM ADITIONAL FILES OF {self.dir.upper()} WAS COMPLETED {'*' * 10}"
         )
 
-    ########################################## READ AND WRITE FILES FUNCTION ############################################
+    ###################################################################################
+    #                      READ AND WRITE FILES FUNCTION                              #
+    ###################################################################################
 
     def _read_json(self, path_file: str) -> Dict:
         """Reads and parsers a JSON file into a Python dictionary
@@ -117,7 +121,10 @@ class XMLReaderAditionalFiles:
                 f"Error writing the file [{json_file}]. Error description: {e}"
             )
 
-    ############################################## TREE FUNCTIONS ###############################################################
+    ###################################################################################
+    #                               TREE FUNCTIONS                                    #
+    ###################################################################################
+    
     def _get_root(self, file: str) -> ElementTree:
         """Get the root element of a XML tree
 
@@ -141,8 +148,10 @@ class XMLReaderAditionalFiles:
         except Exception as e:
             LOGGER.error(f"Error getting the root of the file [{file}]. Error description: {e}")
             return None
-
-    ################################################## PROCESSING INFOMATIONS FUNCTIONS #################################################
+    
+    ###################################################################################
+    #                        PROCESSING INFOMATIONS FUNCTIONS                         #
+    ###################################################################################
 
     def _dispatch(self, e: Element) -> None:
         """Routes an element to the appropriate handler based on the current directory
@@ -256,7 +265,10 @@ class XMLReaderAditionalFiles:
                     "blue": rgb.find("blue").text,
                 }
 
-    ############################################## PROCESSING RELATED FILE FUNTIONS ##############################################################
+    
+    ###################################################################################
+    #                        PROCESSING RELATED FILE FUNTIONS                         #
+    ###################################################################################
 
     def _set_symbol_related(self, symbol_code: str, name_group: str) -> None:
         """Maps the current file to a specific symbol code and group category.

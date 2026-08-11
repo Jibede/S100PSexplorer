@@ -1,17 +1,17 @@
 from flask import Blueprint, redirect, render_template
 
-from ..data_manager import DATA_ATTRS, DATA_FT, LINKED_ATTRS
+from ..data_manager import DATA_ATTRS, LINKED_ATTRS
 
 
 attributes_bp = Blueprint('attributes', __name__, url_prefix='/attributes')
 
 @attributes_bp.route("/")
 @attributes_bp.route("/<attr_code>")
-def view_attributes(attr_code: str = None):
-    if attr_code is None:
-        return redirect(f'/attributes/{list(DATA_ATTRS.keys())[0]}')
+def view_attributes(attr_code: str = f'{list(DATA_ATTRS.keys())[0]}'):
     
     selected_attr = DATA_ATTRS.get(attr_code)
+    print(list(DATA_ATTRS.keys()))
+    print(DATA_ATTRS[list(DATA_ATTRS.keys())[0]])
     
     return render_template(
         'attribute.html',

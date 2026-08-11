@@ -22,18 +22,14 @@
 {% if info_rule.get('text') %}
 <section class="block">
   <h2>Editable settings</h2>
-  
-    {%include 'includes/rule/editable_info.html'%}
-  
-    {%include 'includes/rule/editable_code.html'%}
-    
+    {%include 'includes/rule/editable_info.html'%}    
 {% endif %}
 
 
 {% if linked_ft %}
   {% include 'includes/rule/linked_features.html' %}
 {% endif %}
-
+</section>
 
 <script src="{{ url_for('static', filename='js/update_preview.js') }}"></script>
 {% endblock %}

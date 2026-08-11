@@ -1,5 +1,5 @@
 
-from flask import Blueprint, redirect, render_template, request
+from flask import Blueprint, render_template, request
 
 from ..data_manager import DATA_AREA_FILLS, DATA_CONDITIONS, DATA_FT, DATA_LINE_STYLES, DATA_RULES, DATA_SYMBOLS, get_area_fill, get_line_style
 

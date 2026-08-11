@@ -1,13 +1,16 @@
+# src/routes/__init__.py
+
 import os
 
 from flask import Flask
 
-from ..data_manager import get_svg
+from ..data_manager import extract_svg_data, get_svg, transform_mm_px
 from .main import main_bp
 from .features import features_bp
 from .attributes import attributes_bp
 from .visualisation import visualisation_bp
 from .rules import rules_bp
+from .text_group import text_group_bp
 
 
 def create_app():
@@ -17,12 +20,17 @@ def create_app():
     
     app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
     
+    # Global enviroment functions
     app.jinja_env.globals['get_svg'] = get_svg
+    app.jinja_env.globals['transform_mm_px'] = transform_mm_px
+    app.jinja_env.globals['extract_svg_data'] = extract_svg_data
     
+    # Routes
     app.register_blueprint(main_bp)
     app.register_blueprint(features_bp)
     app.register_blueprint(attributes_bp)
     app.register_blueprint(visualisation_bp)
     app.register_blueprint(rules_bp)
+    app.register_blueprint(text_group_bp)
     
     return app

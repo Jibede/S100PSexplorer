@@ -17,7 +17,7 @@ def process_data():
     xml_reader_feature = XMLReaderFeature('source/xml/101_Feature_Catalogue_2.0.0.xml')
     xml_reader_portrayal = XMLReaderPortrayal('source/xml/portrayal_catalogue.xml')
     
-    lua_interpreter.get_json_analyses()
+    lua_interpreter.get_analyses()
     xml_reader_feature.get_info()
     xml_reader_portrayal.get_info()
     xml_reader_adtional.get_info('source/lineStyles/*.xml')

@@ -9,8 +9,8 @@
   margin-top: 16px;
 }
 .box-detail .glyph-big {
-  width: 96px;
-  height: 96px;
+  min-width: 120px;
+  min-height: 120px;
   flex-shrink: 0;
   background: var(--teal-soft);
   border: 1px solid var(--chart-line);

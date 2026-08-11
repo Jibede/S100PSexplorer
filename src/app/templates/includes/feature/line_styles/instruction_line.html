@@ -1,0 +1,42 @@
+{% for line_info in line['line_info']%} {% set red =
+line_info['pen']['color']['night']['red'] %} {% set green =
+line_info['pen']['color']['night']['green'] %} {% set blue =
+line_info['pen']['color']['night']['blue'] %} {% set middle_y = 120 / 2 %}
+
+<!-- COMPLEX LINE -->
+<span class="swatch_area_fills">
+  <svg width="{{transform_mm_px(line_info['intervalLength'])}}" height="120">
+    {% if line_info['dash'] %} {% for dash in line_info['dash']%}
+    <line
+      x1="{{ transform_mm_px(dash['start']) }}"
+      y1="{{ middle_y }}"
+      x2="{{ transform_mm_px(dash['start']) | float + transform_mm_px(dash['length']) | float }}"
+      y2="{{ middle_y }}"
+      stroke="rgb({{red}}, {{green}}, {{blue}})"
+      stroke-width="{{ transform_mm_px(line_info['pen']['width']) }}"
+    />
+
+    {%endfor%} {% else %}
+    <line
+      x1="0"
+      y1="{{ middle_y }}"
+      x2="100%"
+      y2="{{ middle_y }}"
+      stroke="rgb({{red}}, {{green}}, {{blue}})"
+      stroke-width="{{ transform_mm_px(line_info['pen']['width']) }}"
+    />
+
+    {% endif %} {% if line_info['symbol'] %} {% for sym in line_info['symbol']
+    %} {% set pos_x = transform_mm_px(sym['position']) %} {% set svg_data =
+    extract_svg_data(sym['code']) %}
+
+    <g
+      transform="translate({{ pos_x - svg_data['offset_x'] }}, {{ middle_y - svg_data['offset_y'] }})"
+    >
+      {{ get_svg(sym['code']) | safe }}
+    </g>
+
+    {% endfor %} {% endif %}
+  </svg>
+</span>
+{% endfor %}
