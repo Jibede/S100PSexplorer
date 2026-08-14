@@ -51,7 +51,7 @@ Focused on parsing accessory XML files that detail the visual styles of componen
   * `./data/featureCatalog/` (Features mapped in JSON)
   * `./data/portrayalCatalog/` (Visuals mapped in JSON)
   * `./data/aditionalFiles/` (Lines, Colors, and Areas)
-  * `./data/related_*.json` (General relationships)
+  * `./data/related_*.json` (General relationships )
 
 ---
 
