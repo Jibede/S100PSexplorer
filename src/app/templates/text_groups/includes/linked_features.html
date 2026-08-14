@@ -1,0 +1,38 @@
+{% set rules = link_vw.get('rule') %}
+
+<section class="block">
+  <h2>{{title}}</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Name</th>
+
+        {% if title == 'Linked Features' %}
+        <th>Code</th>
+        {% endif %}
+
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rule in rules %} {% set desc_info = dataset.get(rule) %}
+
+      <tr
+        class="clickable"
+        onclick="window.location.href='{% if title == 'Linked Features' %}/features{% else %}/rules{% endif %}/{{rule}}'"
+      >
+        {% if title == 'Linked Features' %}
+        <td class="mono">{{desc_info['name']}}</td>
+        <td class="mono">{{desc_info['code']}}</td>
+        <td class="mono">{{desc_info['definition']}}</td>
+
+        {% else %}
+        <td class="mono">{{desc_info['file_name']}}</td>
+        <td class="mono">{{desc_info['description']}}</td>
+        {% endif %}
+      </tr>
+
+      {% endfor%}
+    </tbody>
+  </table>
+</section>

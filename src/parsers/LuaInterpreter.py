@@ -1,5 +1,6 @@
 # src/parsers/LuaInterpreter.py
 
+from filecmp import dircmp
 import glob
 import json
 import os
@@ -49,7 +50,11 @@ class LuaInterpreter:
     def __init__(self, path: str):
         self.files = glob.glob(path)
         self.local_var = []
-        self.related = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
+        self.related_symbols = defaultdict(
+            lambda: defaultdict(lambda: defaultdict(set))
+        )
+        self.related_vw = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
+        self.related_colors = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
 
     ###################################################################################
     #                            MAIN FUNCTION                                        #
@@ -89,18 +94,26 @@ class LuaInterpreter:
             os.makedirs(file_output_dir, exist_ok=True)
 
             ################### JUST FOR TESTS AND DEBUGS########################
-            # self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
+            self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
             #####################################################################
 
             conditions_path = file_output_dir / f"{base_name}-conditions.json"
             self._write_json(conditions_path, data=conditions)
 
-            self._collect_related(conditions, base_name)
+            self._collect_related_visualisation(conditions, base_name)
+            self._collect_related_viewgroup(conditions, base_name)
+            self._collect_related_colors(conditions, base_name)
 
-        LOGGER.info('CREATING RELATED FILE ')
+        LOGGER.info("CREATING RELATED FILE ")
+
         related_path = Path("data") / "related_symbols.json"
-        self._write_json(related_path, data=self.related)
+        self._write_json(related_path, data=self.related_symbols)
 
+        related_path = Path("data") / "related_vw.json"
+        self._write_json(related_path, data=self.related_vw)
+        
+        related_path = Path("data") / "related_colors.json"
+        self._write_json(related_path, data=self.related_colors)
         LOGGER.info(
             f"{'#' * 10} THE CAPTURE OF ALL INFORMATION FROM RULES FILE WAS COMPLETED {'#' * 10}"
         )
@@ -169,7 +182,51 @@ class LuaInterpreter:
     #                            RELATED DATA FUNCTIONS                               #
     ###################################################################################
 
-    def _collect_related(self, conditions: List, rule_name: str) -> None:
+    def _collect_related_colors(self, conditions: List[Dict], rule_name: str) -> None:
+        for item in conditions:
+            if item.get("node_type") != "hit" and item.get("instruction_type") not in [
+                "text",
+                "line_style",
+            ]:
+                continue
+            
+            items_vals = item.get('values') or {}
+            
+            values = {
+                'text': items_vals.get('FontColor'),
+                'line_style': items_vals.get('color')
+            }
+            
+            for visu_name in ['text', 'line_style']:
+                if values[visu_name] is not None:
+                    for visu in self._flatten_values(values[visu_name]):
+                        self.related_colors[visu_name][visu]['rule'].add(rule_name)
+
+    def _collect_related_viewgroup(
+        self, conditions: List[Dict], rule_name: str
+    ) -> None:
+
+        for item in conditions:
+            if (
+                item.get("node_type") != "hit"
+                or item.get("instruction_type") != "text_instruction"
+            ):
+                continue
+
+            items_vals = item.get("values") or {}
+            values = {
+                "text_vw_group": items_vals.get("text_vw_group"),
+                "view_group": items_vals.get("view_group"),
+            }
+
+            for visu_name in ["text_vw_group", "view_group"]:
+                if values[visu_name] is not None:
+                    for visu in self._flatten_values(values[visu_name]):
+                        self.related_vw[visu_name][visu]["rule"].add(rule_name)
+
+    def _collect_related_visualisation(
+        self, conditions: List[Dict], rule_name: str
+    ) -> None:
         """Collects and groups related visual instructions [symbol, line_instruction, area_fill] from parsed conditions
 
         Args:
@@ -177,9 +234,11 @@ class LuaInterpreter:
             rule_name (str): The name of the rule currently being processed
         """
         try:
-            
+
             for item in conditions:
-                if item.get("node_type") != "hit" or item.get("instruction_type") not in [
+                if item.get("node_type") != "hit" or item.get(
+                    "instruction_type"
+                ) not in [
                     "symbol",
                     "line_instruction",
                     "area_fill",
@@ -196,7 +255,7 @@ class LuaInterpreter:
                 for visu_name in ["symbol", "line_style", "area_fill"]:
                     if values[visu_name] is not None:
                         for visu in self._flatten_values(values[visu_name]):
-                            self.related[visu_name][visu]["rule"].add(rule_name)
+                            self.related_symbols[visu_name][visu]["rule"].add(rule_name)
 
         except Exception as err:
             LOGGER.error(
@@ -212,7 +271,7 @@ class LuaInterpreter:
         Returns:
             List: A flattened List of string values
         """
-        if isinstance(value, str):
+        if isinstance(value, str) or isinstance(value, int):
             return [value]
 
         if isinstance(value, List):
@@ -841,17 +900,16 @@ class LuaInterpreter:
         """
         resolved = {**node, "conditions": self._visible_conditions(base_path)}
 
-        if not node.get("has_var"):
-            return resolved
+        if node.get("has_var"):
+            values = node.get("values") or {}
+            resolved["values"] = self._resolve_value(values, var_state, base_path)
 
-        values = node.get("values") or {}
-        resolved["values"] = self._resolve_value(values, var_state, base_path)
         return resolved
 
     def _resolve_value(
         self, val: Dict | str | Any, var_state: Dict, base_path: List
     ) -> List | Dict:
-        """_summary_
+        """Resolves the value into the element
 
         Args:
             val (Dict | str | Any): The value to resolve

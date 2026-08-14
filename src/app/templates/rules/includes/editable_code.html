@@ -1,0 +1,50 @@
+
+
+{% set code = info.get('code')%}
+
+{% if code%}
+<label>Code Preview</label>
+<div class="code-preview" id="code-preview-box">
+  <div class="line">
+    <span class="line-num">{{info.get('line')}}</span>
+
+    {% set function = code.get('function') %}
+    {% set string = code.get('param') %}
+
+      <span class="var">{{function}}</span>
+      <span class="var">(</span>
+      <span class="str" id="instruction-string_{{loop.index}}">'{{string}}'</span>
+      <span class="var">)</span>
+  </div>
+
+  {% set conde_instruction = info.get('code_instruction') %}
+  {% if conde_instruction %}
+  <div class="line">
+    <span class="line-num">{{info.get('line_instruction')}}</span>
+
+    {% set function = conde_instruction.get('function') %}
+    {% set string = conde_instruction.get('param') %}
+
+      <span class="var">{{function}}</span>
+      <span class="var">(</span>
+      <span class="str" id="instruction-text-string_{{loop.index}}">'{{string}}'</span>
+      <span class="var">)</span>
+  </div>
+  {% endif %}
+</div>
+
+<br />
+
+<label>Preview Output</label>
+<div id="previewContainer_{{loop.index}}" class="preview-container">
+  <div id="previewText_{{loop.index}}" class="preview-text">
+    Example Text
+  </div>
+</div>
+
+<div class="save-row">
+  <span class="save-msg" id="save-msg">Saved changescoalla</span>
+  <button onclick="saveParams()">Save changes</button>
+</div>
+
+{%endif%}

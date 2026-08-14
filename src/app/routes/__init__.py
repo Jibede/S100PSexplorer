@@ -11,6 +11,7 @@ from .attributes import attributes_bp
 from .visualisation import visualisation_bp
 from .rules import rules_bp
 from .text_group import text_group_bp
+from .colors import colors_bp
 
 
 def create_app():
@@ -32,5 +33,6 @@ def create_app():
     app.register_blueprint(visualisation_bp)
     app.register_blueprint(rules_bp)
     app.register_blueprint(text_group_bp)
+    app.register_blueprint(colors_bp)
     
     return app

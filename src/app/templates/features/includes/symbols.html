@@ -1,0 +1,47 @@
+<section class="block">
+  <h2>Symboles</h2>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Overview</th>
+        <th>Name</th>
+        <th>Conditions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for symbol in symbols %}
+        {% set conditions = symbol['conditions']%}
+        
+        {% if conditions %}
+          {% set full_string = conditions | join('or') %}
+          {% set conditions_check = full_string.split('or') | map('trim') | list %}
+          {% set default = (conditions_check | reject('in', default_conditions) | list | length == 0) %}
+        {% endif %}
+
+        <tr
+          class="clickable {% if default %} default {% endif %}"
+          onclick="window.location.href='/visualisation/symbol/{{symbol['value']}}'"
+        >
+          <td><span class="swatch"> {{ get_svg(symbol['value']) }} </span></td>
+
+          <td>
+            {{ symbol['value']}}
+            {% if default %}
+              <span class="pill">Default</span>
+            {% endif %}
+          </td>
+
+          <td class="mono">
+            <ul>
+              {% for condition in symbol['conditions'] %}
+              <li>{{condition}}</li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

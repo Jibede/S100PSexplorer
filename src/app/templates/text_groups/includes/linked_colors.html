@@ -1,0 +1,60 @@
+{% set rules = link_vw.get('rule') %}
+
+<section class="block">
+    <h2>Linked Colors</h2>
+
+    <table class="data">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Rule</th>
+                <th>Description</th>
+                <th>Preview (Day)</th>
+                <th>Preview (Dusk)</th>
+                <th>Preview (Night)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for rule in rules %}
+                {% set colors = get_info(rule).get('text') | map(attribute='FontColor') | unique(attribute='code') | list %}
+
+                {% for color in colors %}
+                    <tr
+                    class="clickable"
+                    onclick="window.location.href='/colors/{{color.get('code')}}'"
+                    >
+                    {% set info_color = data_colors.get(color.get('code')) %}
+                        <td>{{info_color['name'].capitalize()}}</td>
+                        <td>{{color.get('code')}}</td>
+                        <td>{{rule}}.lua</td>
+                        <td>{{info_color['description'].capitalize()}}</td>
+                        
+                        <td>
+                            <span class="swatch">
+                                <div style="background-color: rgb({{info_color['rgbDay']['red']}}, {{info_color['rgbDay']['green']}}, {{info_color['rgbDay']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"></div>
+                            </span>
+                            <span>RGB({{info_color['rgbDay']['red']}}, {{info_color['rgbDay']['green']}}, {{info_color['rgbDay']['blue']}})</span>
+                        </td>
+                        <td>
+                            <span class="swatch">
+                                <div style="background-color: rgb({{info_color['rgbDusk']['red']}}, {{info_color['rgbDusk']['green']}}, {{info_color['rgbDusk']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"></div>
+                            </span>
+                            <span>RGB({{info_color['rgbDusk']['red']}}, {{info_color['rgbDusk']['green']}}, {{info_color['rgbDusk']['blue']}})</span>
+                        </td>
+                        <td>
+                            <span class="swatch">
+                                <div style="background-color: rgb({{info_color['rgbNight']['red']}}, {{info_color['rgbNight']['green']}}, {{info_color['rgbNight']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"></div>
+                            </span>
+                            <span>RGB({{info_color['rgbNight']['red']}}, {{info_color['rgbNight']['green']}}, {{info_color['rgbNight']['blue']}})</span>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</section>

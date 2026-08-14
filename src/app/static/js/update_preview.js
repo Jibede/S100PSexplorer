@@ -6,7 +6,7 @@ function updatePreview(index) {
   const elSize = document.getElementById(`fontSize_${index}`);
   const elColor = document.getElementById(`fontColor_${index}`);
 
-  const rawText = document.getElementById(`rawText_${index}`)
+  const rawText = document.getElementById(`rawText_${index}`);
   const textVwGroup = document.getElementById(`textVwGroup_${index}`);
   const viewGroup = document.getElementById(`viewGroup_${index}`);
   const priority = document.getElementById(`priority_${index}`);
@@ -35,7 +35,7 @@ function updatePreview(index) {
 
   // 2. Coletando os parâmetros da segunda linha (TextInstruction)
   if (rawText) {
-    params_instructions.push(rawText.value)
+    params_instructions.push(rawText.value);
   }
   if (textVwGroup) {
     params_instructions.push(textVwGroup.value);
@@ -63,7 +63,9 @@ function updatePreview(index) {
 
   // 4. Atualizando o HTML da Segunda Linha (instruction-text-string)
   const innerInstructions = params_instructions.join(", "); // Separado por vírgula (ajuste se precisar de ";")
-  const textStringSpan = document.getElementById(`instruction-text-string_${index}`);
+  const textStringSpan = document.getElementById(
+    `instruction-text-string_${index}`,
+  );
   if (textStringSpan) {
     // Adicionamos as aspas simples de volta para manter o visual do código
     textStringSpan.innerText = `'${innerInstructions}'`;
@@ -111,34 +113,43 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // 3. Pegamos todos os spans do SEGUNDO grupo (que você mencionou) e guardamos o número
-  document.querySelectorAll('[id^="instruction-text-string_"]').forEach((span) => {
-    const index = span.id.split("_")[1];
-    uniqueIndexes.add(index);
-  });
+  document
+    .querySelectorAll('[id^="instruction-text-string_"]')
+    .forEach((span) => {
+      const index = span.id.split("_")[1];
+      uniqueIndexes.add(index);
+    });
 
   // 4. Agora, para cada número encontrado (seja do grupo 1 ou do grupo 2), aplicamos a lógica
   uniqueIndexes.forEach((index) => {
-    
     // Roda a função uma vez para carregar a tela inicial correta
     updatePreview(index);
 
     // Lista TODOS os inputs possíveis para esse índice
     const inputIds = [
-      `coordX_${index}`, `coordY_${index}`, `alignH_${index}`, `alignV_${index}`, 
-      `fontSize_${index}`, `fontColor_${index}`, `textVwGroup_${index}`, 
-      `viewGroup_${index}`, `priority_${index}`, `hover_${index}`, `textPriority_${index}`
+      `rawText_${index}`,
+      `coordX_${index}`,
+      `coordY_${index}`,
+      `alignH_${index}`,
+      `alignV_${index}`,
+      `fontSize_${index}`,
+      `fontColor_${index}`,
+      `textVwGroup_${index}`,
+      `viewGroup_${index}`,
+      `priority_${index}`,
+      `hover_${index}`,
+      `textPriority_${index}`,
     ];
 
     // Fazemos o forEach dentro dos inputs para adicionar o atualizador em tempo real
-    inputIds.forEach(id => {
+    inputIds.forEach((id) => {
       const el = document.getElementById(id);
-      
+
       // Se o campo existir na página, adiciona a escuta
       if (el) {
         el.addEventListener("input", () => updatePreview(index));
         el.addEventListener("change", () => updatePreview(index));
       }
     });
-
   }); // Fim do forEach principal
 }); // Fim do DOMContentLoaded

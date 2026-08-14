@@ -23,6 +23,7 @@ class XMLReaderAditionalFiles:
         self.data = {}
         self.data_line = []
         self.symbols_related = {}
+        self.colors_related = {}
 
     ###################################################################################
     #                            MAIN FUNCTION                                        #
@@ -36,9 +37,12 @@ class XMLReaderAditionalFiles:
         """
         LOGGER.info(f"{'#' * 30} GETTING ADITIONAL FILES DATA {'#' * 30}")
 
-        dt_related = self._read_json(path_file="data/related.json")
+        dt_related = self._read_json(path_file="data/related_symbols.json")
         self.symbols_related = dt_related["symbol"]
-
+        
+        dt_related_color = self._read_json(path_file="data/related_colors.json")
+        self.colors_related = dt_related_color["line_style"]
+        
         files = glob.glob(file_path)
 
         for file in files:
@@ -67,7 +71,8 @@ class XMLReaderAditionalFiles:
                 file_name=f'{self.file}.json',
             )
 
-        self._save_json(dt_related, output="./data", file_name="related.json")
+        self._save_json(dt_related, output="./data", file_name="related_symbols.json")
+        self._save_json(dt_related_color, output="./data", file_name="related_colors.json")
 
         LOGGER.info(
             f"{'*' * 10} THE CAPTURE OF ALL INFORMATION FROM ADITIONAL FILES OF {self.dir.upper()} WAS COMPLETED {'*' * 10}"
@@ -180,10 +185,13 @@ class XMLReaderAditionalFiles:
             self.data[tag] = e.text
 
         if tag == "pen":
+            color = e.find("color").text
             self.data[tag] = {
                 "width": e.attrib.get("width"),
-                "color": e.find("color").text,
+                "color": color,
             }
+            self._set_related(color, 'line_complex', self.colors_related)
+            
 
         if tag == "dash":
             self.data.setdefault(tag, []).append(
@@ -198,7 +206,7 @@ class XMLReaderAditionalFiles:
                     "position": e.find("position").text,
                 }
             )
-            self._set_symbol_related(ref, "line_styles")
+            self._set_related(ref, "line_styles", self.symbols_related)
 
         if tag == "lineStyle":
             self.data = {}
@@ -227,7 +235,7 @@ class XMLReaderAditionalFiles:
 
             self.data[tag] = ref
 
-            self._set_symbol_related(ref, "area_fills")
+            self._set_related(ref, "area_fills", self.symbols_related)
 
         if tag in ["v1", "v2"]:
             self.data[tag] = {"x": e.find("x").text, "y": e.find("y").text}
@@ -245,11 +253,12 @@ class XMLReaderAditionalFiles:
 
             for color in colors:
                 token = color.attrib.get("token")
-                name = color.attrib.get("name")
+                name = color.attrib.get("name").capitalize()
                 description = color.find("description").text
 
                 self.data.setdefault(token, {})["name"] = name
                 self.data.setdefault(token, {})["description"] = description
+                self.data.setdefault(token, {})["code"] = token
 
         if tag == "palette":
             day_status = e.attrib.get("name")
@@ -270,7 +279,7 @@ class XMLReaderAditionalFiles:
     #                        PROCESSING RELATED FILE FUNTIONS                         #
     ###################################################################################
 
-    def _set_symbol_related(self, symbol_code: str, name_group: str) -> None:
+    def _set_related(self, symbol_code: str, name_group: str, data: Dict) -> None:
         """Maps the current file to a specific symbol code and group category.
 
         Args:
@@ -278,7 +287,7 @@ class XMLReaderAditionalFiles:
             name_group (str): The category or context group where the symbol is
                 being used (e.g., 'line_styles', 'area_fills')
         """
-        self.symbols_related.setdefault(symbol_code, {})
-        self.symbols_related[symbol_code].setdefault(name_group, [])
-        if self.file not in self.symbols_related[symbol_code][name_group]:
-            self.symbols_related[symbol_code][name_group].append(self.file)
+        data.setdefault(symbol_code, {})
+        data[symbol_code].setdefault(name_group, [])
+        if self.file not in data[symbol_code][name_group]:
+            data[symbol_code][name_group].append(self.file)

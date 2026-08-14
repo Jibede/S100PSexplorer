@@ -1,0 +1,24 @@
+<div>
+  <h3>Linked Line Styles</h3>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for line_code in linked_rules['line_styles'] %}
+      {% set line = data_line.get(line_code) %}
+
+      <tr
+        class="clickable"
+        onclick="window.location.href='/visualisation/line_style/{{line_code}}?theme={{theme}}'"
+      >
+        <td class="mono">{{ line_code }}</td>
+        <td class="mono">{{ line.get('description').capitalize() }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,50 @@
+{% set section = 'area_fill'%}
+{% set areafill = get_area(actual_element) %}
+<div class="swatch_area_fills">
+  <canvas
+    class="cartoCanvas"
+    width="100"
+    height="100"
+    data-symbol="{{ url_for('static', filename='symbols/' ~ areafill['symbol'] ~ '.svg') }}"
+    data-v1_x="{{ areafill['v1']['x'] }}"
+    data-v1_y="{{ areafill['v1']['y'] }}"
+    data-v2_x="{{ areafill['v2']['x'] }}"
+    data-v2_y="{{ areafill['v2']['y'] }}"
+  >
+    >
+  </canvas>
+</div>
+
+<div class="info">
+  <h3>{{selected_item['name']}}</h3>
+  <p>{{selected_item['description'].capitalize()}}</p>
+
+  {% if 'rule' in linked_rules %}
+    {% set title = 'Linked Rules'%}
+    {% set dataset = data_rules %}
+    {% include 'visualisation/includes/sections/linked_features.html' %}
+  {% endif %} 
+
+  {% set match_rules = namespace(found=false) %}
+  {% if 'rule' in linked_rules %}
+    {% for rule in linked_rules['rule'] %} 
+      {% if rule in data_ft %} 
+        {% set match_rules.found = true %} 
+      {% endif %} 
+    {% endfor %} 
+  {% endif %} 
+  
+  {% if match_rules.found %}
+    {% set title = 'Linked Feature' %}
+    {% set dataset = data_ft %}
+    {% include 'visualisation/includes/sections/linked_features.html' %}
+  {% endif %}
+
+  {% if areafill['symbol'] %}
+    {% set dataset = [areafill['symbol']] %}
+    {% include 'visualisation/includes/sections/linked_symbols.html' %}
+  {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='js/canvas_renderer.js') }}"></script>

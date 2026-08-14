@@ -1,0 +1,61 @@
+<section class="block">
+  <h2>Color Style</h2>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Style</th>
+        <th>Color</th>
+        <th>Preview</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Day</td>
+        <td>
+          RGB({{selected_item['rgbDay']['red']}},
+          {{selected_item['rgbDay']['green']}},
+          {{selected_item['rgbDay']['blue']}})
+        </td>
+        <td>
+          <span class="swatch">
+            <div
+              style="background-color: rgb({{selected_item['rgbDay']['red']}}, {{selected_item['rgbDay']['green']}}, {{selected_item['rgbDay']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
+            ></div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Dusk</td>
+        <td>
+          RGB({{selected_item['rgbDusk']['red']}},
+          {{selected_item['rgbDusk']['green']}},
+          {{selected_item['rgbDusk']['blue']}})
+        </td>
+        <td>
+          <span class="swatch">
+            <div
+              style="background-color: rgb({{selected_item['rgbDusk']['red']}}, {{selected_item['rgbDusk']['green']}}, {{selected_item['rgbDusk']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
+            ></div>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Night</td>
+        <td>
+          RGB({{selected_item['rgbNight']['red']}},
+          {{selected_item['rgbNight']['green']}},
+          {{selected_item['rgbNight']['blue']}})
+        </td>
+        <td>
+          <span class="swatch">
+            <div
+              style="background-color: rgb({{selected_item['rgbNight']['red']}}, {{selected_item['rgbNight']['green']}}, {{selected_item['rgbNight']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
+            ></div>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

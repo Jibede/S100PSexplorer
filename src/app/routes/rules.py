@@ -12,12 +12,15 @@ def view_rules(rule_code: str = f'{list(DATA_RULES.keys())[0]}'):
     selected_rule = DATA_RULES.get(rule_code)
     
     return render_template(
-        'rules.html',
+        'rules/main_rules.html',
+        name_page='rules',
+         
         data=DATA_RULES,
-        name_page='rules', 
+        colors=DATA_COLOR_PROFILES,
+        
         actual_element=rule_code,
         selected_rule=selected_rule,
         info_rule=get_ft_info(rule_code),
         linked_ft=DATA_FT.get(rule_code, []),
-        colors=DATA_COLOR_PROFILES
+        
     )

@@ -1,0 +1,29 @@
+{% extends "base/base.html" %} {% block conteudo %}
+
+<div class="crumb">
+  Color &nbsp;/&nbsp; <b>{{selected_item['name']}} [{{selected_item['code']}}]</b>
+</div>
+
+<div class="header-card">
+    <h1>{{selected_item['name']}}</h1>
+
+    <div class="tag-row">
+        <div class="tag"><b>CODE</b><span>{{selected_item['code']}}</span></div>
+    </div>
+
+    <br>
+
+    <div class="sub">{{selected_item['description']}}</div>
+</div>
+
+{% include 'colors/includes/color_style.html'%}
+
+{% if linked_colors['line_style'].get(actual_element) %}
+    {% include 'colors/includes/linked_line_styles.html' %}
+{% endif %}
+
+{% if linked_colors['text'].get(actual_element) %}
+    {% include 'colors/includes/linked_texts.html'%}
+{% endif %}
+
+{% endblock %}

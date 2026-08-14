@@ -1,0 +1,72 @@
+<section class="block">
+  <h2>Line Styles</h2>
+  <table class="data">
+  
+    <thead>
+      <tr>
+        <th>Overview</th>
+        <th>Type</th>
+        <th>Conditions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for line in lineStyles %}
+
+        {% set attr_multi = line.get('has_var') %}
+        {% set inter_list = line[attr_multi] if attr_multi else [1] %}
+
+        {% for item in inter_list %}
+
+          {% set color = item['rgb'] if attr_multi == 'color' else line['color'] %}
+          {% set style = item if attr_multi == 'style' else line['style'] %}
+          {% set thickness = item if attr_multi == 'thickness' else line['thickness'] %}
+          {% set conditions = item['conditions'] if attr_multi else line['conditions'] %}
+          {% set code = item['value'] if attr_multi else line['code'] %}
+
+          {% if conditions %}
+            {% set full_string = conditions | join('or') %}
+            {% set conditions_check = full_string.split('or') | map('trim') | list %}
+            {% set default = (conditions_check | reject('in', default_conditions) | list | length == 0) %}
+          {% endif %}
+
+          <tr {% if line['type'] != 'simple' %} 
+            class="clickable {% if default %} default {% endif %}"
+            onclick="window.location.href='/visualisation/line_style/{{line['code']}}'"
+            {% else %}
+            class="{% if default %} default {% endif %}"
+            {% endif %}>
+
+            <td>
+              {% if line['type'] == 'simple' %}
+                {% include 'features/includes/line_styles/simple_line.html' %}
+
+              {% elif line['type'] == 'instruction' %}
+                {% include 'features/includes/line_styles/instruction_line.html' %}
+
+              {% endif %}
+              
+              </td>
+
+            <td>{{ code if code else 'SIMPLE LINE' }}
+
+            {% if default %}
+              <span class="pill">Default</span>
+            {% endif %}
+            </td>
+
+            <td class="mono">
+              {% for condition in conditions %}
+                <ul><li>{{condition}}</li></ul>
+
+              {% endfor %}
+
+            </td>
+
+          </tr>
+        {% endfor %}
+      {% endfor %}
+      
+    </tbody>
+  </table>
+</section>

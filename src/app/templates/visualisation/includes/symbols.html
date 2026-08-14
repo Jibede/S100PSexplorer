@@ -1,0 +1,37 @@
+{% set section = 'symbol'%}
+<div class="glyph-big">{{ get_svg(selected_item['code']) }}</div>
+
+<div class="info">
+  <h3>{{selected_item['name']}}</h3>
+  <p>{{selected_item['description'].capitalize()}}</p>
+
+  {% if 'rule' in linked_rules %}
+    {% set title = 'Linked Rules'%}
+    {% set dataset = data_rules%}
+    {% include 'visualisation/includes/sections/linked_features.html' %}
+  {% endif %} 
+
+  {% set match_rules = namespace(found=false) %}
+  {% if 'rule' in linked_rules %}
+    {% for rule in linked_rules['rule'] %} 
+      {% if rule in data_ft %} 
+        {% set match_rules.found = true %} 
+      {% endif %}
+
+    {% endfor %} 
+  {% endif %} 
+  
+  {% if match_rules.found %}
+    {% set title = 'Linked Rules'%}
+    {% set dataset = data_ft %}
+    {% include 'visualisation/includes/sections/linked_features.html' %}
+  {% endif %}
+  
+  {% if 'line_styles' in linked_rules %}
+    {% include 'visualisation/includes/sections/linked_line_styles.html' %}
+  {% endif %} 
+  
+  {% if 'area_fills' in linked_rules%}
+    {% include 'visualisation/includes/sections/linked_area_fills.html' %}
+  {% endif %}
+<div>

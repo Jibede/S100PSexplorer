@@ -1,0 +1,32 @@
+<section class="block">
+  <h2>Linked Line Styles</h2>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for type, content in
+      linked_colors['line_style'].get(actual_element).items()%} {% for item in
+      content%} {% if type == 'rule' %}
+      <tr class="clickable" onclick="window.location.href='/rules/{{item}}'">
+        <td>SIMPLE LINE</td>
+        <td>Simple line from the rule {{item}}.lua</td>
+      </tr>
+
+      {% else %}
+      <tr
+        class="clickable"
+        onclick="window.location.href='/visualisation/line_style/{{item}}'"
+      >
+        <td>{{item}}</td>
+        <td>{{data_line.get(item).get('description').capitalize()}}</td>
+      </tr>
+
+      {% endif %} {% endfor %} {% endfor %}
+    </tbody>
+  </table>
+</section>

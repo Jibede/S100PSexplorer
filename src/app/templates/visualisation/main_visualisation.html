@@ -1,0 +1,33 @@
+{% extends "base/base.html" %} 
+
+{% block page_styles %}
+  <link
+    id="theme-stylesheet"
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}"
+  />
+{% endblock %}
+
+{% block conteudo %}
+  {% include 'visualisation/includes/dropdown.html' %}
+
+  <h2>Details of the selected {{visu_type.replace('_', ' ')}}</h2>
+  
+  <div class="box-detail">
+    {% if visu_type == 'symbol' %}
+      {% include 'visualisation/includes/symbols.html' %}
+    {% endif %}
+    
+    {% if visu_type == 'line_style' %}
+      {% include 'visualisation/includes/line_style.html' %}
+    {% endif %}
+    
+    {% if visu_type == 'area_fill' %}
+      {% include 'visualisation/includes/areaFill.html' %}
+    {% endif %}
+  </div>
+
+<script>
+  window.S101_NIGHT_CSS_URL = "{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}";
+</script>
+{% endblock %}

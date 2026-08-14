@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %} {% block conteudo %}
+
+<div class="crumb">
+  Text Group &nbsp;/&nbsp; <b>{{selected_text_group['name']}}</b>
+</div>
+
+<div class="header-card">
+  <h1>{{selected_text_group['name']}}</h1>
+
+  <div class="tag-row">
+    <div class="tag"><b>ID</b><span>{{actual_element}}</span></div>
+  </div>
+
+  <br />
+
+  <div class="sub">{{selected_text_group['description']}}</div>
+</div>
+    {% if selected_text_group['name'].startswith('Text') %}
+        {% set target = 'text_vw_group' %}
+
+    {% else %}
+        {% set target = 'view_group' %}
+
+    {% endif %}
+
+    {% set link_vw = linked_vw.get(target).get(selected_text_group['code']) %}
+
+    {% if link_vw %}
+      {% set title = 'Linked Rules' %}
+      {% set dataset = data_rules %}
+      {% include 'text_groups/includes/linked_features.html'%}
+      
+      {% set title = 'Linked Features' %}
+      {% set dataset = data_ft %}
+      {% include 'text_groups/includes/linked_features.html' %}
+
+      {% include 'text_groups/includes/linked_colors.html' %}
+
+    {% endif %}
+
+{% endblock %}

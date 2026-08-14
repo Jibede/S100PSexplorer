@@ -1,0 +1,21 @@
+<section class="block">
+  <h2>Linked Texts</h2>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for item in linked_colors['text'].get(actual_element)['rule'] %}
+      <tr class="clickable" onclick="window.location.href='/rules/{{item}}'">
+        <td>Color Text</td>
+        <td>Text color from the rule {{item}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,50 @@
+<aside class="sidebar">
+  <input type="text" id="search" placeholder="Rechercher…" />
+
+  {% if name_page == 'visualisation'%}
+    {% include 'base/includes/sidebar/visualisation.html' %}
+
+  {% else %}
+
+  <div class="label">{{ name_page | capitalize }}</div>
+
+  <ul class="side-list">
+    {% for item in data.values() %}
+
+      {% set first_info = item['name']%}
+      {% set second_info = item['code']%}
+
+      {% if name_page == 'features' %}
+        {% set link_url = url_for('features.view_features', feature_code=item['code']) %}
+
+      {% elif name_page == 'attributes' %} 
+        {% set link_url = url_for('attributes.view_attributes', attr_code=item['code']) %}
+
+      {% elif name_page == 'rules' %} 
+        {% set link_url = url_for('rules.view_rules', rule_code=item['code']) %}
+        {% set first_info = item['file_name']%}
+        {% set second_info = ''%}
+
+      {% elif name_page == 'text group' %}
+        {% set link_url = url_for('text_group.view_text_group', text_group=item['code']) %}
+
+      {% elif name_page == 'colors' %}
+        {% set link_url = url_for('colors.view_color', color_code=item['code']) %}
+
+      {% else %}
+        {% set link_url = '#' %}
+         
+      {% endif %}
+
+      <li
+        class="{% if item['code'] == actual_element %}active{% endif %}"
+        onclick="window.location.href='{{ link_url }}'"
+      >
+        <span><b>{{ first_info }}</b></span>
+        <span class="code">{{ second_info }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% endif %}
+</aside>

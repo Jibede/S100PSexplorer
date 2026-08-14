@@ -6,6 +6,8 @@ import re
 from typing import Dict, List
 import xml.etree.ElementTree as ET
 from markupsafe import Markup
+
+from ..utils.formatter import get_json
 from ..utils.logger import config_logger
 
 LOGGER = config_logger(__name__)
@@ -122,15 +124,15 @@ DATA_AREA_FILLS = _process_data(_data_area_fills, "id")
 DATA_SYMBOLS = _process_data(_data_symbols, "id")
 LINKED_ATTRS = _get_linked_attrs()
 DATA_COLOR_PROFILES = _load_data(aditional_dir / "colorProfiles" / "colorProfile.json")
-DATA_CONDITIONS = _load_data(base_dir / "related.json")
-DATA_VIEW_GROUPS = _process_data(_data_view_group, 'id')
+DATA_SYMBOLS_RELATED = _load_data(base_dir / "related_symbols.json")
+DATA_VW_RELATED = _load_data(base_dir / "related_vw.json")
+DATA_COLORS_RELATED = _load_data(base_dir / "related_colors.json")
+DATA_VIEW_GROUPS = _process_data(_data_view_group, "id")
 
 ###################################################################################
 #                          SVG & UNIT TRANSFORMATIONS                             #
 ###################################################################################
 
-
-import xml.etree.ElementTree as ET
 
 def extract_svg_data(symbol_id: str) -> Dict[str, float]:
     """Extracts useful information from a specific svg to plot it
@@ -144,28 +146,26 @@ def extract_svg_data(symbol_id: str) -> Dict[str, float]:
     svg = get_svg(symbol_id)
     root = ET.fromstring(svg)
 
-    # Extract the minimum values from the viewBox
     viewbox = root.attrib.get("viewBox", "0 0 0 0").split()
     min_x = float(viewbox[0]) if len(viewbox) == 4 else 0.0
     min_y = float(viewbox[1]) if len(viewbox) == 4 else 0.0
 
-    # 2. Extract pivotPoint
     pivot_cx = 0.0
     pivot_cy = 0.0
     for elem in root.iter():
-        if elem.tag.endswith('circle') and 'pivotPoint' in elem.attrib.get('class', ''):
-            pivot_cx = float(elem.attrib.get('cx', '0'))
-            pivot_cy = float(elem.attrib.get('cy', '0'))
+        if elem.tag.endswith("circle") and "pivotPoint" in elem.attrib.get("class", ""):
+            pivot_cx = float(elem.attrib.get("cx", "0"))
+            pivot_cy = float(elem.attrib.get("cy", "0"))
             break
 
-    # 3. Calculate the actual offset (distance from the start of the viewBox to the pivot)
     offset_x = pivot_cx - min_x
     offset_y = pivot_cy - min_y
 
     return {
         "offset_x": transform_mm_px(offset_x),
-        "offset_y": transform_mm_px(offset_y)
+        "offset_y": transform_mm_px(offset_y),
     }
+
 
 def transform_mm_px(number: str | float) -> float:
     """Transforms milimeter into pixels
@@ -176,7 +176,7 @@ def transform_mm_px(number: str | float) -> float:
     Returns:
         float: The number in pixels
     """
-    
+
     return float(number) * 96 / 25.4
 
 
@@ -218,12 +218,14 @@ def get_line_style(line_code: str) -> List[Dict]:
 
     line_file = _load_data(line_path)
     line_file = line_file if isinstance(line_file, list) else [line_file]
-    
+
     for line in line_file:
-        line_color = line['pen']['color']
+        line_color = line["pen"]["color"]
+        line["pen"]["color_code"] = line_color
         line["pen"]["color"] = get_color_styles(line_color)
-    
+
     return line_file
+
 
 def get_area_fill(area_code: str) -> Dict:
     """Gets the information of a specific area_fill
@@ -234,7 +236,7 @@ def get_area_fill(area_code: str) -> Dict:
     Returns:
         Dict: A dictionary with all useful informations of a area_fill
     """
-    
+
     area_path = aditional_dir / "areaFills" / f"{area_code}.json"
     return _load_data(area_path)
 
@@ -330,6 +332,7 @@ def get_ft_info(ft_code: str) -> Dict[str, Dict]:
 
     return info
 
+
 ###################################################################################
 #                          INSTRUCTION-SPECIFIC PARSERS                           #
 ###################################################################################
@@ -356,43 +359,43 @@ def _get_ft_symbol_info(stmt: Dict[str, Dict], info: Dict) -> None:
             )
 
 
-def _get_ft_line_info(stmt: Dict[str, Dict], info: Dict) -> None:
+from typing import Dict, Any
+
+
+def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
     """Extracts simple line style information
 
     Args:
-        stmt (Dict[str, Dict]): The statement containing line style details
-        info (Dict): The aggregated info dictionary being built for the results
+        stmt (Dict[str, Any]): The statement containing line style details
+        info (Dict[str, Any]): The aggregated info dictionary being built for the results
     """
-
     info_line = {}
+    values = stmt.get("values", {})
 
-    for key, val in stmt.get("values").items():
+    for key, val in values.items():
         if isinstance(val, list):
             if key == "color":
+                info_line["has_var"] = key
+                info_line[key] = []
 
-                color_data = {}
                 for e in val:
                     color_data = {
-                        **color_data,
                         **e,
-                        "code": e["value"],
-                        "color": get_color_styles(e["value"]),
+                        "rgb": get_color_styles(e.get("value")),
                     }
-
-                info_line.setdefault(key, []).append(color_data)
-
+                    info_line[key].append(color_data)
             else:
                 info_line.setdefault(key, []).extend(val)
 
         else:
             if key == "color":
-                info_line.setdefault("code", "SIMPLE LINE")
+                info_line["code"] = "SIMPLE LINE"
                 val = get_color_styles(val)
 
-            info_line.setdefault(key, val)
+            info_line[key] = val
 
     info.setdefault("line_style", []).append(
-        {**info_line, "type": "simple", "conditions": stmt.get("conditions")}
+        {**info_line, "type": "simple", "conditions": stmt.get("conditions", [])}
     )
 
 
@@ -468,12 +471,13 @@ def _get_ft_line_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
     if not line_instruction == "_simple_":
         info.setdefault("line_style", []).append(
             {
-                'line_info': get_line_style(line_instruction),
+                "line_info": get_line_style(line_instruction),
                 "type": "instruction",
                 "code": line_instruction,
                 "conditions": stmt.get("conditions"),
             }
         )
+
 
 def _get_ft_text(stmt: Dict[str, Dict], info: Dict) -> None:
     """Extracts text rendering parameters
@@ -488,21 +492,28 @@ def _get_ft_text(stmt: Dict[str, Dict], info: Dict) -> None:
     for key, val in values.items():
         if key == "FontColor":
             if isinstance(val, list):
+                info_text["has_var"] = key
                 val = [{"code": item, **get_color_styles(item)} for item in val]
             else:
                 val = {"code": val, **get_color_styles(val)}
 
         if isinstance(val, list):
+            info_text["has_var"] = key
             info_text.setdefault(key, []).extend(val)
 
         else:
-            info_text.setdefault(key, []).append(
-                {"value": val, "conditions": stmt.get("conditions")}
-            )
+            info_text.setdefault(key, val)
 
     info.setdefault("text", []).append(
-        info_text | {"line": stmt["line"], "code": _extract_function_code(stmt["code"])}
+        info_text
+        | {
+            "line": stmt["line"],
+            "code": _extract_function_code(stmt["code"]),
+            "conditions": stmt.get("conditions"),
+        }
     )
+
+    print(info.get("text"))
 
 
 def _get_ft_text_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
@@ -521,9 +532,7 @@ def _get_ft_text_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
             info_text.setdefault(key, []).extend(val)
 
         else:
-            info_text.setdefault(key, []).append(
-                {"value": val, "conditions": stmt.get("conditions")}
-            )
+            info_text.setdefault(key, val)
 
     aditional_data = info_text | {
         "line_instruction": stmt["line"],

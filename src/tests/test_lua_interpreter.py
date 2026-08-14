@@ -7,7 +7,6 @@ from luaparser import ast as lua_ast
 
 from src.parsers.LuaInterpreter import LuaInterpreter
 
-
 # --------------------------------------------------------------------------- #
 #                                  FIXTURES                                   #
 # --------------------------------------------------------------------------- #
@@ -15,12 +14,6 @@ from src.parsers.LuaInterpreter import LuaInterpreter
 
 @pytest.fixture
 def interpreter():
-    """Retorna uma instância 'crua' de LuaInterpreter, sem tocar no filesystem.
-
-    Usamos __new__ para não depender de glob.glob() sobre um path real,
-    já que os testes normalmente montam o código Lua em memória / em
-    arquivos temporários criados pelo próprio teste.
-    """
     interp = LuaInterpreter.__new__(LuaInterpreter)
     interp.files = []
     interp.local_var = []
@@ -29,14 +22,12 @@ def interpreter():
 
 
 def build_conditions(interpreter, lua_code: str):
-    """Helper de teste: parseia uma string Lua e retorna a lista de condições resolvidas."""
     tree = lua_ast.parse(lua_code)
     nodes = interpreter._build_tree(tree)
     return interpreter._map_conditions(nodes)
 
 
 def build_nodes(interpreter, lua_code: str):
-    """Helper de teste: parseia uma string Lua e retorna a árvore simplificada (_build_tree)."""
     tree = lua_ast.parse(lua_code)
     return interpreter._build_tree(tree)
 
@@ -46,7 +37,7 @@ def hits_by_line(conditions):
 
 
 # --------------------------------------------------------------------------- #
-#                    TESTES: HELPERS PUROS (SEM DEPENDER DO AST)              #
+#                   TESTS: PURE HELPERS (WITHOUT RELYING ON AST)              #
 # --------------------------------------------------------------------------- #
 
 
@@ -128,7 +119,7 @@ class TestReferencesLocalVar:
 
 
 # --------------------------------------------------------------------------- #
-#                TESTES: CONSTRUÇÃO DA ÁRVORE (_build_tree)                   #
+#                    TESTS: BUILDING THE TREE (_build_tree)                   #
 # --------------------------------------------------------------------------- #
 
 
@@ -137,19 +128,18 @@ class TestBuildTree:
         assert interpreter._build_tree(None) == []
 
     def test_top_level_function_call_is_ignored(self, interpreter):
-        """Chamadas de função "soltas" (Call, não Invoke em obj:Metodo()) não geram hit.
-
-        Isso reflete o formato real dos arquivos de portrayal do S-101, em que as
-        instruções sempre são invocadas como método do objeto (obj:AddInstructions(...)).
-        """
-        lua_code = 'function Rule(obj)\n  AddInstructions("PointInstruction:SYM1")\nend\n'
+        lua_code = (
+            'function Rule(obj)\n  AddInstructions("PointInstruction:SYM1")\nend\n'
+        )
         nodes = build_nodes(interpreter, lua_code)
         function_node = nodes[0]
         assert function_node["node_type"] == "function"
         assert function_node["children"] == []
 
     def test_method_call_produces_hit_node(self, interpreter):
-        lua_code = 'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        lua_code = (
+            'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        )
         nodes = build_nodes(interpreter, lua_code)
         children = nodes[0]["children"]
         assert len(children) == 1
@@ -185,7 +175,9 @@ class TestBuildTree:
         chain = nodes[0]["children"]
         assert [b["node_type"] for b in chain] == ["if"]
 
-    def test_var_assignment_produces_var_node_and_registers_local_var(self, interpreter):
+    def test_var_assignment_produces_var_node_and_registers_local_var(
+        self, interpreter
+    ):
         lua_code = 'function Rule(obj)\n  local color = "CHBLK"\nend\n'
         nodes = build_nodes(interpreter, lua_code)
         var_node = nodes[0]["children"][0]
@@ -214,13 +206,15 @@ class TestBuildTree:
 
 
 # --------------------------------------------------------------------------- #
-#             TESTES: RECONHECIMENTO DE INSTRUÇÕES (hit nodes)                #
+#                 TESTS: INSTRUCTION RECOGNITION (hit nodes)                  #
 # --------------------------------------------------------------------------- #
 
 
 class TestInstructionParsing:
     def test_add_instructions_symbol(self, interpreter):
-        lua_code = 'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        lua_code = (
+            'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        )
         conditions = build_conditions(interpreter, lua_code)
         assert len(conditions) == 1
         hit = conditions[0]
@@ -230,9 +224,9 @@ class TestInstructionParsing:
 
     def test_add_instructions_with_local_offset_splits_x_y(self, interpreter):
         lua_code = (
-            'function Rule(obj)\n'
+            "function Rule(obj)\n"
             '  obj:AddInstructions("LocalOffset:10, 20;ColorFill:CHBLK")\n'
-            'end\n'
+            "end\n"
         )
         conditions = build_conditions(interpreter, lua_code)
         hit = conditions[0]
@@ -241,7 +235,6 @@ class TestInstructionParsing:
         assert hit["values"]["ColorFill"] == "CHBLK"
 
     def test_add_instructions_unrecognized_first_key_is_dropped(self, interpreter):
-        """Se a primeira chave não estiver em TARGET_PREFIXES, o nó não vira um hit."""
         lua_code = 'function Rule(obj)\n  obj:AddInstructions("UnknownKey:VAL1")\nend\n'
         conditions = build_conditions(interpreter, lua_code)
         assert conditions == []
@@ -252,7 +245,9 @@ class TestInstructionParsing:
         assert conditions == []
 
     def test_simple_line_style(self, interpreter):
-        lua_code = 'function Rule(obj)\n  obj:SimpleLineStyle("SOLD", "1", "CHBLK")\nend\n'
+        lua_code = (
+            'function Rule(obj)\n  obj:SimpleLineStyle("SOLD", "1", "CHBLK")\nend\n'
+        )
         conditions = build_conditions(interpreter, lua_code)
         hit = conditions[0]
         assert hit["instruction_type"] == "line_style"
@@ -261,9 +256,9 @@ class TestInstructionParsing:
 
     def test_add_text_instruction_minimal_args(self, interpreter):
         lua_code = (
-            'function Rule(obj)\n'
+            "function Rule(obj)\n"
             '  obj:AddTextInstruction("MyText", "10,20", "1", "2")\n'
-            'end\n'
+            "end\n"
         )
         conditions = build_conditions(interpreter, lua_code)
         hit = conditions[0]
@@ -274,9 +269,9 @@ class TestInstructionParsing:
 
     def test_add_text_instruction_with_all_args(self, interpreter):
         lua_code = (
-            'function Rule(obj)\n'
+            "function Rule(obj)\n"
             '  obj:AddTextInstruction("MyText", "10,20", "1", "2", "3", "true")\n'
-            'end\n'
+            "end\n"
         )
         conditions = build_conditions(interpreter, lua_code)
         hit = conditions[0]
@@ -290,13 +285,15 @@ class TestInstructionParsing:
 
 
 # --------------------------------------------------------------------------- #
-#             TESTES: MAPEAMENTO DE CONDIÇÕES (if/elseif/else)                #
+#               TESTS: CONDITIONAL LOGIC (if/elseif/else)                     #
 # --------------------------------------------------------------------------- #
 
 
 class TestConditionMapping:
     def test_hit_outside_any_branch_has_no_conditions(self, interpreter):
-        lua_code = 'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        lua_code = (
+            'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        )
         conditions = build_conditions(interpreter, lua_code)
         assert conditions[0]["conditions"] == []
 
@@ -314,21 +311,12 @@ class TestConditionMapping:
     def test_else_branch_condition_is_negation_of_if_and_stripped_from_output(
         self, interpreter
     ):
-        """A condição do 'else' é internamente NOT (if_condition), mas não deve
-        aparecer no resultado final (ela é filtrada por _visible_conditions)."""
-        lua_code = """
-        function Rule(obj)
-            if obj:attr("cat") == "1" then
-                obj:AddInstructions("PointInstruction:SYM1")
-            else
-                obj:AddInstructions("PointInstruction:SYM2")
-            end
-        end
-        """
         conditions = build_conditions(interpreter, lua_code)
         by_line = hits_by_line(conditions)
         if_hit = [h for h in conditions if h["values"]["PointInstruction"] == "SYM1"][0]
-        else_hit = [h for h in conditions if h["values"]["PointInstruction"] == "SYM2"][0]
+        else_hit = [h for h in conditions if h["values"]["PointInstruction"] == "SYM2"][
+            0
+        ]
 
         assert if_hit["conditions"] == ['obj:attr("cat") == "1"']
         # A condição do else não deve conter "NOT (" nem qualquer resquício de negação
@@ -349,9 +337,10 @@ class TestConditionMapping:
         end
         """
         conditions = build_conditions(interpreter, lua_code)
-        sym2_hit = [h for h in conditions if h["values"]["PointInstruction"] == "SYM2"][0]
-        
-        # Apenas a condição positiva do próprio ramo elseif deve ficar visível
+        sym2_hit = [h for h in conditions if h["values"]["PointInstruction"] == "SYM2"][
+            0
+        ]
+
         assert sym2_hit["conditions"] == ['obj:attr("cat") == "2"']
 
     def test_no_negation_prefix_leaks_into_any_output_condition(self, interpreter):
@@ -373,7 +362,7 @@ class TestConditionMapping:
 
 
 # --------------------------------------------------------------------------- #
-#         TESTES: RESOLUÇÃO DE VARIÁVEIS (reaching-definitions)               #
+#             TESTS: VARIABLE RESOLUTION (reaching-definitions)               #
 # --------------------------------------------------------------------------- #
 
 
@@ -387,7 +376,7 @@ class TestVariableResolution:
         """
         conditions = build_conditions(interpreter, lua_code)
         hit = conditions[0]
-        
+
         # Um único valor possível e sem condições -> deve virar escalar, não lista
         assert hit["values"]["ColorFill"] == "CHBLK"
 
@@ -425,19 +414,19 @@ class TestVariableResolution:
         conditions = build_conditions(interpreter, lua_code)
         values = conditions[0]["values"]["ColorFill"]
         as_map = {entry["value"]: entry["conditions"] for entry in values}
-        assert as_map['CHRED'] == ['obj:attr("cat") == "1"']
-        # Condição do else é interna (NOT (...)) e não deve aparecer aqui
-        assert as_map['CHGRN'] == []
+        assert as_map["CHRED"] == ['obj:attr("cat") == "1"']
+        assert as_map["CHGRN"] == []
 
     def test_hit_without_has_var_keeps_raw_values_unresolved(self, interpreter):
-        lua_code = 'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        lua_code = (
+            'function Rule(obj)\n  obj:AddInstructions("PointInstruction:SYM1")\nend\n'
+        )
         conditions = build_conditions(interpreter, lua_code)
-        # has_var é False, então _resolve_value nunca é chamado
         assert conditions[0]["values"] == {"PointInstruction": "SYM1"}
 
 
 # --------------------------------------------------------------------------- #
-#                  TESTES: COLETA DE DADOS RELACIONADOS (related.json)        #
+#                  TESTS: COLLECTING RELATED DATA (related.json)              #
 # --------------------------------------------------------------------------- #
 
 
@@ -493,7 +482,7 @@ class TestCollectRelated:
 
 
 # --------------------------------------------------------------------------- #
-#                    TESTES: FLUXO PONTA-A-PONTA (get_analyses)               #
+#                    TESTS: END-TO-END FLOW (get_analyses)                    #
 # --------------------------------------------------------------------------- #
 
 
@@ -514,8 +503,6 @@ class TestGetAnalysesEndToEnd:
         return lua_path
 
     def test_generates_conditions_json_file(self, lua_file, tmp_path, monkeypatch):
-        # 'related.json' é escrito em um caminho relativo fixo ("data/related.json"),
-        # então isolamos o cwd do teste em um diretório temporário com "data/" já criado.
         monkeypatch.chdir(tmp_path)
         os.makedirs("data", exist_ok=True)
 
@@ -557,27 +544,24 @@ class TestGetAnalysesEndToEnd:
 
         file_a = tmp_path / "RuleA.lua"
         file_a.write_text(
-            'function Rule(obj)\n'
+            "function Rule(obj)\n"
             '  local color = "CHBLK"\n'
             '  obj:AddInstructions("PointInstruction:SYM1;ColorFill:" .. color)\n'
-            'end\n'
+            "end\n"
         )
         file_b = tmp_path / "RuleB.lua"
         file_b.write_text(
-            'function Rule(obj)\n'
+            "function Rule(obj)\n"
             '  obj:AddInstructions("PointInstruction:SYM2;ColorFill:" .. color)\n'
-            'end\n'
+            "end\n"
         )
 
         interp = LuaInterpreter(str(tmp_path / "Rule*.lua"))
-        interp.files = sorted(interp.files)  # ordem determinística: RuleA antes de RuleB
+        interp.files = sorted(interp.files)
         interp.get_analyses(output_dir=str(tmp_path / "rules_parsed"))
 
         rule_b_conditions = json.loads(
             (tmp_path / "rules_parsed" / "RuleB" / "RuleB-conditions.json").read_text()
         )
-        # Em RuleB, "color" não foi declarado localmente: como local_var foi
-        # resetado, has_var deve ser False e o valor bruto ("color") deve
-        # permanecer sem substituição.
         hit = rule_b_conditions[0]
         assert hit["values"]["ColorFill"] == "color"

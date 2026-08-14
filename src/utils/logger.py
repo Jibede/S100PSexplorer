@@ -1,19 +1,20 @@
+# src/utils/logger.py
+
 from logging import Logger
 import logging
 
 def color_filter(record):
     colors = {
-        logging.DEBUG: "\033[90m",      # Gris
-        logging.WARNING: "\033[93m",    # Jaune
-        logging.ERROR: "\033[91m",      # Rouge
-        logging.CRITICAL: "\033[1;91m"  # Rouge 
+        logging.DEBUG: "\033[90m",      # GRAY
+        logging.WARNING: "\033[93m",    # YELLOW
+        logging.ERROR: "\033[91m",      # RED
+        logging.CRITICAL: "\033[1;91m"  # RED 
     }
     
     record.color = colors.get(record.levelno, "\033[0m")
     record.reset = "\033[0m"
     
     return True
-
 
 def config_logger(name: str) -> Logger:
     logger = logging.getLogger(name)
@@ -33,7 +34,6 @@ def config_logger(name: str) -> Logger:
         logger.addHandler(handler)
         
     return logger
-
 
 def set_flask_logger(logger: Logger) -> None:
     wer_logger = logging.getLogger('werkzeug')

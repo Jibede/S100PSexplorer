@@ -1,0 +1,63 @@
+<section class="block">
+  <h2>Area Fills</h2>
+
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Overview</th>
+        <th>Name</th>
+        <th>Conditions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for areafill in areaFills %}
+        {% set conditions = areafill['conditions']%}
+
+        {% if conditions %} 
+          {% set full_string = conditions | join('or') %}
+          {% set conditions_check = full_string.split('or') | map('trim') | list %} 
+          {% set default = (conditions_check | reject('in', default_conditions) | list | length == 0) %}
+        {% endif %}
+        
+        <tr
+          class="clickable {% if default %} default {% endif %}"
+          onclick="window.location.href='/visualisation/area_fill/{{areafill['value']}}'"
+        >
+          <td>
+            <span class="swatch_area_fills">
+              <canvas
+                class="cartoCanvas"
+                width="100"
+                height="100"
+                data-symbol="{{ url_for('static', filename='symbols/' ~ areafill['symbol'] ~ '.svg') }}"
+                data-v1_x="{{ areafill['v1']['x'] }}"
+                data-v1_y="{{ areafill['v1']['y'] }}"
+                data-v2_x="{{ areafill['v2']['x'] }}"
+                data-v2_y="{{ areafill['v2']['y'] }}"
+              >
+                >
+              </canvas>
+            </span>
+          </td>
+
+          <td>
+            {{ areafill['value']}} {% if default %}
+            <span class="pill">Default</span>
+            {% endif %}
+          </td>
+
+          <td class="mono">
+            {% for condition in areafill['conditions'] %}
+
+            <ul>
+              <li>{{condition}}</li>
+            </ul>
+
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

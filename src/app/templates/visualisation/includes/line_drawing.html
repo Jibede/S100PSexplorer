@@ -1,0 +1,53 @@
+<div class="glyph-big">
+  {% for line in lines %}
+    <svg width="{{transform_mm_px(line.get('intervalLength', 8))}}" height="120">
+        {% set red = line['pen']['color'][theme]['red'] %} 
+        {% set green = line['pen']['color'][theme]['green'] %} 
+        {% set blue = line['pen']['color'][theme]['blue'] %} 
+        {% set middle_y = 120 / 2 %} 
+
+        {% if line['dash'] %} 
+            {% for dash in line['dash'] %}
+                <line
+                x1="{{ transform_mm_px(dash['start']) }}"
+                y1="{{ middle_y }}"
+                x2="{{ transform_mm_px(dash['start']) | float + transform_mm_px(dash['length']) | float }}"
+                y2="{{ middle_y }}"
+                stroke="rgb({{red}}, {{green}}, {{blue}})"
+                stroke-width="{{ transform_mm_px(line['pen']['width']) }}"
+                />
+            {% endfor %}
+
+        {% else %}
+            <line
+            x1="0"
+            y1="{{ middle_y }}"
+            x2="100%"
+            y2="{{ middle_y }}"
+            stroke="rgb({{red}}, {{green}}, {{blue}})"
+            stroke-width="{{ transform_mm_px(line['pen']['width']) }}"
+            />
+
+        {% endif %}
+
+        {% if line['symbol'] %} 
+            {% for sym in line['symbol'] %} 
+                {% set pos_x = transform_mm_px(sym['position']) %} 
+                {% set svg_data = extract_svg_data(sym['code']) %}
+
+                <g
+                transform="translate({{ pos_x - svg_data['offset_x'] }}, {{ middle_y - svg_data['offset_y'] }})"
+                >
+                {{ get_svg(sym['code']) | safe }}
+                </g>
+
+                {% if sym['code'] not in ns.symbols %} 
+                    {% set ns.symbols = ns.symbols + [sym['code']]%}
+                {% endif %}
+
+            {% endfor %} 
+        {% endif %}
+    </svg>
+
+  {% endfor %}
+</div>

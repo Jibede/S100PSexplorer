@@ -1,8 +1,6 @@
 
 from flask import Blueprint, render_template, request
-
-from ..data_manager import DATA_AREA_FILLS, DATA_CONDITIONS, DATA_FT, DATA_LINE_STYLES, DATA_RULES, DATA_SYMBOLS, get_area_fill, get_line_style
-
+from ..data_manager import DATA_AREA_FILLS, DATA_COLOR_PROFILES, DATA_SYMBOLS_RELATED, DATA_FT, DATA_LINE_STYLES, DATA_RULES, DATA_SYMBOLS, get_area_fill, get_ft_info, get_line_style
 
 visualisation_bp = Blueprint('visualisation', __name__, url_prefix='/visualisation')
 
@@ -20,20 +18,23 @@ def view_visualisation(visu_type='symbol', item_id=list(DATA_SYMBOLS.keys())[0])
     selected_item = dataset.get(item_id)
     theme = request.args.get('theme', 'day')
 
-    
     return render_template(
-        "visualisation.html",
+        "visualisation/main_visualisation.html",
+        name_page="visualisation",
+        visu_type=visu_type,
+        
         data_symbols=DATA_SYMBOLS,
         data_ft=DATA_FT,
         data_line=DATA_LINE_STYLES,
         data_area=DATA_AREA_FILLS,
         data_rules=DATA_RULES,
-        name_page="visualisation",
-        actual_element=item_id,
-        visu_type=visu_type,
-        selected_item=selected_item,
-        linked_rules=DATA_CONDITIONS.get(visu_type).get(item_id, []),
+        data_colors=DATA_COLOR_PROFILES,
         
+        actual_element=item_id,
+        selected_item=selected_item,
+        linked_rules=DATA_SYMBOLS_RELATED.get(visu_type).get(item_id, []),
+        
+        get_info=get_ft_info,
         get_line=get_line_style,
         get_area=get_area_fill,
         

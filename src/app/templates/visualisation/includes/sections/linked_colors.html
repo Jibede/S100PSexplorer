@@ -1,0 +1,28 @@
+<div>
+    <h3>Linked Colors</h3>
+
+    <table class="data">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for color_code, vals in get_line(actual_element)| groupby('pen.color_code') %}
+                {% set info_color = data_colors.get(color_code)%}
+                <tr class="clickable" onclick="window.location.href='/colors/{{color_code}}'">
+                    <td class="mono">{{info_color.name}}</td>
+                    <td class="mono">{{color_code}}</td>
+                    <td class="mono">{{info_color.description.capitalize()}}</td>
+                </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>

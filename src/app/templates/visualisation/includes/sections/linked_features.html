@@ -1,0 +1,43 @@
+<div>
+  <h3>{{title}}</h3>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Description</th>
+        <th>Conditions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rule in linked_rules['rule'] | sort %} 
+        {% if rule in dataset %}
+        
+            {% set ft_info = get_info(rule) %} 
+            {% set data_visualisation = ft_info.get(section) %} 
+            {% set ns = namespace(conditions=[]) %} 
+            
+            {% for item in data_visualisation %} 
+                {% if selected_item['name'] == item['code'] or selected_item['name'] == item['value']%}
+                    {% set ns.conditions = item['conditions']%} 
+                {% endif%} 
+            {% endfor %}
+
+            {% set item = dataset.get(rule, {}) %}
+            <tr class="clickable" onclick="window.location.href='/features/{{rule}}'">
+                <td class="mono">{{ item.get('name', 'N/A') }}</td>
+                <td class="mono">
+                {{ item.get('definition') if item.get('definition') else item.get('description')}}
+                </td>
+                <td class="mono">
+                <ul>
+                    {%for condition in ns.conditions%}
+                    <li>{{condition}}</li>
+                    {%endfor%}
+                </ul>
+                </td>
+            </tr>
+        {% endif %} 
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

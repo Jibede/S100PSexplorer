@@ -1,0 +1,34 @@
+
+<div>
+    <h3>Linked Symbols</h3>
+    <table class="data">
+        <thead>
+            <tr>
+                <th>Preview</th>
+                <th>Name</th>
+                <th>Description</th>
+    </tr>
+</thead>
+
+<tbody>
+    
+    {% for symbol in dataset %}
+    <tr class="clickable" onclick="window.location.href='/visualisation/symbol/{{symbol}}'">
+          <td>
+              <span class="swatch">
+                  {{ get_svg(symbol) }}
+                </span>
+            </td>
+
+            <td class="mono">{{symbol}}</td>
+          
+          <td class="mono">{{data_symbols.get(symbol).get('description')}}</td>
+
+        </tr>
+        
+        {% endfor %}
+  </tbody>
+  
+  
+</table>
+</div>
