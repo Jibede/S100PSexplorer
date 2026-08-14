@@ -1,6 +1,5 @@
 # src/parsers/LuaInterpreter.py
 
-from filecmp import dircmp
 import glob
 import json
 import os

@@ -8,6 +8,9 @@
   border: 1px solid var(--chart-line);
   border-radius: var(--radius);
   padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .param-field h3 {
   display: block;

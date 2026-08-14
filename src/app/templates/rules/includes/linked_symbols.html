@@ -1,0 +1,25 @@
+<section class="block">
+    <h2>Linked Symbols</h2>
+    <table class="data">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Conditions</th>
+            </tr>
+
+            <tbody>
+                {% for symbol in linked_symbols%}
+                    <tr 
+                    class="clickable"
+                    onclick="window.location.href='/visualisation/symbol/{{symbol['value']}}'"
+                    >
+                        <td class="mono">{{symbol['value']}}</td>
+                        <td class="mono">{{symbol['conditions']}}</td>
+                    </tr>
+
+                {%endfor%}
+            </tbody>
+        </thead>
+    </table>
+
+</section>

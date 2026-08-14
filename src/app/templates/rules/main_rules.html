@@ -20,15 +20,25 @@
 </div>
 
 {% if info_rule.get('text') %}
-<section class="block">
-  <h2>Editable settings</h2>
+  <section class="block">
+    <h2>Editable settings</h2>
     {%include 'rules/includes/editable_info.html'%}    
+  </section>
 {% endif %}
 
 {% if linked_ft %}
   {% include 'rules/includes/linked_features.html' %}
 {% endif %}
-</section>
+
+{% set linked_symbols = info_rule.get('symbol') %}
+{% if linked_symbols%}
+  {% include 'rules/includes/linked_symbols.html'%}
+{% endif %}
+
+{% set linked_lines = info_rule.line_style | selectattr("type", "equalto", "instruction") | list %}
+{% if linked_lines %}
+  {% include 'rules/includes/linked_complex_lines.html' %}
+{% endif%}
 
 <script src="{{ url_for('static', filename='js/update_preview.js') }}"></script>
 {% endblock %}

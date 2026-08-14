@@ -1,0 +1,79 @@
+{% if info.get('LocalOffset') %}
+  <label>Coordinate X</label>
+  <input type="number" id="coordX_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{info.get('LocalOffset').get('x')}}"/>
+
+  <label>Coordinate Y</label>
+  <input type="number" id="coordY_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{info.get('LocalOffset').get('y')}}" />
+{% endif %} 
+  
+{% if info.get('TextAlignHorizontal') %}
+  {% set text_align_hor = info.get('TextAlignHorizontal') %}
+  <label>Text Align Horizontal</label>
+  <select id="alignH_{{current_index}}" onchange="updatePreview({{current_index}})">
+    <option value="Start" {% if text_align_hor == 'Start'%} selected {% endif %}>Start</option>
+    <option value="Center" {% if text_align_hor == 'Center'%} selected {% endif %}>Center</option>
+    <option value="End" {% if text_align_hor == 'End'%} selected {% endif %}>End</option>
+  </select>
+{% endif %} 
+    
+{% if info.get('TextAlignVertical') %}
+  <label>Text Align Vertical</label>
+  {% set text_align_ver = info.get('TextAlignVertical') %}
+  <select id="alignV_{{current_index}}" onchange="updatePreview({{current_index}})">
+    <option value="Start" {% if text_align_ver == 'Start'%} selected {% endif %}>Start</option>
+    <option value="Center" {% if text_align_ver == 'Center'%} selected {% endif %}>Center</option>
+    <option value="End" {% if text_align_ver == 'End'%} selected {% endif %}>End</option>
+  </select>
+{% endif %} 
+
+{% if info.get('FontSize') %}
+  <label>Font Size</label>
+  <input type="number" id="fontSize_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{info.get('FontSize')}}" min="0"/>
+{% endif %} 
+
+{% if info.get('FontColor') %}
+  <label>Font Color</label>
+  <select id="fontColor_{{current_index}}" onchange="updatePreview({{current_index}})">
+    {% set chosen_color = info.get('FontColor').get('code') %} 
+    {% for code, color in colors | dictsort %}
+      {% set r = color.get('rgbDay').get('red') %}
+      {% set g = color.get('rgbDay').get('green') %}
+      {% set b = color.get('rgbDay').get('blue') %}
+      {% set rgb = 'rgb(%s, %s, %s)' | format(r, g, b) %}
+
+      <option value="{{code}}" data-rgb="{{rgb}}" {% if code == chosen_color %} selected {% endif %}>
+        {{ code }} [{{ color['name'].capitalize() }}]
+      </option>
+    {% endfor %}
+  </select>
+{% endif %}
+  
+{% if info.get('raw_text') %}
+  <label>Raw Text</label>
+  <input type="text" id="rawText_{{current_index}}" value="{{info.get('raw_text')}}"/>
+{% endif %}
+
+{% if info.get('text_vw_group') %}
+  <label>Text Viewing Group</label>
+  <input type="number" id="textVwGroup_{{current_index}}" value="{{info.get('text_vw_group')}}"/>
+{% endif %}
+
+{% if info.get('view_group') %}
+  <label>View Group</label>
+  <input type="number" id="viewGroup_{{current_index}}" value="{{info.get('view_group')}}"/>
+{% endif %}
+
+{% if info.get('priority') %}
+  <label>Priority</label>
+  <input type="number" id="priority_{{current_index}}" value="{{info.get('priority')}}"/>
+{% endif %}
+
+{% if info.get('hover') and info.get('hover')[0].get('value') != false%}
+  <label>Hover</label>
+  <input type="number" id="hover_{{current_index}}" value="{{info.get('hover')}}"/>
+{% endif %}
+
+{% if info.get('text_priority') %}
+  <label>Text Priority</label>
+  <input type="number" id="textPriority_{{current_index}}" value="{{info.get('text_priority')}}"/>
+{% endif %}

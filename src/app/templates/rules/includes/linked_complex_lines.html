@@ -1,0 +1,24 @@
+<section class="block">
+    <h2>Linked Lines</h2>
+    <table class="data">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Conditions</th>
+            </tr>
+
+            <tbody>
+                {% for line in linked_lines %}
+                    <tr 
+                    class="clickable"
+                    onclick="window.location.href='/visualisation/line_style/{{line['value']}}'"
+                    >
+                        <td class="mono">{{line['code']}}</td>
+                        <td class="mono">{{line['conditions']}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </thead>
+    </table>
+
+</section>

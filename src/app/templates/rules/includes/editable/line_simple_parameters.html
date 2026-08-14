@@ -1,0 +1,40 @@
+{% if line.get('style') %}
+<div>
+    <label>Line Format</label>
+    <select id="lineFormat_{{current_index}}">
+        {% set selected = line.get('style') %}
+        <option value="solid" {% if selected == 'solid'%} selected {% endif %}>Solid</option>
+        <option value="dash" {% if selected == 'solid'%} selected {% endif %}>Dash</option>
+        <option value="dot" {% if selected == 'solid'%} selected {% endif %}>Dot</option>
+    </select>
+</div>
+{% endif %}
+
+{% if line.get('thickness') %}
+<div>
+    <label>Thickness</label>
+    <input type="number" id="thickness_{{current_index}}" value="{{line.thickness}}" min="0">
+</div>
+{%endif%}
+{% if line.get('color') %}
+{% set chosen_color = line.get('color_code')%}
+<div>
+    <label>Font Color</label>
+    <select id="fontColor_{{current_index}}">
+        {% for code, color in colors | dictsort %}
+            {% set r = color.get('rgbDay').get('red') %}
+            {% set g = color.get('rgbDay').get('green') %}
+            {% set b = color.get('rgbDay').get('blue') %}
+            {% set rgb = 'rgb(%s, %s, %s)' | format(r, g, b) %}
+            <option value="{{code}}" data-rgb="{{rgb}}" {% if code == chosen_color %} selected {% endif %}>
+                {{ code }} [{{ color['name'].capitalize() }}]
+        </option>
+        {% endfor %}
+    </select>
+</div>
+{% endif %}
+
+<div>
+    {% set color = line.get('color') %}
+    {% include 'features/includes/line_styles/simple_line.html' %}
+</div>

@@ -381,6 +381,7 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
                 for e in val:
                     color_data = {
                         **e,
+                        'color_code': e.get('value'),
                         "rgb": get_color_styles(e.get("value")),
                     }
                     info_line[key].append(color_data)
@@ -390,6 +391,7 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
         else:
             if key == "color":
                 info_line["code"] = "SIMPLE LINE"
+                info_line['color_code'] = val
                 val = get_color_styles(val)
 
             info_line[key] = val
@@ -512,9 +514,6 @@ def _get_ft_text(stmt: Dict[str, Dict], info: Dict) -> None:
             "conditions": stmt.get("conditions"),
         }
     )
-
-    print(info.get("text"))
-
 
 def _get_ft_text_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
     """Extracts text instruction details
