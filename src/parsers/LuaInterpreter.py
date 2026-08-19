@@ -93,7 +93,7 @@ class LuaInterpreter:
             os.makedirs(file_output_dir, exist_ok=True)
 
             ################### JUST FOR TESTS AND DEBUGS########################
-            self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
+            # self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
             #####################################################################
 
             conditions_path = file_output_dir / f"{base_name}-conditions.json"
@@ -180,6 +180,28 @@ class LuaInterpreter:
     ###################################################################################
     #                            RELATED DATA FUNCTIONS                               #
     ###################################################################################
+    
+    def _extract_and_map(self, target_dict: Dict, mapping: Dict, rule_name: str) -> None:
+        for key, raw_value in mapping.items():
+            if raw_value is not None:
+                for visu in self._flatten_values(raw_value):
+                    target_dict[key][visu]['rule'].add(rule_name)
+    
+    def _collect_related_data(self, conditions: List[Dict], rule_name: str) -> None:
+        
+        try:
+            for item in conditions:
+                if item.get('node_type') != 'hit': continue
+                
+                instruction_type = item.get('instruction_type')
+                values = item.get('values') or {}
+                
+                if instruction_type in ['text', 'line_style']:
+                    self._extract_and_map()
+            
+            
+        except:
+            pass
 
     def _collect_related_colors(self, conditions: List[Dict], rule_name: str) -> None:
         for item in conditions:
@@ -507,7 +529,15 @@ class LuaInterpreter:
         if node_dt["instruction_type"] == "text":
             x, y = node_dt["values"]["LocalOffset"].split(",")
             node_dt["values"]["LocalOffset"] = {"x": x.strip(), "y": y.strip()}
+            
+            if 'LinePlacement' in node_dt['values']:
+                mode, value = node_dt['values']['LinePlacement'].split(',')
+                node_dt['values']['LinePlacement'] = {'mode': mode.strip(), 'value': value.strip()}
 
+            if 'Rotation' in node_dt['values']:
+                system, angle = node_dt['values']['Rotation'].split(',')
+                node_dt['values']['Rotation'] = {'system': system.strip(), 'angle': angle.strip()}
+            
         return node_dt
 
     def _build_var_node(self, node: Assign) -> Dict:
@@ -594,6 +624,7 @@ class LuaInterpreter:
         has_var = False
         for param in all_params.split(";"):
             if ":" not in param:
+                params[param] = True
                 continue
 
             key, value = (p.strip() for p in param.split(":", 1))
@@ -640,6 +671,7 @@ class LuaInterpreter:
         """
         data = [self._get_parameters(arg) for arg in node.args]
 
+        
         raw_text = data[0]
         text_vw_group = data[1]
         text_priority = data[2]
@@ -649,6 +681,7 @@ class LuaInterpreter:
 
         has_var = any(self._references_local_var(v) for v in data)
 
+        
         return {
             "instruction_type": "text_instruction",
             "values": {
@@ -958,7 +991,7 @@ class LuaInterpreter:
             (value, self._visible_conditions(path)) for value, path in combined
         )
 
-        if len(visible) == 1 and not visible[0][1]:
+        if len(visible) == 1:
             return visible[0][0]
 
         return [{"value": v, "conditions": c} for v, c in visible]

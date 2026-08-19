@@ -4,6 +4,7 @@
     <table class="data">
         <thead>
             <tr>
+                <th>Preview</th>
                 <th>Name</th>
                 <th>Code</th>
                 <th>Description</th>
@@ -11,11 +12,19 @@
         </thead>
 
         <tbody>
-            {% for color_code, vals in get_line(actual_element)| groupby('pen.color_code') %}
-                {% set info_color = data_colors.get(color_code)%}
-                <tr class="clickable" onclick="window.location.href='/colors/{{color_code}}'">
+            {% for color in colors %}
+                {% set info_color = data_colors.get(color)%}
+                <tr class="clickable" onclick="window.location.href='/colors/{{color}}'">
+                    <td>
+                        <span class="swatch">
+                            <div
+                            style="background-color: rgb({{info_color['rgb' ~ theme.capitalize()]['red']}}, {{info_color['rgb' ~ theme.capitalize()]['green']}}, {{info_color['rgb' ~ theme.capitalize()]['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
+                            ></div>
+                            
+                        </span>
+                    </td>
                     <td class="mono">{{info_color.name}}</td>
-                    <td class="mono">{{color_code}}</td>
+                    <td class="mono">{{color}}</td>
                     <td class="mono">{{info_color.description.capitalize()}}</td>
                 </tr>
 

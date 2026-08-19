@@ -1,10 +1,14 @@
+{% import '_components.html' as components %}
 {% extends "base/base.html" %} 
 
 {% block page_styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/themes/nightSvgStyle.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}" />
 {% endblock %} 
 
 {% block conteudo %}
+{{ components.render_dropdown(name_page, actual_element, theme) }}
+
+<br><br>
 
 {% set feature_info = get_info(selected_feature['code']) %}
 {% set symbols = feature_info.get('symbol') %}
@@ -14,7 +18,7 @@
 
 {% set default_conditions = ['feature.PrimitiveType == PrimitiveType.Point', 'feature.PrimitiveType == PrimitiveType.Surface', 'feature.PrimitiveType == PrimitiveType.Curve'] %}
 
-{% include 'features/includes/header.html' %}
+{{ components.render_header(selected_feature) }}
 
 {% include 'features/includes/attributes.html' %}
 

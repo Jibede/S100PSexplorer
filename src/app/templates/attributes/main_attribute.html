@@ -1,13 +1,15 @@
+{% import '_components.html' as components %}
+
 {% extends "base/base.html" %} {% block conteudo %}
 
-{% include 'attributes/includes/header.html' %}
+{{components.render_header(selected_attr)}}
 
-  {% set attr_val_list = selected_attr.get('listed_value') %}
-  
-  {% if attr_val_list%}
-    {% include 'attributes/includes/dictionary.html' %}
-  {% endif %}
-  
+{% set attr_val_list = selected_attr.get('listed_value') %}
+
+{% if attr_val_list%}
+  {% include 'attributes/includes/dictionary.html' %}
+{% endif %}
+
 {% if linked_objs %}
   {% include 'attributes/includes/linked_objects.html' %}
 {% endif %}

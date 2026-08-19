@@ -1,0 +1,123 @@
+{% macro render_simple_line(rgb, style, thickness, width_frame=100, height_frame=30) %}
+  <svg width="{{width_frame}}" height="{{height_frame}}">
+    {% if style == 'dash' %}
+    <line
+      x1="0"
+      y1="{{height_frame / 2}}"
+      x2="{{width_frame}}"
+      y2="{{height_frame / 2}}"
+      stroke="{{rgb}}"
+      stroke-width="{{thickness}}"
+      stroke-dasharray="8 5"
+    />
+
+    {% elif style == 'dot' %}
+    <line
+      x1="0"
+      y1="{{height_frame / 2}}"
+      x2="{{width_frame}}"
+      y2="{{height_frame / 2}}"
+      stroke="{{rgb}}"
+      stroke-width="{{thickness}}"
+      stroke-dasharray="2 3"
+    />
+
+    {% else %}
+    <line
+      x1="0"
+      y1="{{height_frame / 2}}"
+      x2="{{width_frame}}"
+      y2="{{height_frame / 2}}"
+      stroke="{{rgb}}"
+      stroke-width="{{thickness}}"
+    />
+
+    {% endif %}
+  </svg>
+
+{% endmacro %}
+
+{% macro render_complex_line(lines, height_frame=120, theme='night')%}
+  {% for line in lines %} 
+      {% set red = line['pen']['color'][theme]['red'] %} 
+      {% set green = line['pen']['color'][theme]['green'] %} 
+      {% set blue = line['pen']['color'][theme]['blue'] %} 
+
+        <svg width="{{transform_mm_px(line.get('intervalLength', 10))}}" height="{{height_frame}}">
+          {% if line['dash'] %} 
+            {% for dash in line['dash']%}
+              <line
+                x1="{{ transform_mm_px(dash['start']) }}"
+                y1="{{ height_frame / 2 }}"
+                x2="{{ transform_mm_px(dash['start']) | float + transform_mm_px(dash['length']) | float }}"
+                y2="{{ height_frame / 2 }}"
+                stroke="rgb({{red}}, {{green}}, {{blue}})"
+                stroke-width="{{ transform_mm_px(line['pen']['width']) }}"
+              />
+
+            {%endfor%} 
+          {% else %}
+            <line
+              x1="0"
+              y1="{{ height_frame / 2 }}"
+              x2="100%"
+              y2="{{ height_frame / 2 }}"
+              stroke="rgb({{red}}, {{green}}, {{blue}})"
+              stroke-width="{{ transform_mm_px(line['pen']['width']) }}"
+            />
+
+          {% endif %} 
+          {% if line['symbol'] %}
+            {% for sym in line['symbol'] %}
+              {% set pos_x = transform_mm_px(sym['position']) %}
+              {% set svg_data = extract_svg_data(sym['code']) %}
+
+              <g
+                transform="translate({{ pos_x - svg_data['offset_x'] }}, {{ height_frame / 2 - svg_data['offset_y'] }})"
+              >
+                {{ get_svg(sym['code']) | safe }}
+              </g>
+
+            {% endfor %}
+            
+          {% endif %}
+        </svg>
+  {% endfor %}
+
+{% endmacro %}
+
+{% macro render_area_fill(area_fill, width_canvas=100, height_canvas=100) %}
+  <canvas
+    class="cartoCanvas"
+    width="{{width_canvas}}"
+    height="{{height_canvas}}"
+    data-symbol="{{ url_for('static', filename='symbols/' ~ area_fill['symbol'] ~ '.svg') }}"
+    data-v1_x="{{ area_fill['v1']['x'] }}"
+    data-v1_y="{{ area_fill['v1']['y'] }}"
+    data-v2_x="{{ area_fill['v2']['x'] }}"
+    data-v2_y="{{ area_fill['v2']['y'] }}"
+  >
+  </canvas>
+
+{% endmacro %}
+
+{% macro render_color(rgb) %}
+  <span class="swatch">
+      <div style="background-color: {{rgb}}; width: 80px; height: 40px; border-radius: 4px;"></div>
+  </span>
+{% endmacro %}
+
+{% macro rendre_color_fill(colorfill) %}
+  <span class="swatch">
+    <div
+      style="background-color: rgb({{colorfill['value']['day']['red']}}, {{colorfill['value']['day']['green']}}, {{colorfill['value']['day']['blue']}}, {{colorfill['transparency']}}); width: 80px; height: 40px; border-radius: 4px;"
+    ></div>
+    <div
+      style="background-color: rgb({{colorfill['value']['dusk']['red']}}, {{colorfill['value']['dusk']['green']}}, {{colorfill['value']['dusk']['blue']}}, {{colorfill['transparency']}}); width: 80px; height: 40px; border-radius: 4px;"
+    ></div>
+    <div
+      style="background-color: rgb({{colorfill['value']['night']['red']}}, {{colorfill['value']['night']['green']}}, {{colorfill['value']['night']['blue']}}, {{colorfill['transparency']}}); width: 80px; height: 40px; border-radius: 4px;"
+    ></div>
+  </span>
+
+{% endmacro %}

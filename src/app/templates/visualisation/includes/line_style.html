@@ -1,8 +1,11 @@
+{% import '_draw_img.html' as draw_line %}
+
 {% set section = 'line_style'%}
 {% set lines = get_line(actual_element) %}
-{% set ns = namespace(symbols=[]) %}
 
-{% include 'visualisation/includes/line_drawing.html' %}
+<div class="glyph-big">
+  {{draw_line.render_complex_line(lines, theme=theme)}}
+</div>
 
 <div class="info">
   <h3>{{selected_item['name']}}</h3>
@@ -29,12 +32,17 @@
     {% include 'visualisation/includes/sections/linked_features.html' %}
   {% endif %}
 
-{% if ns.symbols %}
-  {% set dataset = ns.symbols %}
-  {% include 'visualisation/includes/sections/linked_symbols.html'%}
+
+{% for line in lines%}
+  {% set dataset = line.symbol | map(attribute='code') | unique | list %}
+  {% if dataset %}
+    {% include 'visualisation/includes/sections/linked_symbols.html'%}
+  {% endif %}
+{% endfor %}
+
+{% set colors = get_line(actual_element) | map(attribute='pen.color_code') | list %}
+{% if colors %}
+  {% include 'visualisation/includes/sections/linked_colors.html' %}
 {% endif %}
-
-{% include 'visualisation/includes/sections/linked_colors.html'%}
-
 
 </div>

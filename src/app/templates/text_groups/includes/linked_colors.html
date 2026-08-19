@@ -1,3 +1,6 @@
+{% import '_draw_img.html' as draw_color %}
+
+
 {% set rules = link_vw.get('rule') %}
 
 <section class="block">
@@ -32,22 +35,19 @@
                         <td>{{info_color['description'].capitalize()}}</td>
                         
                         <td>
-                            <span class="swatch">
-                                <div style="background-color: rgb({{info_color['rgbDay']['red']}}, {{info_color['rgbDay']['green']}}, {{info_color['rgbDay']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"></div>
-                            </span>
-                            <span>RGB({{info_color['rgbDay']['red']}}, {{info_color['rgbDay']['green']}}, {{info_color['rgbDay']['blue']}})</span>
+                            {% set rgb = 'rgb(%s, %s, %s)' | format(info_color['rgbDay']['red'], info_color['rgbDay']['green'], info_color['rgbDay']['blue']) %}
+                            {{draw_color.render_color(rgb)}}
+                            <span>RGB({{rgb}})</span>
                         </td>
                         <td>
-                            <span class="swatch">
-                                <div style="background-color: rgb({{info_color['rgbDusk']['red']}}, {{info_color['rgbDusk']['green']}}, {{info_color['rgbDusk']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"></div>
-                            </span>
-                            <span>RGB({{info_color['rgbDusk']['red']}}, {{info_color['rgbDusk']['green']}}, {{info_color['rgbDusk']['blue']}})</span>
+                            {% set rgb = 'rgb(%s, %s, %s)' | format(info_color['rgbDusk']['red'], info_color['rgbDusk']['green'], info_color['rgbDusk']['blue']) %}
+                            {{draw_color.render_color(rgb)}}
+                            <span>RGB({{rgb}})</span>
                         </td>
                         <td>
-                            <span class="swatch">
-                                <div style="background-color: rgb({{info_color['rgbNight']['red']}}, {{info_color['rgbNight']['green']}}, {{info_color['rgbNight']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"></div>
-                            </span>
-                            <span>RGB({{info_color['rgbNight']['red']}}, {{info_color['rgbNight']['green']}}, {{info_color['rgbNight']['blue']}})</span>
+                            {% set rgb = 'rgb(%s, %s, %s)' | format(info_color['rgbNight']['red'], info_color['rgbNight']['green'], info_color['rgbNight']['blue']) %}
+                            {{draw_color.render_color(rgb)}}
+                            <span>RGB({{rgb}})</span>
                         </td>
                     </tr>
                 {% endfor %}

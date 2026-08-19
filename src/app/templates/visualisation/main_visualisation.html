@@ -1,3 +1,4 @@
+{% import '_components.html' as dropdown %}
 {% extends "base/base.html" %} 
 
 {% block page_styles %}
@@ -9,7 +10,7 @@
 {% endblock %}
 
 {% block conteudo %}
-  {% include 'visualisation/includes/dropdown.html' %}
+  {{ dropdown.render_dropdown(name_page, actual_element, theme, visu_type=visu_type) }}
 
   <h2>Details of the selected {{visu_type.replace('_', ' ')}}</h2>
   

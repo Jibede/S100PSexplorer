@@ -1,10 +1,12 @@
+{% import '_draw_img.html' as draw_line %}
+
 <section class="block">
   <h2>Line Styles</h2>
   <table class="data">
   
     <thead>
       <tr>
-        <th>Overview</th>
+        <th>Preview</th>
         <th>Type</th>
         <th>Conditions</th>
       </tr>
@@ -39,14 +41,20 @@
 
             <td>
               {% if line['type'] == 'simple' %}
-                {% include 'features/includes/line_styles/simple_line.html' %}
+                {% set rgb = 'rgb(%s, %s, %s)' | format(color[theme]['red'], color[theme]['green'], color[theme]['blue']) %}
+                <span class="swatch_area_fills">
+                  {{draw_line.render_simple_line(rgb, style, thickness) }}
+                </span>
 
               {% elif line['type'] == 'instruction' %}
-                {% include 'features/includes/line_styles/instruction_line.html' %}
+                <span class="swatch_area_fills">
+                  {% set lines = line['line_info'] %}
+                  {{draw_line.render_complex_line(lines, theme=theme)}}
+                </span>
 
               {% endif %}
               
-              </td>
+            </td>
 
             <td>{{ code if code else 'SIMPLE LINE' }}
 

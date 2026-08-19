@@ -1,20 +1,8 @@
+{% import '_components.html' as components %}
+
 {% extends "base/base.html" %} {% block conteudo %}
 
-<div class="crumb">
-  Color &nbsp;/&nbsp; <b>{{selected_item['name']}} [{{selected_item['code']}}]</b>
-</div>
-
-<div class="header-card">
-    <h1>{{selected_item['name']}}</h1>
-
-    <div class="tag-row">
-        <div class="tag"><b>CODE</b><span>{{selected_item['code']}}</span></div>
-    </div>
-
-    <br>
-
-    <div class="sub">{{selected_item['description']}}</div>
-</div>
+{{ components.render_header(selected_item) }}
 
 {% include 'colors/includes/color_style.html'%}
 

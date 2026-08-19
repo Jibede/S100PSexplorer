@@ -1,0 +1,58 @@
+{% macro render_dropdown(name_page, actual_element, theme, visu_type=None) %}
+<div class="dropdown-container">
+    <button class="dropdown-trigger">{{ theme | capitalize }} ▾</button>
+
+    <div class="dropdown-menu">
+        {% set kwargs = {'item_id': actual_element} %}
+        {% if visu_type %}
+            {% set _ = kwargs.update({'visu_type': visu_type})%}
+        {% endif %}
+
+
+        {% set endpoint = name_page ~ '.view_' ~ name_page %}
+
+        <a href="{{ url_for(endpoint, theme='day', **kwargs) }}">Day</a>
+        <a href="{{ url_for(endpoint, theme='dusk', **kwargs) }}">Dusk</a>
+        <a href="{{ url_for(endpoint, theme='night', **kwargs) }}">Night</a>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro render_header(selected_item) %}
+    <div class="crumb">
+    Features &nbsp;/&nbsp; <b>{{selected_item['code']}}</b>
+    </div>
+
+    <div class="header-card">
+        <h1>{{selected_item['name']}}</h1>
+
+        <div class="tag-row">
+            <div class="tag">
+            <b>Code</b><span>{{ selected_item['code'] }}</span>
+            </div>
+            {% set primitives = selected_item.get('permitted_primitives') %}
+            {% if primitives %}
+                <div class="tag"><b>Primitive</b><span>{{ ' | '.join(primitives)}}</span></div>
+            {% endif %}
+
+            {% set alias =  selected_item.get('alias') %}
+            {% if alias %}
+                <div class="tag"><b>Alias</b><span>{{alias}}</span></div>
+            {% endif %}
+
+            {% set type = selected_item.get('value_type') %}
+            {% if type %}
+                <div class="tag"><b>Type</b><span>{{type}}</span></div>
+            {% endif %}
+
+            {% set rule_type = selected_item.get('rule_type') %}
+            {% if rule_type %}
+                <div class="tag"><b>Rule Type</b><span>{{rule_type}}</span></div>
+            {% endif %}
+        </div>
+
+        <br />
+        {% set description = selected_item.get('definition') or selected_item.get('description') %}
+        <div class="sub">{{description}}</div>
+    </div>
+{% endmacro %}

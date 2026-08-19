@@ -26,7 +26,7 @@
             <tr class="clickable" onclick="window.location.href='/features/{{rule}}'">
                 <td class="mono">{{ item.get('name', 'N/A') }}</td>
                 <td class="mono">
-                {{ item.get('definition') if item.get('definition') else item.get('description')}}
+                {{ item.get('definition').capitalize() if item.get('definition') else item.get('description').capitalize()}}
                 </td>
                 <td class="mono">
                 <ul>

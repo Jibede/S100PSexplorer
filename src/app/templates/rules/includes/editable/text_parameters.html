@@ -1,13 +1,17 @@
-{% if info.get('LocalOffset') %}
-  <label>Coordinate X</label>
-  <input type="number" id="coordX_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{info.get('LocalOffset').get('x')}}"/>
 
+{% set coords = info.get('LocalOffset') %}
+{% if coords %}
+  {% set coord_x = coords.get('x') %}
+  {% set coord_y = coords.get('y') %}
+  
+  <label>Coordinate X</label>
+  <input type="number" id="coordX_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{coord_x}}"/>
   <label>Coordinate Y</label>
-  <input type="number" id="coordY_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{info.get('LocalOffset').get('y')}}" />
+  <input type="number" id="coordY_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{coord_y}}" />
 {% endif %} 
   
-{% if info.get('TextAlignHorizontal') %}
-  {% set text_align_hor = info.get('TextAlignHorizontal') %}
+{% set text_align_hor = info.get('TextAlignHorizontal') %}
+{% if text_align_hor %}
   <label>Text Align Horizontal</label>
   <select id="alignH_{{current_index}}" onchange="updatePreview({{current_index}})">
     <option value="Start" {% if text_align_hor == 'Start'%} selected {% endif %}>Start</option>
@@ -16,64 +20,123 @@
   </select>
 {% endif %} 
     
-{% if info.get('TextAlignVertical') %}
+{% set text_align_ver = info.get('TextAlignVertical') %}
+{% if text_align_ver %}
   <label>Text Align Vertical</label>
-  {% set text_align_ver = info.get('TextAlignVertical') %}
   <select id="alignV_{{current_index}}" onchange="updatePreview({{current_index}})">
     <option value="Start" {% if text_align_ver == 'Start'%} selected {% endif %}>Start</option>
     <option value="Center" {% if text_align_ver == 'Center'%} selected {% endif %}>Center</option>
-    <option value="End" {% if text_align_ver == 'End'%} selected {% endif %}>End</option>
+    <option value="Bottom" {% if text_align_ver == 'Bottom'%} selected {% endif %}>Bottom</option>
   </select>
 {% endif %} 
 
-{% if info.get('FontSize') %}
+{% set font_size = info.get('FontSize') %}
+{% if font_size %}
   <label>Font Size</label>
-  <input type="number" id="fontSize_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{info.get('FontSize')}}" min="0"/>
+  <input type="number" id="fontSize_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{font_size}}" min="0"/>
 {% endif %} 
 
-{% if info.get('FontColor') %}
+{% set font_color = info.get('FontColor') %}
+{% if font_color %}
   <label>Font Color</label>
   <select id="fontColor_{{current_index}}" onchange="updatePreview({{current_index}})">
-    {% set chosen_color = info.get('FontColor').get('code') %} 
+    {% set chosen_color = font_color.get('code') %} 
     {% for code, color in colors | dictsort %}
       {% set r = color.get('rgbDay').get('red') %}
       {% set g = color.get('rgbDay').get('green') %}
       {% set b = color.get('rgbDay').get('blue') %}
       {% set rgb = 'rgb(%s, %s, %s)' | format(r, g, b) %}
-
       <option value="{{code}}" data-rgb="{{rgb}}" {% if code == chosen_color %} selected {% endif %}>
         {{ code }} [{{ color['name'].capitalize() }}]
       </option>
     {% endfor %}
   </select>
 {% endif %}
-  
-{% if info.get('raw_text') %}
-  <label>Raw Text</label>
-  <input type="text" id="rawText_{{current_index}}" value="{{info.get('raw_text')}}"/>
+
+
+{% set line_placement = info.get('LinePlacement') %}
+{% if line_placement %}
+  {% set mode = line_placement.get('mode') %}
+  {% set value = line_placement.get('value') %}
+  <label>Line Placement</label>
+  <div class="param-multi-field">
+
+    <div class="param-multi-field">
+      <label class="group_label">Mode</label>
+      <select id="linePlacement-mode_{{current_index}}" onchange="updatePreview({{current_index}})">
+        <option value="Relative" {% if mode == 'Relative'%} selected {% endif %}>Relative</option>
+        <option value="Absolute" {% if mode == 'Absolute'%} selected {% endif %}>Absolute</option>
+      </select>
+    </div>
+
+    <div class="param-multi-field">
+      <label class="group_label">Value</label>
+      <input type="number" id="linePlacement-value_{{current_index}}" onchange="updatePreview({{current_index}})" value={{value}}>
+    </div>
+
+  </div>
 {% endif %}
 
-{% if info.get('text_vw_group') %}
-  <label>Text Viewing Group</label>
-  <input type="number" id="textVwGroup_{{current_index}}" value="{{info.get('text_vw_group')}}"/>
+{% set area_placement = info.get('AreaPlacement') %}
+{% if area_placement %}
+  <label>Area Placement</label>
+  <select id="areaPlacement_{{current_index}}" onchange="updatePreview({{current_index}})">
+    <option value="VisibleParts" {% if area_placement == 'VisibleParts'%} selected {% endif %}>VisibleParts</option>
+    <option value="BaseGeometry" {% if area_placement == 'BaseGeometry'%} selected {% endif %}>BaseGeometry</option>
+  </select>
 {% endif %}
 
-{% if info.get('view_group') %}
-  <label>View Group</label>
-  <input type="number" id="viewGroup_{{current_index}}" value="{{info.get('view_group')}}"/>
+{% set coord_ref = info.get('AreaCRS') %}
+{% if coord_ref %}
+  <label>Coordinate Reference</label>
+
+  <select id="areaCRS_{{current_index}}" onchange="updatePreview({{current_index}})">
+    <option value="GlobalGeometry" {% if coord_ref == 'GlobalGeometry'%} selected {% endif %}>GlobalGeometry</option>
+    <option value="PortrayalCRS" {% if coord_ref == 'PortrayalCRS'%} selected {% endif %}>PortrayalCRS</option>
+    <option value="LocalCRS" {% if coord_ref == 'LocalCRS'%} selected {% endif %}>LocalCRS</option>
+
+  </select>
 {% endif %}
 
-{% if info.get('priority') %}
-  <label>Priority</label>
-  <input type="number" id="priority_{{current_index}}" value="{{info.get('priority')}}"/>
+{% set rotation = info.get('Rotation') %}
+{% if rotation %}
+  {% set system = rotation.get('system') %}
+  {% set angle = rotation.get('angle') %}
+  <label>Rotation</label>
+  <div class="param-multi-field">
+
+    <div>
+      <label>System</label>
+      <select id="rotation-system_{{current_index}}" onchange="updatePreview({{current_index}})">
+        <option value="PortrayalCRS" {% if system == 'PortrayalCRS' %} selected {% endif %} >PortrayalCRS</option>
+        <option value="GlobalGeometry" {% if system == 'GlobalGeometry' %} selected {% endif %} >GlobalGeometry</option>  
+      </select>
+    </div>
+
+    <div>
+      <label>Angle</label>
+      <input type="number" id="rotation-angle_{{current_index}}" onchange="updatePreview({{current_index}})" value="{{angle}}" min="0" max="360">
+    </div>
+
+  </div>
 {% endif %}
 
-{% if info.get('hover') and info.get('hover')[0].get('value') != false%}
-  <label>Hover</label>
-  <input type="number" id="hover_{{current_index}}" value="{{info.get('hover')}}"/>
+{% set scale_factor = info.get('ScaleFactor') %}
+{% if scale_factor%}
+  <label>Scale Factor</label>
+  <input type="number" id="scaleFactor_{{current_index}}" onchange="updatePreview({{current_index}})" value="{{scale_factor}}" min="0">
 {% endif %}
 
-{% if info.get('text_priority') %}
-  <label>Text Priority</label>
-  <input type="number" id="textPriority_{{current_index}}" value="{{info.get('text_priority')}}"/>
+{% if 'ClearGeometry' in info.keys() %}
+  {% set clearGeo = info.get('ClearGeometry') %}
+  <label>Clear Geometry</label>
+  <select id="clearGeo_{{current_index}}" onchange="updatePreview({{current_index}})">
+    <option value='true' {% if clearGeo == true %}selected{% endif %}>True</option>
+    <option value='false' {% if clearGeo == false %}selected{% endif %}>False</option>
+  </select>
 {% endif %}
+
+<input type="hidden" id="lineNumber_{{current_index}}" value="{{ info.get('line') }}">
+<input type="hidden" id="lineInstructionNumber_{{current_index}}" value="{{ info.get('line_instruction') }}">
+
+<script src="{{ url_for('static', filename='js/update_preview.js') }}"></script>

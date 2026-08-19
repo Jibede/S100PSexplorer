@@ -1,3 +1,5 @@
+{% import '_draw_img.html' as draw_color %}
+
 <section class="block">
   <h2>Color Style</h2>
 
@@ -11,51 +13,18 @@
     </thead>
 
     <tbody>
+      {% for theme in ['day', 'dusk', 'night']%}
       <tr>
-        <td>Day</td>
-        <td>
-          RGB({{selected_item['rgbDay']['red']}},
-          {{selected_item['rgbDay']['green']}},
-          {{selected_item['rgbDay']['blue']}})
-        </td>
-        <td>
-          <span class="swatch">
-            <div
-              style="background-color: rgb({{selected_item['rgbDay']['red']}}, {{selected_item['rgbDay']['green']}}, {{selected_item['rgbDay']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
-            ></div>
-          </span>
-        </td>
+        <td>{{theme.capitalize()}}</td>
+        {% set rgb = 'rgb(%s, %s, %s)' | format(selected_item['rgb' ~
+        theme.capitalize()]['red'], selected_item['rgb' ~
+        theme.capitalize()]['green'], selected_item['rgb' ~
+        theme.capitalize()]['blue']) %}
+
+        <td>{{rgb}}</td>
+        <td>{{draw_color.render_color(rgb)}}</td>
       </tr>
-      <tr>
-        <td>Dusk</td>
-        <td>
-          RGB({{selected_item['rgbDusk']['red']}},
-          {{selected_item['rgbDusk']['green']}},
-          {{selected_item['rgbDusk']['blue']}})
-        </td>
-        <td>
-          <span class="swatch">
-            <div
-              style="background-color: rgb({{selected_item['rgbDusk']['red']}}, {{selected_item['rgbDusk']['green']}}, {{selected_item['rgbDusk']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
-            ></div>
-          </span>
-        </td>
-      </tr>
-      <tr>
-        <td>Night</td>
-        <td>
-          RGB({{selected_item['rgbNight']['red']}},
-          {{selected_item['rgbNight']['green']}},
-          {{selected_item['rgbNight']['blue']}})
-        </td>
-        <td>
-          <span class="swatch">
-            <div
-              style="background-color: rgb({{selected_item['rgbNight']['red']}}, {{selected_item['rgbNight']['green']}}, {{selected_item['rgbNight']['blue']}}); width: 80px; height: 40px; border-radius: 4px;"
-            ></div>
-          </span>
-        </td>
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
 </section>

@@ -1,3 +1,5 @@
+{% import '_draw_img.html' as draw_area %}
+
 <section class="block">
   <h2>Area Fills</h2>
 
@@ -26,18 +28,7 @@
         >
           <td>
             <span class="swatch_area_fills">
-              <canvas
-                class="cartoCanvas"
-                width="100"
-                height="100"
-                data-symbol="{{ url_for('static', filename='symbols/' ~ areafill['symbol'] ~ '.svg') }}"
-                data-v1_x="{{ areafill['v1']['x'] }}"
-                data-v1_y="{{ areafill['v1']['y'] }}"
-                data-v2_x="{{ areafill['v2']['x'] }}"
-                data-v2_y="{{ areafill['v2']['y'] }}"
-              >
-                >
-              </canvas>
+              {{ draw_area.render_area_fill(areafill)}}
             </span>
           </td>
 

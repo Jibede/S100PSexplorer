@@ -1,40 +1,68 @@
+{% import '_draw_img.html' as draw_line %}
+
 {% if line.get('style') %}
 <div>
     <label>Line Format</label>
-    <select id="lineFormat_{{current_index}}">
-        {% set selected = line.get('style') %}
-        <option value="solid" {% if selected == 'solid'%} selected {% endif %}>Solid</option>
-        <option value="dash" {% if selected == 'solid'%} selected {% endif %}>Dash</option>
-        <option value="dot" {% if selected == 'solid'%} selected {% endif %}>Dot</option>
+    <select id="lineFormat_{{current_index}}" onchange="updateLinePreview({{current_index}})">
+        {% set style = line.get('style') %}
+        <option value="solid" {% if style == 'solid'%} selected {% endif %}>Solid</option>
+        <option value="dash" {% if style == 'dash'%} selected {% endif %}>Dash</option>
+        <option value="dot" {% if style == 'dot'%} selected {% endif %}>Dot</option>
     </select>
 </div>
 {% endif %}
 
 {% if line.get('thickness') %}
+{% set thickness = line.get('thickness') %}
 <div>
     <label>Thickness</label>
-    <input type="number" id="thickness_{{current_index}}" value="{{line.thickness}}" min="0">
+    <input type="number" id="thickness_{{current_index}}" value="{{line.thickness}}" min="0" oninput="updateLinePreview({{current_index}})">
 </div>
 {%endif%}
+
+{% set ns = namespace(chosen_color=none, rgb_value='') %}
+
 {% if line.get('color') %}
-{% set chosen_color = line.get('color_code')%}
-<div>
-    <label>Font Color</label>
-    <select id="fontColor_{{current_index}}">
-        {% for code, color in colors | dictsort %}
-            {% set r = color.get('rgbDay').get('red') %}
-            {% set g = color.get('rgbDay').get('green') %}
-            {% set b = color.get('rgbDay').get('blue') %}
-            {% set rgb = 'rgb(%s, %s, %s)' | format(r, g, b) %}
-            <option value="{{code}}" data-rgb="{{rgb}}" {% if code == chosen_color %} selected {% endif %}>
-                {{ code }} [{{ color['name'].capitalize() }}]
-        </option>
-        {% endfor %}
-    </select>
-</div>
+    {% set ns.chosen_color = line.get('color_code') %}
+    
+    <div>
+        <label>Font Color</label>
+        <select id="lineColor_{{current_index}}" onchange="updateLinePreview({{current_index}})">
+            {% for code, color in colors | dictsort %}
+                {% set r = color.get('rgb' ~ theme.capitalize()).get('red') %}
+                {% set g = color.get('rgb' ~ theme.capitalize()).get('green') %}
+                {% set b = color.get('rgb' ~ theme.capitalize()).get('blue') %}
+                {% set current_rgb = 'rgb(%s, %s, %s)' | format(r, g, b) %}
+                
+                {% if code == ns.chosen_color %}
+                    {% set ns.rgb_value = current_rgb %}
+                {% endif %}
+                
+                <option value="{{code}}" data-rgb="{{current_rgb}}" {% if code == ns.chosen_color %} selected {% endif %}>
+                    {{ code }} [{{ color['name'].capitalize() }}]
+                </option>
+            {% endfor %}
+        </select>
+    </div>
 {% endif %}
 
-<div>
-    {% set color = line.get('color') %}
-    {% include 'features/includes/line_styles/simple_line.html' %}
+{% if line.get('line') %}
+    <input type="hidden" id="lineNumberCode_{{current_index}}" value="{{ line.get('line') }}">
+{% endif %}
+
+<br>
+<br>
+<label>Simple Line Preview</label>
+<div id="previewLine_{{current_index}}">
+    <span class="swatch_area_fills">
+        {{draw_line.render_simple_line(ns.rgb_value, style, thickness, width_frame=250, height_frame=100)}}
+    </span>
 </div>
+
+<div class="save-row">
+  <span class="save-msg" id="save-msg-line_{{current_index}}">Saved changes</span>
+  <button onclick="saveLineParams({{current_index}}, {{line | tojson | forceescape}}, '{{selected_rule['code']}}')">Save changes</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/update_line.js') }}"></script>
+<script src="{{ url_for('static', filename='js/save_line.js') }}"></script>

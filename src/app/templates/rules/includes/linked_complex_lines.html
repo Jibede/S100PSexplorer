@@ -3,7 +3,7 @@
     <table class="data">
         <thead>
             <tr>
-                <th>Type</th>
+                <th>Code</th>
                 <th>Conditions</th>
             </tr>
 
@@ -11,7 +11,7 @@
                 {% for line in linked_lines %}
                     <tr 
                     class="clickable"
-                    onclick="window.location.href='/visualisation/line_style/{{line['value']}}'"
+                    onclick="window.location.href='/visualisation/line_style/{{line['code']}}'"
                     >
                         <td class="mono">{{line['code']}}</td>
                         <td class="mono">{{line['conditions']}}</td>

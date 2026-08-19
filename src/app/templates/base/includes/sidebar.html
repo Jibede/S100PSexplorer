@@ -15,21 +15,21 @@
       {% set second_info = item['code']%}
 
       {% if name_page == 'features' %}
-        {% set link_url = url_for('features.view_features', feature_code=item['code']) %}
+        {% set link_url = url_for('features.view_features', item_id=item['code'], theme=theme) %}
 
       {% elif name_page == 'attributes' %} 
-        {% set link_url = url_for('attributes.view_attributes', attr_code=item['code']) %}
+        {% set link_url = url_for('attributes.view_attributes', item_id=item['code']) %}
 
       {% elif name_page == 'rules' %} 
-        {% set link_url = url_for('rules.view_rules', rule_code=item['code']) %}
+        {% set link_url = url_for('rules.view_rules', item_id=item['code']) %}
         {% set first_info = item['file_name']%}
         {% set second_info = ''%}
 
-      {% elif name_page == 'text group' %}
-        {% set link_url = url_for('text_group.view_text_group', text_group=item['code']) %}
+      {% elif name_page == 'text_group' %}
+        {% set link_url = url_for('text_group.view_text_group', item_id=item['code']) %}
 
       {% elif name_page == 'colors' %}
-        {% set link_url = url_for('colors.view_color', color_code=item['code']) %}
+        {% set link_url = url_for('colors.view_color', item_id=item['code']) %}
 
       {% else %}
         {% set link_url = '#' %}

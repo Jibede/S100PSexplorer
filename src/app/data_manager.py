@@ -134,6 +134,15 @@ DATA_VIEW_GROUPS = _process_data(_data_view_group, "id")
 ###################################################################################
 
 
+def get_svg_color(symbol_id: str) -> List[str]:
+    svg = get_svg(symbol_id)
+
+    colors = re.findall(r"\b[sf]([A-Z]{5})\b", svg)
+    set_colors = list(set(colors))
+
+    return set_colors
+
+
 def extract_svg_data(symbol_id: str) -> Dict[str, float]:
     """Extracts useful information from a specific svg to plot it
 
@@ -381,7 +390,7 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
                 for e in val:
                     color_data = {
                         **e,
-                        'color_code': e.get('value'),
+                        "color_code": e.get("value"),
                         "rgb": get_color_styles(e.get("value")),
                     }
                     info_line[key].append(color_data)
@@ -391,13 +400,19 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
         else:
             if key == "color":
                 info_line["code"] = "SIMPLE LINE"
-                info_line['color_code'] = val
+                info_line["color_code"] = val
                 val = get_color_styles(val)
 
             info_line[key] = val
 
     info.setdefault("line_style", []).append(
-        {**info_line, "type": "simple", "conditions": stmt.get("conditions", [])}
+        {
+            **info_line,
+            "line": stmt["line"],
+            "code": _extract_function_code(stmt["code"]),
+            "type": "simple",
+            "conditions": stmt.get("conditions", []),
+        }
     )
 
 
@@ -515,6 +530,7 @@ def _get_ft_text(stmt: Dict[str, Dict], info: Dict) -> None:
         }
     )
 
+
 def _get_ft_text_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
     """Extracts text instruction details
 
@@ -524,7 +540,6 @@ def _get_ft_text_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
     """
 
     values = stmt.get("values")
-
     info_text = {}
     for key, val in values.items():
         if isinstance(val, list):
