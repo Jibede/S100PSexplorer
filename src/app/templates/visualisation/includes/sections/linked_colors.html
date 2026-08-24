@@ -12,7 +12,9 @@
         </thead>
 
         <tbody>
+            {% set ns = namespace(colors=[]) %}
             {% for color in colors %}
+                {% if color not in ns.colors %}
                 {% set info_color = data_colors.get(color)%}
                 <tr class="clickable" onclick="window.location.href='/colors/{{color}}'">
                     <td>
@@ -27,7 +29,8 @@
                     <td class="mono">{{color}}</td>
                     <td class="mono">{{info_color.description.capitalize()}}</td>
                 </tr>
-
+                {% set ns.colors = ns.colors + [color] %}
+                {% endif %}
             {% endfor %}
 
         </tbody>

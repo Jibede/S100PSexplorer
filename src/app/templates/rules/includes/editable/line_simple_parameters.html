@@ -21,7 +21,6 @@
 {%endif%}
 
 {% set ns = namespace(chosen_color=none, rgb_value='') %}
-
 {% if line.get('color') %}
     {% set ns.chosen_color = line.get('color_code') %}
     
@@ -46,11 +45,6 @@
     </div>
 {% endif %}
 
-{% if line.get('line') %}
-    <input type="hidden" id="lineNumberCode_{{current_index}}" value="{{ line.get('line') }}">
-{% endif %}
-
-<br>
 <br>
 <label>Simple Line Preview</label>
 <div id="previewLine_{{current_index}}">

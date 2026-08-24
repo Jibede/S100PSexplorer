@@ -1,5 +1,5 @@
 
-{% set coords = info.get('LocalOffset') %}
+{% set coords = multi_val.get('LocalOffset') %}
 {% if coords %}
   {% set coord_x = coords.get('x') %}
   {% set coord_y = coords.get('y') %}
@@ -10,7 +10,7 @@
   <input type="number" id="coordY_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{coord_y}}" />
 {% endif %} 
   
-{% set text_align_hor = info.get('TextAlignHorizontal') %}
+{% set text_align_hor = multi_val.get('TextAlignHorizontal') %}
 {% if text_align_hor %}
   <label>Text Align Horizontal</label>
   <select id="alignH_{{current_index}}" onchange="updatePreview({{current_index}})">
@@ -20,23 +20,23 @@
   </select>
 {% endif %} 
     
-{% set text_align_ver = info.get('TextAlignVertical') %}
+{% set text_align_ver = multi_val.get('TextAlignVertical') %}
 {% if text_align_ver %}
   <label>Text Align Vertical</label>
   <select id="alignV_{{current_index}}" onchange="updatePreview({{current_index}})">
-    <option value="Start" {% if text_align_ver == 'Start'%} selected {% endif %}>Start</option>
+    <option value="Start" {% if text_align_ver == 'Top'%} selected {% endif %}>Top</option>
     <option value="Center" {% if text_align_ver == 'Center'%} selected {% endif %}>Center</option>
     <option value="Bottom" {% if text_align_ver == 'Bottom'%} selected {% endif %}>Bottom</option>
   </select>
 {% endif %} 
 
-{% set font_size = info.get('FontSize') %}
+{% set font_size = multi_val.get('FontSize') %}
 {% if font_size %}
   <label>Font Size</label>
   <input type="number" id="fontSize_{{current_index}}" oninput="updatePreview({{current_index}})" value="{{font_size}}" min="0"/>
 {% endif %} 
 
-{% set font_color = info.get('FontColor') %}
+{% set font_color = multi_val.get('FontColor') %}
 {% if font_color %}
   <label>Font Color</label>
   <select id="fontColor_{{current_index}}" onchange="updatePreview({{current_index}})">
@@ -54,7 +54,7 @@
 {% endif %}
 
 
-{% set line_placement = info.get('LinePlacement') %}
+{% set line_placement = multi_val.get('LinePlacement') %}
 {% if line_placement %}
   {% set mode = line_placement.get('mode') %}
   {% set value = line_placement.get('value') %}
@@ -77,7 +77,7 @@
   </div>
 {% endif %}
 
-{% set area_placement = info.get('AreaPlacement') %}
+{% set area_placement = multi_val.get('AreaPlacement') %}
 {% if area_placement %}
   <label>Area Placement</label>
   <select id="areaPlacement_{{current_index}}" onchange="updatePreview({{current_index}})">
@@ -86,7 +86,7 @@
   </select>
 {% endif %}
 
-{% set coord_ref = info.get('AreaCRS') %}
+{% set coord_ref = multi_val.get('AreaCRS') %}
 {% if coord_ref %}
   <label>Coordinate Reference</label>
 
@@ -98,7 +98,7 @@
   </select>
 {% endif %}
 
-{% set rotation = info.get('Rotation') %}
+{% set rotation = multi_val.get('Rotation') %}
 {% if rotation %}
   {% set system = rotation.get('system') %}
   {% set angle = rotation.get('angle') %}
@@ -121,14 +121,14 @@
   </div>
 {% endif %}
 
-{% set scale_factor = info.get('ScaleFactor') %}
+{% set scale_factor = multi_val.get('ScaleFactor') %}
 {% if scale_factor%}
   <label>Scale Factor</label>
   <input type="number" id="scaleFactor_{{current_index}}" onchange="updatePreview({{current_index}})" value="{{scale_factor}}" min="0">
 {% endif %}
 
-{% if 'ClearGeometry' in info.keys() %}
-  {% set clearGeo = info.get('ClearGeometry') %}
+{% if 'ClearGeometry' in multi_val.keys() %}
+  {% set clearGeo = multi_val.get('ClearGeometry') %}
   <label>Clear Geometry</label>
   <select id="clearGeo_{{current_index}}" onchange="updatePreview({{current_index}})">
     <option value='true' {% if clearGeo == true %}selected{% endif %}>True</option>
@@ -136,7 +136,7 @@
   </select>
 {% endif %}
 
-<input type="hidden" id="lineNumber_{{current_index}}" value="{{ info.get('line') }}">
-<input type="hidden" id="lineInstructionNumber_{{current_index}}" value="{{ info.get('line_instruction') }}">
+<input type="hidden" id="lineNumber_{{current_index}}" value="{{ multi_val.get('line') }}">
+<input type="hidden" id="lineInstructionNumber_{{current_index}}" value="{{ multi_val.get('line_instruction') }}">
 
 <script src="{{ url_for('static', filename='js/update_preview.js') }}"></script>

@@ -1,11 +1,15 @@
 # src/app/data_menager.py
 
+import copy
+from hmac import new
 import json
 from pathlib import Path
 import re
-from typing import Dict, List
+from tkinter import NO
+from typing import Dict, List, Any, Tuple
 import xml.etree.ElementTree as ET
 from markupsafe import Markup
+from numpy import isin
 
 from ..utils.formatter import get_json
 from ..utils.logger import config_logger
@@ -133,6 +137,65 @@ DATA_VIEW_GROUPS = _process_data(_data_view_group, "id")
 #                          SVG & UNIT TRANSFORMATIONS                             #
 ###################################################################################
 
+def get_multi_val_path(data: Dict, current_path: List[str] = None) -> Tuple[List[str], List[Dict]]:
+    if current_path is None:
+        current_path = []
+    
+    if isinstance(data, dict):
+        for key, val in data.items():
+            
+            if key == 'conditions':
+                continue
+            
+            if isinstance(val, List) and len(val) > 0 and isinstance(val[0], Dict) and 'value' in val[0]:
+                return current_path + [key], val
+            
+            elif isinstance(val, dict):
+                path, var_list = get_multi_val_path(val, current_path + [key])
+                
+                if path: 
+                    return path, var_list
+    
+    return None, None
+    
+def apply_value_nested(data: Dict, path: List[str], new_value: str | int) -> None:
+    target = data
+    
+    for key in path[:-1]:
+        target = target[key]
+        
+    target[path[-1]] = new_value
+    
+def set_variations(info: Dict) -> List[Dict]:
+    path, variations = get_multi_val_path(info)
+
+    if not variations:
+        fixed_dict = copy.deepcopy(info)
+        fixed_dict['has_var'] = False
+        return [fixed_dict]
+    
+    results = []
+    
+    for variation in variations:
+        new_dict = copy.deepcopy(info)
+        
+        apply_value_nested(new_dict, path, variation['value'])
+        
+        original_conditions = new_dict.get('conditions', [])
+        specific_conditions = variation.get('conditions', [])
+        
+        all_conditions = original_conditions.copy()
+        for cond in specific_conditions:
+            if cond not in all_conditions:
+                all_conditions.append(cond)
+                
+        new_dict['conditions'] = all_conditions
+        
+        children_results = set_variations(new_dict)
+        
+        results.extend(children_results)
+
+    return results
 
 def get_svg_color(symbol_id: str) -> List[str]:
     svg = get_svg(symbol_id)
@@ -286,13 +349,13 @@ def get_attr_info(attr_code: str) -> Dict | None:
 
 
 def _extract_function_code(code: str) -> Dict | str:
-    """_summary_
+    """Extract the function and its parameters
 
     Args:
-        code (str): _description_
+        code (str): Raw code representing a function call
 
     Returns:
-        Dict | str: _description_
+        Dict | str: A dictionary containing the function name and its parameters, or the original string if no match is found
     """
     match = re.search(r"^([^\(]+)\((.*)\)$", code)
 
@@ -368,9 +431,6 @@ def _get_ft_symbol_info(stmt: Dict[str, Dict], info: Dict) -> None:
             )
 
 
-from typing import Dict, Any
-
-
 def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
     """Extracts simple line style information
 
@@ -380,7 +440,6 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
     """
     info_line = {}
     values = stmt.get("values", {})
-
     for key, val in values.items():
         if isinstance(val, list):
             if key == "color":
@@ -399,7 +458,7 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
 
         else:
             if key == "color":
-                info_line["code"] = "SIMPLE LINE"
+                info_line["function"] = "SIMPLE LINE"
                 info_line["color_code"] = val
                 val = get_color_styles(val)
 
@@ -409,7 +468,7 @@ def _get_ft_line_info(stmt: Dict[str, Any], info: Dict[str, Any]) -> None:
         {
             **info_line,
             "line": stmt["line"],
-            "code": _extract_function_code(stmt["code"]),
+            "function": _extract_function_code(stmt["code"]),
             "type": "simple",
             "conditions": stmt.get("conditions", []),
         }
@@ -504,13 +563,18 @@ def _get_ft_text(stmt: Dict[str, Dict], info: Dict) -> None:
         info (Dict): The aggregated info dictionary being built for the results
     """
     values = stmt.get("values")
-
     info_text = {}
     for key, val in values.items():
         if key == "FontColor":
             if isinstance(val, list):
                 info_text["has_var"] = key
-                val = [{"code": item, **get_color_styles(item)} for item in val]
+                
+                res = []
+                for item in val:
+                    item = item.get('value') if item.get('value') else item
+                    res.append({'code': item, **get_color_styles(item)})
+                    
+                val = res
             else:
                 val = {"code": val, **get_color_styles(val)}
 
@@ -527,6 +591,7 @@ def _get_ft_text(stmt: Dict[str, Dict], info: Dict) -> None:
             "line": stmt["line"],
             "code": _extract_function_code(stmt["code"]),
             "conditions": stmt.get("conditions"),
+            'has_var': stmt.get('has_var')
         }
     )
 
@@ -549,6 +614,7 @@ def _get_ft_text_instruction(stmt: Dict[str, Dict], info: Dict) -> None:
             info_text.setdefault(key, val)
 
     aditional_data = info_text | {
+        'has_var': stmt.get('has_var') if stmt.get('has_var') else info.get('has_var'),
         "line_instruction": stmt["line"],
         "code_instruction": _extract_function_code(stmt["code"]),
     }

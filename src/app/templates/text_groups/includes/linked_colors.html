@@ -1,8 +1,18 @@
 {% import '_draw_img.html' as draw_color %}
 
-
+{% set ns = namespace(colors=[]) %}
 {% set rules = link_vw.get('rule') %}
 
+{% for rule in rules %}
+    {% set ns.colors = get_info(rule).get('text', []) 
+        | selectattr('FontColor', 'defined') 
+        | map(attribute='FontColor') 
+        | selectattr('code', 'defined') 
+        | unique(attribute='code') 
+        | list %}
+{% endfor %}
+
+{% if ns.colors %}
 <section class="block">
     <h2>Linked Colors</h2>
 
@@ -11,7 +21,6 @@
             <tr>
                 <th>Name</th>
                 <th>Code</th>
-                <th>Rule</th>
                 <th>Description</th>
                 <th>Preview (Day)</th>
                 <th>Preview (Dusk)</th>
@@ -19,11 +28,11 @@
             </tr>
         </thead>
 
+        
         <tbody>
-            {% for rule in rules %}
-                {% set colors = get_info(rule).get('text') | map(attribute='FontColor') | unique(attribute='code') | list %}
+            
 
-                {% for color in colors %}
+                {% for color in ns.colors %}
                     <tr
                     class="clickable"
                     onclick="window.location.href='/colors/{{color.get('code')}}'"
@@ -31,7 +40,6 @@
                     {% set info_color = data_colors.get(color.get('code')) %}
                         <td>{{info_color['name'].capitalize()}}</td>
                         <td>{{color.get('code')}}</td>
-                        <td>{{rule}}.lua</td>
                         <td>{{info_color['description'].capitalize()}}</td>
                         
                         <td>
@@ -51,10 +59,11 @@
                         </td>
                     </tr>
                 {% endfor %}
-            {% endfor %}
 
         </tbody>
 
     </table>
 
 </section>
+
+{% endif %}

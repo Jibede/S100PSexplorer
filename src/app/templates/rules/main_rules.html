@@ -1,59 +1,84 @@
-{% import '_components.html' as components %} {% extends "base/base.html" %} {%
-block conteudo %}
+{% import '_components.html' as components %}
+{% extends "base/base.html" %} 
+{% block conteudo %}
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}"
+  />
 
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename='css/themes/' ~ theme ~ 'SvgStyle.css') }}"
-/>
+  {% set linked_lines = info_rule.line_style | selectattr("type", "equalto", "simple") | selectattr("conditions", "!=", conditions) | list %} 
 
-{% set linked_lines = info_rule.line_style | selectattr("type", "equalto",
-"simple") | selectattr("conditions", "!=", conditions) | list %} {% if
-linked_lines %} {{components.render_dropdown(name_page, actual_element, theme)}}
-<br /><br />
-{% endif %} {{components.render_header(selected_rule)}} {% if
-info_rule.get('text') %}
-<section class="block">
-  <h2>Editable settings</h2>
-  {% if info_rule.get('text') %} {% for info in info_rule.get('text') %}
-  <br />
-  {% set current_index = loop.index %} {% set conditions =
-  info.get('conditions') %}
-  <h2>To conditions [{{' | '.join(conditions)}}]</h2>
+  {% if linked_lines %} 
+    {{components.render_dropdown(name_page, actual_element, theme)}}
+    <br /><br />
+  {% endif %} 
 
-  <div class="param-field">
-    <h3>Text parameters</h3>
+  {{components.render_header(selected_rule)}} 
 
-    <label>Aditional Informations</label>
-    <div class="add_infos">
-      <ul style="list-style-type: none">
-        <li class="mono"><big>Text Viewing Group</big>: {{info.get('text_vw_group')}}</li>
-        <li class="mono"><big>Text Priority</big>: {{info.get('text_priority')}}</li>
-        <li class="mono"><big>Viewing Group</big>: {{info.get('view_group')}}</li>
-        <li class="mono"><big>Priority</big>: {{info.get('priority')}}</li>
-      </ul>
+  {% if info_rule.get('text') %}
+  <section class="block">
+    <h2>Editable settings</h2>
+    {% if info_rule.get('text') %}
+    {% for info in info_rule.get('text') %}
+      {% set multi_vals = get_multi(info) %}
+      {% for multi_val in multi_vals %}
+
+      <br />
+      {% set current_index = loop.index %} 
+      {% set conditions = multi_val.get('conditions') %}
+      <h2>To conditions [{{' | '.join(conditions)}}]</h2>
+
+      <div class="param-field">
+        <h3>Text parameters</h3>
+
+        <label>Aditional Informations</label>
+        <div class="add_infos">
+          <ul style="list-style-type: none">
+            <li class="mono"><big>Text Viewing Group</big>: {{multi_val.get('text_vw_group')}}</li>
+            <li class="mono"><big>Text Priority</big>: {{multi_val.get('text_priority')}}</li>
+            <li class="mono"><big>Viewing Group</big>: {{multi_val.get('view_group')}}</li>
+            <li class="mono"><big>Priority</big>: {{multi_val.get('priority')}}</li>
+            <li class="mono"><big>Line Code</big>: {{multi_val.get('line_instruction')}}</li>
+          </ul>
+        </div>
+
+        {% include 'rules/includes/editable/text_parameters.html'%} 
+        {% include 'rules/includes/editable/editable_code.html'%}
+      
+      </div>
+
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if linked_lines %}
+  <section class="block">
+    {% for line in linked_lines %} {% set current_index = loop.index %} {% set
+    conditions = line.conditions %}
+    <h2>To conditions [{{' | '.join(conditions)}}]</h2>
+
+    <div class="param-field">
+      <h3>simple Line parameters</h3>
+      {% include 'rules/includes/editable/line_simple_parameters.html' %}
     </div>
+    {% endfor %}
+  </section>
+  
+  {% endif %}
+  {% if linked_ft %}
+    {% include 'rules/includes/linked_features.html'%} 
+  {% endif %}
 
-    {% include 'rules/includes/editable/text_parameters.html' %} {% include
-    'rules/includes/editable/editable_code.html'%}
-  </div>
+  {% set linked_symbols = info_rule.get('symbol') %} 
+  {% if linked_symbols%}
+    {% include 'rules/includes/linked_symbols.html'%} 
+  {% endif %}
 
-  {% endfor %} {% endif %}
-</section>
-{% endif %} {% if linked_lines %}
-<section class="block">
-  {% for line in linked_lines %} {% set current_index = loop.index %} {% set
-  conditions = line.conditions %}
-  <h2>To conditions [{{' | '.join(conditions)}}]</h2>
+  {% set linked_lines = info_rule.line_style | selectattr("type", "equalto", "instruction") | list %} 
+    {% if linked_lines %} 
+    {% include'rules/includes/linked_complex_lines.html' %} 
+  {% endif%}
 
-  <div class="param-field">
-    <h3>simple Line parameters</h3>
-    {% include 'rules/includes/editable/line_simple_parameters.html' %}
-  </div>
-  {% endfor %}
-</section>
-{% endif %} {% if linked_ft %} {% include 'rules/includes/linked_features.html'
-%} {% endif %} {% set linked_symbols = info_rule.get('symbol') %} {% if
-linked_symbols%} {% include 'rules/includes/linked_symbols.html'%} {% endif %}
-{% set linked_lines = info_rule.line_style | selectattr("type", "equalto",
-"instruction") | list %} {% if linked_lines %} {% include
-'rules/includes/linked_complex_lines.html' %} {% endif%} {% endblock %}
+{% endblock %}

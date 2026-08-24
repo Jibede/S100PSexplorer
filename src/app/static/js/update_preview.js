@@ -16,15 +16,7 @@ function updatePreview(index) {
   const scaleFactor = document.getElementById(`scaleFactor_${index}`);
   const clearGeo = document.getElementById(`clearGeo_${index}`)
 
-  // const rawText = document.getElementById(`rawText_${index}`);
-  // const textVwGroup = document.getElementById(`textVwGroup_${index}`);
-  // const hover = document.getElementById(`hover_${index}`);
-  // const textPriority = document.getElementById(`textPriority_${index}`);
-  // const viewGroup = document.getElementById(`viewGroup_${index}`);
-  // const priority = document.getElementById(`priority_${index}`);
-
   let params = [];
-  // let params_instructions = [];
 
   if (elX && elY) params.push(`LocalOffset:${elX.value},${elY.value}`);
   if (elAlignH) params.push(`TextAlignHorizontal:${elAlignH.value}`);
@@ -41,28 +33,11 @@ function updatePreview(index) {
   if (scaleFactor) params.push(`ScaleFactor:${scaleFactor.value}`);
   if (clearGeo && clearGeo.value == 'true') params.push('ClearGeometry')
 
-  // if (rawText && rawText.value) params_instructions.push(rawText.value);
-  // if (textVwGroup && textVwGroup.value)
-  //   params_instructions.push(textVwGroup.value);
-  // if (hover && hover.value) params_instructions.push(hover.value);
-  // if (textPriority && textPriority.value)
-  //   params_instructions.push(textPriority.value);
-  // if (viewGroup && viewGroup.value) params_instructions.push(viewGroup.value);
-  // if (priority && priority.value) params_instructions.push(priority.value);
-
   const innerString = params.join(";");
   const stringSpan = document.getElementById(`instruction-string_${index}`);
   if (stringSpan) {
     stringSpan.innerText = `'${innerString}'`;
   }
-
-  // const innerInstructions = params_instructions.join(", ");
-  // const textStringSpan = document.getElementById(
-  //   `instruction-text-string_${index}`,
-  // );
-  // if (textStringSpan) {
-  //   textStringSpan.innerText = `'${innerInstructions}'`;
-  // }
 
   const previewText = document.getElementById(`previewText_${index}`);
   const previewContainer = document.getElementById(`previewContainer_${index}`);
@@ -113,12 +88,6 @@ window.addEventListener("DOMContentLoaded", () => {
     updatePreview(index);
 
     const inputIds = [
-      // `rawText_${index}`,
-      // `textVwGroup_${index}`,
-      // `hover_${index}`,
-      // `textPriority_${index}`,
-      // `viewGroup_${index}`,
-      // `priority_${index}`,
       `coordX_${index}`,
       `coordY_${index}`,
       `alignH_${index}`,

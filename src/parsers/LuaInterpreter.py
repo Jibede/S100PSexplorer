@@ -24,6 +24,8 @@ from luaparser.astnodes import (
     String,
     Call,
     Index,
+    Forin,
+    Fornum,
 )
 
 from ..utils.logger import config_logger
@@ -74,26 +76,26 @@ class LuaInterpreter:
             path = Path(file)
             if not path.exists():
                 LOGGER.error(f"No file found for this pattern: {path}")
-                return
+                continue
 
             tree = self._get_lua_code(path)
             if tree is None:
                 LOGGER.warning(
                     f"ERROR GETTING THE LUA CODE. SKIPPING FILE [{path}] PROCESSING !"
                 )
-                return
+                continue
 
             base_name = path.stem
             LOGGER.info(f"PROCESSING [{base_name}.lua]")
 
             root_nodes = self._build_tree(tree)
-            conditions = self._map_conditions(root_nodes)
 
             file_output_dir = Path(output_dir) / base_name
             os.makedirs(file_output_dir, exist_ok=True)
+            self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
 
+            conditions = self._map_conditions(root_nodes)
             ################### JUST FOR TESTS AND DEBUGS########################
-            # self._write_json(file_output_dir / f"{base_name}.json", root_nodes)
             #####################################################################
 
             conditions_path = file_output_dir / f"{base_name}-conditions.json"
@@ -110,7 +112,7 @@ class LuaInterpreter:
 
         related_path = Path("data") / "related_vw.json"
         self._write_json(related_path, data=self.related_vw)
-        
+
         related_path = Path("data") / "related_colors.json"
         self._write_json(related_path, data=self.related_colors)
         LOGGER.info(
@@ -180,48 +182,34 @@ class LuaInterpreter:
     ###################################################################################
     #                            RELATED DATA FUNCTIONS                               #
     ###################################################################################
-    
-    def _extract_and_map(self, target_dict: Dict, mapping: Dict, rule_name: str) -> None:
+
+    def _extract_and_map(
+        self, target_dict: Dict, mapping: Dict, rule_name: str
+    ) -> None:
         for key, raw_value in mapping.items():
             if raw_value is not None:
                 for visu in self._flatten_values(raw_value):
-                    target_dict[key][visu]['rule'].add(rule_name)
-    
-    def _collect_related_data(self, conditions: List[Dict], rule_name: str) -> None:
-        
-        try:
-            for item in conditions:
-                if item.get('node_type') != 'hit': continue
-                
-                instruction_type = item.get('instruction_type')
-                values = item.get('values') or {}
-                
-                if instruction_type in ['text', 'line_style']:
-                    self._extract_and_map()
-            
-            
-        except:
-            pass
+                    target_dict[key][visu]["rule"].add(rule_name)
 
     def _collect_related_colors(self, conditions: List[Dict], rule_name: str) -> None:
         for item in conditions:
-            if item.get("node_type") != "hit" and item.get("instruction_type") not in [
+            if item.get("node_type") != "hit" or item.get("instruction_type") not in [
                 "text",
                 "line_style",
             ]:
                 continue
-            
-            items_vals = item.get('values') or {}
-            
+
+            items_vals = item.get("values") or {}
+
             values = {
-                'text': items_vals.get('FontColor'),
-                'line_style': items_vals.get('color')
+                "text": items_vals.get("FontColor"),
+                "line_style": items_vals.get("color"),
             }
-            
-            for visu_name in ['text', 'line_style']:
+
+            for visu_name in ["text", "line_style"]:
                 if values[visu_name] is not None:
                     for visu in self._flatten_values(values[visu_name]):
-                        self.related_colors[visu_name][visu]['rule'].add(rule_name)
+                        self.related_colors[visu_name][visu]["rule"].add(rule_name)
 
     def _collect_related_viewgroup(
         self, conditions: List[Dict], rule_name: str
@@ -310,6 +298,13 @@ class LuaInterpreter:
     #                            NODE HELPERS                                         #
     ###################################################################################
 
+    def _get_args(self, node: Node):
+        args_str = []
+        for arg in node.args:
+            args_str.append(self._get_parameters(arg))
+
+        return ",".join(args_str)
+
     def _get_line_code(self, node: Node) -> int | None:
         """Extracts the line number from a given AST node
 
@@ -353,14 +348,11 @@ class LuaInterpreter:
                 f"{self._get_parameters(node.value)}.{self._get_parameters(node.idx)}"
             )
 
+        if isinstance(node, Invoke):
+            return f"{self._get_parameters(node.source)}:{self._get_parameters(node.func)}({self._get_args(node)})"
+
         if isinstance(node, Call):
-            func = f"{node.func.id}"
-
-            args_str = []
-            for arg in node.args:
-                args_str.append(self._get_parameters(arg))
-
-            return f"{func}({','.join(args_str)})"
+            return f"{self._get_parameters(node.func)}({self._get_args(node)})"
         return None
 
     ###################################################################################
@@ -423,6 +415,24 @@ class LuaInterpreter:
 
         if isinstance(node, If):
             return self._build_if_chain(node)
+
+        if isinstance(node, Forin):
+            return [
+                {
+                    "node_type": "for",
+                    "line": self._get_line_code(node),
+                    "children": self._build_tree(node.body),
+                }
+            ]
+
+        if isinstance(node, Fornum):
+            return [
+                {
+                    "node_type": "for",
+                    "line": self._get_line_code(node),
+                    "children": self._build_tree(node.body),
+                }
+            ]
 
         if isinstance(node, Function):
             return [
@@ -527,17 +537,24 @@ class LuaInterpreter:
         } | node_info
 
         if node_dt["instruction_type"] == "text":
-            x, y = node_dt["values"]["LocalOffset"].split(",")
-            node_dt["values"]["LocalOffset"] = {"x": x.strip(), "y": y.strip()}
-            
-            if 'LinePlacement' in node_dt['values']:
-                mode, value = node_dt['values']['LinePlacement'].split(',')
-                node_dt['values']['LinePlacement'] = {'mode': mode.strip(), 'value': value.strip()}
+            if "LocalOffset" in node_dt["values"]:
+                x, y = node_dt["values"]["LocalOffset"].split(",")
+                node_dt["values"]["LocalOffset"] = {"x": x.strip(), "y": y.strip()}
 
-            if 'Rotation' in node_dt['values']:
-                system, angle = node_dt['values']['Rotation'].split(',')
-                node_dt['values']['Rotation'] = {'system': system.strip(), 'angle': angle.strip()}
-            
+            if "LinePlacement" in node_dt["values"]:
+                mode, value = node_dt["values"]["LinePlacement"].split(",")
+                node_dt["values"]["LinePlacement"] = {
+                    "mode": mode.strip(),
+                    "value": value.strip(),
+                }
+
+            if "Rotation" in node_dt["values"]:
+                system, angle = node_dt["values"]["Rotation"].split(",")
+                node_dt["values"]["Rotation"] = {
+                    "system": system.strip(),
+                    "angle": angle.strip(),
+                }
+
         return node_dt
 
     def _build_var_node(self, node: Assign) -> Dict:
@@ -552,6 +569,9 @@ class LuaInterpreter:
         """
         value = self._assign_value(node)
         name = self._assign_target_name(node)
+
+        if not value or not name:
+            return {}
 
         # Add the variable to the variables array to verify whether the other functions use it
         self.local_var.append({"name": name, "value": value})
@@ -622,21 +642,30 @@ class LuaInterpreter:
 
         params = {}
         has_var = False
+
         for param in all_params.split(";"):
-            if ":" not in param:
-                params[param] = True
-                continue
+            parts = param.split(":")
 
-            key, value = (p.strip() for p in param.split(":", 1))
-            params[key] = value
-            has_var = has_var or self._references_local_var(value)
+            if len(parts) == 1:
+                params[parts[0]] = True
 
-        first_param = next(iter(params), None)
-        if first_param not in self.TARGET_PREFIXES:
-            return None
+            else:
+                key, value = parts[0].strip(), parts[1].strip()
+                params[key] = value
+
+                has_var = True if self._references_local_var(value) else has_var
+
+        first_param = next(iter(params))
+
+        if first_param in self.TARGET_PREFIXES:
+            instruction_type = self.TARGET_PREFIXES[first_param]
+        elif "Text" in first_param:
+            instruction_type = "text"
+        else:
+            return {}
 
         return {
-            "instruction_type": self.TARGET_PREFIXES[first_param],
+            "instruction_type": instruction_type,
             "values": params,
             "has_var": has_var,
         }
@@ -652,11 +681,14 @@ class LuaInterpreter:
         """
 
         style, thickness, color = [self._get_parameters(arg) for arg in node.args]
+
+        values = {"style": style, "thickness": thickness, "color": color}
+
         has_var = any(self._references_local_var(v) for v in (style, thickness, color))
 
         return {
             "instruction_type": "line_style",
-            "values": {"style": style, "thickness": thickness, "color": color},
+            "values": values,
             "has_var": has_var,
         }
 
@@ -671,27 +703,20 @@ class LuaInterpreter:
         """
         data = [self._get_parameters(arg) for arg in node.args]
 
-        
-        raw_text = data[0]
-        text_vw_group = data[1]
-        text_priority = data[2]
-        view_group = data[3]
-        priority = data[4] if len(data) > 4 else 0
-        hover = data[5] if len(data) > 5 else False
+        values = {
+            "raw_text": data[0],
+            "text_vw_group": data[1],
+            "text_priority": data[2],
+            "view_group": data[3],
+            "priority": data[4] if len(data) > 4 else 0,
+            "hover": data[5] if len(data) > 5 else False,
+        }
 
         has_var = any(self._references_local_var(v) for v in data)
 
-        
         return {
             "instruction_type": "text_instruction",
-            "values": {
-                "raw_text": raw_text,
-                "text_vw_group": text_vw_group,
-                "text_priority": text_priority,
-                "view_group": view_group,
-                "priority": priority,
-                "hover": hover,
-            },
+            "values": values,
             "has_var": has_var,
         }
 

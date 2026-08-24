@@ -3,7 +3,7 @@ import os
 
 from flask import Flask
 
-from ..data_manager import extract_svg_data, get_svg, get_svg_color, transform_mm_px
+from ..data_manager import set_variations, extract_svg_data, get_svg, get_svg_color, transform_mm_px
 from .main import main_bp
 from .features import features_bp
 from .attributes import attributes_bp
@@ -26,6 +26,8 @@ def create_app():
     app.jinja_env.globals['transform_mm_px'] = transform_mm_px
     app.jinja_env.globals['extract_svg_data'] = extract_svg_data
     app.jinja_env.globals['get_svg_color'] = get_svg_color
+    app.jinja_env.globals['get_multi'] = set_variations
+
     
     # Routes
     app.register_blueprint(main_bp)

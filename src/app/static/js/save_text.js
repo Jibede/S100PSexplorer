@@ -15,14 +15,7 @@ function saveTextParams(index, info, file) {
   const sysRotation = document.getElementById(`rotation-system_${index}`);
   const angleRotation = document.getElementById(`rotation-angle_${index}`);
   const scaleFactor = document.getElementById(`scaleFactor_${index}`);
-  const clearGeo = document.getElementById(`clearGeo_${index}`)
-
-  // const rawText = document.getElementById(`rawText_${index}`);
-  // const textVwGroup = document.getElementById(`textVwGroup_${index}`);
-  // const hover = document.getElementById(`hover_${index}`);
-  // const textPriority = document.getElementById(`textPriority_${index}`);
-  // const viewGroup = document.getElementById(`viewGroup_${index}`);
-  // const priority = document.getElementById(`priority_${index}`);
+  const clearGeo = document.getElementById(`clearGeo_${index}`);
 
   let params = [];
   if (elX && elY) params.push(`LocalOffset:${elX.value},${elY.value}`);
@@ -38,21 +31,9 @@ function saveTextParams(index, info, file) {
   if (sysRotation && angleRotation)
     params.push(`Rotation:${sysRotation.value},${angleRotation.value}`);
   if (scaleFactor) params.push(`ScaleFactor:${scaleFactor.value}`);
-  if (clearGeo && clearGeo.value == 'true') params.push('ClearGeometry')
+  if (clearGeo && clearGeo.value == "true") params.push("ClearGeometry");
 
   const codeParamString = `'${params.join(";")}'`;
-
-  // let params_instructions = [];
-  // if (rawText && rawText.value) params_instructions.push(rawText.value);
-  // if (textVwGroup && textVwGroup.value)
-  //   params_instructions.push(textVwGroup.value);
-  // if (hover && hover.value) params_instructions.push(hover.value);
-  // if (textPriority && textPriority.value)
-  //   params_instructions.push(textPriority.value);
-  // if (viewGroup && viewGroup.value) params_instructions.push(viewGroup.value);
-  // if (priority && priority.value) params_instructions.push(priority.value);
-
-  // const codeInstructionParamString = params_instructions.join(", ");
 
   dict[index] = {
     file: file,
@@ -62,17 +43,20 @@ function saveTextParams(index, info, file) {
       code: `featurePortrayal:AddInstructions(${codeParamString})`,
       instruction_type: "text",
       values: {
-        LocalOffset: {
+        ...((elX && elY) && {LocalOffset: {
           x: elX.value,
           y: elY.value,
-        },
+        }}),
         ...(elAlignH && { TextAlignHorizontal: elAlignH.value }),
         ...(elAlignV && { TextAlignVertical: elAlignV.value }),
         ...(elSize && { FontSize: elSize.value }),
         ...(elColor && { FontColor: elColor.value }),
         ...(modeLinePlace &&
           valLinePlace && {
-            LinePlacement: { mode: modeLinePlace.value, value: valLinePlace.value },
+            LinePlacement: {
+              mode: modeLinePlace.value,
+              value: valLinePlace.value,
+            },
           }),
         ...(areaPlacement && { AreaPlacement: areaPlacement.value }),
         ...(coordRef && { AreaCRS: coordRef.value }),
@@ -81,29 +65,11 @@ function saveTextParams(index, info, file) {
             Rotation: { system: sysRotation.value, angle: angleRotation.value },
           }),
         ...(scaleFactor && { ScaleFactor: scaleFactor.value }),
-        ...(clearGeo && {ClearGeometry: clearGeo.value == 'true'})
+        ...(clearGeo && { ClearGeometry: clearGeo.value == "true" }),
       },
       has_var: false,
       conditions: info.conditions,
     },
-  //   ...(rawText && {
-  //     text_instruction: {
-  //       node_type: "hit",
-  //       line: parseInt(info.line_instruction),
-  //       code: `featurePortrayal:AddTextInstruction(${codeInstructionParamString})`,
-  //       instruction_type: "text_instruction",
-  //       values: {
-  //         raw_text: rawText.value,
-  //         text_vw_group: textVwGroup.value,
-  //         text_priority: textPriority.value,
-  //         view_group: viewGroup.value,
-  //         priority: priority.value,
-  //         hover: hover ? hover.value : false,
-  //       },
-  //       has_var: false,
-  //       conditions: info.conditions,
-  //     },
-  //   }),
   };
 
   const dataToSave = dict[index];
