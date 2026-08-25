@@ -2,11 +2,24 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Analyseur des règles d'affichage — LUA S-101{% endblock %}</title>
-    
+    <title>
+      {% block title %}Analyseur des règles d'affichage — LUA S-101{% endblock
+      %}
+    </title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/update.css') }}"
+    />
 
     {% block page_styles %}{% endblock %}
   </head>
@@ -17,12 +30,46 @@
       {% include 'base/includes/sidebar.html' %}
 
       <main id="main">
-        {% block conteudo %}{% endblock %}
+        <!-- Fond assombri derrière le pop-up -->
+        <div
+          id="modalOverlay"
+          class="modal-overlay"
+          style="display: none"
+        ></div>
+
+        <!-- Le Pop-up -->
+        <div id="uploadModal" class="modal" style="display: none">
+          <h2 class="modal-title">Import File</h2>
+
+          <form id="uploadForm" enctype="multipart/form-data">
+            <div class="file-input-wrapper">
+              <input
+                type="file"
+                name="file"
+                id="fileInput"
+                class="mono"
+                required
+              />
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" id="closeModalBtn" class="btn secondary">
+                Cancel
+              </button>
+              <button type="submit" class="btn primary">Submit</button>
+            </div>
+          </form>
+
+          <div id="uploadStatus" class="mono"></div>
+        </div>
+
+        {% block conteudo %} {% endblock %}
       </main>
     </div>
 
     <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
-    
+    <script src="{{ url_for('static', filename='js/upload_file.js') }}"></script>
+
     {% block page_scripts %}{% endblock %}
   </body>
 </html>

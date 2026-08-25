@@ -6,7 +6,6 @@ Here is a visual representation of the source code structure:
 src/
 ├── app/               # Web application (Flask), UI, and Jinja templates
 ├── parsers/           # Lua and XML parsing scripts (S-100 / IHO standards)
-├── tests/             # Automated test suites (unit, integration, UI)
 └── utils/             # Shared utilities (logger, JSON formatters)
 ```
 
@@ -22,12 +21,7 @@ The data extraction and transformation engine.
 * Converts complex maritime standard data (S-100 / IHO) into structured **JSON** files.
 * *For deeper technical details, see the [Parsers README](./parsers/README.md).*
 
-### 3. 🧪 `tests/`
-Contains automated tests to ensure the reliability and correctness of the application.
-* Includes unit tests for data parsing logic and utility functions.
-* Includes integration and UI tests (e.g., verifying the rendering of the Colors Page and rule conditions).
-
-### 4. 🛠️ `utils/`
+### 3. 🛠️ `utils/`
 Shared utilities and helper functions used across the entire project.
 * Contains the **logger** configuration integrated with the web server.
 * Includes JSON formatting and data serialization helpers.

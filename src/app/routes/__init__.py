@@ -12,6 +12,7 @@ from .rules import rules_bp
 from .text_group import text_group_bp
 from .colors import colors_bp
 from .save_file import save_file_bp
+from .upload_file import upload_file_bp
 
 
 def create_app():
@@ -38,5 +39,6 @@ def create_app():
     app.register_blueprint(text_group_bp)
     app.register_blueprint(colors_bp)
     app.register_blueprint(save_file_bp)
+    app.register_blueprint(upload_file_bp)
     
     return app

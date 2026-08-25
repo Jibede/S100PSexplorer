@@ -13,5 +13,6 @@
 │   ├── rules.py         # Route for viewing and editing portrayal rules
 │   ├── save_file.py     # Route for handling file save operations
 │   ├── text_group.py    # Route for text group management
+│   ├── upload_file.py   # Route for handling file update operations
 │   └── visualisation.py # Route for the canvas visualization engine
 ```

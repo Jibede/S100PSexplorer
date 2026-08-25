@@ -1,0 +1,92 @@
+/* Fond sombre derrière le modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 9998;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white, #ffffff);
+  border: 1px solid var(--chart-line);
+  padding: 28px 36px;
+  width: 600px;
+  max-width: 90vw;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.modal-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  font-weight: 700;
+  margin: 0 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.modal-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--chart-line);
+}
+
+.file-input-wrapper {
+  background: var(--navy-soft, #f4f6f8);
+  border: 1px dashed var(--chart-line);
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.file-input-wrapper input[type="file"] {
+  font-size: 11px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modal-actions .btn {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 9px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.modal-actions .btn.primary {
+  background: var(--teal);
+  color: var(--white, #fff);
+}
+.modal-actions .btn.primary:hover {
+  background: var(--ink);
+}
+
+.modal-actions .btn.secondary {
+  background: #eae3cf; 
+  color: var(--ink-soft);
+}
+.modal-actions .btn.secondary:hover {
+  background: var(--chart-line);
+}
+
+#uploadStatus {
+  margin-top: 16px;
+  font-size: 11px;
+  text-align: right;
+}

@@ -3,7 +3,7 @@
 {% if line.get('style') %}
 <div>
     <label>Line Format</label>
-    <select id="lineFormat_{{current_index}}" onchange="updateLinePreview({{current_index}})">
+    <select id="lineFormat_{{current_index}}" onchange="updateLinePreview({{current_index}})" autocomplete="off">
         {% set style = line.get('style') %}
         <option value="solid" {% if style == 'solid'%} selected {% endif %}>Solid</option>
         <option value="dash" {% if style == 'dash'%} selected {% endif %}>Dash</option>
@@ -16,7 +16,7 @@
 {% set thickness = line.get('thickness') %}
 <div>
     <label>Thickness</label>
-    <input type="number" id="thickness_{{current_index}}" value="{{line.thickness}}" min="0" oninput="updateLinePreview({{current_index}})">
+    <input type="number" id="thickness_{{current_index}}" value="{{line.thickness}}" min="0" oninput="updateLinePreview({{current_index}})" autocomplete="off">
 </div>
 {%endif%}
 
@@ -26,7 +26,7 @@
     
     <div>
         <label>Font Color</label>
-        <select id="lineColor_{{current_index}}" onchange="updateLinePreview({{current_index}})">
+        <select id="lineColor_{{current_index}}" onchange="updateLinePreview({{current_index}})" autocomplete="off">
             {% for code, color in colors | dictsort %}
                 {% set r = color.get('rgb' ~ theme.capitalize()).get('red') %}
                 {% set g = color.get('rgb' ~ theme.capitalize()).get('green') %}

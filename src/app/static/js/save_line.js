@@ -10,7 +10,7 @@ function saveLineParams(index, info, file) {
   if (elThickness && elThickness.value) params.push(`${elThickness.value}`);
   if (elColor && elColor.value) params.push(`'${elColor.value}'`);
 
-  const codeParamString = `${params.join(", ")}`;
+  const codeParamString = `${params.join(",")}`;
 
   dict[index] = {
     file: file,
