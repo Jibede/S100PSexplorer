@@ -2,128 +2,128 @@
   "line_style": {
     "_simple_": {
       "rule": [
-        "ContinentalShelfArea",
-        "Dyke",
-        "MooringArea",
-        "TerritorialSeaArea",
-        "Gridiron",
-        "SpanOpening",
-        "LogPond",
-        "OBSTRN07",
-        "Runway",
-        "DepthArea",
-        "FloatingDock",
-        "SmallCraftFacility",
-        "InformationArea",
-        "CustomZone",
-        "Hulk",
-        "Wreck",
-        "PylonBridgeSupport",
-        "Berth",
-        "HarbourAreaAdministrative",
-        "DEPARE03",
-        "MagneticVariation",
-        "FishingFacility",
-        "BuiltUpArea",
-        "DeepWaterRoutePart",
-        "FortifiedStructure",
-        "Gate",
-        "OffshorePlatform",
-        "RadioCallingInPoint",
-        "LandElevation",
-        "FerryRoute",
-        "DockArea",
-        "Obstruction",
-        "FenceWall",
-        "MilitaryPracticeArea",
-        "ProductionStorageArea",
-        "MarineFarmCulture",
-        "ArchipelagicSeaLaneAxis",
-        "SubmarinePipelineArea",
-        "Dolphin",
-        "InshoreTrafficZone",
-        "PilotageDistrict",
-        "PrecautionaryArea",
-        "NavigationLine",
-        "MarinePollutionRegulationsArea",
-        "Causeway",
-        "CableSubmarine",
-        "TwoWayRoutePart",
-        "Pontoon",
-        "Vegetation",
-        "TidalStreamFloodEbb",
-        "QUALIN02",
-        "CableArea",
-        "ExclusiveEconomicZone",
-        "QualityOfNonBathymetricData",
-        "Conveyor",
-        "Canal",
-        "RadarLine",
-        "River",
-        "SeparationZoneOrLine",
-        "OilBarrier",
-        "Bridge",
-        "OffshoreProductionArea",
-        "SlopingGround",
-        "LightAllAround",
-        "CautionArea",
-        "Crane",
-        "WeedKelp",
-        "CableOverhead",
-        "SweptArea",
-        "Coastline",
-        "Waterfall",
-        "Fairway",
-        "DiscolouredWater",
-        "FreePortArea",
-        "SlopeTopline",
-        "AirportAirfield",
-        "Tideway",
-        "UnsurveyedArea",
-        "FoulGround",
-        "SeabedArea",
-        "StraightTerritorialSeaBaseline",
-        "AnchorageArea",
         "Dam",
-        "TrafficSeparationSchemeBoundary",
-        "WaterTurbulence",
-        "AnchorBerth",
-        "DryDock",
-        "Building",
-        "RESARE04",
-        "IceArea",
-        "Road",
-        "LocalDirectionOfBuoyage",
-        "LockBasin",
-        "VesselTrafficServiceArea",
-        "RadarRange",
-        "Default",
+        "Bridge",
+        "DockArea",
+        "Dolphin",
+        "FreePortArea",
         "Seagrass",
+        "DeepWaterRoutePart",
+        "Runway",
+        "SweptArea",
+        "WeedKelp",
+        "Obstruction",
+        "FoulGround",
+        "ExclusiveEconomicZone",
+        "MilitaryPracticeArea",
+        "QualityOfBathymetricData",
+        "PrecautionaryArea",
+        "AnchorageArea",
+        "CableArea",
+        "SpanOpening",
+        "UnsurveyedArea",
+        "Vegetation",
+        "Conveyor",
+        "OffshorePlatform",
+        "AnchorBerth",
+        "CustomZone",
+        "ContinentalShelfArea",
+        "InshoreTrafficZone",
+        "TidalStreamPanelData",
+        "QUALIN02",
+        "FloatingDock",
+        "LockBasin",
+        "DryDock",
+        "Gate",
+        "Tideway",
+        "RESARE04",
+        "FortifiedStructure",
+        "DepthArea",
+        "MagneticVariation",
+        "River",
+        "VesselTrafficServiceArea",
+        "FerryRoute",
+        "Gridiron",
+        "SlopingGround",
+        "PilotageDistrict",
+        "SeabedArea",
+        "LocalDirectionOfBuoyage",
+        "OffshoreProductionArea",
+        "ArchipelagicSeaLaneAxis",
+        "Fairway",
+        "Causeway",
+        "SeaplaneLandingArea",
+        "RadarLine",
+        "TrafficSeparationSchemeBoundary",
+        "DiscolouredWater",
+        "ProductionStorageArea",
+        "AirportAirfield",
+        "StructureOverNavigableWater",
+        "RadioCallingInPoint",
+        "RadarRange",
+        "WRECKS05",
+        "InformationArea",
         "Tunnel",
+        "Building",
+        "WaterTurbulence",
+        "SubmarineTransitLane",
+        "SiloTank",
+        "HarbourAreaAdministrative",
+        "Rapids",
+        "Canal",
+        "FenceWall",
+        "SmallCraftFacility",
+        "PipelineOverhead",
+        "TerritorialSeaArea",
+        "OBSTRN07",
         "DumpingGround",
+        "QualityOfNonBathymetricData",
+        "DEPARE03",
+        "LightSectored",
+        "TidalStreamFloodEbb",
+        "SubmarinePipelineArea",
+        "SpanFixed",
+        "CautionArea",
+        "ContiguousZone",
+        "MooringArea",
+        "OilBarrier",
+        "Sandwave",
+        "TwoWayRoutePart",
+        "MarinePollutionRegulationsArea",
+        "CableOverhead",
+        "MarineFarmCulture",
+        "SlopeTopline",
+        "Lake",
+        "CargoTranshipmentArea",
+        "LightAllAround",
         "FisheryZone",
+        "LogPond",
+        "SLCONS04",
+        "Wreck",
+        "Road",
+        "NavigationLine",
+        "FishingFacility",
+        "Hulk",
+        "Crane",
+        "Coastline",
+        "FishingGround",
+        "PilotBoardingPlace",
+        "StraightTerritorialSeaBaseline",
+        "CableSubmarine",
+        "PylonBridgeSupport",
+        "Default",
+        "SeparationZoneOrLine",
+        "Berth",
+        "IceArea",
         "AdministrationArea",
         "LocalMagneticAnomaly",
-        "Lake",
-        "SLCONS04",
-        "TidalStreamPanelData",
-        "SpanFixed",
-        "SiloTank",
+        "Waterfall",
+        "Pontoon",
+        "BuiltUpArea",
+        "Dyke",
+        "LandElevation",
         "Landmark",
-        "LightSectored",
-        "WRECKS05",
-        "CargoTranshipmentArea",
-        "QualityOfBathymetricData",
-        "SubmarineTransitLane",
-        "Rapids",
-        "PipelineOverhead",
-        "Railway",
-        "StructureOverNavigableWater",
-        "Sandwave",
-        "FishingGround",
-        "SeaplaneLandingArea",
-        "ContiguousZone",
-        "PilotBoardingPlace"
+        "Railway"
       ]
     },
     "ADMARE01": {
@@ -145,9 +145,9 @@
     },
     "LOWACC21": {
       "rule": [
-        "BuiltUpArea",
+        "QUALIN02",
         "SLCONS04",
-        "QUALIN02"
+        "BuiltUpArea"
       ]
     },
     "CBLARE51": {
@@ -162,15 +162,15 @@
     },
     "CTYARE51": {
       "rule": [
-        "TwoWayRoutePart",
-        "DumpingGround",
-        "CargoTranshipmentArea",
-        "SubmarineTransitLane",
-        "MilitaryPracticeArea",
-        "SeaplaneLandingArea",
-        "LocalMagneticAnomaly",
         "RESARE04",
-        "PilotBoardingPlace"
+        "LocalMagneticAnomaly",
+        "DumpingGround",
+        "MilitaryPracticeArea",
+        "SubmarineTransitLane",
+        "SeaplaneLandingArea",
+        "PilotBoardingPlace",
+        "TwoWayRoutePart",
+        "CargoTranshipmentArea"
       ]
     },
     "CTNARE51": {
@@ -225,16 +225,16 @@
     },
     "NAVARE51": {
       "rule": [
-        "Fairway",
-        "FerryRoute",
-        "HarbourAreaAdministrative",
-        "OffshoreProductionArea",
-        "SweptArea",
-        "FishingFacility",
-        "Sandwave",
         "LocalDirectionOfBuoyage",
+        "MarineFarmCulture",
+        "OffshoreProductionArea",
+        "FerryRoute",
+        "Fairway",
+        "Sandwave",
+        "FishingFacility",
+        "HarbourAreaAdministrative",
         "Wreck",
-        "MarineFarmCulture"
+        "SweptArea"
       ]
     },
     "FERYRT01": {
@@ -264,8 +264,8 @@
     },
     "LOWACC41": {
       "rule": [
-        "OBSTRN07",
-        "WRECKS05"
+        "WRECKS05",
+        "OBSTRN07"
       ]
     },
     "LOWACC31": {
@@ -375,8 +375,8 @@
     },
     "TIDINF51": {
       "rule": [
-        "TidalStreamFloodEbb",
-        "TidalStreamPanelData"
+        "TidalStreamPanelData",
+        "TidalStreamFloodEbb"
       ]
     },
     "VTSARE51": {
@@ -435,8 +435,8 @@
     },
     "PILPNT02": {
       "rule": [
-        "Bollard",
-        "Pile"
+        "Pile",
+        "Bollard"
       ],
       "line_styles": [
         "PILPNT01"
@@ -444,21 +444,21 @@
     },
     "BRIDGE01": {
       "rule": [
-        "Bridge",
-        "SpanOpening"
+        "SpanOpening",
+        "Bridge"
       ]
     },
     "POSGEN03": {
       "rule": [
-        "Building",
         "Landmark",
+        "Building",
         "PylonBridgeSupport"
       ]
     },
     "BUIREL13": {
       "rule": [
-        "Building",
-        "Landmark"
+        "Landmark",
+        "Building"
       ]
     },
     "BUIREL14": {
@@ -468,14 +468,14 @@
     },
     "BUIREL15": {
       "rule": [
-        "Building",
-        "Landmark"
+        "Landmark",
+        "Building"
       ]
     },
     "TNKCON12": {
       "rule": [
-        "Building",
         "ProductionStorageArea",
+        "Building",
         "SiloTank"
       ]
     },
@@ -486,8 +486,8 @@
     },
     "BUIREL01": {
       "rule": [
-        "Building",
-        "Landmark"
+        "Landmark",
+        "Building"
       ]
     },
     "BUIREL04": {
@@ -502,8 +502,8 @@
     },
     "TNKCON02": {
       "rule": [
-        "Building",
         "ProductionStorageArea",
+        "Building",
         "SiloTank"
       ]
     },
@@ -524,9 +524,9 @@
     },
     "RACNSP01": {
       "rule": [
-        "PipelineOverhead",
+        "CableOverhead",
         "Conveyor",
-        "CableOverhead"
+        "PipelineOverhead"
       ]
     },
     "BCNCAR04": {
@@ -598,46 +598,46 @@
     "BCNSTK02": {
       "rule": [
         "CardinalBeacon",
-        "SafeWaterBeacon",
+        "IsolatedDangerBeacon",
         "LateralBeacon",
-        "SpecialPurposeGeneralBeacon",
-        "IsolatedDangerBeacon"
+        "SafeWaterBeacon",
+        "SpecialPurposeGeneralBeacon"
       ]
     },
     "BCNTOW01": {
       "rule": [
         "CardinalBeacon",
-        "SafeWaterBeacon",
+        "IsolatedDangerBeacon",
         "LateralBeacon",
-        "SpecialPurposeGeneralBeacon",
-        "IsolatedDangerBeacon"
+        "SafeWaterBeacon",
+        "SpecialPurposeGeneralBeacon"
       ]
     },
     "BCNLTC01": {
       "rule": [
         "CardinalBeacon",
-        "SafeWaterBeacon",
+        "IsolatedDangerBeacon",
         "LateralBeacon",
-        "SpecialPurposeGeneralBeacon",
-        "IsolatedDangerBeacon"
+        "SafeWaterBeacon",
+        "SpecialPurposeGeneralBeacon"
       ]
     },
     "BCNGEN01": {
       "rule": [
         "CardinalBeacon",
-        "SafeWaterBeacon",
+        "IsolatedDangerBeacon",
         "LateralBeacon",
-        "SpecialPurposeGeneralBeacon",
-        "IsolatedDangerBeacon"
+        "SafeWaterBeacon",
+        "SpecialPurposeGeneralBeacon"
       ]
     },
     "BCNGEN03": {
       "rule": [
         "CardinalBeacon",
-        "SafeWaterBeacon",
+        "IsolatedDangerBeacon",
         "LateralBeacon",
-        "SpecialPurposeGeneralBeacon",
-        "IsolatedDangerBeacon"
+        "SafeWaterBeacon",
+        "SpecialPurposeGeneralBeacon"
       ]
     },
     "BOYCAR04": {
@@ -662,8 +662,8 @@
     },
     "BOYDEF03": {
       "rule": [
-        "LateralBuoy",
-        "CardinalBuoy"
+        "CardinalBuoy",
+        "LateralBuoy"
       ]
     },
     "BOYPIL23": {
@@ -708,104 +708,104 @@
     },
     "BOYCON01": {
       "rule": [
-        "LateralBuoy",
         "IsolatedDangerBuoy",
         "SpecialPurposeGeneralBuoy",
-        "CardinalBuoy"
+        "CardinalBuoy",
+        "LateralBuoy"
       ]
     },
     "BOYCAN01": {
       "rule": [
-        "LateralBuoy",
         "IsolatedDangerBuoy",
         "SpecialPurposeGeneralBuoy",
-        "CardinalBuoy"
+        "CardinalBuoy",
+        "LateralBuoy"
       ]
     },
     "BOYSPH01": {
       "rule": [
-        "SpecialPurposeGeneralBuoy",
         "CardinalBuoy",
-        "IsolatedDangerBuoy",
+        "LateralBuoy",
         "SafeWaterBuoy",
-        "LateralBuoy"
+        "SpecialPurposeGeneralBuoy",
+        "IsolatedDangerBuoy"
       ]
     },
     "BOYPIL01": {
       "rule": [
-        "SpecialPurposeGeneralBuoy",
         "CardinalBuoy",
-        "IsolatedDangerBuoy",
+        "LateralBuoy",
         "SafeWaterBuoy",
-        "LateralBuoy"
+        "SpecialPurposeGeneralBuoy",
+        "IsolatedDangerBuoy"
       ]
     },
     "BOYSPR01": {
       "rule": [
-        "SpecialPurposeGeneralBuoy",
         "CardinalBuoy",
-        "IsolatedDangerBuoy",
+        "LateralBuoy",
         "SafeWaterBuoy",
-        "LateralBuoy"
+        "SpecialPurposeGeneralBuoy",
+        "IsolatedDangerBuoy"
       ]
     },
     "BOYBAR01": {
       "rule": [
-        "SpecialPurposeGeneralBuoy",
         "CardinalBuoy",
-        "IsolatedDangerBuoy",
+        "LateralBuoy",
         "SafeWaterBuoy",
-        "LateralBuoy"
+        "SpecialPurposeGeneralBuoy",
+        "IsolatedDangerBuoy"
       ]
     },
     "BOYSUP01": {
       "rule": [
-        "SpecialPurposeGeneralBuoy",
         "CardinalBuoy",
-        "IsolatedDangerBuoy",
+        "LateralBuoy",
         "SafeWaterBuoy",
-        "LateralBuoy"
+        "SpecialPurposeGeneralBuoy",
+        "IsolatedDangerBuoy"
       ]
     },
     "BOYGEN03": {
       "rule": [
-        "EmergencyWreckMarkingBuoy",
-        "SpecialPurposeGeneralBuoy",
         "CardinalBuoy",
-        "IsolatedDangerBuoy",
+        "LateralBuoy",
+        "EmergencyWreckMarkingBuoy",
         "SafeWaterBuoy",
-        "LateralBuoy"
+        "SpecialPurposeGeneralBuoy",
+        "IsolatedDangerBuoy"
       ]
     },
     "CHINFO07": {
       "rule": [
-        "DumpingGround",
-        "CargoTranshipmentArea",
         "HarbourFacility",
-        "SubmarinePipelineArea"
+        "SubmarinePipelineArea",
+        "DumpingGround",
+        "CargoTranshipmentArea"
       ]
     },
     "INFARE51": {
       "rule": [
-        "RESCSP03",
-        "SubmarinePipelineArea",
-        "DumpingGround",
-        "CargoTranshipmentArea",
         "RESARE04",
+        "DumpingGround",
+        "SubmarinePipelineArea",
+        "RESCSP03",
+        "CargoTranshipmentArea",
         "InformationArea"
       ]
     },
     "CHINFO06": {
       "rule": [
-        "MilitaryPracticeArea",
+        "SeaplaneLandingArea",
         "CautionArea",
-        "SeaplaneLandingArea"
+        "MilitaryPracticeArea"
       ]
     },
     "CTNARE51": {
       "rule": [
-        "TrafficSeparationSchemeLanePart",
-        "CautionArea"
+        "CautionArea",
+        "TrafficSeparationSchemeLanePart"
       ]
     },
     "CHKPNT01": {
@@ -815,9 +815,9 @@
     },
     "POSGEN04": {
       "rule": [
+        "LandElevation",
         "LandRegion",
-        "Checkpoint",
-        "LandElevation"
+        "Checkpoint"
       ]
     },
     "CGUSTA02": {
@@ -837,14 +837,14 @@
     },
     "CURENT01": {
       "rule": [
-        "CurrentNonGravitational",
-        "TidalStreamFloodEbb"
+        "TidalStreamFloodEbb",
+        "CurrentNonGravitational"
       ]
     },
     "CURDEF01": {
       "rule": [
-        "CurrentNonGravitational",
-        "TidalStreamFloodEbb"
+        "TidalStreamFloodEbb",
+        "CurrentNonGravitational"
       ]
     },
     "DAYSQR01": {
@@ -879,8 +879,8 @@
     },
     "TSSLPT51": {
       "rule": [
-        "TrafficSeparationSchemeLanePart",
-        "DeepWaterRoutePart"
+        "DeepWaterRoutePart",
+        "TrafficSeparationSchemeLanePart"
       ]
     },
     "DWRTPT51": {
@@ -900,15 +900,15 @@
     },
     "QUESMRK1": {
       "rule": [
-        "Default",
-        "LightSectored"
+        "LightSectored",
+        "Default"
       ]
     },
     "symbol": {
       "rule": [
+        "WRECKS05",
         "SOUNDG03",
         "OBSTRN07",
-        "WRECKS05",
         "DepthNoBottomFound"
       ]
     },
@@ -1135,8 +1135,8 @@
     },
     "CAIRNS11": {
       "rule": [
-        "Landmark",
         "LateralBeacon",
+        "Landmark",
         "SpecialPurposeGeneralBeacon"
       ]
     },
@@ -1157,8 +1157,8 @@
     },
     "FLASTK11": {
       "rule": [
-        "Landmark",
-        "ProductionStorageArea"
+        "ProductionStorageArea",
+        "Landmark"
       ]
     },
     "MSTCON14": {
@@ -1209,8 +1209,8 @@
     },
     "CAIRNS01": {
       "rule": [
-        "Landmark",
         "LateralBeacon",
+        "Landmark",
         "SpecialPurposeGeneralBeacon"
       ]
     },
@@ -1231,8 +1231,8 @@
     },
     "FLASTK01": {
       "rule": [
-        "Landmark",
-        "ProductionStorageArea"
+        "ProductionStorageArea",
+        "Landmark"
       ]
     },
     "MSTCON04": {
@@ -1262,8 +1262,8 @@
     },
     "POSGEN01": {
       "rule": [
-        "Landmark",
-        "RadarStation"
+        "RadarStation",
+        "Landmark"
       ]
     },
     "POSGEN05": {
@@ -1483,26 +1483,26 @@
     },
     "LIGHTS11": {
       "rule": [
-        "LightFlareAndDescription",
-        "LightSectored"
+        "LightSectored",
+        "LightFlareAndDescription"
       ]
     },
     "LIGHTS12": {
       "rule": [
-        "LightFlareAndDescription",
-        "LightSectored"
+        "LightSectored",
+        "LightFlareAndDescription"
       ]
     },
     "LIGHTS13": {
       "rule": [
-        "LightFlareAndDescription",
-        "LightSectored"
+        "LightSectored",
+        "LightFlareAndDescription"
       ]
     },
     "LITDEF11": {
       "rule": [
-        "LightFlareAndDescription",
-        "LightSectored"
+        "LightSectored",
+        "LightFlareAndDescription"
       ]
     },
     "LITFLT02": {
@@ -1558,12 +1558,12 @@
     },
     "CTYARE51": {
       "rule": [
-        "RESCSP03",
+        "RESARE04",
         "OffshoreProductionArea",
-        "SubmarineTransitLane",
         "MilitaryPracticeArea",
+        "SubmarineTransitLane",
         "SeaplaneLandingArea",
-        "RESARE04"
+        "RESCSP03"
       ]
     },
     "BOYMOR02": {
@@ -1588,9 +1588,9 @@
     },
     "1": {
       "rule": [
-        "OBSTRN07",
         "WRECKS05",
-        "TOPMAR02"
+        "TOPMAR02",
+        "OBSTRN07"
       ]
     },
     "UWTROC04": {
@@ -1600,8 +1600,8 @@
     },
     "DANGER01": {
       "rule": [
-        "OBSTRN07",
-        "WRECKS05"
+        "WRECKS05",
+        "OBSTRN07"
       ]
     },
     "OBSTRN11": {
@@ -1616,8 +1616,8 @@
     },
     "DANGER02": {
       "rule": [
-        "OBSTRN07",
-        "WRECKS05"
+        "WRECKS05",
+        "OBSTRN07"
       ]
     },
     "UWTROC03": {
@@ -2698,10 +2698,10 @@
     },
     "TSSJCT02": {
       "rule": [
-        "TrafficSeparationSchemeLanePart",
-        "PrecautionaryArea",
         "TrafficSeparationSchemeCrossing",
-        "TrafficSeparationSchemeRoundabout"
+        "TrafficSeparationSchemeRoundabout",
+        "TrafficSeparationSchemeLanePart",
+        "PrecautionaryArea"
       ]
     },
     "DQUALA11": {

@@ -18,13 +18,13 @@ def process_data(file_name: str = None):
         
         lua_interpreter = LuaInterpreter('source/rules/*.lua')
         xml_reader_portrayal = XMLReaderPortrayal('source/xml/portrayal_catalogue.xml')
-        xml_reader_adtional = XMLReaderAditionalFiles()
+        xml_reader_aditional = XMLReaderAditionalFiles()
         
         lua_interpreter.get_analyses()
         xml_reader_portrayal.get_info()
-        xml_reader_adtional.get_info('source/lineStyles/*.xml')
-        xml_reader_adtional.get_info('source/areaFills/*.xml')
-        xml_reader_adtional.get_info('source/colorProfiles/*.xml')
+        xml_reader_aditional.get_info('source/lineStyles/*.xml')
+        xml_reader_aditional.get_info('source/areaFills/*.xml')
+        xml_reader_aditional.get_info('source/colorProfiles/*.xml')
         
     if  file_name is None or check_2 in file_name.lower():
         
@@ -35,3 +35,6 @@ def process_data(file_name: str = None):
     
 
     LOGGER.info('PROCESSING COMPLETE ! JSONs SUCCESSFULLY GENERATED.')
+    
+if __name__ == '__main__':
+    process_data()
