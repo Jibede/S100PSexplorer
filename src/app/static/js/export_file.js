@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Récupération des éléments du DOM
     const exportModal = document.getElementById('exportModal');
     const exportOverlay = document.getElementById('modalOverlay');
-    const closeBtn = document.getElementById('closeExportBtn');
+    const closeBtn = document.getElementById('closeExportModalBtn');
     const exportForm = document.getElementById('exportForm');
     const statusDiv = document.getElementById('exportStatus');
     
