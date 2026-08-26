@@ -1,0 +1,25 @@
+<div id="exportModal" class="modal" style="display: none">
+  <h2 class="modal-title">Export File</h2>
+
+  <form id="exportForm">
+    <div class="file-input-wrapper">
+      <select
+        name="format"
+        id="exportFormat"
+      >
+        <option value="json">JSON</option>
+        <option value="xml">XML</option>
+        <option value="csv">CSV</option>
+      </select>
+    </div>
+
+    <div class="modal-actions">
+      <button type="button" id="closeExportBtn" class="btn secondary">
+        Cancel
+      </button>
+      <button type="submit" class="btn primary">Export</button>
+    </div>
+  </form>
+
+  <div id="exportStatus" class="mono"></div>
+</div>

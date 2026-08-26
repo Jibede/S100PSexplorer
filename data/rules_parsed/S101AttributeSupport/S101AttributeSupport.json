@@ -1,0 +1,588 @@
+[
+  {
+    "node_type": "function",
+    "name": "EncodeClearanceValue",
+    "line": 2,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "str",
+        "instruction_type": "LocalAssign",
+        "line": 3,
+        "code": "local str",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "clearanceValue",
+        "line": 4,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeVerticalClearanceOpen",
+    "line": 10,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "str",
+        "instruction_type": "LocalAssign",
+        "line": 11,
+        "code": "local str",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "verticalClearanceOpen",
+        "line": 12,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "verticalClearanceOpen.verticalClearanceUnlimited",
+            "line": 13,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 14,
+                "code": "str = '\u221e'",
+                "value": "\u221e"
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 16,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 16,
+                "code": "str = EncodeClearanceValue(verticalClearanceOpen.verticalClearanceValue)",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "str",
+            "line": 18,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 19,
+                "code": "str = 'op ' .. str",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeVerticalClearanceClosed",
+    "line": 25,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "str",
+        "instruction_type": "LocalAssign",
+        "line": 26,
+        "code": "local str",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "verticalClearanceClosed",
+        "line": 27,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "str",
+            "instruction_type": "Assign",
+            "line": 28,
+            "code": "str = EncodeClearanceValue(verticalClearanceClosed.verticalClearanceValue)",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "str",
+            "line": 29,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 30,
+                "code": "str = 'cl ' .. str",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeVerticalClearance",
+    "line": 36,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "closed",
+        "instruction_type": "LocalAssign",
+        "line": 37,
+        "code": "local closed = EncodeVerticalClearanceClosed(verticalClearanceClosed)",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "open",
+        "instruction_type": "LocalAssign",
+        "line": 38,
+        "code": "local open = EncodeVerticalClearanceOpen(verticalClearanceOpen)",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "hasHorizontalClearanceLabel",
+        "line": 39,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "closed and open",
+            "line": 41,
+            "children": []
+          },
+          {
+            "node_type": "elseif",
+            "condition": "closed",
+            "line": 43,
+            "children": []
+          },
+          {
+            "node_type": "elseif",
+            "condition": "open",
+            "line": 45,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "closed and open",
+        "line": 48,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "closed",
+        "line": 50,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "open",
+        "line": 52,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeVerticalClearanceFixed",
+    "line": 58,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "str",
+        "instruction_type": "LocalAssign",
+        "line": 59,
+        "code": "local str",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "verticalClearanceFixed",
+        "line": 60,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "str",
+            "instruction_type": "Assign",
+            "line": 61,
+            "code": "str = EncodeClearanceValue(verticalClearanceFixed.verticalClearanceValue)",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "str",
+            "line": 62,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 63,
+                "code": "str = 'V.clr ' .. str",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeHorizontalClearanceFixed",
+    "line": 69,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "str",
+        "instruction_type": "LocalAssign",
+        "line": 70,
+        "code": "local str",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "horizontalClearanceFixed",
+        "line": 71,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "str",
+            "instruction_type": "Assign",
+            "line": 72,
+            "code": "str = EncodeClearanceValue(horizontalClearanceFixed.horizontalClearanceValue)",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "str",
+            "line": 73,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 74,
+                "code": "str = 'H.clr ' .. str",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "EncodeHorizontalClearanceOpen",
+    "line": 80,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "str",
+        "instruction_type": "LocalAssign",
+        "line": 81,
+        "code": "local str",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "horizontalClearanceOpen",
+        "line": 82,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "str",
+            "instruction_type": "Assign",
+            "line": 83,
+            "code": "str = EncodeClearanceValue(horizontalClearanceOpen.horizontalClearanceValue)",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "str",
+            "line": 84,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "str",
+                "instruction_type": "Assign",
+                "line": 85,
+                "code": "str = 'H.clr op ' .. str",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "PortrayClearances",
+    "line": 92,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "horizontalClearance",
+        "instruction_type": "LocalAssign",
+        "line": 93,
+        "code": "local horizontalClearance",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature['!horizontalClearanceFixed']",
+        "line": 94,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "horizontalClearance",
+            "instruction_type": "Assign",
+            "line": 95,
+            "code": "horizontalClearance = EncodeHorizontalClearanceFixed(feature.horizontalClearanceFixed)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature['!horizontalClearanceOpen']",
+        "line": 96,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "horizontalClearance",
+            "instruction_type": "Assign",
+            "line": 97,
+            "code": "horizontalClearance = EncodeHorizontalClearanceOpen(feature.horizontalClearanceOpen)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "line1",
+        "instruction_type": "LocalAssign",
+        "line": 100,
+        "code": "local line1",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "line2",
+        "instruction_type": "LocalAssign",
+        "line": 101,
+        "code": "local line2",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature['!verticalClearanceFixed']",
+        "line": 102,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "line1",
+            "instruction_type": "Assign",
+            "line": 103,
+            "code": "line1 = EncodeVerticalClearanceFixed(feature.verticalClearanceFixed)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 105,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "line1",
+            "instruction_type": "Assign",
+            "line": 105,
+            "code": "line1, line2 = EncodeVerticalClearance(feature['!verticalClearanceClosed'], feature['!verticalClearanceOpen'], horizontalClearance)",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "xOffset",
+        "instruction_type": "Assign",
+        "line": 108,
+        "code": "xOffset = xOffset or 0",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "yOffset",
+        "instruction_type": "Assign",
+        "line": 109,
+        "code": "yOffset = yOffset or 0",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "line1 or line2 or horizontalClearance",
+        "line": 110,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 111,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:' .. xOffset .. ',' .. yOffset .. ';FontColor:CHBLK')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "xOffset",
+                "y": "yOffset"
+              },
+              "FontColor": "CHBLK"
+            },
+            "has_var": true
+          },
+          {
+            "node_type": "if",
+            "condition": "line1",
+            "line": 112,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 113,
+                "code": "featurePortrayal:AddTextInstruction(line1, 11, 24, viewingGroup, 24)",
+                "instruction_type": "text_instruction",
+                "values": {
+                  "raw_text": "line1",
+                  "text_vw_group": 11,
+                  "text_priority": 24,
+                  "view_group": "viewingGroup",
+                  "priority": 24,
+                  "hover": false
+                },
+                "has_var": true
+              },
+              {
+                "node_type": "var",
+                "name": "yOffset",
+                "instruction_type": "Assign",
+                "line": 114,
+                "code": "yOffset = yOffset - 3.51",
+                "value": 1
+              },
+              {
+                "node_type": "hit",
+                "line": 115,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:' .. xOffset .. ',' .. yOffset)",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "xOffset",
+                    "y": "yOffset"
+                  }
+                },
+                "has_var": true
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "line2",
+            "line": 117,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 118,
+                "code": "featurePortrayal:AddTextInstruction(line2, 11, 24, viewingGroup, 24)",
+                "instruction_type": "text_instruction",
+                "values": {
+                  "raw_text": "line2",
+                  "text_vw_group": 11,
+                  "text_priority": 24,
+                  "view_group": "viewingGroup",
+                  "priority": 24,
+                  "hover": false
+                },
+                "has_var": true
+              },
+              {
+                "node_type": "var",
+                "name": "yOffset",
+                "instruction_type": "Assign",
+                "line": 119,
+                "code": "yOffset = yOffset - 3.51",
+                "value": 1
+              },
+              {
+                "node_type": "hit",
+                "line": 120,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:' .. xOffset .. ',' .. yOffset)",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "xOffset",
+                    "y": "yOffset"
+                  }
+                },
+                "has_var": true
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "horizontalClearance",
+            "line": 122,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 123,
+                "code": "featurePortrayal:AddTextInstruction(horizontalClearance, 11, 24, viewingGroup, 24)",
+                "instruction_type": "text_instruction",
+                "values": {
+                  "raw_text": "horizontalClearance",
+                  "text_vw_group": 11,
+                  "text_priority": 24,
+                  "view_group": "viewingGroup",
+                  "priority": 24,
+                  "hover": false
+                },
+                "has_var": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "HasHorizontalClearance",
+    "line": 128,
+    "children": []
+  },
+  {
+    "node_type": "function",
+    "name": "HasVerticalClearance",
+    "line": 132,
+    "children": []
+  },
+  {
+    "node_type": "function",
+    "name": "HasClearance",
+    "line": 136,
+    "children": []
+  }
+]

@@ -1,0 +1,280 @@
+[
+  {
+    "node_type": "function",
+    "name": "PipelineSubmarineOnLand",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(3, feature.product)",
+            "line": 7,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 8,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 9,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 12,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 14,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(2, feature.categoryOfPipelinePipe)",
+            "line": 15,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 16,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 17,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 20,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 22,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(3, feature.categoryOfPipelinePipe)",
+            "line": 23,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 24,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 25,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 28,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 30,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(4, feature.categoryOfPipelinePipe)",
+            "line": 31,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 32,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 33,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 36,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 38,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(5, feature.categoryOfPipelinePipe)",
+            "line": 39,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 40,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 41,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 44,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 46,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(7, feature.categoryOfPipelinePipe)",
+            "line": 50,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 51,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 52,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 55,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 57,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL06"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 60,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 60,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 61,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 64,
+                "children": []
+              },
+              {
+                "node_type": "hit",
+                "line": 66,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:PIPSOL05')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "PIPSOL05"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 69,
+        "children": []
+      }
+    ]
+  }
+]

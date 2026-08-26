@@ -1,0 +1,30 @@
+[
+  {
+    "node_type": "hit",
+    "line": 10,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 11,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

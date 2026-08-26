@@ -1,0 +1,94 @@
+[
+  {
+    "node_type": "function",
+    "name": "Retroreflector",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 5,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 8,
+            "code": "viewingGroup = 27080",
+            "value": 27080
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:RETRFL02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "RETRFL02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 15,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 16,
+            "code": "viewingGroup = 27080",
+            "value": 27080
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 17,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 20,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 22,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:RETRFL01')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "RETRFL01"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 24,
+        "children": []
+      }
+    ]
+  }
+]

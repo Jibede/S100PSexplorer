@@ -1,0 +1,29 @@
+[
+  {
+    "node_type": "hit",
+    "line": 29,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WIMCON11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WIMCON11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WIMCON01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WIMCON01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  }
+]

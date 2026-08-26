@@ -1,0 +1,82 @@
+[
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.64,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "NAVARE51"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": [
+        {
+          "value": "RENERG51",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(COPA, {\n    2,\n    3,\n    6,\n})"
+          ]
+        },
+        {
+          "value": "WNDFRM52",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "COPA == 1"
+          ]
+        },
+        {
+          "value": "TNKFRM",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "COPA == 4"
+          ]
+        },
+        {
+          "value": "CTYARE51",
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

@@ -1,0 +1,454 @@
+[
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 6 and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 28,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:NOTBRD11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "NOTBRD11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(18, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 30,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "contains(44, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 32,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP21')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP21"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 36,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 38,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 5"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 40,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP21')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP21"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.beaconShape == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSPP21')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSPP21"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 47,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "-3.51",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 48,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters), 'bn %s'), textViewingGroup, textPriority, viewingGroup, priority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters),bn %s)",
+      "text_vw_group": 21,
+      "text_priority": 24,
+      "view_group": 27020,
+      "priority": 24,
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 53,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 6 and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:NOTBRD11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "NOTBRD11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(18, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 57,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(44, feature.categoryOfSpecialPurposeMark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 60,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNTOW13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNTOW13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 3 and feature.colour[1] == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 62,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNTOW12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNTOW12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 3 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 64,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 5 and feature.colour[1] == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 66,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 5 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 68,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 7 and feature.colour[1] == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 70,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 7 and feature.colour[1] == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 72,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNSTK02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNSTK02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 74,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNTOW01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNTOW01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 77,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNLTC01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNLTC01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 80,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 5"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 83,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 85,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.beaconShape == 7"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 88,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BCNGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BCNGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 92,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:-3.51,3.51;TextAlignHorizontal:End;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "-3.51",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "End",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 93,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters), 'bn %s'), textViewingGroup, textPriority, viewingGroup, priority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters),bn %s)",
+      "text_vw_group": 21,
+      "text_priority": 24,
+      "view_group": 27020,
+      "priority": 24,
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  }
+]

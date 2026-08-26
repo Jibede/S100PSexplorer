@@ -1,0 +1,392 @@
+{
+  "line_style": {
+    "CHGRF": {
+      "rule": [
+        "ContinentalShelfArea",
+        "MooringArea",
+        "TerritorialSeaArea",
+        "MarineFarmCulture",
+        "CustomZone",
+        "WeedKelp",
+        "Seagrass",
+        "FisheryZone",
+        "AdministrationArea",
+        "PilotageDistrict",
+        "Waterfall",
+        "FreePortArea",
+        "MarinePollutionRegulationsArea",
+        "DEPARE03",
+        "Tideway",
+        "StraightTerritorialSeaBaseline",
+        "FishingGround",
+        "ExclusiveEconomicZone",
+        "ContiguousZone"
+      ],
+      "line_complex": [
+        "NAVARE52",
+        "SCLBDY51"
+      ]
+    },
+    "LANDF": {
+      "rule": [
+        "Dyke",
+        "Road",
+        "FenceWall",
+        "Runway",
+        "ProductionStorageArea",
+        "SmallCraftFacility",
+        "Crane",
+        "SiloTank",
+        "SlopeTopline",
+        "Landmark",
+        "AirportAirfield",
+        "Causeway",
+        "BuiltUpArea",
+        "Railway",
+        "Vegetation",
+        "Dam",
+        "FortifiedStructure",
+        "Building",
+        "LandElevation"
+      ]
+    },
+    "CHMGF": {
+      "rule": [
+        "CableSubmarine",
+        "AnchorageArea",
+        "ArchipelagicSeaLaneAxis",
+        "MagneticVariation",
+        "QUALIN02",
+        "CargoTranshipmentArea",
+        "AnchorBerth",
+        "LocalMagneticAnomaly"
+      ],
+      "line_complex": [
+        "ARCSLN01",
+        "ESSARE01",
+        "INFARE51"
+      ]
+    },
+    "CHGRD": {
+      "rule": [
+        "IceArea",
+        "Bridge",
+        "OffshoreProductionArea",
+        "Gridiron",
+        "SpanOpening",
+        "LocalDirectionOfBuoyage",
+        "OBSTRN07",
+        "DepthArea",
+        "MarineFarmCulture",
+        "SlopingGround",
+        "Tunnel",
+        "CableOverhead",
+        "SubmarinePipelineArea",
+        "SweptArea",
+        "TidalStreamPanelData",
+        "Fairway",
+        "DiscolouredWater",
+        "NavigationLine",
+        "SpanFixed",
+        "Berth",
+        "SlopeTopline",
+        "HarbourAreaAdministrative",
+        "FishingFacility",
+        "UnsurveyedArea",
+        "QualityOfBathymetricData",
+        "FoulGround",
+        "Rapids",
+        "SeabedArea",
+        "PipelineOverhead",
+        "TidalStreamFloodEbb",
+        "WaterTurbulence",
+        "Sandwave",
+        "QualityOfNonBathymetricData",
+        "Conveyor"
+      ],
+      "line_complex": [
+        "ADMARE01",
+        "CURENT01",
+        "DSCWTR51",
+        "FOULGRD1",
+        "FSHFAC02",
+        "LOWACC31",
+        "MARSYS51",
+        "NAVARE51",
+        "PILPNT01",
+        "PIPARE61",
+        "PIPSOL06",
+        "RECDEF02",
+        "RECTRC09",
+        "RECTRC10",
+        "RECTRC11",
+        "RECTRC12",
+        "TIDINF51"
+      ]
+    },
+    "CHBLK": {
+      "rule": [
+        "FerryRoute",
+        "OilBarrier",
+        "DockArea",
+        "Dyke",
+        "FenceWall",
+        "LogPond",
+        "OBSTRN07",
+        "LockBasin",
+        "ProductionStorageArea",
+        "SlopingGround",
+        "Crane",
+        "Dolphin",
+        "Wreck",
+        "Lake",
+        "SiloTank",
+        "SlopeTopline",
+        "Landmark",
+        "LightSectored",
+        "WRECKS05",
+        "StructureOverNavigableWater",
+        "FortifiedStructure",
+        "Building",
+        "Canal",
+        "River"
+      ],
+      "line_complex": [
+        "FERYRT02",
+        "LOWACC41"
+      ]
+    },
+    "CHMGD": {
+      "rule": [
+        "CableSubmarine",
+        "FerryRoute",
+        "LightAllAround",
+        "Default",
+        "LightSectored",
+        "Obstruction",
+        "SubmarinePipelineArea",
+        "DumpingGround",
+        "SubmarineTransitLane",
+        "MilitaryPracticeArea",
+        "CableArea",
+        "SeaplaneLandingArea",
+        "LocalMagneticAnomaly",
+        "RESARE04",
+        "VesselTrafficServiceArea"
+      ],
+      "line_complex": [
+        "ACHARE51",
+        "ACHRES51",
+        "CBLARE51",
+        "CBLSUB06",
+        "COLREG01",
+        "CTNARE51",
+        "CTYARE51",
+        "ENTRES51",
+        "FERYRT01",
+        "FSHRES51",
+        "PIPARE51",
+        "PIPSOL05",
+        "PRCARE51",
+        "QUESMRK1",
+        "RESARE51",
+        "VTSARE51"
+      ]
+    },
+    "CSTLN": {
+      "rule": [
+        "PylonBridgeSupport",
+        "Pontoon",
+        "Obstruction",
+        "Dam",
+        "QUALIN02",
+        "WRECKS05",
+        "Causeway",
+        "Coastline",
+        "DryDock",
+        "OBSTRN07",
+        "Gate",
+        "Hulk",
+        "OffshorePlatform",
+        "FloatingDock",
+        "SLCONS04"
+      ],
+      "line_complex": [
+        "LOWACC21"
+      ]
+    },
+    "TRFCD": {
+      "rule": [
+        "CautionArea",
+        "TwoWayRoutePart",
+        "TrafficSeparationSchemeBoundary",
+        "RadioCallingInPoint",
+        "InshoreTrafficZone",
+        "PrecautionaryArea",
+        "RadarLine",
+        "DeepWaterRoutePart"
+      ],
+      "line_complex": [
+        "DWLDEF01",
+        "DWRTCL05",
+        "DWRTCL06",
+        "DWRTCL07",
+        "DWRTCL08",
+        "DWRUTE51",
+        "RCRDEF11",
+        "RCRTCL11",
+        "RCRTCL12",
+        "RCRTCL13",
+        "RCRTCL14"
+      ]
+    },
+    "DEPSC": {
+      "rule": [
+        "DEPARE03"
+      ]
+    },
+    "OUTLW": {
+      "rule": [
+        "LightSectored",
+        "LightAllAround"
+      ]
+    },
+    "LITRD": {
+      "rule": [
+        "LightSectored",
+        "LightAllAround"
+      ]
+    },
+    "LITGN": {
+      "rule": [
+        "LightSectored",
+        "LightAllAround"
+      ]
+    },
+    "LITYW": {
+      "rule": [
+        "LightSectored",
+        "LightAllAround"
+      ]
+    },
+    "TRFCF": {
+      "rule": [
+        "PilotBoardingPlace",
+        "SeparationZoneOrLine",
+        "RadarRange"
+      ]
+    },
+    "CHCOR": {
+      "rule": [
+        "UpdateInformation"
+      ],
+      "line_complex": [
+        "CHCRDEL1",
+        "CHCRID01",
+        "CHRVDEL2",
+        "CHRVID02"
+      ]
+    },
+    "CHWHT": {
+      "rule": [
+        "Waterfall"
+      ]
+    },
+    "NINFO": {
+      "line_complex": [
+        "ERBLNA01",
+        "NONHODAT"
+      ]
+    },
+    "BKAJ1": {
+      "line_complex": [
+        "INDHLT02"
+      ]
+    },
+    "CHYLW": {
+      "line_complex": [
+        "INDHLT02"
+      ]
+    }
+  },
+  "text": {
+    "CHBLK": {
+      "rule": [
+        "CardinalBeacon",
+        "DockArea",
+        "InstallationBuoy",
+        "SeaAreaNamedWaterArea",
+        "MooringArea",
+        "ArchipelagicSeaLane",
+        "Bridge",
+        "FairwaySystem",
+        "LateralBeacon",
+        "DistanceMark",
+        "LockBasin",
+        "TwoWayRoute",
+        "DredgedArea",
+        "EmergencyWreckMarkingBuoy",
+        "Tunnel",
+        "CableOverhead",
+        "LandArea",
+        "SweptArea",
+        "RadioCallingInPoint",
+        "DeepWaterRouteCentreline",
+        "LocalMagneticAnomaly",
+        "S101AttributeSupport",
+        "PilotBoardingPlace",
+        "LightVessel",
+        "Fairway",
+        "NavigationLine",
+        "DeepWaterRoute",
+        "RecommendedRouteCentreline",
+        "Berth",
+        "CardinalBuoy",
+        "Landmark",
+        "Chart1Feature",
+        "LightSectored",
+        "ShorelineConstruction",
+        "LateralBuoy",
+        "MagneticVariation",
+        "Tideway",
+        "IsolatedDangerBuoy",
+        "RecommendedTrack",
+        "LightFloat",
+        "SafeWaterBuoy",
+        "TrafficSeparationScheme",
+        "BuiltUpArea",
+        "TrafficSeparationSchemeLanePart",
+        "Daymark",
+        "IslandGroup",
+        "CurrentNonGravitational",
+        "SpecialPurposeGeneralBuoy",
+        "PipelineOverhead",
+        "AnchorageArea",
+        "LandRegion",
+        "RangeSystem",
+        "StructureOverNavigableWater",
+        "TidalStreamFloodEbb",
+        "RadarStation",
+        "SafeWaterBeacon",
+        "AnchorBerth",
+        "FogSignal",
+        "Gate",
+        "IsolatedDangerBeacon",
+        "OffshorePlatform",
+        "MooringTrot",
+        "Building",
+        "SpecialPurposeGeneralBeacon",
+        "Conveyor",
+        "Canal",
+        "RadarLine",
+        "LandElevation"
+      ]
+    },
+    "CHMGD": {
+      "rule": [
+        "VesselTrafficServiceArea",
+        "DistanceMark"
+      ]
+    }
+  }
+}

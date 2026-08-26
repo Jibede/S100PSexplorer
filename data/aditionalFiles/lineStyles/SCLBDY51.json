@@ -1,0 +1,44 @@
+[
+  {
+    "intervalLength": "6.10",
+    "pen": {
+      "width": "0.96",
+      "color": "CHGRF"
+    },
+    "dash": [
+      {
+        "start": "0.0",
+        "length": "6.10"
+      }
+    ],
+    "offset": "-1.0"
+  },
+  {
+    "intervalLength": "6.10",
+    "pen": {
+      "width": "0.32",
+      "color": "CHGRF"
+    },
+    "dash": [
+      {
+        "start": "0.0",
+        "length": "6.10"
+      }
+    ],
+    "offset": "1.74"
+  },
+  {
+    "intervalLength": "6.10",
+    "pen": {
+      "width": "0.32",
+      "color": "CHGRF"
+    },
+    "dash": [
+      {
+        "start": "0.0",
+        "length": "6.10"
+      }
+    ],
+    "offset": "2.43"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:LOWACC21')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "LOWACC21"
+    },
+    "has_var": false,
+    "conditions": [
+      "qualityOfPosition and qualityOfPosition ~= 1 and qualityOfPosition ~= 10 and qualityOfPosition ~= 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.96, 'CHMGF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.96,
+      "color": "CHMGF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.Code == 'Coastline'",
+      "feature.radarConspicuous == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.Code == 'Coastline'",
+      "feature.radarConspicuous == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.Code == 'Coastline'"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 22,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.Code == 'Coastline'"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 25,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": []
+  }
+]

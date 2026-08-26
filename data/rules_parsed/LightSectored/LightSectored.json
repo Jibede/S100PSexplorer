@@ -1,0 +1,1048 @@
+[
+  {
+    "node_type": "function",
+    "name": "LightSectored",
+    "line": 30,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType ~= PrimitiveType.Point",
+        "line": 31,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "contextParameters.RadarOverlay",
+        "line": 35,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 38,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "textOffsetLines",
+        "instruction_type": "LocalAssign",
+        "line": 41,
+        "code": "local textOffsetLines = featurePortrayal:GetColocatedTextCount()",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "informationFound",
+        "instruction_type": "LocalAssign",
+        "line": 42,
+        "code": "local informationFound = false",
+        "value": 1
+      },
+      {
+        "node_type": "for",
+        "line": 43,
+        "children": [
+          {},
+          {
+            "node_type": "for",
+            "line": 46,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "informationFound",
+                "instruction_type": "Assign",
+                "line": 47,
+                "code": "informationFound = informationFound or (lightSector.sectorInformation and #lightSector.sectorInformation ~= 0)",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "valueOfNominalRange",
+                "instruction_type": "LocalAssign",
+                "line": 49,
+                "code": "local valueOfNominalRange = 9.0",
+                "value": 9.0
+              },
+              {
+                "node_type": "if",
+                "condition": "lightSector.valueOfNominalRange",
+                "line": 51,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "valueOfNominalRange",
+                    "instruction_type": "Assign",
+                    "line": 52,
+                    "code": "valueOfNominalRange = lightSector.valueOfNominalRange:ToNumber()",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "var",
+                "name": "colour",
+                "instruction_type": "LocalAssign",
+                "line": 55,
+                "code": "local colour = lightSector.colour",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "sectorColourToken",
+                "instruction_type": "LocalAssign",
+                "line": 56,
+                "code": "local sectorColourToken",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "sectorLightSymbol",
+                "instruction_type": "LocalAssign",
+                "line": 57,
+                "code": "local sectorLightSymbol",
+                "value": 1
+              },
+              {},
+              {
+                "node_type": "if",
+                "condition": "colour[1] == 1 and colour[2] == 3",
+                "line": 61,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 62,
+                    "code": "sectorColourToken = 'LITRD'",
+                    "value": "LITRD"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 63,
+                    "code": "sectorLightSymbol = 'LIGHTS11'",
+                    "value": "LIGHTS11"
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "colour[1] == 3",
+                "line": 64,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 65,
+                    "code": "sectorColourToken = 'LITRD'",
+                    "value": "LITRD"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 66,
+                    "code": "sectorLightSymbol = 'LIGHTS11'",
+                    "value": "LIGHTS11"
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "colour[1] == 1 and colour[2] == 4",
+                "line": 67,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 68,
+                    "code": "sectorColourToken = 'LITGN'",
+                    "value": "LITGN"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 69,
+                    "code": "sectorLightSymbol = 'LIGHTS12'",
+                    "value": "LIGHTS12"
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "colour[1] == 4",
+                "line": 70,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 71,
+                    "code": "sectorColourToken = 'LITGN'",
+                    "value": "LITGN"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 72,
+                    "code": "sectorLightSymbol = 'LIGHTS12'",
+                    "value": "LIGHTS12"
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "colour[1] == 11 or colour[1] == 6 or colour[1] == 1",
+                "line": 73,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 74,
+                    "code": "sectorColourToken = 'LITYW'",
+                    "value": "LITYW"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 75,
+                    "code": "sectorLightSymbol = 'LIGHTS13'",
+                    "value": "LIGHTS13"
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "colour[1] == 1 and colour[2] == 6",
+                "line": 76,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 77,
+                    "code": "sectorColourToken = 'LITYW'",
+                    "value": "LITYW"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 78,
+                    "code": "sectorLightSymbol = 'LIGHTS13'",
+                    "value": "LIGHTS13"
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 80,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorColourToken",
+                    "instruction_type": "Assign",
+                    "line": 80,
+                    "code": "sectorColourToken = 'CHMGD'",
+                    "value": "CHMGD"
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLightSymbol",
+                    "instruction_type": "Assign",
+                    "line": 81,
+                    "code": "sectorLightSymbol = 'LITDEF11'",
+                    "value": "LITDEF11"
+                  }
+                ]
+              },
+              {
+                "node_type": "if",
+                "condition": "lightSector.sectorLimit",
+                "line": 84,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "sectorLimit1",
+                    "instruction_type": "LocalAssign",
+                    "line": 86,
+                    "code": "local sectorLimit1 = flipSector(lightSector.sectorLimit.sectorLimitOne.sectorBearing:ToNumber())",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "sectorLimit2",
+                    "instruction_type": "LocalAssign",
+                    "line": 87,
+                    "code": "local sectorLimit2 = flipSector(lightSector.sectorLimit.sectorLimitTwo.sectorBearing:ToNumber())",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "sectorLimit2 < sectorLimit1",
+                    "line": 89,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "sectorLimit2",
+                        "instruction_type": "Assign",
+                        "line": 90,
+                        "code": "sectorLimit2 = sectorLimit2 + 360.0",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "length1",
+                    "instruction_type": "LocalAssign",
+                    "line": 93,
+                    "code": "local length1, length2",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "crs1",
+                    "instruction_type": "LocalAssign",
+                    "line": 94,
+                    "code": "local crs1, crs2",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "contextParameters.FullLightLines",
+                    "line": 96,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "length1",
+                        "instruction_type": "Assign",
+                        "line": 97,
+                        "code": "length1 = nmi2metres(valueOfNominalRange)",
+                        "value": 1
+                      },
+                      {
+                        "node_type": "var",
+                        "name": "crs1",
+                        "instruction_type": "Assign",
+                        "line": 98,
+                        "code": "crs1 = 'GeographicCRS'",
+                        "value": "GeographicCRS"
+                      },
+                      {
+                        "node_type": "var",
+                        "name": "length2",
+                        "instruction_type": "Assign",
+                        "line": 100,
+                        "code": "length2 = length1",
+                        "value": 1
+                      },
+                      {
+                        "node_type": "var",
+                        "name": "crs2",
+                        "instruction_type": "Assign",
+                        "line": 101,
+                        "code": "crs2 = crs1",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 103,
+                    "children": [
+                      {
+                        "node_type": "if",
+                        "condition": "lightSector.sectorLimit.sectorLimitOne.sectorLineLength",
+                        "line": 103,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "length1",
+                            "instruction_type": "Assign",
+                            "line": 104,
+                            "code": "length1 = nmi2metres(lightSector.sectorLimit.sectorLimitOne.sectorLineLength:ToNumber())",
+                            "value": 1
+                          },
+                          {
+                            "node_type": "var",
+                            "name": "crs1",
+                            "instruction_type": "Assign",
+                            "line": 105,
+                            "code": "crs1 = 'GeographicCRS'",
+                            "value": "GeographicCRS"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "else",
+                        "line": 107,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "length1",
+                            "instruction_type": "Assign",
+                            "line": 107,
+                            "code": "length1 = 25.0",
+                            "value": 25.0
+                          },
+                          {
+                            "node_type": "var",
+                            "name": "crs1",
+                            "instruction_type": "Assign",
+                            "line": 108,
+                            "code": "crs1 = 'LocalCRS'",
+                            "value": "LocalCRS"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "if",
+                        "condition": "lightSector.sectorLimit.sectorLimitTwo.sectorLineLength",
+                        "line": 111,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "length2",
+                            "instruction_type": "Assign",
+                            "line": 112,
+                            "code": "length2 = nmi2metres(lightSector.sectorLimit.sectorLimitTwo.sectorLineLength:ToNumber())",
+                            "value": 1
+                          },
+                          {
+                            "node_type": "var",
+                            "name": "crs2",
+                            "instruction_type": "Assign",
+                            "line": 113,
+                            "code": "crs2 = 'GeographicCRS'",
+                            "value": "GeographicCRS"
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "else",
+                        "line": 115,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "length2",
+                            "instruction_type": "Assign",
+                            "line": 115,
+                            "code": "length2 = length1",
+                            "value": 1
+                          },
+                          {
+                            "node_type": "var",
+                            "name": "crs2",
+                            "instruction_type": "Assign",
+                            "line": 116,
+                            "code": "crs2 = crs1",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 122,
+                    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHBLK')",
+                    "instruction_type": "line_style",
+                    "values": {
+                      "style": "dash",
+                      "thickness": 0.32,
+                      "color": "CHBLK"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 123,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 127,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "lightSector.sectorArcExtension",
+                    "line": 130,
+                    "children": []
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 133,
+                    "children": []
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "contains(lightSector.lightVisibility, {\n    7,\n    8,\n    3,\n})",
+                    "line": 137,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 138,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 140,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 140,
+                        "code": "featurePortrayal:SimpleLineStyle('solid', 1.28, 'OUTLW')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "solid",
+                          "thickness": 1.28,
+                          "color": "OUTLW"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 141,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 142,
+                        "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, sectorColourToken)",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "solid",
+                          "thickness": 0.64,
+                          "color": "sectorColourToken"
+                        },
+                        "has_var": true
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 143,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "lightSector.directionalCharacter",
+                "line": 148,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "leglen",
+                    "instruction_type": "LocalAssign",
+                    "line": 150,
+                    "code": "local leglen = nmi2metres(valueOfNominalRange)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "orientationValue",
+                    "instruction_type": "LocalAssign",
+                    "line": 151,
+                    "code": "local orientationValue = lightSector.directionalCharacter.orientation.orientationValue",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "orientation",
+                    "instruction_type": "LocalAssign",
+                    "line": 152,
+                    "code": "local orientation",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "orientationValue",
+                    "line": 154,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "orientation",
+                        "instruction_type": "Assign",
+                        "line": 157,
+                        "code": "orientation = flipSector(orientationValue:ToNumber())",
+                        "value": 1
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 160,
+                        "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHBLK')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "dash",
+                          "thickness": 0.32,
+                          "color": "CHBLK"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 161,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "categoryOfLight",
+                    "instruction_type": "LocalAssign",
+                    "line": 165,
+                    "code": "local categoryOfLight = feature.categoryOfLight",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "valueOfNominalRange >= 10.0 and not contains(feature.categoryOfLight, {\n    5,\n}) and sectorCharacteristic.lightCharacteristic ~= 12",
+                    "line": 167,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 171,
+                        "code": "featurePortrayal:SimpleLineStyle('solid', 1.28, 'OUTLW')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "solid",
+                          "thickness": 1.28,
+                          "color": "OUTLW"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 172,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 173,
+                        "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, sectorColourToken)",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "solid",
+                          "thickness": 0.64,
+                          "color": "sectorColourToken"
+                        },
+                        "has_var": true
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 174,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "elseif",
+                    "condition": "orientationValue",
+                    "line": 176,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 178,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:' .. sectorLightSymbol)",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "sectorLightSymbol"
+                        },
+                        "has_var": true
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 181,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 181,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "QUESMRK1"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 184,
+                    "code": "featurePortrayal:AddInstructions('LocalOffset:10.53,-3.51;FontColor:CHBLK')",
+                    "instruction_type": "text",
+                    "values": {
+                      "LocalOffset": {
+                        "x": "10.53",
+                        "y": "-3.51"
+                      },
+                      "FontColor": "CHBLK"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "orientationValue",
+                    "line": 186,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 188,
+                        "code": "featurePortrayal:AddInstructions('TextAlignVertical:Top')",
+                        "instruction_type": "text",
+                        "values": {
+                          "TextAlignVertical": "Top"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 189,
+                        "code": "featurePortrayal:AddTextInstruction(string.format('%03.0f deg', orientationValue:ToNumber()), 23, 24, 27070, 24)",
+                        "instruction_type": "text_instruction",
+                        "values": {
+                          "raw_text": "string.format(%03.0f deg,orientationValue:ToNumber())",
+                          "text_vw_group": 23,
+                          "text_priority": 24,
+                          "view_group": 27070,
+                          "priority": 24,
+                          "hover": false
+                        },
+                        "has_var": true
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "LocalAssign",
+                    "line": 192,
+                    "code": "local description = LITDSN02(feature.categoryOfLight[1], sectorCharacteristic, colour, feature.height, lightSector.valueOfNominalRange, feature.status)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 194,
+                    "code": "featurePortrayal:AddInstructions('TextAlignVertical:Bottom')",
+                    "instruction_type": "text",
+                    "values": {
+                      "TextAlignVertical": "Bottom"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 195,
+                    "code": "featurePortrayal:AddTextInstruction(EncodeString(description), 23, 24, 27070, 24, true)",
+                    "instruction_type": "text_instruction",
+                    "values": {
+                      "raw_text": "EncodeString(description)",
+                      "text_vw_group": 23,
+                      "text_priority": 24,
+                      "view_group": 27070,
+                      "priority": 24,
+                      "hover": null
+                    },
+                    "has_var": true
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "lightSector.directionalCharacter.moireEffect",
+                    "line": 198,
+                    "children": [
+                      {
+                        "node_type": "if",
+                        "condition": "orientationValue",
+                        "line": 199,
+                        "children": [
+                          {
+                            "node_type": "hit",
+                            "line": 201,
+                            "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;PointInstruction:MOIRE01')",
+                            "instruction_type": "text",
+                            "values": {
+                              "LocalOffset": {
+                                "x": "0",
+                                "y": "0"
+                              },
+                              "PointInstruction": "MOIRE01"
+                            },
+                            "has_var": false
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "else",
+                        "line": 204,
+                        "children": [
+                          {
+                            "node_type": "hit",
+                            "line": 204,
+                            "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;PointInstruction:MOIRE01')",
+                            "instruction_type": "text",
+                            "values": {
+                              "LocalOffset": {
+                                "x": "0",
+                                "y": "0"
+                              },
+                              "PointInstruction": "MOIRE01"
+                            },
+                            "has_var": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 209,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 209,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:QUESMRK1')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "QUESMRK1"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "#descriptionInfo > 0",
+            "line": 213,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "numRanges",
+                "instruction_type": "LocalAssign",
+                "line": 216,
+                "code": "local numRanges = 1",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "prevRange",
+                "instruction_type": "LocalAssign",
+                "line": 217,
+                "code": "local prevRange = descriptionInfo[1][1]",
+                "value": 1
+              },
+              {},
+              {},
+              {
+                "node_type": "for",
+                "line": 220,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "entry[1] ~= prevRange",
+                    "line": 221,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "prevRange",
+                        "instruction_type": "Assign",
+                        "line": 222,
+                        "code": "prevRange = entry[1]",
+                        "value": 1
+                      },
+                      {
+                        "node_type": "var",
+                        "name": "numRanges",
+                        "instruction_type": "Assign",
+                        "line": 223,
+                        "code": "numRanges = numRanges + 1",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "for",
+                    "line": 225,
+                    "children": [
+                      {
+                        "node_type": "if",
+                        "condition": "not colorsAdded[color]",
+                        "line": 226,
+                        "children": [
+                          {
+                            "node_type": "var",
+                            "name": "color",
+                            "instruction_type": "Assign",
+                            "line": 227,
+                            "code": "colorsAdded[color] = true",
+                            "value": 1
+                          },
+                          {}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "var",
+                "name": "vnr",
+                "instruction_type": "LocalAssign",
+                "line": 234,
+                "code": "local vnr = descriptionInfo[1][3]",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "vnr2",
+                "instruction_type": "LocalAssign",
+                "line": 235,
+                "code": "local vnr2 = descriptionInfo[#descriptionInfo][3]",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "LocalAssign",
+                "line": 236,
+                "code": "local description = LITDSN02(feature.categoryOfLight[1], sectorCharacteristic, sectorColors, feature.height, vnr, feature.status, vnr2, numRanges)",
+                "value": 1
+              },
+              {
+                "node_type": "hit",
+                "line": 238,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignHorizontal:Start;TextAlignVertical:Center')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "7.02",
+                    "y": "0"
+                  },
+                  "TextAlignHorizontal": "Start",
+                  "TextAlignVertical": "Center"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "var",
+                "name": "textVerticalOffset",
+                "instruction_type": "LocalAssign",
+                "line": 239,
+                "code": "local textVerticalOffset = (textOffsetLines + isc - 1) * -3.51",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "textVerticalOffset ~= 0",
+                "line": 240,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 241,
+                    "code": "featurePortrayal:AddInstructions('TextVerticalOffset:' .. textVerticalOffset)",
+                    "instruction_type": "text",
+                    "values": {
+                      "TextVerticalOffset": "textVerticalOffset"
+                    },
+                    "has_var": true
+                  }
+                ]
+              },
+              {
+                "node_type": "hit",
+                "line": 243,
+                "code": "featurePortrayal:AddTextInstruction(EncodeString(description), 23, 24, 27070, 24, true)",
+                "instruction_type": "text_instruction",
+                "values": {
+                  "raw_text": "EncodeString(description)",
+                  "text_vw_group": 23,
+                  "text_priority": 24,
+                  "view_group": 27070,
+                  "priority": 24,
+                  "hover": null
+                },
+                "has_var": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "informationFound",
+        "line": 247,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 248,
+            "code": "featurePortrayal:AddInstructions('LocalOffset:0,0')",
+            "instruction_type": "text",
+            "values": {
+              "LocalOffset": {
+                "x": "0",
+                "y": "0"
+              }
+            },
+            "has_var": false
+          }
+        ]
+      }
+    ]
+  }
+]

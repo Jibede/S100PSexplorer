@@ -1,0 +1,19 @@
+{
+  "intervalLength": "6",
+  "pen": {
+    "width": "0.32",
+    "color": "NINFO"
+  },
+  "dash": [
+    {
+      "start": "0",
+      "length": "6"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMNOHO01",
+      "position": "3"
+    }
+  ]
+}

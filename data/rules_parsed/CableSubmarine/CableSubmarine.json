@@ -1,0 +1,138 @@
+[
+  {
+    "node_type": "function",
+    "name": "CableSubmarine",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 8,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.categoryOfCable == 9",
+            "line": 14,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 16,
+                "code": "viewingGroup = 14020",
+                "value": 14020
+              },
+              {
+                "node_type": "hit",
+                "line": 18,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGF')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHMGF"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 19,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.categoryOfCable == 6 or feature.categoryOfCable == 7",
+            "line": 20,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 22,
+                "code": "viewingGroup = 24010",
+                "value": 24010
+              },
+              {
+                "node_type": "hit",
+                "line": 24,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHMGD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 25,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 27,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "Assign",
+                "line": 27,
+                "code": "viewingGroup = 34070",
+                "value": 34070
+              },
+              {
+                "node_type": "hit",
+                "line": 29,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:CBLSUB06')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "CBLSUB06"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 32,
+        "children": []
+      }
+    ]
+  }
+]

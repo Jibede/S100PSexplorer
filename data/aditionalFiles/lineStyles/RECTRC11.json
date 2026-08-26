@@ -1,0 +1,27 @@
+{
+  "intervalLength": "19.3",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "dash": [
+    {
+      "start": "2.1",
+      "length": "3.3"
+    },
+    {
+      "start": "7.4",
+      "length": "3.2"
+    },
+    {
+      "start": "16",
+      "length": "3.3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMRECTR2",
+      "position": "13.3"
+    }
+  ]
+}

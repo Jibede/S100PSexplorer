@@ -1,0 +1,81 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.64,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:VTSARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "VTSARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHMGD')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters), 'VTS %s'), 21, 24, 36050, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters),VTS %s)",
+      "text_vw_group": 21,
+      "text_priority": 24,
+      "view_group": 36050,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and feature.featureName[1] and feature.featureName[1].name"
+    ]
+  }
+]

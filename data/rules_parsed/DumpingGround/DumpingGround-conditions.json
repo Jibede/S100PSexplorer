@@ -1,0 +1,82 @@
+[
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHINFO07')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHINFO07"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "INFARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 22,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHMGD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHMGD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 28,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "INFARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 29,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:CTYARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "CTYARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

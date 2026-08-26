@@ -1,0 +1,39 @@
+{
+  "intervalLength": "32.3",
+  "pen": {
+    "width": "0.32",
+    "color": "TRFCD"
+  },
+  "dash": [
+    {
+      "start": "2",
+      "length": "6"
+    },
+    {
+      "start": "18.2",
+      "length": "6"
+    },
+    {
+      "start": "26.2",
+      "length": "6"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMAREMG1",
+      "position": "5"
+    },
+    {
+      "code": "EMDWRUT1",
+      "position": "13.1"
+    },
+    {
+      "code": "EMAREMG1",
+      "position": "21.2"
+    },
+    {
+      "code": "EMAREMG1",
+      "position": "29.3"
+    }
+  ]
+}

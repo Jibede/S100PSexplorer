@@ -1,0 +1,117 @@
+[
+  {
+    "node_type": "function",
+    "name": "FloatingDock",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 5,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 10,
+            "code": "viewingGroup = 12410",
+            "value": 12410
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 11,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 14,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 16,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.96, 'CSTLN')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "thickness": 0.96,
+              "color": "CSTLN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 17,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 20,
+            "code": "viewingGroup = 12410",
+            "value": 12410
+          },
+          {
+            "node_type": "hit",
+            "line": 22,
+            "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+            "instruction_type": "color_fill",
+            "values": {
+              "ColorFill": "CHBRN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 23,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "thickness": 0.64,
+              "color": "CSTLN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 24,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 26,
+        "children": []
+      }
+    ]
+  }
+]

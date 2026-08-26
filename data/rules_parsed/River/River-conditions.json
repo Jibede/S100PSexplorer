@@ -1,0 +1,71 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "DEPVS"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

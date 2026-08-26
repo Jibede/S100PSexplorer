@@ -1,0 +1,58 @@
+[
+  {
+    "node_type": "function",
+    "name": "Helipad",
+    "line": 1,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 2,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 4,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 6,
+            "code": "viewingGroup = 32240",
+            "value": 32240
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 7,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 10,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 12,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:HELIPD02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "HELIPD02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 14,
+        "children": []
+      }
+    ]
+  }
+]

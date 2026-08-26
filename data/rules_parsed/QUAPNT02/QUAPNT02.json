@@ -1,0 +1,115 @@
+[
+  {
+    "node_type": "function",
+    "name": "QUAPNT02",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "for",
+        "line": 7,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "IsLowAccuracy(spatialAssociation)",
+            "line": 8,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "IsLowAccuracy",
+    "line": 18,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "spatialQuality",
+        "instruction_type": "LocalAssign",
+        "line": 21,
+        "code": "local spatialQuality = spatialAssociation:GetInformationAssociation(unpack(sqParams))",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "qualityOfPosition",
+        "instruction_type": "LocalAssign",
+        "line": 22,
+        "code": "local qualityOfPosition = spatialQuality and spatialQuality.qualityOfHorizontalMeasurement",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "qualityOfPosition and qualityOfPosition >= 2 and qualityOfPosition <= 9",
+        "line": 25,
+        "children": []
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "AddLowAccuracySymbol",
+    "line": 34,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "spatialAssociations",
+        "instruction_type": "LocalAssign",
+        "line": 37,
+        "code": "local spatialAssociations = feature:GetSpatialAssociations()",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "#spatialAssociations == 1",
+        "line": 39,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 42,
+        "children": [
+          {},
+          {
+            "node_type": "for",
+            "line": 44,
+            "children": [
+              {
+                "node_type": "for",
+                "line": 45,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "IsLowAccuracy(spatialComponent)",
+                    "line": 46,
+                    "children": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "#spatialAssociations ~= #lowAccuracyAssociations",
+            "line": 53,
+            "children": [
+              {
+                "node_type": "for",
+                "line": 54,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 59,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

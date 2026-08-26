@@ -1,0 +1,15 @@
+[
+  {
+    "node_type": "hit",
+    "line": 24,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "symbol"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.MultiPoint"
+    ]
+  }
+]

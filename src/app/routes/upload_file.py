@@ -1,4 +1,3 @@
-from email.mime import base
 import io
 import os
 import shutil
@@ -92,9 +91,8 @@ def upload_file():
                 extract_data(zip_ref, DATA_DIR)
 
             os.remove(temp_zip_path)
-
-            process_data()
-
+            process_data(file.filename)
+            
             return (
                 jsonify(
                     {

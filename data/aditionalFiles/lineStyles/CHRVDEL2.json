@@ -1,0 +1,19 @@
+{
+  "intervalLength": "11",
+  "pen": {
+    "width": "0.32",
+    "color": "CHCOR"
+  },
+  "dash": [
+    {
+      "start": "0",
+      "length": "11"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMCHRVD1",
+      "position": "7"
+    }
+  ]
+}

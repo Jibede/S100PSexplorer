@@ -1,0 +1,261 @@
+[
+  {
+    "node_type": "function",
+    "name": "RESCSP03",
+    "line": 4,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "restriction",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local restriction = feature.restriction",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "contains(restriction, {\n    7,\n    8,\n    14,\n})",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(restriction, {\n    1,\n    2,\n    3,\n    4,\n    5,\n    6,\n    13,\n    16,\n    17,\n    23,\n    24,\n    25,\n    26,\n    27,\n})",
+            "line": 11,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 12,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ENTRES61')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ENTRES61"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(restriction, {\n    9,\n    10,\n    11,\n    12,\n    15,\n    18,\n    19,\n    20,\n    21,\n    22,\n})",
+            "line": 13,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 14,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ENTRES71')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ENTRES71"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 16,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 16,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ENTRES51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ENTRES51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "contains(restriction, {\n    1,\n    2,\n})",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(restriction, {\n    3,\n    4,\n    5,\n    6,\n    13,\n    16,\n    17,\n    23,\n    24,\n    25,\n    26,\n    27,\n})",
+            "line": 20,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 21,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHRES61')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHRES61"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(restriction, {\n    9,\n    10,\n    11,\n    12,\n    15,\n    18,\n    19,\n    20,\n    21,\n    22,\n})",
+            "line": 22,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 23,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHRES71')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHRES71"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 25,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 25,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:ACHRES51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "ACHRES51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "contains(restriction, {\n    3,\n    4,\n    5,\n    6,\n    24,\n})",
+        "line": 27,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(restriction, {\n    13,\n    16,\n    17,\n    23,\n    24,\n    25,\n    26,\n    27,\n})",
+            "line": 29,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 30,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHRES61')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHRES61"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "contains(restriction, {\n    9,\n    10,\n    11,\n    12,\n    15,\n    18,\n    19,\n    20,\n    21,\n    22,\n})",
+            "line": 31,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 32,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHRES71')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHRES71"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 34,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 34,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:FSHRES51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "FSHRES51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "contains(restriction, {\n    13,\n    16,\n    17,\n    23,\n    25,\n    26,\n    27,\n})",
+        "line": 36,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(restriction, {\n    9,\n    10,\n    11,\n    12,\n    15,\n    18,\n    19,\n    20,\n    21,\n    22,\n})",
+            "line": 38,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 39,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:CTYARE71')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "CTYARE71"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 41,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 41,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:CTYARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "CTYARE51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "contains(restriction, {\n    9,\n    10,\n    11,\n    12,\n    15,\n    18,\n    19,\n    20,\n    21,\n    22,\n})",
+        "line": 43,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 44,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:INFARE51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "INFARE51"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 46,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 46,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:RSRDEF51')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "RSRDEF51"
+            },
+            "has_var": false
+          }
+        ]
+      }
+    ]
+  }
+]

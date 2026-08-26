@@ -1,0 +1,3056 @@
+[
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(15, feature.categoryOfLandmark) and contains(20, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(15, feature.categoryOfLandmark) and contains(21, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 46,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(20, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 48,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(21, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 50,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS15"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 52,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 53,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 56,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 58,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 59,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 62,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark) and contains(20, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 64,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark) and contains(21, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 66,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL15"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark) and contains(26, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 68,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL15"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark) and contains(27, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 70,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(1, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 72,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHIMNY11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHIMNY11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(3, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 74,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DSHAER11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DSHAER11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(4, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 76,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLGSTF02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLGSTF02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(5, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 78,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLASTK11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLASTK11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(6, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 80,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MSTCON14')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MSTCON14"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(7, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 82,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(8, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 84,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(9, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 86,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(10, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 88,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(12, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 90,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(13, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 92,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DOMES011')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DOMES011"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(15, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 94,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RASCAN11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RASCAN11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(16, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 96,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 98,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WNDMIL12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WNDMIL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(18, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 100,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 103,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FERWHL03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FERWHL03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(24, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 106,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TORII11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TORII11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(25, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 108,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(15, feature.categoryOfLandmark) and contains(20, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 110,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(20, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 112,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 114,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 115,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 118,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 120,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 121,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 124,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark) and contains(20, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 126,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 128,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(1, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 130,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHIMNY01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHIMNY01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(3, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 132,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DSHAER01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DSHAER01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(4, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 134,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLGSTF01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLGSTF01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(5, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 136,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLASTK01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLASTK01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(6, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 138,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MSTCON04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MSTCON04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(7, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 140,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(8, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 142,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(9, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 144,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(10, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 146,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(12, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 148,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(13, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 150,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DOMES001')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DOMES001"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(15, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 152,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RASCAN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RASCAN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(16, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 154,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(17, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 156,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WNDMIL02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WNDMIL02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(18, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 158,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(20, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 161,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(22, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 164,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FERWHL04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FERWHL04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(24, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 167,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TORII01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TORII01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols",
+      "contains(25, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 169,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point and contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 173,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(15, feature.categoryOfLandmark) and contains(20, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 175,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(15, feature.categoryOfLandmark) and contains(21, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 177,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(20, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 179,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(21, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 181,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS15"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 183,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 184,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 187,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 189,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 190,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 193,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark) and contains(20, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 195,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL13')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark) and contains(21, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 197,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL15"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark) and contains(26, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 199,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL15')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL15"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark) and contains(27, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 201,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(1, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 203,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHIMNY11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHIMNY11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(3, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 205,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DSHAER11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DSHAER11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(4, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 207,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLGSTF02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLGSTF02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(5, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 209,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLASTK11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLASTK11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(6, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 211,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MSTCON14')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MSTCON14"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(7, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 213,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(8, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 215,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(9, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 217,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(10, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 219,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(12, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 221,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(13, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 223,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DOMES011')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DOMES011"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(15, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 225,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RASCAN11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RASCAN11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(16, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 227,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 229,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WNDMIL12')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WNDMIL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(18, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 231,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 234,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FERWHL03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FERWHL03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(24, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 237,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TORII11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TORII11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(25, feature.categoryOfLandmark) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 239,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(15, feature.categoryOfLandmark) and contains(20, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 241,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(20, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 243,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 245,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 246,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(31, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 249,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 251,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:3.51,3.51;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "3.51",
+        "y": "3.51"
+      },
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 252,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Point",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 255,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BUIREL01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BUIREL01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark) and contains(20, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 257,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 259,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CAIRNS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CAIRNS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(1, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 261,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:CHIMNY01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "CHIMNY01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(3, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 263,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DSHAER01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DSHAER01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(4, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 265,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLGSTF01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLGSTF01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(5, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 267,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FLASTK01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FLASTK01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(6, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 269,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MSTCON04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MSTCON04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(7, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 271,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(8, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 273,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(9, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 275,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(10, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 277,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(12, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 279,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:MONUMT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "MONUMT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(13, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 281,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DOMES001')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DOMES001"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(15, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 283,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:RASCAN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "RASCAN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(16, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 285,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TOWERS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TOWERS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(17, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 287,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WNDMIL02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WNDMIL02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(18, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 289,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(20, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 292,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(22, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 295,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FERWHL04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FERWHL04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(24, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 298,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:TORII01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "TORII01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contains(25, feature.categoryOfLandmark)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 300,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "POSGEN01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 304,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 305,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 307,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'LANDF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "LANDF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 308,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 312,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 314,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 315,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 317,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 318,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 320,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 322,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 323,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 325,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'LANDF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "LANDF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 326,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 328,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 329,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 330,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 332,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 333,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'LANDF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "LANDF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 334,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 338,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 340,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 341,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 343,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 344,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function']) and feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 346,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 348,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "0"
+      },
+      "TextAlignHorizontal": "Center",
+      "TextAlignVertical": "Center",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 349,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, viewingGroup, drawingPriority)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": [
+        {
+          "value": 12200,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.inTheWater"
+          ]
+        },
+        {
+          "value": 22220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 32220,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "priority": [
+        {
+          "value": 18,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1",
+            "feature.PrimitiveType == PrimitiveType.Point"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name",
+            "feature.visualProminence == 1"
+          ]
+        },
+        {
+          "value": 12,
+          "conditions": [
+            "feature.PrimitiveType == PrimitiveType.Surface",
+            "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+            "feature.featureName[1] and feature.featureName[1].name"
+          ]
+        }
+      ],
+      "hover": false
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 351,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'LANDF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "LANDF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 352,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "contains(17, feature.categoryOfLandmark) and contains(33, feature['function'])"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 354,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 355,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 356,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.visualProminence == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 358,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 359,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'LANDF')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "LANDF"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 360,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

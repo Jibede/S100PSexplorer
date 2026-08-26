@@ -1,0 +1,355 @@
+{
+  "text_vw_group": {
+    "26": {
+      "rule": [
+        "Fairway",
+        "Building",
+        "DockArea",
+        "SeaAreaNamedWaterArea",
+        "MooringArea",
+        "Landmark",
+        "AnchorageArea",
+        "Tunnel",
+        "LandRegion",
+        "StructureOverNavigableWater",
+        "LandArea",
+        "ShorelineConstruction",
+        "FairwaySystem",
+        "Gate",
+        "LockBasin",
+        "BuiltUpArea",
+        "Canal"
+      ]
+    },
+    "29": {
+      "rule": [
+        "AnchorBerth",
+        "Berth"
+      ]
+    },
+    "21": {
+      "rule": [
+        "CardinalBeacon",
+        "InstallationBuoy",
+        "ArchipelagicSeaLane",
+        "Bridge",
+        "LateralBeacon",
+        "DistanceMark",
+        "TwoWayRoute",
+        "VesselTrafficServiceArea",
+        "EmergencyWreckMarkingBuoy",
+        "LightVessel",
+        "DeepWaterRoute",
+        "CardinalBuoy",
+        "Chart1Feature",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LightFloat",
+        "TrafficSeparationScheme",
+        "Daymark",
+        "IslandGroup",
+        "SpecialPurposeGeneralBuoy",
+        "RangeSystem",
+        "SafeWaterBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon",
+        "OffshorePlatform",
+        "MooringTrot",
+        "RadioCallingInPoint",
+        "PilotBoardingPlace",
+        "LateralBuoy"
+      ]
+    },
+    "11": {
+      "rule": [
+        "NavigationLine",
+        "RecommendedRouteCentreline",
+        "PipelineOverhead",
+        "CableOverhead",
+        "RadarStation",
+        "RecommendedTrack",
+        "DeepWaterRouteCentreline",
+        "RadioCallingInPoint",
+        "S101AttributeSupport",
+        "Conveyor",
+        "RadarLine",
+        "DredgedArea"
+      ]
+    },
+    "30": {
+      "rule": [
+        "CurrentNonGravitational",
+        "TidalStreamFloodEbb"
+      ]
+    },
+    "23": {
+      "rule": [
+        "LightAllAround",
+        "LightSectored",
+        "FogSignal",
+        "LightFlareAndDescription"
+      ]
+    },
+    "28": {
+      "rule": [
+        "LandElevation"
+      ]
+    },
+    "27": {
+      "rule": [
+        "LocalMagneticAnomaly",
+        "SweptArea",
+        "MagneticVariation"
+      ]
+    },
+    "textViewingGroup": {
+      "rule": [
+        "PortrayalModel"
+      ]
+    },
+    "25": {
+      "rule": [
+        "Tideway"
+      ]
+    },
+    "24": {
+      "rule": [
+        "TrafficSeparationSchemeLanePart"
+      ]
+    }
+  },
+  "view_group": {
+    "26220": {
+      "rule": [
+        "MooringArea",
+        "AnchorageArea",
+        "AnchorBerth"
+      ]
+    },
+    "21060": {
+      "rule": [
+        "DeepWaterRoute",
+        "SeaAreaNamedWaterArea",
+        "ArchipelagicSeaLane",
+        "LandRegion",
+        "RangeSystem",
+        "TrafficSeparationScheme",
+        "FairwaySystem",
+        "MooringTrot",
+        "TwoWayRoute",
+        "IslandGroup"
+      ]
+    },
+    "32440": {
+      "rule": [
+        "Gate",
+        "Berth"
+      ]
+    },
+    "12210": {
+      "rule": [
+        "PipelineOverhead",
+        "Bridge",
+        "CableOverhead",
+        "StructureOverNavigableWater",
+        "OffshorePlatform",
+        "Conveyor"
+      ]
+    },
+    "12200": {
+      "rule": [
+        "Building",
+        "Landmark"
+      ]
+    },
+    "22220": {
+      "rule": [
+        "Building",
+        "Landmark"
+      ]
+    },
+    "32220": {
+      "rule": [
+        "Building",
+        "Landmark"
+      ]
+    },
+    "22240": {
+      "rule": [
+        "BuiltUpArea"
+      ]
+    },
+    "12420": {
+      "rule": [
+        "Canal"
+      ]
+    },
+    "1": {
+      "rule": [
+        "DockArea",
+        "Tunnel",
+        "ShorelineConstruction",
+        "Gate",
+        "LockBasin",
+        "Canal"
+      ]
+    },
+    "27020": {
+      "rule": [
+        "CardinalBeacon",
+        "SafeWaterBeacon",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "27010": {
+      "rule": [
+        "EmergencyWreckMarkingBuoy",
+        "InstallationBuoy",
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LightFloat",
+        "LateralBuoy"
+      ]
+    },
+    "21020": {
+      "rule": [
+        "Chart1Feature"
+      ]
+    },
+    "33060": {
+      "rule": [
+        "CurrentNonGravitational",
+        "TidalStreamFloodEbb"
+      ]
+    },
+    "27025": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "25010": {
+      "rule": [
+        "TrafficSeparationSchemeLanePart",
+        "NavigationLine",
+        "DeepWaterRouteCentreline"
+      ]
+    },
+    "27030": {
+      "rule": [
+        "DistanceMark"
+      ]
+    },
+    "22010": {
+      "rule": [
+        "Gate",
+        "DockArea",
+        "LockBasin"
+      ]
+    },
+    "13030": {
+      "rule": [
+        "DredgedArea"
+      ]
+    },
+    "26050": {
+      "rule": [
+        "Fairway"
+      ]
+    },
+    "27080": {
+      "rule": [
+        "FogSignal"
+      ]
+    },
+    "12410": {
+      "rule": [
+        "Gate",
+        "ShorelineConstruction"
+      ]
+    },
+    "12010": {
+      "rule": [
+        "LandArea"
+      ]
+    },
+    "32010": {
+      "rule": [
+        "LandElevation"
+      ]
+    },
+    "27070": {
+      "rule": [
+        "LightSectored",
+        "LightAllAround"
+      ]
+    },
+    "viewingGroup": {
+      "rule": [
+        "PortrayalModel",
+        "LightFlareAndDescription",
+        "S101AttributeSupport"
+      ]
+    },
+    "27011": {
+      "rule": [
+        "LightVessel"
+      ]
+    },
+    "31080": {
+      "rule": [
+        "LocalMagneticAnomaly",
+        "MagneticVariation"
+      ]
+    },
+    "28010": {
+      "rule": [
+        "PilotBoardingPlace"
+      ]
+    },
+    "25040": {
+      "rule": [
+        "RadarLine"
+      ]
+    },
+    "38010": {
+      "rule": [
+        "RadarStation"
+      ]
+    },
+    "25060": {
+      "rule": [
+        "RadioCallingInPoint"
+      ]
+    },
+    "25020": {
+      "rule": [
+        "RecommendedTrack",
+        "RecommendedRouteCentreline"
+      ]
+    },
+    "23030": {
+      "rule": [
+        "SweptArea"
+      ]
+    },
+    "32070": {
+      "rule": [
+        "Tideway"
+      ]
+    },
+    "32250": {
+      "rule": [
+        "Tunnel"
+      ]
+    },
+    "36050": {
+      "rule": [
+        "VesselTrafficServiceArea"
+      ]
+    }
+  }
+}

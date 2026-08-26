@@ -1,0 +1,223 @@
+[
+  {
+    "node_type": "function",
+    "name": "SNDFRM04",
+    "line": 7,
+    "children": [
+      {},
+      {
+        "node_type": "var",
+        "name": "symbolPrefix",
+        "instruction_type": "LocalAssign",
+        "line": 18,
+        "code": "local symbolPrefix",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "colour",
+        "instruction_type": "LocalAssign",
+        "line": 19,
+        "code": "local colour",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "fontSize",
+        "instruction_type": "LocalAssign",
+        "line": 20,
+        "code": "local fontSize",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "lowAccuracySymbolRing",
+        "instruction_type": "LocalAssign",
+        "line": 21,
+        "code": "local lowAccuracySymbolRing",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "depthValue <= contextParameters.SafetyDepth",
+        "line": 23,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "colour",
+            "instruction_type": "Assign",
+            "line": 24,
+            "code": "colour = 'SNDG2'",
+            "value": "SNDG2"
+          },
+          {
+            "node_type": "var",
+            "name": "symbolPrefix",
+            "instruction_type": "Assign",
+            "line": 25,
+            "code": "symbolPrefix = 'SOUNDS'",
+            "value": "SOUNDS"
+          },
+          {
+            "node_type": "var",
+            "name": "lowAccuracySymbolRing",
+            "instruction_type": "Assign",
+            "line": 26,
+            "code": "lowAccuracySymbolRing = 'C3'",
+            "value": "C3"
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 29,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "colour",
+            "instruction_type": "Assign",
+            "line": 29,
+            "code": "colour = 'SNDG1'",
+            "value": "SNDG1"
+          },
+          {
+            "node_type": "var",
+            "name": "symbolPrefix",
+            "instruction_type": "Assign",
+            "line": 30,
+            "code": "symbolPrefix = 'SOUNDG'",
+            "value": "SOUNDG"
+          },
+          {
+            "node_type": "var",
+            "name": "lowAccuracySymbolRing",
+            "instruction_type": "Assign",
+            "line": 31,
+            "code": "lowAccuracySymbolRing = 'C2'",
+            "value": "C2"
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "contains(feature.techniqueOfVerticalMeasurement, {\n    4,\n    18,\n})",
+        "line": 36,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.Code == 'DepthNoBottomFound' or contains(feature.qualityOfVerticalMeasurement, {\n    3,\n    4,\n    5,\n    8,\n    9,\n}) or contains(feature.status, {\n    18,\n})",
+        "line": 41,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 44,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "spatialQuality",
+            "instruction_type": "LocalAssign",
+            "line": 44,
+            "code": "local spatialQuality = feature:GetSpatialAssociation():GetInformationAssociation(unpack(sqParams))",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "qualityOfPosition",
+            "instruction_type": "LocalAssign",
+            "line": 45,
+            "code": "local qualityOfPosition = spatialQuality and spatialQuality.qualityOfHorizontalMeasurement",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "qualityOfPosition and qualityOfPosition ~= 1 and qualityOfPosition ~= 10 and qualityOfPosition ~= 11",
+            "line": 47,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "sign",
+        "instruction_type": "LocalAssign",
+        "line": 52,
+        "code": "local sign, depth, fractional = depthValue:Split()",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "fractional == ''",
+        "line": 54,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "fractional",
+            "instruction_type": "Assign",
+            "line": 55,
+            "code": "fractional = '0'",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "idepth",
+        "instruction_type": "LocalAssign",
+        "line": 58,
+        "code": "local idepth = tonumber(depth)",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "ifractional",
+        "instruction_type": "LocalAssign",
+        "line": 59,
+        "code": "local ifractional = tonumber(fractional)",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "sign == '-'",
+        "line": 61,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "idepth < 10",
+        "line": 65,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "idepth < 31 and ifractional ~= 0",
+        "line": 68,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "idepth < 100",
+        "line": 72,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "idepth < 1000",
+        "line": 75,
+        "children": []
+      },
+      {
+        "node_type": "elseif",
+        "condition": "idepth < 10000",
+        "line": 79,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 85,
+        "children": []
+      }
+    ]
+  }
+]

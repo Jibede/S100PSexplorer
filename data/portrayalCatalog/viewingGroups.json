@@ -1,0 +1,800 @@
+[
+  {
+    "id": "11010",
+    "name": "cursor [symbol  SY(CURSRA01)]",
+    "description": "Base: A, B - Chart Furniture",
+    "language": "eng"
+  },
+  {
+    "id": "11030",
+    "name": "scalebar, latitude scale [SY(SCALEB10),SY( SCALEB11)]",
+    "description": "Base: A, B - Chart Furniture",
+    "language": "eng"
+  },
+  {
+    "id": "11040",
+    "name": "north arrow [SY(NORTHAR1)]",
+    "description": "Base: A, B - Chart Furniture",
+    "language": "eng"
+  },
+  {
+    "id": "11050",
+    "name": "no data [colour NODTA, AP(NODATA03)], unsurveyed (UNSARE), incompletely surveyed area  ",
+    "description": "Base: A, B - Chart Furniture",
+    "language": "eng"
+  },
+  {
+    "id": "11060",
+    "name": "Non-HO data boundary LC(NONHODAT)",
+    "description": "Base: A, B - Chart Furniture",
+    "language": "eng"
+  },
+  {
+    "id": "12010",
+    "name": "land area (LANDARE)",
+    "description": "Base: C, D, E, F - Topography and Infrastructure",
+    "language": "eng"
+  },
+  {
+    "id": "12200",
+    "name": "Dangers above water",
+    "description": "Base: C, D, E, F - Topography and Infrastructure",
+    "language": "eng"
+  },
+  {
+    "id": "12210",
+    "name": "bridge (BRIDGE), pylon (PYLONS), overhead cable (CBLOHD), conveyor (CONVYR), overhead pipeline (PIPOHD), offshore platform (OFSPLF)",
+    "description": "Base: C, D, E, F - Topography and Infrastructure",
+    "language": "eng"
+  },
+  {
+    "id": "12400",
+    "name": "Shoreline",
+    "description": "Base: C, D, E, F - Topography and Infrastructure",
+    "language": "eng"
+  },
+  {
+    "id": "12410",
+    "name": "coastline (COALNE), ice shelf, glacier (ICEARE), shoreline construction (SLCONS), tie-up wall, dolphin (MORFAC), gate (GATCON, pile (PILPNT), crib, wellhead, ice boom (OBSTRN), floating dock (FLODOC), hulk (HULKES), pontoon (PONTON), oilboom (OILBAR), log boom (LOGPON),  flood barrage (DAMCON, CATDAM3)",
+    "description": "Base: C, D, E, F - Topography and Infrastructure",
+    "language": "eng"
+  },
+  {
+    "id": "12420",
+    "name": "lock (LOKBSN), canal (CANALS), river (RIVERS)",
+    "description": "Base: C, D, E, F - Topography and Infrastructure",
+    "language": "eng"
+  },
+  {
+    "id": "13010",
+    "name": "safety contour (from conditional symbology procedure DEPCNT03)",
+    "description": "Base: H, I - Hydrography",
+    "language": "eng"
+  },
+  {
+    "id": "13030",
+    "name": "depth area (DEPARE), dredged area (DRGARE)",
+    "description": "Base: H, I - Hydrography",
+    "language": "eng"
+  },
+  {
+    "id": "14010",
+    "name": "isolated underwater dangers in water deeper than the displayed safety contour  (rocks, wrecks, obstructions, mooring cables from conditional symbology procedure)",
+    "description": "Base: J, K, L - Subsea Features",
+    "language": "eng"
+  },
+  {
+    "id": "14020",
+    "name": "Non-isolated dangers (active submarine volcanos, junction cables (CableSubmarine categoryOfCable=9))",
+    "description": "Base: J, K, L - Subsea Features",
+    "language": "eng"
+  },
+  {
+    "id": "14050",
+    "name": "Isolated above water danger in safe water",
+    "description": "Base: J, K, L - Subsea Features",
+    "language": "eng"
+  },
+  {
+    "id": "21010",
+    "name": "Unknown object (magenta question mark)",
+    "description": "Standard: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "21020",
+    "name": "Chart 1 feature, virtual AIS aid to navigation",
+    "description": "Standard: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "21030",
+    "name": "Chart scale boundary, overscale data [AP(OVERSCO1)]",
+    "description": "Standard: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "21060",
+    "name": "Place-holder for geographic names (LNDRGN, SEAARE)",
+    "description": "Standard: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "22010",
+    "name": "Lake, sloping ground, slope top, dyke, causeway, dam, dock area",
+    "description": "Standard: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "22200",
+    "name": "Conspicuous landmarks",
+    "description": "Standard: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "22210",
+    "name": "Radar conspicuous object (any object with attribute CONRAD 1)",
+    "description": "Standard: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "22220",
+    "name": "Visually conspicuous object (any object with attribute CONVIS 1)",
+    "description": "Standard: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "22240",
+    "name": "Built up area (BUAARE)",
+    "description": "Standard: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "23030",
+    "name": "Swept area (SWPARE)",
+    "description": "Standard: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "24010",
+    "name": "Mooring cables (CBLSUB, CATCBL6), tunnel on Seabed (TUNNEL, BURDEP=0), sandwaves (SNDWAV), ferry cables (CableSubmarine categoryOfCable=7)",
+    "description": "Standard: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "24020",
+    "name": "Isolated underwater danger in unsafe water",
+    "description": "Standard: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "24050",
+    "name": "Isolated above water danger in unsafe water",
+    "description": "Standard: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "25001",
+    "name": "Collision Regulations Limit, demarcation line between inland and international navigation rules",
+    "description": "Standard: M - Traffic routes",
+    "language": "eng"
+  },
+  {
+    "id": "25010",
+    "name": "Leading line, clearing line (NAVLNE), traffic lane (TSSLPT), deep water route (DWRTPT), traffic separation area (TSEZNE), traffic separation line (TSELNE), traffic roundabout (TSSRON), traffic crossing (TSSCRS), precautionary area (PRCARE), traffic separation scheme boundary (TSSBND), deep water route centre line (DWRTCL), two way route part (TWRTPT), inshore traffic zone (ISTZNE)",
+    "description": "Standard: M - Traffic routes",
+    "language": "eng"
+  },
+  {
+    "id": "25020",
+    "name": "Recommended track (RECTRC), recommended traffic lane (RCTLPT), recommended route centreline (RCRTCL)",
+    "description": "Standard: M - Traffic routes",
+    "language": "eng"
+  },
+  {
+    "id": "25030",
+    "name": "Ferry route (FERYRT)",
+    "description": "Standard: M - Traffic routes",
+    "language": "eng"
+  },
+  {
+    "id": "25040",
+    "name": "Radar line (RADLNE), limit of shore radar (RADRNG)",
+    "description": "Standard: M - Traffic routes",
+    "language": "eng"
+  },
+  {
+    "id": "25060",
+    "name": "Radio calling in point (RDOCAL)",
+    "description": "Standard: M - Traffic routes",
+    "language": "eng"
+  },
+  {
+    "id": "26010",
+    "name": "Restricted area (RESARE)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26040",
+    "name": "Submarine transit lane (SUBTLN), military practice area (MIPARE), sea plane landing area (SPLARE), offshore production area (OSPARE)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26050",
+    "name": "Fairway (FAIRWY)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26150",
+    "name": "Caution area (CTNARE)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26200",
+    "name": "Information Areas. Protected Areas",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26210",
+    "name": "Information Areas. Protected Areas",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26220",
+    "name": "Anchorage area (ACHARE), anchor berth (ACHBRT)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26240",
+    "name": "Dumping ground (DMPGRD)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26250",
+    "name": "Cargo transhipment (CTSARE), incineration (ICNARE)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "26260",
+    "name": "Archipelagic sea lane (ASLXIS, ARCSLN)",
+    "description": "Standard: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "27010",
+    "name": "Buoy (BOYxxx), light float (LITFLT), mooring buoy (MORFAC, CATMOR7)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27011",
+    "name": "Light vessel (LITVES)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27020",
+    "name": "Beacon (BCNxxx)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27025",
+    "name": "Daymark (DAYMAR)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27030",
+    "name": "Distance mark (DISMAR)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27040",
+    "name": "Direction of buoyage IALA buoyage regions (M_NSYS)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27050",
+    "name": "topmarks (TOPMAR) - for paper chart symbols",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27060",
+    "name": "gridiron (GRIDRN)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27070",
+    "name": "light (LIGHTS)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27080",
+    "name": "fog signal (FOGSIG), retro-reflector (RETRFL)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27200",
+    "name": "Radar",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27210",
+    "name": "racon (RTPBCN)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27220",
+    "name": "range system (C_AGGR)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27230",
+    "name": "radar reflector (RADRFL)",
+    "description": "Standard: P, Q, R, S - Buoys and Beacons, Lights, Fog signals, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "27240",
+    "name": "Physical and Virtual AIS Aids to Navigation",
+    "description": "Standard: P, Q, R, S BUOYS and BEACONS, LIGHTS, FOG SIGNALS, RADAR",
+    "language": "eng"
+  },
+  {
+    "id": "28010",
+    "name": "pilot boarding point (PILBOP), pilotage district",
+    "description": "Standard: T, U - Services and Small craft facilities",
+    "language": "eng"
+  },
+  {
+    "id": "28020",
+    "name": "signal station, traffic (SISTAT), sig. stn. warning (SISTAW)",
+    "description": "Standard: T, U - Services and Small craft facilities",
+    "language": "eng"
+  },
+  {
+    "id": "31010",
+    "name": "Quality of survey, quality of non-bathymetric data, sounding datum, vertical datum",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "31020",
+    "name": "information area or nautical publication (M_NPUB)",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "31040",
+    "name": "dataCoverage",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "31080",
+    "name": "magnetic variation (MAGVAR), local magnetic anomaly (LOCMAG)",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "32010",
+    "name": "dunes , hills (SLOGRD), ridge, clifftop (SLOTOP), contours and elevation (LNDELV)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32030",
+    "name": "trees, vegetation, mangrove (VEGATN), marsh (LNDRGN)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32050",
+    "name": "river (RIVERS) or lake (LAKARE); also rapids (RAPIDS), waterfall (WATFAL)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32070",
+    "name": "tideway (TIDWAY)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32200",
+    "name": "Shore Structures",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32220",
+    "name": "any of the following not classified as CONVIS1 (conspicuous): landmark (LNDMRK), building (BUISGL), tank, silo, water tower (SILTNK), wall (FNCLNE), fort (FORSTC)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32240",
+    "name": "airport (AIRARE), runway (RUNWAY)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32250",
+    "name": "any of the following not classified as CONVIS1 (conspicuous): landmark (LNDMRK), building (BUISGL), tank, silo, water tower (SILTNK), wall (FNCLNE), fort (FORSTC)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32270",
+    "name": "quarry, refinery, power station, tank farm, wind farm, factory, timber yard (PRDARE)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32400",
+    "name": "Port Features",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32410",
+    "name": "harbour type (HRBFAC), customs check point (CHKPNT) [note: \"small craft facilities\" (SMCFAC) is in group 38210]",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "32440",
+    "name": "berth number (BERTHS), mooring facility (such as bollard) (MORFAC), , gate (such as lock gate) (GATCON) , dry dock (DRYDOC), crane (CRANES)",
+    "description": "Other: C, D, E, F - Natural and man made features, Port features",
+    "language": "eng"
+  },
+  {
+    "id": "33010",
+    "name": "Soundings (SOUNDG)",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "33020",
+    "name": "depth contours (DEPCNT) other than the safety contour",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "33040",
+    "name": "water turbulence (WATTUR)",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "33050",
+    "name": "tidal information (T_HMON, T_NHMN, T_TIMS)",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "33060",
+    "name": "current and tidal stream information (CURENT, TS_FEB, TS_PAD, TS_PNH, TS_PRH, TS_TIS)",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "34010",
+    "name": "nature of seabed (SBDARE)",
+    "description": "Other: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "34020",
+    "name": "spring (SPRING), sea weed (WEDKLP)",
+    "description": "Other: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "34030",
+    "name": "Pipeline area (PIPARE), cable area (CBLARE)",
+    "description": "Other: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "34050",
+    "name": "rocks (UWTROC), wrecks (WRECKS), obstructions (OBSTRN), which are not a danger to own ship's navigation (these are all Display Base if a danger to own ship)",
+    "description": "Other: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "34051",
+    "name": "non-dangerous rocks (UWTROC), wrecks (WRECKS) and obstructions (OBSTRN) which have a VALSOU attribute and are not a danger to own-ship's navigation (these objects are all Display Base if a danger to own-ship)",
+    "description": "Other: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "34070",
+    "name": "submarine cable (CBLSUB), submarine pipeline (PIPSOL)",
+    "description": "Other: J, K, L - Seabed, Obstructions, Pipelines",
+    "language": "eng"
+  },
+  {
+    "id": "36010",
+    "name": "continental shelf (COSARE)",
+    "description": "Other: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "36020",
+    "name": "harbour area (HRBARE) free port area (FRPARE), customs zone (CUSZNE)",
+    "description": "Other: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "36040",
+    "name": "fishery zone (FSHZNE)",
+    "description": "Other: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "36050",
+    "name": "Contiguous zone (CONZNE), exclusive economic zone (EXEZNE), national territorial area (NATARE), territorial sea (TESARE), territorial sea baseline (STSLNE), administration area (ADMARE)",
+    "description": "Other: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "36060",
+    "name": "Marine Pollution Regulations Area (MARPOL)",
+    "description": "Other: N - Special areas",
+    "language": "eng"
+  },
+  {
+    "id": "38010",
+    "name": "radar station (RADSTA), radio station (RDOSTA)",
+    "description": "Other: T, U - Services and Small craft facilities",
+    "language": "eng"
+  },
+  {
+    "id": "38030",
+    "name": "coastguard station (CGUSTA), rescue station (RSCSTA)",
+    "description": "Other: T, U - Services and Small craft facilities",
+    "language": "eng"
+  },
+  {
+    "id": "38200",
+    "name": "Small craft facilities",
+    "description": "Other: T, U - Services and Small craft facilities",
+    "language": "eng"
+  },
+  {
+    "id": "38210",
+    "name": "small craft facilities (SMCFAC)",
+    "description": "Other: T, U - Services and Small craft facilities",
+    "language": "eng"
+  },
+  {
+    "id": "11",
+    "name": "Text: Important",
+    "description": "Various important text: Bearings, Clearances, Recommendations, Radio info",
+    "language": "eng"
+  },
+  {
+    "id": "21",
+    "name": "Text: Name or number",
+    "description": "Name or Number of Buoys, Beacons, Daymarks, Light Vessels, Light Floats, Offshore Platforms",
+    "language": "eng"
+  },
+  {
+    "id": "23",
+    "name": "Text: Aids to Navigation information",
+    "description": "Text describing the characteristics of navigation aids",
+    "language": "eng"
+  },
+  {
+    "id": "24",
+    "name": "Text: Supplementary information",
+    "description": "Note on chart data (INFORM) or nautical publication (TXTDSC)",
+    "language": "eng"
+  },
+  {
+    "id": "25",
+    "name": "Text: Nature of Seabed",
+    "description": "Seabed area surface characteristics",
+    "language": "eng"
+  },
+  {
+    "id": "26",
+    "name": "Text: Geographic Names",
+    "description": "Names of Anchorages, Bridges, Buildings, Docks, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "27",
+    "name": "Text: MagVar, Swept Depth",
+    "description": "Value of magnetic variation and swept depth",
+    "language": "eng"
+  },
+  {
+    "id": "28",
+    "name": "Text: Height of land area",
+    "description": "Height of islet or land feature",
+    "language": "eng"
+  },
+  {
+    "id": "29",
+    "name": "Text: Berth Number",
+    "description": "Number of Berth or Anchor Berth",
+    "language": "eng"
+  },
+  {
+    "id": "30",
+    "name": "Text: Current velocity",
+    "description": "The velocity of a tidal or non-tidal current.",
+    "language": "eng"
+  },
+  {
+    "id": "32",
+    "name": "Text: Auxiliary names",
+    "description": "Names providing supplementary information.",
+    "language": "eng"
+  },
+  {
+    "id": "53010",
+    "name": "Safety Contour Highlight",
+    "description": "Used to turn on or off the graphical highlighting of alerts triggered by the safety contour.",
+    "language": "eng"
+  },
+  {
+    "id": "53011",
+    "name": "Navigational Hazards Highlight",
+    "description": "Used to turn on or off the graphical highlighting of alerts triggered by navigational hazards",
+    "language": "eng"
+  },
+  {
+    "id": "53012",
+    "name": "Traffic Separation Zone Highlight",
+    "description": "Alert highlight: Traffic Seperation Zone",
+    "language": "eng"
+  },
+  {
+    "id": "53013",
+    "name": "Inshore Traffic Zone Highlight",
+    "description": "Alert highlight: Inshore Traffic Zone",
+    "language": "eng"
+  },
+  {
+    "id": "53014",
+    "name": "Restricted Area Highlight",
+    "description": "Alert highlight: Restricted Area",
+    "language": "eng"
+  },
+  {
+    "id": "53015",
+    "name": "Areas to be Avoided Highlight",
+    "description": "Alert highlight: Areas to be avoided",
+    "language": "eng"
+  },
+  {
+    "id": "53016",
+    "name": "PSSA (Particularly Sensitive Sea Area) Highlight",
+    "description": "Alert highlight: PSSA (Particularly Sensitive Sea Area)",
+    "language": "eng"
+  },
+  {
+    "id": "53017",
+    "name": "Caution Area Highlight",
+    "description": "Alert highlight: Caution area",
+    "language": "eng"
+  },
+  {
+    "id": "53018",
+    "name": "Offshore Production Area Highlight",
+    "description": "Alert highlight: Offshore production area",
+    "language": "eng"
+  },
+  {
+    "id": "53019",
+    "name": "User Defined Areas to be Avoided Highlight",
+    "description": "Alert highlight: User defined areas to be avoided",
+    "language": "eng"
+  },
+  {
+    "id": "53020",
+    "name": "Military Practice Area Highlight",
+    "description": "Alert highlight: Military practice area",
+    "language": "eng"
+  },
+  {
+    "id": "53021",
+    "name": "Seaplane Landing Area Highlight",
+    "description": "Alert highlight: Seaplane landing area",
+    "language": "eng"
+  },
+  {
+    "id": "53022",
+    "name": "Submarine Transit Lane Highlight",
+    "description": "Alert highlight: Submarine transit lane",
+    "language": "eng"
+  },
+  {
+    "id": "53023",
+    "name": "Anchorage Area Highlight",
+    "description": "Alert highlight: Anchorage area",
+    "language": "eng"
+  },
+  {
+    "id": "53024",
+    "name": "Marine Farm/Aquaculture Highlight",
+    "description": "Alert highlight: Marine farm/aquaculture",
+    "language": "eng"
+  },
+  {
+    "id": "90000",
+    "name": "Area of depth less than the safety contour (DIAMON1 pattern)",
+    "description": "Shallow water pattern",
+    "language": "eng"
+  },
+  {
+    "id": "90010",
+    "name": "accuracy of data (M_ACCY), survey reliability (M_SREL), quality of data (M_QUAL)",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "90011",
+    "name": "symbol LOWACC01, identifying low accuracy data, applied to the spatial object of point and area wrecks, rocks and obstructions and to point land areas",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "90020",
+    "name": "Additional Information INFORM, NINFOM",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "90021",
+    "name": "Additional Documents NTXTDS, TXTDSC, PICREP",
+    "description": "Other: A, B - Information about the chart display",
+    "language": "eng"
+  },
+  {
+    "id": "90022",
+    "name": "Date dependent",
+    "description": "The object is present only during the indicated period",
+    "language": "eng"
+  },
+  {
+    "id": "90030",
+    "name": "label for the safety contour",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "90031",
+    "name": "label for contours other than the safety contour",
+    "description": "Other: H, I - Depths, Currents, etc.",
+    "language": "eng"
+  },
+  {
+    "id": "90040",
+    "name": "Update review",
+    "description": "Review of Updates - This function turns on colour highlighting for the objects which have undergone modification in the process of the latest accepted correction",
+    "language": "eng"
+  }
+]

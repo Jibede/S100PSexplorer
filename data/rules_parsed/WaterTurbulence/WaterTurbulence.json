@@ -1,0 +1,163 @@
+[
+  {
+    "node_type": "function",
+    "name": "WaterTurbulence",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 8,
+            "code": "viewingGroup = 33040",
+            "value": 33040
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:WATTUR02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "WATTUR02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 15,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 16,
+            "code": "viewingGroup = 33040",
+            "value": 33040
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 17,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 20,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 22,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "thickness": 0.32,
+              "color": "CHGRD"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 23,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 24,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:WATTUR02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "WATTUR02"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 25,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 27,
+            "code": "viewingGroup = 33040",
+            "value": 33040
+          },
+          {
+            "node_type": "hit",
+            "line": 29,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:WATTUR02')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "WATTUR02"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 30,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "thickness": 0.32,
+              "color": "CHGRD"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 31,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 33,
+        "children": []
+      }
+    ]
+  }
+]

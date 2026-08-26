@@ -1,0 +1,19 @@
+{
+  "intervalLength": "2.4",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "dash": [
+    {
+      "start": "0.4",
+      "length": "2"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMFSHFA1",
+      "position": "2.4"
+    }
+  ]
+}

@@ -1,0 +1,2152 @@
+[
+  {
+    "id": "main",
+    "name": "main",
+    "description": "Top level rule",
+    "language": "eng",
+    "file_name": "main.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "TopLevelTemplate"
+  },
+  {
+    "id": "S100Scripting",
+    "name": "S100Scripting",
+    "description": "Scripting support",
+    "language": "eng",
+    "file_name": "S100Scripting.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PortrayalAPI",
+    "name": "PortrayalAPI",
+    "description": "Portrayal API",
+    "language": "eng",
+    "file_name": "PortrayalAPI.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PortrayalModel",
+    "name": "PortrayalModel",
+    "description": "Portrayal Model",
+    "language": "eng",
+    "file_name": "PortrayalModel.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "S101AttributeSupport",
+    "name": "S101AttributeSupport",
+    "description": "Support routines to ensure consistent processing of S-101 attributes",
+    "language": "eng",
+    "file_name": "S101AttributeSupport.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Default",
+    "name": "Default",
+    "description": "Default portrayal rules",
+    "language": "eng",
+    "file_name": "Default.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Chart1Feature",
+    "name": "Chart1Feature",
+    "description": "Portrayal rules for features specific to Chart 1",
+    "language": "eng",
+    "file_name": "Chart1Feature.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DEPARE03",
+    "name": "DEPARE03",
+    "description": "Custom rules DEPARE03",
+    "language": "eng",
+    "file_name": "DEPARE03.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DEPCNT03",
+    "name": "DEPCNT03",
+    "description": "Custom rules DEPCNT03",
+    "language": "eng",
+    "file_name": "DEPCNT03.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LITDSN02",
+    "name": "LITDSN02",
+    "description": "Custom rules LITDSN02",
+    "language": "eng",
+    "file_name": "LITDSN02.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "OBSTRN07",
+    "name": "OBSTRN07",
+    "description": "Custom rules OBSTRN07",
+    "language": "eng",
+    "file_name": "OBSTRN07.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "QUALIN02",
+    "name": "QUALIN02",
+    "description": "Custom rules QUALIN02",
+    "language": "eng",
+    "file_name": "QUALIN02.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "QUAPNT02",
+    "name": "QUAPNT02",
+    "description": "Custom rules QUAPNT02",
+    "language": "eng",
+    "file_name": "QUAPNT02.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "QUAPOS01",
+    "name": "QUAPOS01",
+    "description": "Custom rules QUAPOS01",
+    "language": "eng",
+    "file_name": "QUAPOS01.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RESARE04",
+    "name": "RESARE04",
+    "description": "Custom rules RESARE04",
+    "language": "eng",
+    "file_name": "RESARE04.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RESCSP03",
+    "name": "RESCSP03",
+    "description": "Custom rules RESCSP03",
+    "language": "eng",
+    "file_name": "RESCSP03.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RESTRN01",
+    "name": "RESTRN01",
+    "description": "Custom rules RESTRN01",
+    "language": "eng",
+    "file_name": "RESTRN01.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SAFCON01",
+    "name": "SAFCON01",
+    "description": "Custom rules SAFCON01",
+    "language": "eng",
+    "file_name": "SAFCON01.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SEABED01",
+    "name": "SEABED01",
+    "description": "Custom rules SEABED01",
+    "language": "eng",
+    "file_name": "SEABED01.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Seagrass",
+    "name": "Seagrass",
+    "description": "Seagrass",
+    "language": "eng",
+    "file_name": "Seagrass.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SLCONS04",
+    "name": "SLCONS04",
+    "description": "Custom rules SLCONS04",
+    "language": "eng",
+    "file_name": "SLCONS04.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SNDFRM04",
+    "name": "SNDFRM04",
+    "description": "Custom rules SNDFRM04",
+    "language": "eng",
+    "file_name": "SNDFRM04.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SOUNDG03",
+    "name": "SOUNDG03",
+    "description": "Custom rules SOUNDG03",
+    "language": "eng",
+    "file_name": "SOUNDG03.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TOPMAR02",
+    "name": "TOPMAR02",
+    "description": "Custom rules TOPMAR02",
+    "language": "eng",
+    "file_name": "TOPMAR02.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "UDWHAZ05",
+    "name": "UDWHAZ05",
+    "description": "Custom rules UDWHAZ05",
+    "language": "eng",
+    "file_name": "UDWHAZ05.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "WRECKS05",
+    "name": "WRECKS05",
+    "description": "Custom rules WRECKS05",
+    "language": "eng",
+    "file_name": "WRECKS05.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "AdministrationArea",
+    "name": "AdministrationArea",
+    "description": "Rules for feature type AdministrationArea",
+    "language": "eng",
+    "file_name": "AdministrationArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "AirportAirfield",
+    "name": "AirportAirfield",
+    "description": "Rules for feature type AirportAirfield",
+    "language": "eng",
+    "file_name": "AirportAirfield.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "AnchorageArea",
+    "name": "AnchorageArea",
+    "description": "Rules for feature type AnchorageArea",
+    "language": "eng",
+    "file_name": "AnchorageArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "AnchorBerth",
+    "name": "AnchorBerth",
+    "description": "Rules for feature type AnchorBerth",
+    "language": "eng",
+    "file_name": "AnchorBerth.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ArchipelagicSeaLane",
+    "name": "ArchipelagicSeaLane",
+    "description": "Rules for feature type ArchipelagicSeaLane",
+    "language": "eng",
+    "file_name": "ArchipelagicSeaLane.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ArchipelagicSeaLaneArea",
+    "name": "ArchipelagicSeaLaneArea",
+    "description": "Rules for feature type ArchipelagicSeaLaneArea",
+    "language": "eng",
+    "file_name": "ArchipelagicSeaLaneArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ArchipelagicSeaLaneAxis",
+    "name": "ArchipelagicSeaLaneAxis",
+    "description": "Rules for feature type ArchipelagicSeaLaneAxis",
+    "language": "eng",
+    "file_name": "ArchipelagicSeaLaneAxis.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CardinalBeacon",
+    "name": "CardinalBeacon",
+    "description": "Rules for feature type CardinalBeacon",
+    "language": "eng",
+    "file_name": "CardinalBeacon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "IsolatedDangerBeacon",
+    "name": "IsolatedDangerBeacon",
+    "description": "Rules for feature type IsolatedDangerBeacon",
+    "language": "eng",
+    "file_name": "IsolatedDangerBeacon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LateralBeacon",
+    "name": "LateralBeacon",
+    "description": "Rules for feature type LateralBeacon",
+    "language": "eng",
+    "file_name": "LateralBeacon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SafeWaterBeacon",
+    "name": "SafeWaterBeacon",
+    "description": "Rules for feature type SafeWaterBeacon",
+    "language": "eng",
+    "file_name": "SafeWaterBeacon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SpecialPurposeGeneralBeacon",
+    "name": "SpecialPurposeGeneralBeacon",
+    "description": "Rules for feature type SpecialPurposeGeneralBeacon",
+    "language": "eng",
+    "file_name": "SpecialPurposeGeneralBeacon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Berth",
+    "name": "Berth",
+    "description": "Rules for feature type Berth",
+    "language": "eng",
+    "file_name": "Berth.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Bollard",
+    "name": "Bollard",
+    "description": "Rules for feature type Bollard",
+    "language": "eng",
+    "file_name": "Bollard.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Bridge",
+    "name": "Bridge",
+    "description": "Rules for feature type Bridge",
+    "language": "eng",
+    "file_name": "Bridge.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Building",
+    "name": "Building",
+    "description": "Rules for feature type Building",
+    "language": "eng",
+    "file_name": "Building.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "BuiltUpArea",
+    "name": "BuiltUpArea",
+    "description": "Rules for feature type BuiltUpArea",
+    "language": "eng",
+    "file_name": "BuiltUpArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CardinalBuoy",
+    "name": "CardinalBuoy",
+    "description": "Rules for feature type CardinalBuoy",
+    "language": "eng",
+    "file_name": "CardinalBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "InstallationBuoy",
+    "name": "InstallationBuoy",
+    "description": "Rules for feature type InstallationBuoy",
+    "language": "eng",
+    "file_name": "InstallationBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "IsolatedDangerBuoy",
+    "name": "IsolatedDangerBuoy",
+    "description": "Rules for feature type IsolatedDangerBuoy",
+    "language": "eng",
+    "file_name": "IsolatedDangerBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LateralBuoy",
+    "name": "LateralBuoy",
+    "description": "Rules for feature type LateralBuoy",
+    "language": "eng",
+    "file_name": "LateralBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "EmergencyWreckMarkingBuoy",
+    "name": "EmergencyWreckMarkingBuoy",
+    "description": "Rules for feature type EmergencyWreckMarkingBuoy",
+    "language": "eng",
+    "file_name": "EmergencyWreckMarkingBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SafeWaterBuoy",
+    "name": "SafeWaterBuoy",
+    "description": "Rules for feature type SafeWaterBuoy",
+    "language": "eng",
+    "file_name": "SafeWaterBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SpecialPurposeGeneralBuoy",
+    "name": "SpecialPurposeGeneralBuoy",
+    "description": "Rules for feature type SpecialPurposeGeneralBuoy",
+    "language": "eng",
+    "file_name": "SpecialPurposeGeneralBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CableArea",
+    "name": "CableArea",
+    "description": "Rules for feature type CableArea",
+    "language": "eng",
+    "file_name": "CableArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CableOverhead",
+    "name": "CableOverhead",
+    "description": "Rules for feature type CableOverhead",
+    "language": "eng",
+    "file_name": "CableOverhead.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CableSubmarine",
+    "name": "CableSubmarine",
+    "description": "Rules for feature type CableSubmarine",
+    "language": "eng",
+    "file_name": "CableSubmarine.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Canal",
+    "name": "Canal",
+    "description": "Rules for feature type Canal",
+    "language": "eng",
+    "file_name": "Canal.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CargoTranshipmentArea",
+    "name": "CargoTranshipmentArea",
+    "description": "Rules for feature type CargoTranshipmentArea",
+    "language": "eng",
+    "file_name": "CargoTranshipmentArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Causeway",
+    "name": "Causeway",
+    "description": "Rules for feature type Causeway",
+    "language": "eng",
+    "file_name": "Causeway.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CautionArea",
+    "name": "CautionArea",
+    "description": "Rules for feature type CautionArea",
+    "language": "eng",
+    "file_name": "CautionArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Checkpoint",
+    "name": "Checkpoint",
+    "description": "Rules for feature type Checkpoint",
+    "language": "eng",
+    "file_name": "Checkpoint.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CoastGuardStation",
+    "name": "CoastGuardStation",
+    "description": "Rules for feature type CoastGuardStation",
+    "language": "eng",
+    "file_name": "CoastGuardStation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Coastline",
+    "name": "Coastline",
+    "description": "Rules for feature type Coastline",
+    "language": "eng",
+    "file_name": "Coastline.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CollisionRegulationsLimit",
+    "name": "CollisionRegulationsLimit",
+    "description": "Rules for feature type CollisionRegulationsLimit",
+    "language": "eng",
+    "file_name": "CollisionRegulationsLimit.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ContiguousZone",
+    "name": "ContiguousZone",
+    "description": "Rules for feature type ContiguousZone",
+    "language": "eng",
+    "file_name": "ContiguousZone.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ContinentalShelfArea",
+    "name": "ContinentalShelfArea",
+    "description": "Rules for feature type ContinentalShelfArea",
+    "language": "eng",
+    "file_name": "ContinentalShelfArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Conveyor",
+    "name": "Conveyor",
+    "description": "Rules for feature type Conveyor",
+    "language": "eng",
+    "file_name": "Conveyor.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Crane",
+    "name": "Crane",
+    "description": "Rules for feature type Crane",
+    "language": "eng",
+    "file_name": "Crane.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CurrentNonGravitational",
+    "name": "CurrentNonGravitational",
+    "description": "Rules for feature type CurrentNonGravitational",
+    "language": "eng",
+    "file_name": "CurrentNonGravitational.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "CustomZone",
+    "name": "CustomZone",
+    "description": "Rules for feature type CustomZone",
+    "language": "eng",
+    "file_name": "CustomZone.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Dam",
+    "name": "Dam",
+    "description": "Rules for feature type Dam",
+    "language": "eng",
+    "file_name": "Dam.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DataCoverage",
+    "name": "DataCoverage",
+    "description": "Rules for feature type DataCoverage",
+    "language": "eng",
+    "file_name": "DataCoverage.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Daymark",
+    "name": "Daymark",
+    "description": "Rules for feature type Daymark",
+    "language": "eng",
+    "file_name": "Daymark.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DeepWaterRoute",
+    "name": "DeepWaterRoute",
+    "description": "Rules for feature type DeepWaterRoute",
+    "language": "eng",
+    "file_name": "DeepWaterRoute.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DeepWaterRouteCentreline",
+    "name": "DeepWaterRouteCentreline",
+    "description": "Rules for feature type DeepWaterRouteCentreline",
+    "language": "eng",
+    "file_name": "DeepWaterRouteCentreline.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DeepWaterRoutePart",
+    "name": "DeepWaterRoutePart",
+    "description": "Rules for feature type DeepWaterRoutePart",
+    "language": "eng",
+    "file_name": "DeepWaterRoutePart.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DepthArea",
+    "name": "DepthArea",
+    "description": "Rules for feature type DepthArea",
+    "language": "eng",
+    "file_name": "DepthArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DepthContour",
+    "name": "DepthContour",
+    "description": "Rules for feature type DepthContour",
+    "language": "eng",
+    "file_name": "DepthContour.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DepthNoBottomFound",
+    "name": "DepthNoBottomFound",
+    "description": "Rules for feature type DepthNoBottomFound",
+    "language": "eng",
+    "file_name": "DepthNoBottomFound.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DiscolouredWater",
+    "name": "DiscolouredWater",
+    "description": "Rules for feature type DiscolouredWater",
+    "language": "eng",
+    "file_name": "DiscolouredWater.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DistanceMark",
+    "name": "DistanceMark",
+    "description": "Rules for feature type DistanceMark",
+    "language": "eng",
+    "file_name": "DistanceMark.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DockArea",
+    "name": "DockArea",
+    "description": "Rules for feature type DockArea",
+    "language": "eng",
+    "file_name": "DockArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Dolphin",
+    "name": "Dolphin",
+    "description": "Rules for feature type Dolphin",
+    "language": "eng",
+    "file_name": "Dolphin.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DredgedArea",
+    "name": "DredgedArea",
+    "description": "Rules for feature type DredgedArea",
+    "language": "eng",
+    "file_name": "DredgedArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DryDock",
+    "name": "DryDock",
+    "description": "Rules for feature type DryDock",
+    "language": "eng",
+    "file_name": "DryDock.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "DumpingGround",
+    "name": "DumpingGround",
+    "description": "Rules for feature type DumpingGround",
+    "language": "eng",
+    "file_name": "DumpingGround.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Dyke",
+    "name": "Dyke",
+    "description": "Rules for feature type Dyke",
+    "language": "eng",
+    "file_name": "Dyke.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ExclusiveEconomicZone",
+    "name": "ExclusiveEconomicZone",
+    "description": "Rules for feature type ExclusiveEconomicZone",
+    "language": "eng",
+    "file_name": "ExclusiveEconomicZone.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Fairway",
+    "name": "Fairway",
+    "description": "Rules for feature type Fairway",
+    "language": "eng",
+    "file_name": "Fairway.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FairwaySystem",
+    "name": "FairwaySystem",
+    "description": "Rules for feature type FairwaySystem",
+    "language": "eng",
+    "file_name": "FairwaySystem.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FenceWall",
+    "name": "FenceWall",
+    "description": "Rules for feature type FenceWall",
+    "language": "eng",
+    "file_name": "FenceWall.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FerryRoute",
+    "name": "FerryRoute",
+    "description": "Rules for feature type FerryRoute",
+    "language": "eng",
+    "file_name": "FerryRoute.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FisheryZone",
+    "name": "FisheryZone",
+    "description": "Rules for feature type FisheryZone",
+    "language": "eng",
+    "file_name": "FisheryZone.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FishingFacility",
+    "name": "FishingFacility",
+    "description": "Rules for feature type FishingFacility",
+    "language": "eng",
+    "file_name": "FishingFacility.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FishingGround",
+    "name": "FishingGround",
+    "description": "Rules for feature type FishingGround",
+    "language": "eng",
+    "file_name": "FishingGround.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FloatingDock",
+    "name": "FloatingDock",
+    "description": "Rules for feature type FloatingDock",
+    "language": "eng",
+    "file_name": "FloatingDock.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FogSignal",
+    "name": "FogSignal",
+    "description": "Rules for feature type FogSignal",
+    "language": "eng",
+    "file_name": "FogSignal.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FortifiedStructure",
+    "name": "FortifiedStructure",
+    "description": "Rules for feature type FortifiedStructure",
+    "language": "eng",
+    "file_name": "FortifiedStructure.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FoulGround",
+    "name": "FoulGround",
+    "description": "Rules for feature type FoulGround",
+    "language": "eng",
+    "file_name": "FoulGround.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "FreePortArea",
+    "name": "FreePortArea",
+    "description": "Rules for feature type FreePortArea",
+    "language": "eng",
+    "file_name": "FreePortArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Gate",
+    "name": "Gate",
+    "description": "Rules for feature type Gate",
+    "language": "eng",
+    "file_name": "Gate.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Gridiron",
+    "name": "Gridiron",
+    "description": "Rules for feature type Gridiron",
+    "language": "eng",
+    "file_name": "Gridiron.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "HarbourAreaAdministrative",
+    "name": "HarbourAreaAdministrative",
+    "description": "Rules for feature type HarbourAreaAdministrative",
+    "language": "eng",
+    "file_name": "HarbourAreaAdministrative.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "HarbourFacility",
+    "name": "HarbourFacility",
+    "description": "Rules for feature type HarbourFacility",
+    "language": "eng",
+    "file_name": "HarbourFacility.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Helipad",
+    "name": "Helipad",
+    "description": "Rules for feature type Helipad",
+    "language": "eng",
+    "file_name": "Helipad.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Hulk",
+    "name": "Hulk",
+    "description": "Rules for feature type Hulk",
+    "language": "eng",
+    "file_name": "Hulk.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "IceArea",
+    "name": "IceArea",
+    "description": "Rules for feature type IceArea",
+    "language": "eng",
+    "file_name": "IceArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "InformationArea",
+    "name": "InformationArea",
+    "description": "Rules for feature type InformationArea",
+    "language": "eng",
+    "file_name": "InformationArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "InshoreTrafficZone",
+    "name": "InshoreTrafficZone",
+    "description": "Rules for feature type InshoreTrafficZone",
+    "language": "eng",
+    "file_name": "InshoreTrafficZone.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "IslandGroup",
+    "name": "IslandGroup",
+    "description": "Rules for feature type IslandGroup",
+    "language": "eng",
+    "file_name": "IslandGroup.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Lake",
+    "name": "Lake",
+    "description": "Rules for feature type Lake",
+    "language": "eng",
+    "file_name": "Lake.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LandArea",
+    "name": "LandArea",
+    "description": "Rules for feature type LandArea",
+    "language": "eng",
+    "file_name": "LandArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LandElevation",
+    "name": "LandElevation",
+    "description": "Rules for feature type LandElevation",
+    "language": "eng",
+    "file_name": "LandElevation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Landmark",
+    "name": "Landmark",
+    "description": "Rules for feature type Landmark",
+    "language": "eng",
+    "file_name": "Landmark.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LandRegion",
+    "name": "LandRegion",
+    "description": "Rules for feature type LandRegion",
+    "language": "eng",
+    "file_name": "LandRegion.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightAirObstruction",
+    "name": "LightAirObstruction",
+    "description": "Rules for feature type LightAirObstruction",
+    "language": "eng",
+    "file_name": "LightAirObstruction.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightAllAround",
+    "name": "LightAllAround",
+    "description": "Rules for feature type LightAllAround",
+    "language": "eng",
+    "file_name": "LightAllAround.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightFlareAndDescription",
+    "name": "LightFlareAndDescription",
+    "description": "Rules for feature type LightFlareAndDescription",
+    "language": "eng",
+    "file_name": "LightFlareAndDescription.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightFloat",
+    "name": "LightFloat",
+    "description": "Rules for feature type LightFloat",
+    "language": "eng",
+    "file_name": "LightFloat.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightFogDetector",
+    "name": "LightFogDetector",
+    "description": "Rules for feature type LightFogDetector",
+    "language": "eng",
+    "file_name": "LightFogDetector.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightSectored",
+    "name": "LightSectored",
+    "description": "Rules for feature type LightSectored",
+    "language": "eng",
+    "file_name": "LightSectored.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LightVessel",
+    "name": "LightVessel",
+    "description": "Rules for feature type LightVessel",
+    "language": "eng",
+    "file_name": "LightVessel.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LocalDirectionOfBuoyage",
+    "name": "LocalDirectionOfBuoyage",
+    "description": "Rules for feature type LocalDirectionOfBuoyage",
+    "language": "eng",
+    "file_name": "LocalDirectionOfBuoyage.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LocalMagneticAnomaly",
+    "name": "LocalMagneticAnomaly",
+    "description": "Rules for feature type LocalMagneticAnomaly",
+    "language": "eng",
+    "file_name": "LocalMagneticAnomaly.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LockBasin",
+    "name": "LockBasin",
+    "description": "Rules for feature type LockBasin",
+    "language": "eng",
+    "file_name": "LockBasin.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "LogPond",
+    "name": "LogPond",
+    "description": "Rules for feature type LogPond",
+    "language": "eng",
+    "file_name": "LogPond.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MagneticVariation",
+    "name": "MagneticVariation",
+    "description": "Rules for feature type MagneticVariation",
+    "language": "eng",
+    "file_name": "MagneticVariation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MarineFarmCulture",
+    "name": "MarineFarmCulture",
+    "description": "Rules for feature type MarineFarmCulture",
+    "language": "eng",
+    "file_name": "MarineFarmCulture.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MarinePollutionRegulationsArea",
+    "name": "MarinePollutionRegulationsArea",
+    "description": "Rules for feature type MarinePollutionRegulationsArea",
+    "language": "eng",
+    "file_name": "MarinePollutionRegulationsArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MilitaryPracticeArea",
+    "name": "MilitaryPracticeArea",
+    "description": "Rules for feature type MilitaryPracticeArea",
+    "language": "eng",
+    "file_name": "MilitaryPracticeArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MooringArea",
+    "name": "MooringArea",
+    "description": "Rules for feature type MooringArea",
+    "language": "eng",
+    "file_name": "MooringArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MooringBuoy",
+    "name": "MooringBuoy",
+    "description": "Rules for feature type MooringBuoy",
+    "language": "eng",
+    "file_name": "MooringBuoy.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "MooringTrot",
+    "name": "MooringTrot",
+    "description": "Rules for feature type MooringTrot",
+    "language": "eng",
+    "file_name": "MooringTrot.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "NavigationalSystemOfMarks",
+    "name": "NavigationalSystemOfMarks",
+    "description": "Rules for feature type NavigationalSystemOfMarks",
+    "language": "eng",
+    "file_name": "NavigationalSystemOfMarks.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "NavigationLine",
+    "name": "NavigationLine",
+    "description": "Rules for feature type NavigationLine",
+    "language": "eng",
+    "file_name": "NavigationLine.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Obstruction",
+    "name": "Obstruction",
+    "description": "Rules for feature type Obstruction",
+    "language": "eng",
+    "file_name": "Obstruction.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "OffshorePlatform",
+    "name": "OffshorePlatform",
+    "description": "Rules for feature type OffshorePlatform",
+    "language": "eng",
+    "file_name": "OffshorePlatform.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "OffshoreProductionArea",
+    "name": "OffshoreProductionArea",
+    "description": "Rules for feature type OffshoreProductionArea",
+    "language": "eng",
+    "file_name": "OffshoreProductionArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "OilBarrier",
+    "name": "OilBarrier",
+    "description": "Rules for feature type OilBarrier",
+    "language": "eng",
+    "file_name": "OilBarrier.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PhysicalAISAidToNavigation",
+    "name": "PhysicalAISAidToNavigation",
+    "description": "Rules for feature type PhysicalAISAidToNavigation",
+    "language": "eng",
+    "file_name": "PhysicalAISAidToNavigation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Pile",
+    "name": "Pile",
+    "description": "Rules for feature type Pile",
+    "language": "eng",
+    "file_name": "Pile.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PilotageDistrict",
+    "name": "PilotageDistrict",
+    "description": "Rules for feature type PilotageDistrict",
+    "language": "eng",
+    "file_name": "PilotageDistrict.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PilotBoardingPlace",
+    "name": "PilotBoardingPlace",
+    "description": "Rules for feature type PilotBoardingPlace",
+    "language": "eng",
+    "file_name": "PilotBoardingPlace.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PipelineOverhead",
+    "name": "PipelineOverhead",
+    "description": "Rules for feature type PipelineOverhead",
+    "language": "eng",
+    "file_name": "PipelineOverhead.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PipelineSubmarineOnLand",
+    "name": "PipelineSubmarineOnLand",
+    "description": "Rules for feature type PipelineSubmarineOnLand",
+    "language": "eng",
+    "file_name": "PipelineSubmarineOnLand.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Pontoon",
+    "name": "Pontoon",
+    "description": "Rules for feature type Pontoon",
+    "language": "eng",
+    "file_name": "Pontoon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PrecautionaryArea",
+    "name": "PrecautionaryArea",
+    "description": "Rules for feature type PrecautionaryArea",
+    "language": "eng",
+    "file_name": "PrecautionaryArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ProductionStorageArea",
+    "name": "ProductionStorageArea",
+    "description": "Rules for feature type ProductionStorageArea",
+    "language": "eng",
+    "file_name": "ProductionStorageArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "PylonBridgeSupport",
+    "name": "PylonBridgeSupport",
+    "description": "Rules for feature type PylonBridgeSupport",
+    "language": "eng",
+    "file_name": "PylonBridgeSupport.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "QualityOfBathymetricData",
+    "name": "QualityOfBathymetricData",
+    "description": "Rules for feature type QualityOfBathymetricData",
+    "language": "eng",
+    "file_name": "QualityOfBathymetricData.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "QualityOfNonBathymetricData",
+    "name": "QualityOfNonBathymetricData",
+    "description": "Rules for feature type QualityOfNonBathymetricData",
+    "language": "eng",
+    "file_name": "QualityOfNonBathymetricData.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "QualityOfSurvey",
+    "name": "QualityOfSurvey",
+    "description": "Rules for feature type QualityOfSurvey",
+    "language": "eng",
+    "file_name": "QualityOfSurvey.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadarLine",
+    "name": "RadarLine",
+    "description": "Rules for feature type RadarLine",
+    "language": "eng",
+    "file_name": "RadarLine.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadarRange",
+    "name": "RadarRange",
+    "description": "Rules for feature type RadarRange",
+    "language": "eng",
+    "file_name": "RadarRange.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadarReflector",
+    "name": "RadarReflector",
+    "description": "Rules for feature type RadarReflector",
+    "language": "eng",
+    "file_name": "RadarReflector.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadarStation",
+    "name": "RadarStation",
+    "description": "Rules for feature type RadarStation",
+    "language": "eng",
+    "file_name": "RadarStation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadarTransponderBeacon",
+    "name": "RadarTransponderBeacon",
+    "description": "Rules for feature type RadarTransponderBeacon",
+    "language": "eng",
+    "file_name": "RadarTransponderBeacon.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadioCallingInPoint",
+    "name": "RadioCallingInPoint",
+    "description": "Rules for feature type RadioCallingInPoint",
+    "language": "eng",
+    "file_name": "RadioCallingInPoint.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RadioStation",
+    "name": "RadioStation",
+    "description": "Rules for feature type RadioStation",
+    "language": "eng",
+    "file_name": "RadioStation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Railway",
+    "name": "Railway",
+    "description": "Rules for feature type Railway",
+    "language": "eng",
+    "file_name": "Railway.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RangeSystem",
+    "name": "RangeSystem",
+    "description": "Rules for feature type RangeSystem",
+    "language": "eng",
+    "file_name": "RangeSystem.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Rapids",
+    "name": "Rapids",
+    "description": "Rules for feature type Rapids",
+    "language": "eng",
+    "file_name": "Rapids.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RecommendedRouteCentreline",
+    "name": "RecommendedRouteCentreline",
+    "description": "Rules for feature type RecommendedRouteCentreline",
+    "language": "eng",
+    "file_name": "RecommendedRouteCentreline.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RecommendedTrack",
+    "name": "RecommendedTrack",
+    "description": "Rules for feature type RecommendedTrack",
+    "language": "eng",
+    "file_name": "RecommendedTrack.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RecommendedTrafficLanePart",
+    "name": "RecommendedTrafficLanePart",
+    "description": "Rules for feature type RecommendedTrafficLanePart",
+    "language": "eng",
+    "file_name": "RecommendedTrafficLanePart.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RescueStation",
+    "name": "RescueStation",
+    "description": "Rules for feature type RescueStation",
+    "language": "eng",
+    "file_name": "RescueStation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "RestrictedArea",
+    "name": "RestrictedArea",
+    "description": "Rules for feature type RestrictedArea",
+    "language": "eng",
+    "file_name": "RestrictedArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Retroreflector",
+    "name": "Retroreflector",
+    "description": "Rules for feature type Retroreflector",
+    "language": "eng",
+    "file_name": "Retroreflector.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "River",
+    "name": "River",
+    "description": "Rules for feature type River",
+    "language": "eng",
+    "file_name": "River.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Road",
+    "name": "Road",
+    "description": "Rules for feature type Road",
+    "language": "eng",
+    "file_name": "Road.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Runway",
+    "name": "Runway",
+    "description": "Rules for feature type Runway",
+    "language": "eng",
+    "file_name": "Runway.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Sandwave",
+    "name": "Sandwave",
+    "description": "Rules for feature type Sandwave",
+    "language": "eng",
+    "file_name": "Sandwave.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SeaAreaNamedWaterArea",
+    "name": "SeaAreaNamedWaterArea",
+    "description": "Rules for feature type SeaAreaNamedWaterArea",
+    "language": "eng",
+    "file_name": "SeaAreaNamedWaterArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SeabedArea",
+    "name": "SeabedArea",
+    "description": "Rules for feature type SeabedArea",
+    "language": "eng",
+    "file_name": "SeabedArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SeaplaneLandingArea",
+    "name": "SeaplaneLandingArea",
+    "description": "Rules for feature type SeaplaneLandingArea",
+    "language": "eng",
+    "file_name": "SeaplaneLandingArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SeparationZoneOrLine",
+    "name": "SeparationZoneOrLine",
+    "description": "Rules for feature type SeparationZoneOrLine",
+    "language": "eng",
+    "file_name": "SeparationZoneOrLine.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "ShorelineConstruction",
+    "name": "ShorelineConstruction",
+    "description": "Rules for feature type ShorelineConstruction",
+    "language": "eng",
+    "file_name": "ShorelineConstruction.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SignalStationTraffic",
+    "name": "SignalStationTraffic",
+    "description": "Rules for feature type SignalStationTraffic",
+    "language": "eng",
+    "file_name": "SignalStationTraffic.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SignalStationWarning",
+    "name": "SignalStationWarning",
+    "description": "Rules for feature type SignalStationWarning",
+    "language": "eng",
+    "file_name": "SignalStationWarning.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SiloTank",
+    "name": "SiloTank",
+    "description": "Rules for feature type SiloTank",
+    "language": "eng",
+    "file_name": "SiloTank.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SlopeTopline",
+    "name": "SlopeTopline",
+    "description": "Rules for feature type SlopeTopline",
+    "language": "eng",
+    "file_name": "SlopeTopline.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SlopingGround",
+    "name": "SlopingGround",
+    "description": "Rules for feature type SlopingGround",
+    "language": "eng",
+    "file_name": "SlopingGround.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SmallCraftFacility",
+    "name": "SmallCraftFacility",
+    "description": "Rules for feature type SmallCraftFacility",
+    "language": "eng",
+    "file_name": "SmallCraftFacility.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Sounding",
+    "name": "Sounding",
+    "description": "Rules for feature type Sounding",
+    "language": "eng",
+    "file_name": "Sounding.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SoundingDatum",
+    "name": "SoundingDatum",
+    "description": "Rules for feature type SoundingDatum",
+    "language": "eng",
+    "file_name": "SoundingDatum.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SpanFixed",
+    "name": "SpanFixed",
+    "description": "Rules for feature type SpanFixed",
+    "language": "eng",
+    "file_name": "SpanFixed.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SpanOpening",
+    "name": "SpanOpening",
+    "description": "Rules for feature type SpanOpening",
+    "language": "eng",
+    "file_name": "SpanOpening.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Spring",
+    "name": "Spring",
+    "description": "Rules for feature type Spring",
+    "language": "eng",
+    "file_name": "Spring.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "StraightTerritorialSeaBaseline",
+    "name": "StraightTerritorialSeaBaseline",
+    "description": "Rules for feature type StraightTerritorialSeaBaseline",
+    "language": "eng",
+    "file_name": "StraightTerritorialSeaBaseline.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "StructureOverNavigableWater",
+    "name": "StructureOverNavigableWater",
+    "description": "Rules for feature type StructureOverNavigableWater",
+    "language": "eng",
+    "file_name": "StructureOverNavigableWater.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SubmarinePipelineArea",
+    "name": "SubmarinePipelineArea",
+    "description": "Rules for feature type SubmarinePipelineArea",
+    "language": "eng",
+    "file_name": "SubmarinePipelineArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SubmarineTransitLane",
+    "name": "SubmarineTransitLane",
+    "description": "Rules for feature type SubmarineTransitLane",
+    "language": "eng",
+    "file_name": "SubmarineTransitLane.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "SweptArea",
+    "name": "SweptArea",
+    "description": "Rules for feature type SweptArea",
+    "language": "eng",
+    "file_name": "SweptArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TerritorialSeaArea",
+    "name": "TerritorialSeaArea",
+    "description": "Rules for feature type TerritorialSeaArea",
+    "language": "eng",
+    "file_name": "TerritorialSeaArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TextPlacement",
+    "name": "TextPlacement",
+    "description": "Rules for feature type TextPlacement",
+    "language": "eng",
+    "file_name": "TextPlacement.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TidalStreamFloodEbb",
+    "name": "TidalStreamFloodEbb",
+    "description": "Rules for feature type TidalStreamFloodEbb",
+    "language": "eng",
+    "file_name": "TidalStreamFloodEbb.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TidalStreamPanelData",
+    "name": "TidalStreamPanelData",
+    "description": "Rules for feature type TidalStreamPanelData",
+    "language": "eng",
+    "file_name": "TidalStreamPanelData.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Tideway",
+    "name": "Tideway",
+    "description": "Rules for feature type Tideway",
+    "language": "eng",
+    "file_name": "Tideway.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TrafficSeparationScheme",
+    "name": "TrafficSeparationScheme",
+    "description": "Rules for feature type TrafficSeparationScheme",
+    "language": "eng",
+    "file_name": "TrafficSeparationScheme.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TrafficSeparationSchemeBoundary",
+    "name": "TrafficSeparationSchemeBoundary",
+    "description": "Rules for feature type TrafficSeparationSchemeBoundary",
+    "language": "eng",
+    "file_name": "TrafficSeparationSchemeBoundary.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TrafficSeparationSchemeCrossing",
+    "name": "TrafficSeparationSchemeCrossing",
+    "description": "Rules for feature type TrafficSeparationSchemeCrossing",
+    "language": "eng",
+    "file_name": "TrafficSeparationSchemeCrossing.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TrafficSeparationSchemeLanePart",
+    "name": "TrafficSeparationSchemeLanePart",
+    "description": "Rules for feature type TrafficSeparationSchemeLanePart",
+    "language": "eng",
+    "file_name": "TrafficSeparationSchemeLanePart.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TrafficSeparationSchemeRoundabout",
+    "name": "TrafficSeparationSchemeRoundabout",
+    "description": "Rules for feature type TrafficSeparationSchemeRoundabout",
+    "language": "eng",
+    "file_name": "TrafficSeparationSchemeRoundabout.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Tunnel",
+    "name": "Tunnel",
+    "description": "Rules for feature type Tunnel",
+    "language": "eng",
+    "file_name": "Tunnel.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TwoWayRoute",
+    "name": "TwoWayRoute",
+    "description": "Rules for feature type TwoWayRoute",
+    "language": "eng",
+    "file_name": "TwoWayRoute.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "TwoWayRoutePart",
+    "name": "TwoWayRoutePart",
+    "description": "Rules for feature type TwoWayRoutePart",
+    "language": "eng",
+    "file_name": "TwoWayRoutePart.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "UnderwaterAwashRock",
+    "name": "UnderwaterAwashRock",
+    "description": "Rules for feature type UnderwaterAwashRock",
+    "language": "eng",
+    "file_name": "UnderwaterAwashRock.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "UnsurveyedArea",
+    "name": "UnsurveyedArea",
+    "description": "Rules for feature type UnsurveyedArea",
+    "language": "eng",
+    "file_name": "UnsurveyedArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "UpdateInformation",
+    "name": "UpdateInformation",
+    "description": "Rules for feature type UpdateInformation",
+    "language": "eng",
+    "file_name": "UpdateInformation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Vegetation",
+    "name": "Vegetation",
+    "description": "Rules for feature type Vegetation",
+    "language": "eng",
+    "file_name": "Vegetation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "VerticalDatumOfData",
+    "name": "VerticalDatumOfData",
+    "description": "Rules for feature type VerticalDatumOfData",
+    "language": "eng",
+    "file_name": "VerticalDatumOfData.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "VesselTrafficServiceArea",
+    "name": "VesselTrafficServiceArea",
+    "description": "Rules for feature type VesselTrafficServiceArea",
+    "language": "eng",
+    "file_name": "VesselTrafficServiceArea.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "VirtualAISAidToNavigation",
+    "name": "VirtualAISAidToNavigation",
+    "description": "Rules for feature type VirtualAISAidToNavigation",
+    "language": "eng",
+    "file_name": "VirtualAISAidToNavigation.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Waterfall",
+    "name": "Waterfall",
+    "description": "Rules for feature type Waterfall",
+    "language": "eng",
+    "file_name": "Waterfall.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "WaterTurbulence",
+    "name": "WaterTurbulence",
+    "description": "Rules for feature type WaterTurbulence",
+    "language": "eng",
+    "file_name": "WaterTurbulence.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "WeedKelp",
+    "name": "WeedKelp",
+    "description": "Rules for feature type WeedKelp",
+    "language": "eng",
+    "file_name": "WeedKelp.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "WindTurbine",
+    "name": "WindTurbine",
+    "description": "Rules for feature type WindTurbine",
+    "language": "eng",
+    "file_name": "WindTurbine.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  },
+  {
+    "id": "Wreck",
+    "name": "Wreck",
+    "description": "Rules for feature type Wreck",
+    "language": "eng",
+    "file_name": "Wreck.lua",
+    "file_type": "Rule",
+    "file_format": "LUA",
+    "rule_type": "SubTemplate"
+  }
+]

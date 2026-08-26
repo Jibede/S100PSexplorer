@@ -1,0 +1,35 @@
+{
+  "intervalLength": "26",
+  "pen": {
+    "width": "0.32",
+    "color": "TRFCD"
+  },
+  "dash": [
+    {
+      "start": "0",
+      "length": "3.3"
+    },
+    {
+      "start": "14.1",
+      "length": "3.3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMDWRTC1",
+      "position": "6"
+    },
+    {
+      "code": "EMQUESM1",
+      "position": "8.7"
+    },
+    {
+      "code": "EMDWRTC2",
+      "position": "11.4"
+    },
+    {
+      "code": "EMDWRUT2",
+      "position": "21.5"
+    }
+  ]
+}

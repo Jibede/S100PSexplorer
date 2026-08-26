@@ -1,0 +1,297 @@
+[
+  {
+    "node_type": "function",
+    "name": "PortrayalMain",
+    "line": 7,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "not portrayalContext",
+        "line": 10,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "contextParameters",
+        "instruction_type": "LocalAssign",
+        "line": 14,
+        "code": "local contextParameters = portrayalContext.ContextParameters",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "featurePortrayalItems",
+        "instruction_type": "LocalAssign",
+        "line": 16,
+        "code": "local featurePortrayalItems = portrayalContext.FeaturePortrayalItems",
+        "value": 1
+      },
+      {
+        "node_type": "function",
+        "name": "ProcessFeaturePortrayalItem",
+        "line": 21,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "feature",
+            "instruction_type": "LocalAssign",
+            "line": 23,
+            "code": "local feature = featurePortrayalItem.Feature",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "featurePortrayal",
+            "instruction_type": "LocalAssign",
+            "line": 27,
+            "code": "local featurePortrayal = featurePortrayalItem:NewFeaturePortrayal()",
+            "value": 1
+          },
+          {},
+          {
+            "node_type": "var",
+            "name": "status",
+            "instruction_type": "LocalAssign",
+            "line": 31,
+            "code": "local status, err = pcall(function()\nDebug.StartPerformance('Lua Code - Rules processing')\nlocal dateDependent = ProcessFixedAndPeriodicDates(feature, featurePortrayal)\nlocal scaleMinimum = feature['!scaleMinimum']\nlocal scaleMaximum = feature['!scaleMaximum']\nif scaleMinimum and not contextParameters.IgnoreScaleMinimum then\n    featurePortrayal:AddInstructions('ScaleMinimum:' .. scaleMinimum)\nend\nif scaleMaximum then\n    featurePortrayal:AddInstructions('ScaleMaximum:' .. scaleMaximum)\nend\nrequire(feature.Code)\nlocal viewingGroup = _G[feature.Code](feature, featurePortrayal, contextParameters)\nif not viewingGroup then\n    error('Viewing group not returned for feature ' .. feature.ID)\nend\nif #featurePortrayal.DrawingInstructions == 0 then\n    error('No drawing instructions were emitted for feature ' .. feature.ID)\nend\nif not featurePortrayal.GetFeatureNameCalled then\n    PortrayFeatureName(feature, featurePortrayal, contextParameters, 32, 24, viewingGroup, nil, 'TextAlignHorizontal:Center;TextAlignVertical:Top;LocalOffset:0,-3.51;FontColor:CHBLK')\nend\nProcessNauticalInformation(feature, featurePortrayal, contextParameters, viewingGroup)\nif dateDependent then\n    AddDateDependentSymbol(feature, featurePortrayal, contextParameters, viewingGroup)\nend\nDebug.StopPerformance('Lua Code - Rules processing')\nend)",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "not status",
+            "line": 72,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "featurePortrayal",
+                "instruction_type": "Assign",
+                "line": 76,
+                "code": "featurePortrayal = featurePortrayalItem:NewFeaturePortrayal()",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "dateDependent",
+                "instruction_type": "LocalAssign",
+                "line": 78,
+                "code": "local dateDependent = ProcessFixedAndPeriodicDates(feature, featurePortrayal)",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "viewingGroup",
+                "instruction_type": "LocalAssign",
+                "line": 79,
+                "code": "local viewingGroup = Default(feature, featurePortrayal, contextParameters)",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "dateDependent",
+                "line": 81,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "var",
+            "name": "ObservedContextParameters",
+            "instruction_type": "Assign",
+            "line": 90,
+            "code": "featurePortrayalItem.ObservedContextParameters = contextParameters._observed",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "InUseContextParameters",
+            "instruction_type": "Assign",
+            "line": 91,
+            "code": "featurePortrayalItem.InUseContextParameters = contextParameters._asTable",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "observed",
+            "instruction_type": "LocalAssign",
+            "line": 93,
+            "code": "local observed = ObservedContextParametersAsString(featurePortrayalItem)",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "drawingInstructions",
+            "instruction_type": "LocalAssign",
+            "line": 95,
+            "code": "local drawingInstructions = table.concat(featurePortrayal.DrawingInstructions, ';')",
+            "value": 1
+          }
+        ]
+      },
+      {},
+      {
+        "node_type": "if",
+        "condition": "featureIDs",
+        "line": 104,
+        "children": [
+          {
+            "node_type": "for",
+            "line": 105,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "item",
+                "instruction_type": "LocalAssign",
+                "line": 106,
+                "code": "local item = featurePortrayalItems[featureID]",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "item.Feature.Code ~= 'TextPlacement'",
+                "line": 108,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "not ProcessFeaturePortrayalItem(item)",
+                    "line": 109,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 113,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 117,
+        "children": [
+          {
+            "node_type": "for",
+            "line": 117,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "featurePortrayalItem.Feature.Code ~= 'TextPlacement'",
+                "line": 119,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "not ProcessFeaturePortrayalItem(featurePortrayalItem)",
+                    "line": 120,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 124,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "for",
+        "line": 131,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "featurePortrayal",
+            "instruction_type": "LocalAssign",
+            "line": 132,
+            "code": "local featurePortrayal = rawget(feature, '_featurePortrayal')",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "featurePortrayal",
+            "line": 133,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "featurePortrayal.DrawingInstructions",
+                "line": 135,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "item",
+                    "instruction_type": "LocalAssign",
+                    "line": 136,
+                    "code": "local item = rawget(feature, '_featurePortrayalItem')",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 139,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {},
+  {},
+  {},
+  {
+    "node_type": "var",
+    "name": "scaminInfinite",
+    "instruction_type": "Assign",
+    "line": 174,
+    "code": "scaminInfinite = 2147483647",
+    "value": 2147483647
+  },
+  {},
+  {
+    "node_type": "var",
+    "name": "unpack",
+    "instruction_type": "Assign",
+    "line": 181,
+    "code": "unpack = unpack or table.unpack",
+    "value": 1
+  },
+  {
+    "node_type": "var",
+    "name": "EqMetaMethodGuarantee",
+    "instruction_type": "Assign",
+    "line": 200,
+    "code": "EqMetaMethodGuarantee = true",
+    "value": 1
+  },
+  {},
+  {},
+  {},
+  {},
+  {
+    "node_type": "var",
+    "name": "__eq",
+    "instruction_type": "Assign",
+    "line": 208,
+    "code": "m1.__eq = function(p1, p2)\nreturn true\nend",
+    "value": 1
+  },
+  {
+    "node_type": "var",
+    "name": "EqMetaMethodGuarantee",
+    "instruction_type": "Assign",
+    "line": 209,
+    "code": "EqMetaMethodGuarantee = not (t1 == t2)",
+    "value": 1
+  },
+  {
+    "node_type": "if",
+    "condition": "not EqMetaMethodGuarantee",
+    "line": 210,
+    "children": []
+  }
+]

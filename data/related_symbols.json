@@ -1,0 +1,2769 @@
+{
+  "line_style": {
+    "_simple_": {
+      "rule": [
+        "ContinentalShelfArea",
+        "Dyke",
+        "MooringArea",
+        "TerritorialSeaArea",
+        "Gridiron",
+        "SpanOpening",
+        "LogPond",
+        "OBSTRN07",
+        "Runway",
+        "DepthArea",
+        "FloatingDock",
+        "SmallCraftFacility",
+        "InformationArea",
+        "CustomZone",
+        "Hulk",
+        "Wreck",
+        "PylonBridgeSupport",
+        "Berth",
+        "HarbourAreaAdministrative",
+        "DEPARE03",
+        "MagneticVariation",
+        "FishingFacility",
+        "BuiltUpArea",
+        "DeepWaterRoutePart",
+        "FortifiedStructure",
+        "Gate",
+        "OffshorePlatform",
+        "RadioCallingInPoint",
+        "LandElevation",
+        "FerryRoute",
+        "DockArea",
+        "Obstruction",
+        "FenceWall",
+        "MilitaryPracticeArea",
+        "ProductionStorageArea",
+        "MarineFarmCulture",
+        "ArchipelagicSeaLaneAxis",
+        "SubmarinePipelineArea",
+        "Dolphin",
+        "InshoreTrafficZone",
+        "PilotageDistrict",
+        "PrecautionaryArea",
+        "NavigationLine",
+        "MarinePollutionRegulationsArea",
+        "Causeway",
+        "CableSubmarine",
+        "TwoWayRoutePart",
+        "Pontoon",
+        "Vegetation",
+        "TidalStreamFloodEbb",
+        "QUALIN02",
+        "CableArea",
+        "ExclusiveEconomicZone",
+        "QualityOfNonBathymetricData",
+        "Conveyor",
+        "Canal",
+        "RadarLine",
+        "River",
+        "SeparationZoneOrLine",
+        "OilBarrier",
+        "Bridge",
+        "OffshoreProductionArea",
+        "SlopingGround",
+        "LightAllAround",
+        "CautionArea",
+        "Crane",
+        "WeedKelp",
+        "CableOverhead",
+        "SweptArea",
+        "Coastline",
+        "Waterfall",
+        "Fairway",
+        "DiscolouredWater",
+        "FreePortArea",
+        "SlopeTopline",
+        "AirportAirfield",
+        "Tideway",
+        "UnsurveyedArea",
+        "FoulGround",
+        "SeabedArea",
+        "StraightTerritorialSeaBaseline",
+        "AnchorageArea",
+        "Dam",
+        "TrafficSeparationSchemeBoundary",
+        "WaterTurbulence",
+        "AnchorBerth",
+        "DryDock",
+        "Building",
+        "RESARE04",
+        "IceArea",
+        "Road",
+        "LocalDirectionOfBuoyage",
+        "LockBasin",
+        "VesselTrafficServiceArea",
+        "RadarRange",
+        "Default",
+        "Seagrass",
+        "Tunnel",
+        "DumpingGround",
+        "FisheryZone",
+        "AdministrationArea",
+        "LocalMagneticAnomaly",
+        "Lake",
+        "SLCONS04",
+        "TidalStreamPanelData",
+        "SpanFixed",
+        "SiloTank",
+        "Landmark",
+        "LightSectored",
+        "WRECKS05",
+        "CargoTranshipmentArea",
+        "QualityOfBathymetricData",
+        "SubmarineTransitLane",
+        "Rapids",
+        "PipelineOverhead",
+        "Railway",
+        "StructureOverNavigableWater",
+        "Sandwave",
+        "FishingGround",
+        "SeaplaneLandingArea",
+        "ContiguousZone",
+        "PilotBoardingPlace"
+      ]
+    },
+    "ADMARE01": {
+      "rule": [
+        "MarinePollutionRegulationsArea",
+        "PilotageDistrict",
+        "AdministrationArea"
+      ]
+    },
+    "ACHARE51": {
+      "rule": [
+        "AnchorageArea"
+      ]
+    },
+    "ARCSLN01": {
+      "rule": [
+        "ArchipelagicSeaLaneArea"
+      ]
+    },
+    "LOWACC21": {
+      "rule": [
+        "BuiltUpArea",
+        "SLCONS04",
+        "QUALIN02"
+      ]
+    },
+    "CBLARE51": {
+      "rule": [
+        "CableArea"
+      ]
+    },
+    "CBLSUB06": {
+      "rule": [
+        "CableSubmarine"
+      ]
+    },
+    "CTYARE51": {
+      "rule": [
+        "TwoWayRoutePart",
+        "DumpingGround",
+        "CargoTranshipmentArea",
+        "SubmarineTransitLane",
+        "MilitaryPracticeArea",
+        "SeaplaneLandingArea",
+        "LocalMagneticAnomaly",
+        "RESARE04",
+        "PilotBoardingPlace"
+      ]
+    },
+    "CTNARE51": {
+      "rule": [
+        "CautionArea"
+      ]
+    },
+    "COLREG01": {
+      "rule": [
+        "CollisionRegulationsLimit"
+      ]
+    },
+    "DWRTCL08": {
+      "rule": [
+        "DeepWaterRouteCentreline"
+      ]
+    },
+    "DWRTCL06": {
+      "rule": [
+        "DeepWaterRouteCentreline"
+      ]
+    },
+    "DWRTCL07": {
+      "rule": [
+        "DeepWaterRouteCentreline"
+      ]
+    },
+    "DWRTCL05": {
+      "rule": [
+        "DeepWaterRouteCentreline"
+      ]
+    },
+    "DWLDEF01": {
+      "rule": [
+        "DeepWaterRouteCentreline"
+      ]
+    },
+    "DWRUTE51": {
+      "rule": [
+        "DeepWaterRoutePart"
+      ]
+    },
+    "QUESMRK1": {
+      "rule": [
+        "Default"
+      ]
+    },
+    "DSCWTR51": {
+      "rule": [
+        "DiscolouredWater"
+      ]
+    },
+    "NAVARE51": {
+      "rule": [
+        "Fairway",
+        "FerryRoute",
+        "HarbourAreaAdministrative",
+        "OffshoreProductionArea",
+        "SweptArea",
+        "FishingFacility",
+        "Sandwave",
+        "LocalDirectionOfBuoyage",
+        "Wreck",
+        "MarineFarmCulture"
+      ]
+    },
+    "FERYRT01": {
+      "rule": [
+        "FerryRoute"
+      ]
+    },
+    "FERYRT02": {
+      "rule": [
+        "FerryRoute"
+      ]
+    },
+    "FSHFAC02": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "RESARE51": {
+      "rule": [
+        "InshoreTrafficZone"
+      ]
+    },
+    "NAVARE52": {
+      "rule": [
+        "MooringArea"
+      ]
+    },
+    "LOWACC41": {
+      "rule": [
+        "OBSTRN07",
+        "WRECKS05"
+      ]
+    },
+    "LOWACC31": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "PILPNT01": {
+      "rule": [
+        "Pile"
+      ]
+    },
+    "PIPSOL06": {
+      "rule": [
+        "PipelineSubmarineOnLand"
+      ]
+    },
+    "PIPSOL05": {
+      "rule": [
+        "PipelineSubmarineOnLand"
+      ]
+    },
+    "PRCARE51": {
+      "rule": [
+        "PrecautionaryArea"
+      ]
+    },
+    "RCRTCL14": {
+      "rule": [
+        "RecommendedRouteCentreline"
+      ]
+    },
+    "RCRTCL13": {
+      "rule": [
+        "RecommendedRouteCentreline"
+      ]
+    },
+    "RCRTCL12": {
+      "rule": [
+        "RecommendedRouteCentreline"
+      ]
+    },
+    "RCRTCL11": {
+      "rule": [
+        "RecommendedRouteCentreline"
+      ]
+    },
+    "RCRDEF11": {
+      "rule": [
+        "RecommendedRouteCentreline"
+      ]
+    },
+    "RECTRC12": {
+      "rule": [
+        "RecommendedTrack"
+      ]
+    },
+    "RECTRC10": {
+      "rule": [
+        "RecommendedTrack"
+      ]
+    },
+    "RECTRC11": {
+      "rule": [
+        "RecommendedTrack"
+      ]
+    },
+    "RECTRC09": {
+      "rule": [
+        "RecommendedTrack"
+      ]
+    },
+    "RECDEF02": {
+      "rule": [
+        "RecommendedTrack"
+      ]
+    },
+    "ENTRES51": {
+      "rule": [
+        "RESARE04"
+      ]
+    },
+    "ACHRES51": {
+      "rule": [
+        "RESARE04"
+      ]
+    },
+    "FSHRES51": {
+      "rule": [
+        "RESARE04"
+      ]
+    },
+    "ESSARE01": {
+      "rule": [
+        "RestrictedArea"
+      ]
+    },
+    "PIPARE61": {
+      "rule": [
+        "SubmarinePipelineArea"
+      ]
+    },
+    "PIPARE51": {
+      "rule": [
+        "SubmarinePipelineArea"
+      ]
+    },
+    "TIDINF51": {
+      "rule": [
+        "TidalStreamFloodEbb",
+        "TidalStreamPanelData"
+      ]
+    },
+    "VTSARE51": {
+      "rule": [
+        "VesselTrafficServiceArea"
+      ]
+    }
+  },
+  "symbol": {
+    "HELIPD02": {
+      "rule": [
+        "Helipad",
+        "AirportAirfield"
+      ]
+    },
+    "AIRARE02": {
+      "rule": [
+        "AirportAirfield"
+      ]
+    },
+    "ACHARE03": {
+      "rule": [
+        "AnchorageArea"
+      ]
+    },
+    "ACHARE02": {
+      "rule": [
+        "AnchorageArea",
+        "Obstruction"
+      ]
+    },
+    "ACHARE51": {
+      "rule": [
+        "AnchorageArea"
+      ]
+    },
+    "ANCBDNG2": {
+      "rule": [
+        "AnchorBerth"
+      ]
+    },
+    "ACHBRT07": {
+      "rule": [
+        "AnchorBerth"
+      ]
+    },
+    "BRTHDNG1": {
+      "rule": [
+        "Berth"
+      ]
+    },
+    "BRTHNO01": {
+      "rule": [
+        "Berth"
+      ]
+    },
+    "PILPNT02": {
+      "rule": [
+        "Bollard",
+        "Pile"
+      ],
+      "line_styles": [
+        "PILPNT01"
+      ]
+    },
+    "BRIDGE01": {
+      "rule": [
+        "Bridge",
+        "SpanOpening"
+      ]
+    },
+    "POSGEN03": {
+      "rule": [
+        "Building",
+        "Landmark",
+        "PylonBridgeSupport"
+      ]
+    },
+    "BUIREL13": {
+      "rule": [
+        "Building",
+        "Landmark"
+      ]
+    },
+    "BUIREL14": {
+      "rule": [
+        "Building"
+      ]
+    },
+    "BUIREL15": {
+      "rule": [
+        "Building",
+        "Landmark"
+      ]
+    },
+    "TNKCON12": {
+      "rule": [
+        "Building",
+        "ProductionStorageArea",
+        "SiloTank"
+      ]
+    },
+    "BUISGL11": {
+      "rule": [
+        "Building"
+      ]
+    },
+    "BUIREL01": {
+      "rule": [
+        "Building",
+        "Landmark"
+      ]
+    },
+    "BUIREL04": {
+      "rule": [
+        "Building"
+      ]
+    },
+    "BUIREL05": {
+      "rule": [
+        "Building"
+      ]
+    },
+    "TNKCON02": {
+      "rule": [
+        "Building",
+        "ProductionStorageArea",
+        "SiloTank"
+      ]
+    },
+    "BUISGL01": {
+      "rule": [
+        "Building"
+      ]
+    },
+    "BUAARE02": {
+      "rule": [
+        "BuiltUpArea"
+      ]
+    },
+    "CBLARE51": {
+      "rule": [
+        "CableArea"
+      ]
+    },
+    "RACNSP01": {
+      "rule": [
+        "PipelineOverhead",
+        "Conveyor",
+        "CableOverhead"
+      ]
+    },
+    "BCNCAR04": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNCAR03": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNCAR02": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNCAR01": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNDEF13": {
+      "rule": [
+        "CardinalBeacon",
+        "LateralBeacon"
+      ]
+    },
+    "BCNTOW23": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNGEN23": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNTOW25": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNGEN25": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNTOW22": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNGEN22": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNTOW24": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNGEN24": {
+      "rule": [
+        "CardinalBeacon"
+      ]
+    },
+    "BCNSTK02": {
+      "rule": [
+        "CardinalBeacon",
+        "SafeWaterBeacon",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BCNTOW01": {
+      "rule": [
+        "CardinalBeacon",
+        "SafeWaterBeacon",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BCNLTC01": {
+      "rule": [
+        "CardinalBeacon",
+        "SafeWaterBeacon",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BCNGEN01": {
+      "rule": [
+        "CardinalBeacon",
+        "SafeWaterBeacon",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BCNGEN03": {
+      "rule": [
+        "CardinalBeacon",
+        "SafeWaterBeacon",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon",
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BOYCAR04": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYCAR03": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYCAR02": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYCAR01": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYDEF03": {
+      "rule": [
+        "LateralBuoy",
+        "CardinalBuoy"
+      ]
+    },
+    "BOYPIL23": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYSPR23": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYPIL25": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYSPR25": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYPIL22": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYSPR22": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYPIL24": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYSPR24": {
+      "rule": [
+        "CardinalBuoy"
+      ]
+    },
+    "BOYCON01": {
+      "rule": [
+        "LateralBuoy",
+        "IsolatedDangerBuoy",
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy"
+      ]
+    },
+    "BOYCAN01": {
+      "rule": [
+        "LateralBuoy",
+        "IsolatedDangerBuoy",
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy"
+      ]
+    },
+    "BOYSPH01": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LateralBuoy"
+      ]
+    },
+    "BOYPIL01": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPR01": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LateralBuoy"
+      ]
+    },
+    "BOYBAR01": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LateralBuoy"
+      ]
+    },
+    "BOYSUP01": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LateralBuoy"
+      ]
+    },
+    "BOYGEN03": {
+      "rule": [
+        "EmergencyWreckMarkingBuoy",
+        "SpecialPurposeGeneralBuoy",
+        "CardinalBuoy",
+        "IsolatedDangerBuoy",
+        "SafeWaterBuoy",
+        "LateralBuoy"
+      ]
+    },
+    "CHINFO07": {
+      "rule": [
+        "DumpingGround",
+        "CargoTranshipmentArea",
+        "HarbourFacility",
+        "SubmarinePipelineArea"
+      ]
+    },
+    "INFARE51": {
+      "rule": [
+        "RESCSP03",
+        "SubmarinePipelineArea",
+        "DumpingGround",
+        "CargoTranshipmentArea",
+        "RESARE04",
+        "InformationArea"
+      ]
+    },
+    "CHINFO06": {
+      "rule": [
+        "MilitaryPracticeArea",
+        "CautionArea",
+        "SeaplaneLandingArea"
+      ]
+    },
+    "CTNARE51": {
+      "rule": [
+        "TrafficSeparationSchemeLanePart",
+        "CautionArea"
+      ]
+    },
+    "CHKPNT01": {
+      "rule": [
+        "Checkpoint"
+      ]
+    },
+    "POSGEN04": {
+      "rule": [
+        "LandRegion",
+        "Checkpoint",
+        "LandElevation"
+      ]
+    },
+    "CGUSTA02": {
+      "rule": [
+        "CoastGuardStation"
+      ]
+    },
+    "CRANES03": {
+      "rule": [
+        "Crane"
+      ]
+    },
+    "CRANES01": {
+      "rule": [
+        "Crane"
+      ]
+    },
+    "CURENT01": {
+      "rule": [
+        "CurrentNonGravitational",
+        "TidalStreamFloodEbb"
+      ]
+    },
+    "CURDEF01": {
+      "rule": [
+        "CurrentNonGravitational",
+        "TidalStreamFloodEbb"
+      ]
+    },
+    "DAYSQR01": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "DAYTRI01": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "DAYTRI05": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "DAYSQR21": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "DAYTRI21": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "DAYTRI25": {
+      "rule": [
+        "Daymark"
+      ]
+    },
+    "TSSLPT51": {
+      "rule": [
+        "TrafficSeparationSchemeLanePart",
+        "DeepWaterRoutePart"
+      ]
+    },
+    "DWRTPT51": {
+      "rule": [
+        "DeepWaterRoutePart"
+      ]
+    },
+    "DWRUTE51": {
+      "rule": [
+        "DeepWaterRoutePart"
+      ]
+    },
+    "TSLDEF51": {
+      "rule": [
+        "DeepWaterRoutePart"
+      ]
+    },
+    "QUESMRK1": {
+      "rule": [
+        "Default",
+        "LightSectored"
+      ]
+    },
+    "symbol": {
+      "rule": [
+        "SOUNDG03",
+        "OBSTRN07",
+        "WRECKS05",
+        "DepthNoBottomFound"
+      ]
+    },
+    "EMDSCWTR": {
+      "rule": [
+        "DiscolouredWater"
+      ],
+      "line_styles": [
+        "DSCWTR51"
+      ]
+    },
+    "DSCWTR51": {
+      "rule": [
+        "DiscolouredWater"
+      ]
+    },
+    "DISMAR07": {
+      "rule": [
+        "DistanceMark"
+      ]
+    },
+    "DISMAR06": {
+      "rule": [
+        "DistanceMark"
+      ]
+    },
+    "MORFAC04": {
+      "rule": [
+        "Dolphin"
+      ]
+    },
+    "MORFAC03": {
+      "rule": [
+        "ShorelineConstruction",
+        "Dolphin"
+      ]
+    },
+    "BOYNDM02": {
+      "rule": [
+        "EmergencyWreckMarkingBuoy"
+      ]
+    },
+    "BOYSPH60": {
+      "rule": [
+        "EmergencyWreckMarkingBuoy"
+      ]
+    },
+    "BOYPIL60": {
+      "rule": [
+        "EmergencyWreckMarkingBuoy"
+      ]
+    },
+    "BOYSPR60": {
+      "rule": [
+        "EmergencyWreckMarkingBuoy"
+      ]
+    },
+    "FAIRWY51": {
+      "rule": [
+        "Fairway"
+      ]
+    },
+    "FAIRWY52": {
+      "rule": [
+        "Fairway"
+      ]
+    },
+    "FRYARE52": {
+      "rule": [
+        "FerryRoute"
+      ]
+    },
+    "FRYARE51": {
+      "rule": [
+        "FerryRoute"
+      ]
+    },
+    "FSHFAC03": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "FSHFAC02": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "FSHHAV01": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "FSHGRD01": {
+      "rule": [
+        "FishingGround"
+      ]
+    },
+    "FOGSIG01": {
+      "rule": [
+        "FogSignal"
+      ]
+    },
+    "FORSTC11": {
+      "rule": [
+        "FortifiedStructure"
+      ]
+    },
+    "FORSTC01": {
+      "rule": [
+        "FortifiedStructure"
+      ]
+    },
+    "FOULGND1": {
+      "rule": [
+        "Wreck",
+        "FoulGround"
+      ]
+    },
+    "FOULGD51": {
+      "rule": [
+        "FoulGround"
+      ]
+    },
+    "GATCON04": {
+      "rule": [
+        "Gate"
+      ]
+    },
+    "GATCON03": {
+      "rule": [
+        "Gate"
+      ]
+    },
+    "ROLROL01": {
+      "rule": [
+        "HarbourFacility"
+      ]
+    },
+    "HRBFAC09": {
+      "rule": [
+        "HarbourFacility"
+      ]
+    },
+    "SMCFAC02": {
+      "rule": [
+        "HarbourFacility",
+        "SmallCraftFacility"
+      ]
+    },
+    "HULKES01": {
+      "rule": [
+        "Hulk"
+      ]
+    },
+    "INFARE01": {
+      "rule": [
+        "InformationArea"
+      ],
+      "line_styles": [
+        "INFARE51"
+      ]
+    },
+    "ITZARE51": {
+      "rule": [
+        "InshoreTrafficZone"
+      ]
+    },
+    "BOYMOR11": {
+      "rule": [
+        "MooringBuoy",
+        "InstallationBuoy"
+      ]
+    },
+    "BOYINB01": {
+      "rule": [
+        "InstallationBuoy"
+      ]
+    },
+    "BCNISD21": {
+      "rule": [
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BCNTOW40": {
+      "rule": [
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BCNGEN40": {
+      "rule": [
+        "IsolatedDangerBeacon"
+      ]
+    },
+    "BOYISD12": {
+      "rule": [
+        "IsolatedDangerBuoy"
+      ]
+    },
+    "BOYPIL40": {
+      "rule": [
+        "IsolatedDangerBuoy"
+      ]
+    },
+    "BOYSPR40": {
+      "rule": [
+        "IsolatedDangerBuoy"
+      ]
+    },
+    "LNDARE01": {
+      "rule": [
+        "LandArea"
+      ]
+    },
+    "TOWERS15": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "TOWERS03": {
+      "rule": [
+        "Landmark",
+        "SiloTank"
+      ]
+    },
+    "CAIRNS11": {
+      "rule": [
+        "Landmark",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "CHIMNY11": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "DSHAER11": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "FLGSTF02": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "FLASTK11": {
+      "rule": [
+        "Landmark",
+        "ProductionStorageArea"
+      ]
+    },
+    "MSTCON14": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "MONUMT12": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "DOMES011": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "RASCAN11": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "WNDMIL12": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "FERWHL03": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "TORII11": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "TOWERS05": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "TOWERS01": {
+      "rule": [
+        "Landmark",
+        "SiloTank"
+      ]
+    },
+    "CAIRNS01": {
+      "rule": [
+        "Landmark",
+        "LateralBeacon",
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "CHIMNY01": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "DSHAER01": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "FLGSTF01": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "FLASTK01": {
+      "rule": [
+        "Landmark",
+        "ProductionStorageArea"
+      ]
+    },
+    "MSTCON04": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "MONUMT02": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "DOMES001": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "RASCAN01": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "WNDMIL02": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "POSGEN01": {
+      "rule": [
+        "Landmark",
+        "RadarStation"
+      ]
+    },
+    "POSGEN05": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "FERWHL04": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "TORII01": {
+      "rule": [
+        "Landmark"
+      ]
+    },
+    "BCNLAT21": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNLAT22": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNLAT15": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNLAT16": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNTOW30": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNGEN30": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNTOW31": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNGEN31": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNTOW10": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNGEN10": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNTOW11": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BCNGEN11": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "PRICKE03": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "PRICKE04": {
+      "rule": [
+        "LateralBeacon"
+      ]
+    },
+    "BOYLAT14": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYLAT13": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYLAT24": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYLAT23": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCON30": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCAN30": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYPIL30": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPR30": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCON31": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCAN31": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYPIL31": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPR31": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCON10": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCON11": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCAN10": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYCAN11": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPH10": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPH11": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYPIL10": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYPIL11": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPR10": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYSPR11": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYBAR10": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "BOYBAR11": {
+      "rule": [
+        "LateralBuoy"
+      ]
+    },
+    "LIGHTS82": {
+      "rule": [
+        "LightAllAround"
+      ]
+    },
+    "LIGHTS81": {
+      "rule": [
+        "LightAllAround"
+      ]
+    },
+    "LIGHTS11": {
+      "rule": [
+        "LightFlareAndDescription",
+        "LightSectored"
+      ]
+    },
+    "LIGHTS12": {
+      "rule": [
+        "LightFlareAndDescription",
+        "LightSectored"
+      ]
+    },
+    "LIGHTS13": {
+      "rule": [
+        "LightFlareAndDescription",
+        "LightSectored"
+      ]
+    },
+    "LITDEF11": {
+      "rule": [
+        "LightFlareAndDescription",
+        "LightSectored"
+      ]
+    },
+    "LITFLT02": {
+      "rule": [
+        "LightFloat"
+      ]
+    },
+    "LITFLT01": {
+      "rule": [
+        "LightFloat"
+      ]
+    },
+    "LITVES02": {
+      "rule": [
+        "LightVessel"
+      ]
+    },
+    "LITVES01": {
+      "rule": [
+        "LightVessel"
+      ]
+    },
+    "LOCMAG01": {
+      "rule": [
+        "LocalMagneticAnomaly"
+      ]
+    },
+    "LOCMAG51": {
+      "rule": [
+        "LocalMagneticAnomaly"
+      ]
+    },
+    "FLTHAZ02": {
+      "rule": [
+        "LogPond",
+        "Obstruction"
+      ]
+    },
+    "MAGVAR01": {
+      "rule": [
+        "MagneticVariation"
+      ]
+    },
+    "MAGVAR51": {
+      "rule": [
+        "MagneticVariation"
+      ]
+    },
+    "MARCUL02": {
+      "rule": [
+        "MarineFarmCulture"
+      ]
+    },
+    "CTYARE51": {
+      "rule": [
+        "RESCSP03",
+        "OffshoreProductionArea",
+        "SubmarineTransitLane",
+        "MilitaryPracticeArea",
+        "SeaplaneLandingArea",
+        "RESARE04"
+      ]
+    },
+    "BOYMOR02": {
+      "rule": [
+        "MooringArea"
+      ]
+    },
+    "BOYMOR51": {
+      "rule": [
+        "MooringArea"
+      ]
+    },
+    "BOYMOR01": {
+      "rule": [
+        "MooringBuoy"
+      ]
+    },
+    "BOYMOR03": {
+      "rule": [
+        "MooringBuoy"
+      ]
+    },
+    "1": {
+      "rule": [
+        "OBSTRN07",
+        "WRECKS05",
+        "TOPMAR02"
+      ]
+    },
+    "UWTROC04": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "DANGER01": {
+      "rule": [
+        "OBSTRN07",
+        "WRECKS05"
+      ]
+    },
+    "OBSTRN11": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "DANGER03": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "DANGER02": {
+      "rule": [
+        "OBSTRN07",
+        "WRECKS05"
+      ]
+    },
+    "UWTROC03": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "OBSTRN01": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "OBSTRN03": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "VEGATN04P": {
+      "rule": [
+        "Obstruction"
+      ],
+      "area_fills": [
+        "VEGATN04"
+      ]
+    },
+    "OFSPLF01": {
+      "rule": [
+        "OffshorePlatform"
+      ]
+    },
+    "RENERG51": {
+      "rule": [
+        "OffshoreProductionArea"
+      ]
+    },
+    "WNDFRM52": {
+      "rule": [
+        "OffshoreProductionArea"
+      ]
+    },
+    "TNKFRM": {
+      "rule": [
+        "OffshoreProductionArea"
+      ]
+    },
+    "PILBOP02": {
+      "rule": [
+        "PilotBoardingPlace"
+      ]
+    },
+    "PILBARE51": {
+      "rule": [
+        "PilotBoardingPlace"
+      ]
+    },
+    "PRCARE12": {
+      "rule": [
+        "PrecautionaryArea"
+      ]
+    },
+    "PRCARE51": {
+      "rule": [
+        "PrecautionaryArea"
+      ]
+    },
+    "WIMCON11": {
+      "rule": [
+        "ProductionStorageArea",
+        "WindTurbine"
+      ]
+    },
+    "TMBYRD01": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "WIMCON01": {
+      "rule": [
+        "ProductionStorageArea",
+        "WindTurbine"
+      ]
+    },
+    "PRDINS02": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "RFNERY11": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "TNKFRM11": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "WNDFRM61": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "QUARRY01": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "RFNERY01": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "TNKFRM01": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "WNDFRM51": {
+      "rule": [
+        "ProductionStorageArea"
+      ]
+    },
+    "RADRFL03": {
+      "rule": [
+        "RadarReflector"
+      ]
+    },
+    "RDOSTA02": {
+      "rule": [
+        "RadarStation",
+        "RadioStation"
+      ]
+    },
+    "RTPBCN02": {
+      "rule": [
+        "RadarTransponderBeacon"
+      ]
+    },
+    "RDOCAL02": {
+      "rule": [
+        "RadioCallingInPoint"
+      ]
+    },
+    "RDOCAL03": {
+      "rule": [
+        "RadioCallingInPoint"
+      ]
+    },
+    "RCLDEF01": {
+      "rule": [
+        "RadioCallingInPoint"
+      ]
+    },
+    "DRFSTA02": {
+      "rule": [
+        "RadioStation"
+      ]
+    },
+    "RCTLPT52": {
+      "rule": [
+        "RecommendedTrafficLanePart"
+      ]
+    },
+    "RTLDEF51": {
+      "rule": [
+        "RecommendedTrafficLanePart"
+      ]
+    },
+    "ENTRES61": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "ENTRES71": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "ENTRES51": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "ACHRES61": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "ACHRES71": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "ACHRES51": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "FSHRES61": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "FSHRES71": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "FSHRES51": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "CTYARE71": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "RSRDEF51": {
+      "rule": [
+        "RESARE04",
+        "RESCSP03"
+      ]
+    },
+    "RSCSTA02": {
+      "rule": [
+        "RescueStation"
+      ]
+    },
+    "ESSARE01": {
+      "rule": [
+        "RestrictedArea"
+      ]
+    },
+    "PSSARE01": {
+      "rule": [
+        "RestrictedArea"
+      ]
+    },
+    "RETRFL02": {
+      "rule": [
+        "Retroreflector"
+      ]
+    },
+    "RETRFL01": {
+      "rule": [
+        "Retroreflector"
+      ]
+    },
+    "BCNSAW21": {
+      "rule": [
+        "SafeWaterBeacon"
+      ]
+    },
+    "BCNSAW13": {
+      "rule": [
+        "SafeWaterBeacon"
+      ]
+    },
+    "BCNTOW50": {
+      "rule": [
+        "SafeWaterBeacon"
+      ]
+    },
+    "BCNGEN50": {
+      "rule": [
+        "SafeWaterBeacon"
+      ]
+    },
+    "BOYSAW12": {
+      "rule": [
+        "SafeWaterBuoy"
+      ]
+    },
+    "BOYSPH50": {
+      "rule": [
+        "SafeWaterBuoy"
+      ]
+    },
+    "BOYPIL50": {
+      "rule": [
+        "SafeWaterBuoy"
+      ]
+    },
+    "BOYSPR50": {
+      "rule": [
+        "SafeWaterBuoy"
+      ]
+    },
+    "SNDWAV02": {
+      "rule": [
+        "Sandwave"
+      ]
+    },
+    "SEAGRASS": {
+      "rule": [
+        "Seagrass"
+      ]
+    },
+    "SISTAT03": {
+      "rule": [
+        "SignalStationTraffic"
+      ]
+    },
+    "SISTAW03": {
+      "rule": [
+        "SignalStationWarning"
+      ]
+    },
+    "SILBUI11": {
+      "rule": [
+        "SiloTank"
+      ]
+    },
+    "TOWERS12": {
+      "rule": [
+        "SiloTank"
+      ]
+    },
+    "SILBUI01": {
+      "rule": [
+        "SiloTank"
+      ]
+    },
+    "TOWERS02": {
+      "rule": [
+        "SiloTank"
+      ]
+    },
+    "HILTOP11": {
+      "rule": [
+        "SlopingGround"
+      ]
+    },
+    "HILTOP01": {
+      "rule": [
+        "SlopingGround"
+      ]
+    },
+    "NOTBRD11": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BCNSPP13": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BCNSPP21": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BCNTOW13": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BCNTOW12": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BCNGEN13": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BCNGEN12": {
+      "rule": [
+        "SpecialPurposeGeneralBeacon"
+      ]
+    },
+    "BOYSPP15": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSPP25": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSPP35": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSUP02": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSPP11": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYCON12": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYCAN12": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSPH12": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYPIL12": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSPR12": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYBAR12": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "BOYSUP03": {
+      "rule": [
+        "SpecialPurposeGeneralBuoy"
+      ]
+    },
+    "SPRING02": {
+      "rule": [
+        "Spring"
+      ]
+    },
+    "SWPARE51": {
+      "rule": [
+        "SweptArea"
+      ]
+    },
+    "FLDSTR01": {
+      "rule": [
+        "TidalStreamFloodEbb"
+      ]
+    },
+    "EBBSTR01": {
+      "rule": [
+        "TidalStreamFloodEbb"
+      ]
+    },
+    "TIDSTR01": {
+      "rule": [
+        "TidalStreamPanelData"
+      ]
+    },
+    "TSSCRS51": {
+      "rule": [
+        "TrafficSeparationSchemeCrossing"
+      ]
+    },
+    "TSSRON51": {
+      "rule": [
+        "TrafficSeparationSchemeRoundabout"
+      ]
+    },
+    "TWRTPT53": {
+      "rule": [
+        "TwoWayRoutePart"
+      ]
+    },
+    "TWRTPT52": {
+      "rule": [
+        "TwoWayRoutePart"
+      ]
+    },
+    "TWRDEF51": {
+      "rule": [
+        "TwoWayRoutePart"
+      ]
+    },
+    "CHRVID01": {
+      "rule": [
+        "UpdateInformation"
+      ]
+    },
+    "CHRVDEL1": {
+      "rule": [
+        "UpdateInformation"
+      ]
+    },
+    "TREPNT05": {
+      "rule": [
+        "Vegetation"
+      ]
+    },
+    "MARSHE01": {
+      "rule": [
+        "Vegetation"
+      ]
+    },
+    "TREPNT04": {
+      "rule": [
+        "Vegetation"
+      ]
+    },
+    "VATON00": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON01": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON02": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON03": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON04": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON05": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON06": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON07": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON08": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON09": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON10": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON11": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "VATON12": {
+      "rule": [
+        "VirtualAISAidToNavigation"
+      ]
+    },
+    "WATFAL01": {
+      "rule": [
+        "Waterfall"
+      ]
+    },
+    "WATFAL02": {
+      "rule": [
+        "Waterfall"
+      ]
+    },
+    "WATTUR02": {
+      "rule": [
+        "WaterTurbulence"
+      ]
+    },
+    "WEDKLP03": {
+      "rule": [
+        "WeedKelp"
+      ]
+    },
+    "WRECKS04": {
+      "rule": [
+        "WRECKS05"
+      ]
+    },
+    "WRECKS05": {
+      "rule": [
+        "WRECKS05"
+      ]
+    },
+    "WRECKS01": {
+      "rule": [
+        "WRECKS05"
+      ]
+    },
+    "EMAREMG1": {
+      "line_styles": [
+        "ACHARE51",
+        "CBLARE51",
+        "CTNARE51",
+        "CTYARE51",
+        "DWRUTE51",
+        "PIPARE51",
+        "PRCARE51",
+        "VTSARE51"
+      ]
+    },
+    "EMACHAR1": {
+      "line_styles": [
+        "ACHARE51"
+      ]
+    },
+    "EMACHRE2": {
+      "line_styles": [
+        "ACHRES51",
+        "ENTRES51",
+        "FSHRES51"
+      ]
+    },
+    "EMACHRE1": {
+      "line_styles": [
+        "ACHRES51"
+      ]
+    },
+    "EMADMAR2": {
+      "line_styles": [
+        "ADMARE01"
+      ]
+    },
+    "EMARCSL1": {
+      "line_styles": [
+        "ARCSLN01"
+      ]
+    },
+    "EMCBLAR1": {
+      "line_styles": [
+        "CBLARE51",
+        "CBLSUB06"
+      ]
+    },
+    "EMCBLSU1": {
+      "line_styles": [
+        "CBLSUB06"
+      ]
+    },
+    "CHCRDEL1": {
+      "line_styles": [
+        "CHCRDEL1"
+      ]
+    },
+    "EMCHCR01": {
+      "line_styles": [
+        "CHCRID01"
+      ]
+    },
+    "EMCHRVD1": {
+      "line_styles": [
+        "CHRVDEL2"
+      ]
+    },
+    "EMCHRV01": {
+      "line_styles": [
+        "CHRVID02"
+      ]
+    },
+    "EMCOLREG": {
+      "line_styles": [
+        "COLREG01"
+      ]
+    },
+    "EMCTNAR1": {
+      "line_styles": [
+        "CTNARE51"
+      ]
+    },
+    "EMCURNT1": {
+      "line_styles": [
+        "CURENT01"
+      ]
+    },
+    "EMAREGR1": {
+      "line_styles": [
+        "DSCWTR51",
+        "NAVARE51",
+        "PIPARE61",
+        "TIDINF51"
+      ]
+    },
+    "EMDWRTC1": {
+      "line_styles": [
+        "DWLDEF01",
+        "DWRTCL05",
+        "DWRTCL06"
+      ]
+    },
+    "EMQUESM1": {
+      "line_styles": [
+        "DWLDEF01",
+        "QUESMRK1"
+      ]
+    },
+    "EMDWRTC2": {
+      "line_styles": [
+        "DWLDEF01",
+        "DWRTCL05",
+        "DWRTCL06",
+        "DWRTCL07",
+        "DWRTCL08"
+      ]
+    },
+    "EMDWRUT2": {
+      "line_styles": [
+        "DWLDEF01",
+        "DWRTCL05",
+        "DWRTCL06",
+        "DWRTCL07",
+        "DWRTCL08"
+      ]
+    },
+    "EMDWRUT1": {
+      "line_styles": [
+        "DWRUTE51"
+      ]
+    },
+    "EMENTRE1": {
+      "line_styles": [
+        "ENTRES51"
+      ]
+    },
+    "EMESSA01": {
+      "line_styles": [
+        "ESSARE01"
+      ]
+    },
+    "EMFEYRT1": {
+      "line_styles": [
+        "FERYRT01"
+      ]
+    },
+    "EMFEYRT2": {
+      "line_styles": [
+        "FERYRT02"
+      ]
+    },
+    "EMFOULGD": {
+      "line_styles": [
+        "FOULGRD1"
+      ]
+    },
+    "EMFSHFA1": {
+      "line_styles": [
+        "FSHFAC02"
+      ]
+    },
+    "EMFSHRE1": {
+      "line_styles": [
+        "FSHRES51"
+      ]
+    },
+    "EMLOWAC21": {
+      "line_styles": [
+        "LOWACC21"
+      ]
+    },
+    "EMLOWAC31": {
+      "line_styles": [
+        "LOWACC31"
+      ]
+    },
+    "EMLOWAC41": {
+      "line_styles": [
+        "LOWACC41"
+      ]
+    },
+    "EMMARS01": {
+      "line_styles": [
+        "MARSYS51"
+      ]
+    },
+    "EMMARS02": {
+      "line_styles": [
+        "MARSYS51"
+      ]
+    },
+    "EMAREGR2": {
+      "line_styles": [
+        "NAVARE52"
+      ]
+    },
+    "EMNOHO01": {
+      "line_styles": [
+        "NONHODAT"
+      ]
+    },
+    "EMPIPAR1": {
+      "line_styles": [
+        "PIPARE51"
+      ]
+    },
+    "EMPIPAR2": {
+      "line_styles": [
+        "PIPARE61"
+      ]
+    },
+    "EMPIPSL1": {
+      "line_styles": [
+        "PIPSOL05"
+      ]
+    },
+    "EMPIPSL2": {
+      "line_styles": [
+        "PIPSOL06"
+      ]
+    },
+    "EMPRCAR1": {
+      "line_styles": [
+        "PRCARE51"
+      ]
+    },
+    "EMRCRTC1": {
+      "line_styles": [
+        "RCRDEF11",
+        "RCRTCL11",
+        "RCRTCL13"
+      ]
+    },
+    "EMQUESM3": {
+      "line_styles": [
+        "RCRDEF11"
+      ]
+    },
+    "EMRCRTC2": {
+      "line_styles": [
+        "RCRDEF11",
+        "RCRTCL11",
+        "RCRTCL12",
+        "RCRTCL13",
+        "RCRTCL14"
+      ]
+    },
+    "EMRECTR1": {
+      "line_styles": [
+        "RECDEF02",
+        "RECTRC09",
+        "RECTRC10"
+      ]
+    },
+    "EMQUESM2": {
+      "line_styles": [
+        "RECDEF02"
+      ]
+    },
+    "EMRECTR2": {
+      "line_styles": [
+        "RECDEF02",
+        "RECTRC09",
+        "RECTRC10",
+        "RECTRC11",
+        "RECTRC12"
+      ]
+    },
+    "EMRESAR1": {
+      "line_styles": [
+        "RESARE51"
+      ]
+    },
+    "EMTIDIN1": {
+      "line_styles": [
+        "TIDINF51"
+      ]
+    },
+    "EMVTSARE": {
+      "line_styles": [
+        "VTSARE51"
+      ]
+    },
+    "AIRARE02P": {
+      "area_fills": [
+        "AIRARE02"
+      ]
+    },
+    "DIAMOND1P": {
+      "area_fills": [
+        "DIAMOND1"
+      ]
+    },
+    "DQUALA11P": {
+      "area_fills": [
+        "DQUALA11"
+      ]
+    },
+    "DQUALA21P": {
+      "area_fills": [
+        "DQUALA21"
+      ]
+    },
+    "DQUALB01P": {
+      "area_fills": [
+        "DQUALB01"
+      ]
+    },
+    "DQUALC01P": {
+      "area_fills": [
+        "DQUALC01"
+      ]
+    },
+    "DQUALD01P": {
+      "area_fills": [
+        "DQUALD01"
+      ]
+    },
+    "DQUALU01P": {
+      "area_fills": [
+        "DQUALU01"
+      ]
+    },
+    "DRGARE01P": {
+      "area_fills": [
+        "DRGARE01"
+      ]
+    },
+    "FOULAR01P": {
+      "area_fills": [
+        "FOULAR01"
+      ]
+    },
+    "FSHFAC03P": {
+      "area_fills": [
+        "FSHFAC03"
+      ]
+    },
+    "FSHFAC04P": {
+      "area_fills": [
+        "FSHFAC04"
+      ]
+    },
+    "FSHHAV02P": {
+      "area_fills": [
+        "FSHHAV02"
+      ]
+    },
+    "ICEARE04P": {
+      "area_fills": [
+        "ICEARE04"
+      ]
+    },
+    "MARCUL02P": {
+      "area_fills": [
+        "MARCUL02"
+      ]
+    },
+    "MARSHES1P": {
+      "area_fills": [
+        "MARSHES1"
+      ]
+    },
+    "NODATA03P": {
+      "area_fills": [
+        "NODATA03"
+      ]
+    },
+    "OVERSC01P": {
+      "area_fills": [
+        "OVERSC01"
+      ]
+    },
+    "PRTSUR01P": {
+      "area_fills": [
+        "PRTSUR01"
+      ]
+    },
+    "QUESMRK1P": {
+      "area_fills": [
+        "QUESMRK1"
+      ]
+    },
+    "RCKLDG01P": {
+      "area_fills": [
+        "RCKLDG01"
+      ]
+    },
+    "SNDWAV01P": {
+      "area_fills": [
+        "SNDWAV01"
+      ]
+    },
+    "TSSJCT02P": {
+      "area_fills": [
+        "TSSJCT02"
+      ]
+    },
+    "VEGATN03P": {
+      "area_fills": [
+        "VEGATN03"
+      ]
+    }
+  },
+  "area_fill": {
+    "AIRARE02": {
+      "rule": [
+        "AirportAirfield"
+      ]
+    },
+    "DRGARE01": {
+      "rule": [
+        "DEPARE03"
+      ]
+    },
+    "PRTSUR01": {
+      "rule": [
+        "DepthArea"
+      ]
+    },
+    "FSHFAC03": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "FSHFAC04": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "FSHHAV02": {
+      "rule": [
+        "FishingFacility"
+      ]
+    },
+    "ICEARE04": {
+      "rule": [
+        "IceArea"
+      ]
+    },
+    "MARSHES1": {
+      "rule": [
+        "LandRegion"
+      ]
+    },
+    "MARCUL02": {
+      "rule": [
+        "MarineFarmCulture"
+      ]
+    },
+    "FOULAR01": {
+      "rule": [
+        "OBSTRN07"
+      ]
+    },
+    "VEGATN04": {
+      "rule": [
+        "Vegetation",
+        "Obstruction"
+      ]
+    },
+    "TSSJCT02": {
+      "rule": [
+        "TrafficSeparationSchemeLanePart",
+        "PrecautionaryArea",
+        "TrafficSeparationSchemeCrossing",
+        "TrafficSeparationSchemeRoundabout"
+      ]
+    },
+    "DQUALA11": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "DQUALA21": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "DQUALB01": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "DQUALC01": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "DQUALD01": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "DQUALU01": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "DQUAL1": {
+      "rule": [
+        "QualityOfBathymetricData"
+      ]
+    },
+    "NODATA03": {
+      "rule": [
+        "UnsurveyedArea",
+        "QualityOfBathymetricData"
+      ]
+    },
+    "SNDWAV01": {
+      "rule": [
+        "Sandwave"
+      ]
+    },
+    "DIAMOND1": {
+      "rule": [
+        "SEABED01"
+      ]
+    },
+    "RCKLDG01": {
+      "rule": [
+        "SeabedArea"
+      ]
+    },
+    "VEGATN03": {
+      "rule": [
+        "Vegetation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,303 @@
+[
+  {
+    "node_type": "var",
+    "name": "CreateContextParameters",
+    "instruction_type": "LocalAssign",
+    "line": 9,
+    "code": "local CreateContextParameters, CreateFeaturePortrayalItemArray, CreateFeaturePortrayal, CreateDrawingInstructions",
+    "value": 1
+  },
+  {
+    "node_type": "var",
+    "name": "GetMergedDisplayParameters",
+    "instruction_type": "LocalAssign",
+    "line": 10,
+    "code": "local GetMergedDisplayParameters",
+    "value": 1
+  },
+  {},
+  {
+    "node_type": "function",
+    "name": "PortrayalModel.CreatePortrayalContext",
+    "line": 17,
+    "children": [
+      {},
+      {
+        "node_type": "var",
+        "name": "featureIDs",
+        "instruction_type": "LocalAssign",
+        "line": 26,
+        "code": "local featureIDs = HostGetFeatureIDs()",
+        "value": 1
+      },
+      {
+        "node_type": "for",
+        "line": 29,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "featureCode",
+            "instruction_type": "LocalAssign",
+            "line": 31,
+            "code": "local featureCode = HostFeatureGetCode(featureID)",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "feature",
+            "instruction_type": "LocalAssign",
+            "line": 33,
+            "code": "local feature = CreateFeature(featureID, featureCode)",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "ObservedContextParametersAsString",
+    "line": 55,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "inUse",
+        "instruction_type": "LocalAssign",
+        "line": 58,
+        "code": "local inUse = featurePortrayalItem.InUseContextParameters",
+        "value": 1
+      },
+      {},
+      {
+        "node_type": "for",
+        "line": 62,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "observed ~= \"_observed\"",
+            "line": 63,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "value",
+                "instruction_type": "LocalAssign",
+                "line": 64,
+                "code": "local value = inUse[observed]",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "type(value) == 'boolean'",
+                "line": 66,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "value",
+                    "instruction_type": "Assign",
+                    "line": 67,
+                    "code": "value = value and 'true' or 'false'",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "type(value) == 'table' and value.Type == 'ScaledDecimal'",
+                "line": 68,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "value",
+                    "instruction_type": "Assign",
+                    "line": 69,
+                    "code": "value = value:ToNumber()",
+                    "value": 1
+                  }
+                ]
+              },
+              {}
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "observedValues",
+        "instruction_type": "Assign",
+        "line": 76,
+        "code": "observedValues = table.concat(observedValues, ';')",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "CreateContextParameters",
+    "line": 83,
+    "children": [
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "CreateFeaturePortrayalItemArray",
+    "line": 143,
+    "children": [
+      {}
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "InstructionSpatialReference",
+    "line": 170,
+    "children": []
+  },
+  {
+    "node_type": "function",
+    "name": "CreateFeaturePortrayal",
+    "line": 174,
+    "children": [
+      {}
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "CreateDrawingInstructions",
+    "line": 526,
+    "children": [
+      {}
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "GetInformationText",
+    "line": 536,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "defaultText",
+        "instruction_type": "LocalAssign",
+        "line": 537,
+        "code": "local defaultText",
+        "value": 1
+      },
+      {
+        "node_type": "for",
+        "line": 539,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "text.text and text.text ~= ''",
+            "line": 540,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "text.language",
+                "line": 541,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "text.language == contextParameters.NationalLanguage",
+                    "line": 542,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "defaultText",
+                        "instruction_type": "Assign",
+                        "line": 544,
+                        "code": "defaultText = text.text",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "text.language == 'eng' or text.language == ''",
+                    "line": 547,
+                    "children": [
+                      {
+                        "node_type": "var",
+                        "name": "defaultText",
+                        "instruction_type": "Assign",
+                        "line": 549,
+                        "code": "defaultText = defaultText or text.text",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 553,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "defaultText",
+                    "instruction_type": "Assign",
+                    "line": 553,
+                    "code": "defaultText = defaultText or text.text",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node_type": "function",
+    "name": "GetFeatureName",
+    "line": 561,
+    "children": []
+  },
+  {
+    "node_type": "function",
+    "name": "PortrayFeatureName",
+    "line": 570,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "name",
+        "instruction_type": "LocalAssign",
+        "line": 571,
+        "code": "local name = featurePortrayal:GetFeatureName(feature, contextParameters)",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "name",
+        "line": 572,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "textStyle",
+            "instruction_type": "LocalAssign",
+            "line": 573,
+            "code": "local textStyle = textStyleInstructions or 'FontColor:CHBLK'",
+            "value": 1
+          },
+          {
+            "node_type": "hit",
+            "line": 575,
+            "code": "featurePortrayal:AddTextInstruction(EncodeString(name, '%s'), textViewingGroup, textPriority, viewingGroup, priority)",
+            "instruction_type": "text_instruction",
+            "values": {
+              "raw_text": "EncodeString(name,%s)",
+              "text_vw_group": "textViewingGroup",
+              "text_priority": "textPriority",
+              "view_group": "viewingGroup",
+              "priority": "priority",
+              "hover": false
+            },
+            "has_var": true
+          }
+        ]
+      }
+    ]
+  }
+]

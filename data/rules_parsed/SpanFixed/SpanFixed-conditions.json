@@ -1,0 +1,85 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 1.6, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 1.6,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 22,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 1.28, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 1.28,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 23,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 32,
+    "code": "featurePortrayal:AddInstructions('TextAlignHorizontal:Center')",
+    "instruction_type": "text",
+    "values": {
+      "TextAlignHorizontal": "Center"
+    },
+    "has_var": false,
+    "conditions": [
+      "HasClearance(feature)"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('TextAlignVertical:Center')",
+    "instruction_type": "text",
+    "values": {
+      "TextAlignVertical": "Center"
+    },
+    "has_var": false,
+    "conditions": [
+      "HasClearance(feature)",
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  }
+]

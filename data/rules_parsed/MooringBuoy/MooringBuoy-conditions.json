@@ -1,0 +1,57 @@
+[
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYMOR11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "contextParameters.SimplifiedSymbols"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYMOR01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR03')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYMOR03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.buoyShape == 6"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 19,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:BOYMOR11')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "BOYMOR11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  }
+]

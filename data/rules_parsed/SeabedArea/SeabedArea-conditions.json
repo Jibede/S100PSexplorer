@@ -1,0 +1,414 @@
+[
+  {
+    "node_type": "hit",
+    "line": 55,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 56,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 61,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 3 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 62,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 3 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 66,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "RCKLDG01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 67,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 68,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 71,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "RCKLDG01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 72,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 73,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 76,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "RCKLDG01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 77,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 78,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 81,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 82,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 95,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 3 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 96,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 3 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 100,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "RCKLDG01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 101,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 102,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 105,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "RCKLDG01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 106,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 107,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 110,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "RCKLDG01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 111,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 112,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 115,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 116,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface"
+    ]
+  }
+]

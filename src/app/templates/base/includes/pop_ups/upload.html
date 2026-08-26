@@ -1,0 +1,19 @@
+<!-- Le Pop-up -->
+<div id="uploadModal" class="modal" style="display: none">
+  <h2 class="modal-title">Import File</h2>
+
+  <form id="uploadForm" enctype="multipart/form-data">
+    <div class="file-input-wrapper">
+      <input type="file" name="file" id="fileInput" class="mono" required />
+    </div>
+
+    <div class="modal-actions">
+      <button type="button" id="closeModalBtn" class="btn secondary">
+        Cancel
+      </button>
+      <button type="submit" class="btn primary">Submit</button>
+    </div>
+  </form>
+
+  <div id="uploadStatus" class="mono"></div>
+</div>

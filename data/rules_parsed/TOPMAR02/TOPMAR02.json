@@ -1,0 +1,57 @@
+[
+  {},
+  {},
+  {
+    "node_type": "function",
+    "name": "TOPMAR02",
+    "line": 78,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.topmark",
+        "line": 81,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "isFloating",
+            "line": 82,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "topmarkSymbol",
+                "instruction_type": "Assign",
+                "line": 83,
+                "code": "topmarkSymbol = floatingTopmarks[feature.topmark.topmarkDaymarkShape] or 'TMARDEF2'",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 85,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "topmarkSymbol",
+                "instruction_type": "Assign",
+                "line": 85,
+                "code": "topmarkSymbol = rigidTopmarks[feature.topmark.topmarkDaymarkShape] or 'TMARDEF1'",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "node_type": "hit",
+            "line": 89,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:' .. topmarkSymbol)",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "topmarkSymbol"
+            },
+            "has_var": true
+          }
+        ]
+      }
+    ]
+  }
+]

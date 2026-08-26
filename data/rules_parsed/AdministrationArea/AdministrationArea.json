@@ -1,0 +1,84 @@
+[
+  {
+    "node_type": "function",
+    "name": "AdministrationArea",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "(feature.PrimitiveType == PrimitiveType.Surface or feature.PrimitiveType == PrimitiveType.Curve) and contextParameters.PlainBoundaries",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 7,
+            "code": "viewingGroup = 36050",
+            "value": 36050
+          },
+          {
+            "node_type": "hit",
+            "line": 9,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "thickness": 0.64,
+              "color": "CHGRF"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 10,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface or feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 11,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 12,
+            "code": "viewingGroup = 36050",
+            "value": 36050
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:ADMARE01')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "ADMARE01"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 16,
+        "children": []
+      }
+    ]
+  }
+]

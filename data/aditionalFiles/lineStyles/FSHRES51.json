@@ -1,0 +1,47 @@
+{
+  "intervalLength": "30.7",
+  "pen": {
+    "width": "0.32",
+    "color": "CHMGD"
+  },
+  "dash": [
+    {
+      "start": "3.4",
+      "length": "3"
+    },
+    {
+      "start": "15.5",
+      "length": "3"
+    },
+    {
+      "start": "21.4",
+      "length": "3"
+    },
+    {
+      "start": "27.7",
+      "length": "3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMACHRE2",
+      "position": "4.9"
+    },
+    {
+      "code": "EMFSHRE1",
+      "position": "11"
+    },
+    {
+      "code": "EMACHRE2",
+      "position": "17"
+    },
+    {
+      "code": "EMACHRE2",
+      "position": "23"
+    },
+    {
+      "code": "EMACHRE2",
+      "position": "29.2"
+    }
+  ]
+}

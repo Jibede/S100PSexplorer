@@ -1,0 +1,29 @@
+[
+  {
+    "node_type": "hit",
+    "line": 89,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. topmarkSymbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": [
+        {
+          "value": 1,
+          "conditions": [
+            "feature.topmark",
+            "isFloating"
+          ]
+        },
+        {
+          "value": 1,
+          "conditions": [
+            "feature.topmark"
+          ]
+        }
+      ]
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.topmark"
+    ]
+  }
+]

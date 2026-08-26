@@ -1,0 +1,145 @@
+[
+  {
+    "node_type": "function",
+    "name": "OffshoreProductionArea",
+    "line": 8,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 10,
+        "code": "local viewingGroup = 26040",
+        "value": 26040
+      },
+      {
+        "node_type": "var",
+        "name": "symbol",
+        "instruction_type": "LocalAssign",
+        "line": 11,
+        "code": "local symbol = 'CTYARE51'",
+        "value": "CTYARE51"
+      },
+      {
+        "node_type": "var",
+        "name": "COPA",
+        "instruction_type": "LocalAssign",
+        "line": 13,
+        "code": "local COPA = feature.categoryOfOffshoreProductionArea",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 19,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 20,
+            "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHGRD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "dash",
+              "thickness": 0.64,
+              "color": "CHGRD"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 21,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 23,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 23,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "NAVARE51"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 27,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contains(COPA, {\n    2,\n    3,\n    6,\n})",
+            "line": 28,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "symbol",
+                "instruction_type": "Assign",
+                "line": 29,
+                "code": "symbol = 'RENERG51'",
+                "value": "RENERG51"
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "COPA == 1",
+            "line": 30,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "symbol",
+                "instruction_type": "Assign",
+                "line": 31,
+                "code": "symbol = 'WNDFRM52'",
+                "value": "WNDFRM52"
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "COPA == 4",
+            "line": 32,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "symbol",
+                "instruction_type": "Assign",
+                "line": 33,
+                "code": "symbol = 'TNKFRM'",
+                "value": "TNKFRM"
+              }
+            ]
+          },
+          {
+            "node_type": "hit",
+            "line": 36,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "symbol"
+            },
+            "has_var": true
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 40,
+        "children": []
+      }
+    ]
+  }
+]

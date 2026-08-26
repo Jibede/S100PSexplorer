@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       if (statusDiv) {
-        statusDiv.innerHTML = "Processing in progess ...";
+        statusDiv.innerHTML = "Processing in progress ...";
         statusDiv.classList.add("show");
       }
 

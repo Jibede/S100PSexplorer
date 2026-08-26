@@ -1,0 +1,304 @@
+[
+  {},
+  {},
+  {},
+  {},
+  {
+    "node_type": "function",
+    "name": "LITDSN02",
+    "line": 67,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "description",
+        "instruction_type": "LocalAssign",
+        "line": 70,
+        "code": "local description = categoryOfLights[categoryOfLight] or ''",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "statusString",
+        "instruction_type": "LocalAssign",
+        "line": 71,
+        "code": "local statusString = statuses[status] or ''",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "rhythmOfLight",
+        "line": 73,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "lightCharacteristic",
+            "instruction_type": "LocalAssign",
+            "line": 75,
+            "code": "local lightCharacteristic = lightCharacteristics[rhythmOfLight.lightCharacteristic] or {\n}",
+            "value": 1
+          },
+          {
+            "node_type": "var",
+            "name": "signalGroup",
+            "instruction_type": "LocalAssign",
+            "line": 76,
+            "code": "local signalGroup = rhythmOfLight.signalGroup",
+            "value": 1
+          },
+          {
+            "node_type": "for",
+            "line": 78,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "i > 1",
+                "line": 79,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 80,
+                    "code": "description = description .. '+'",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "Assign",
+                "line": 83,
+                "code": "description = description .. lightCharacteristic[i]",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "signalGroup[i] ~= nil and signalGroup[i] ~= '()' and signalGroup[i] ~= '(1)'",
+                "line": 85,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 86,
+                    "code": "description = description .. signalGroup[i]",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "colourFound",
+        "instruction_type": "LocalAssign",
+        "line": 92,
+        "code": "local colourFound = false",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "prevColour",
+        "instruction_type": "LocalAssign",
+        "line": 93,
+        "code": "local prevColour",
+        "value": 1
+      },
+      {
+        "node_type": "for",
+        "line": 94,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "colours[colour]",
+            "line": 95,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "not colourFound",
+                "line": 96,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 97,
+                    "code": "description = description .. ' '",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "colourFound",
+                    "instruction_type": "Assign",
+                    "line": 98,
+                    "code": "colourFound = true",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "if",
+                "condition": "prevColour ~= colours[colour]",
+                "line": 101,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 102,
+                    "code": "description = description .. colours[colour]",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "prevColour",
+                    "instruction_type": "Assign",
+                    "line": 103,
+                    "code": "prevColour = colours[colour]",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "var",
+        "name": "space",
+        "instruction_type": "LocalAssign",
+        "line": 108,
+        "code": "local space = ' '",
+        "value": " "
+      },
+      {
+        "node_type": "if",
+        "condition": "rhythmOfLight",
+        "line": 110,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "signalPeriod",
+            "instruction_type": "LocalAssign",
+            "line": 112,
+            "code": "local signalPeriod = rhythmOfLight.signalPeriod",
+            "value": 1
+          },
+          {
+            "node_type": "if",
+            "condition": "signalPeriod",
+            "line": 114,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "Assign",
+                "line": 115,
+                "code": "description = string.format('%s%s%gs', description, space, signalPeriod:ToNumber())",
+                "value": 1
+              },
+              {}
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "height",
+        "line": 121,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "description",
+            "instruction_type": "Assign",
+            "line": 122,
+            "code": "description = string.format('%s%s%gm', description, space, height:ToNumber())",
+            "value": 1
+          },
+          {}
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "valueOfNominalRange",
+        "line": 127,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "valueOfNominalRange2 and valueOfNominalRange ~= valueOfNominalRange2",
+            "line": 128,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "numRanges and numRanges == 2",
+                "line": 129,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 130,
+                    "code": "description = string.format('%s%s%g/%gM', description, space, valueOfNominalRange:ToNumber(), valueOfNominalRange2:ToNumber())",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 132,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "description",
+                    "instruction_type": "Assign",
+                    "line": 132,
+                    "code": "description = string.format('%s%s%g-%gM', description, space, valueOfNominalRange:ToNumber(), valueOfNominalRange2:ToNumber())",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 135,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "Assign",
+                "line": 135,
+                "code": "description = string.format('%s%s%gM', description, space, valueOfNominalRange:ToNumber())",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "for",
+        "line": 140,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "statuses[statusValue]",
+            "line": 142,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "description",
+                "instruction_type": "Assign",
+                "line": 144,
+                "code": "description = description .. statuses[statusValue]",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

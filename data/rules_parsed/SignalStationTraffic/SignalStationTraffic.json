@@ -1,0 +1,73 @@
+[
+  {
+    "node_type": "function",
+    "name": "SignalStationTraffic",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "Assign",
+        "line": 10,
+        "code": "viewingGroup = 28020",
+        "value": 28020
+      },
+      {
+        "node_type": "if",
+        "condition": "contextParameters.RadarOverlay",
+        "line": 11,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 14,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 20,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:SISTAT03')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "SISTAT03"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 21,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 23,
+            "code": "viewingGroup = 28020",
+            "value": 28020
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 26,
+        "children": []
+      }
+    ]
+  }
+]

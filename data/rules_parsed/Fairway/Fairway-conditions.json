@@ -1,0 +1,737 @@
+[
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 20,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 21,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 27,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 30,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 31,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 33,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 34,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 40,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 43,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 44,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 46,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 47,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 53,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY52')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY52"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 56,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 57,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 59,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 60,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 66,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 67,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 69,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.32,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 70,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 78,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 81,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 82,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 1",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 84,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "NAVARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 90,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 93,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 2",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 94,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 2",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 96,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "NAVARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 102,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY51')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 105,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 3",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 106,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 3",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 108,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "NAVARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 114,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:FAIRWY52')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "FAIRWY52"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 117,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 4",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 118,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 4",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 120,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "NAVARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.orientationValue and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 126,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:7.02,0;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "7.02",
+        "y": "0"
+      },
+      "TextAlignVertical": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 127,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters)), 26, 24, 26050, 12)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(GetFeatureName(feature,contextParameters))",
+      "text_vw_group": 26,
+      "text_priority": 24,
+      "view_group": 26050,
+      "priority": 12,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface",
+      "feature.featureName[1] and feature.featureName[1].name"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 129,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:NAVARE51')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "NAVARE51"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

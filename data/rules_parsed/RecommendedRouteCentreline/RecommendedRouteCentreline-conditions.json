@@ -1,0 +1,714 @@
+[
+  {
+    "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL14')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL14"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 1",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 18,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 1",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 27,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL14')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL14"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 29,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 2",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 30,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 2",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 39,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL14')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL14"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 41,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 3",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 42,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 3",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 51,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL13')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL13"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 53,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 4",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 54,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.basedOnFixedMarks and feature.trafficFlow == 4",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 63,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 65,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 1",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 66,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 1",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 75,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 77,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 2",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 78,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 2",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 87,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 89,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 3",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 90,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 3",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 99,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 101,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 4",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 102,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "not feature.basedOnFixedMarks and feature.trafficFlow == 4",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 111,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 1"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 113,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 1",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 114,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 1",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 123,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 125,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 2",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 126,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 2",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 135,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL12')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL12"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 137,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 3",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 138,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 3",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 147,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRTCL11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRTCL11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 149,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 4",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 150,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.trafficFlow == 4",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 159,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:RCRDEF11')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "RCRDEF11"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 161,
+    "code": "featurePortrayal:AddInstructions('LocalOffset:0,3.51;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+    "instruction_type": "text",
+    "values": {
+      "LocalOffset": {
+        "x": "0",
+        "y": "3.51"
+      },
+      "TextAlignHorizontal": "Center",
+      "FontSize": "10",
+      "FontColor": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.orientationValue"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 162,
+    "code": "featurePortrayal:AddTextInstruction(EncodeString(feature.orientationValue, '%03.0f deg'), 11, 24, 25020, 18)",
+    "instruction_type": "text_instruction",
+    "values": {
+      "raw_text": "EncodeString(feature.orientationValue,%03.0f deg)",
+      "text_vw_group": 11,
+      "text_priority": 24,
+      "view_group": 25020,
+      "priority": 18,
+      "hover": false
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve",
+      "feature.orientationValue"
+    ]
+  }
+]

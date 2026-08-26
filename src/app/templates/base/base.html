@@ -30,38 +30,14 @@
       {% include 'base/includes/sidebar.html' %}
 
       <main id="main">
-        <!-- Fond assombri derrière le pop-up -->
         <div
           id="modalOverlay"
           class="modal-overlay"
           style="display: none"
         ></div>
 
-        <!-- Le Pop-up -->
-        <div id="uploadModal" class="modal" style="display: none">
-          <h2 class="modal-title">Import File</h2>
-
-          <form id="uploadForm" enctype="multipart/form-data">
-            <div class="file-input-wrapper">
-              <input
-                type="file"
-                name="file"
-                id="fileInput"
-                class="mono"
-                required
-              />
-            </div>
-
-            <div class="modal-actions">
-              <button type="button" id="closeModalBtn" class="btn secondary">
-                Cancel
-              </button>
-              <button type="submit" class="btn primary">Submit</button>
-            </div>
-          </form>
-
-          <div id="uploadStatus" class="mono"></div>
-        </div>
+        {% include 'base/includes/pop_ups/upload.html' %}
+        {% include 'base/includes/pop_ups/export.html' %}
 
         {% block conteudo %} {% endblock %}
       </main>
@@ -69,6 +45,7 @@
 
     <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
     <script src="{{ url_for('static', filename='js/upload_file.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/export_file.js') }}"></script>
 
     {% block page_scripts %}{% endblock %}
   </body>

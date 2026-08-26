@@ -1,0 +1,19 @@
+{
+  "intervalLength": "5",
+  "pen": {
+    "width": "0.32",
+    "color": "CHMGF"
+  },
+  "dash": [
+    {
+      "start": "2",
+      "length": "3"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMESSA01",
+      "position": "3.5"
+    }
+  ]
+}

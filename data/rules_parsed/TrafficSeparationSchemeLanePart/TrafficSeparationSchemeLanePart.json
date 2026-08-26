@@ -1,0 +1,186 @@
+[
+  {
+    "node_type": "function",
+    "name": "TrafficSeparationSchemeLanePart",
+    "line": 5,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue",
+            "line": 7,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 10,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TSSLPT51"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 14,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 15,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:CTNARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "CTNARE51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 18,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.orientationValue",
+            "line": 19,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 22,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:TSSLPT51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "TSSLPT51"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 26,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 27,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:TSSJCT02')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "TSSJCT02"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 28,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:CTNARE51')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "CTNARE51"
+                },
+                "has_var": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 32,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "informations",
+        "instruction_type": "LocalAssign",
+        "line": 35,
+        "code": "local informations = feature:GetInformationAssociations('AdditionalInformation')",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "text",
+        "instruction_type": "LocalAssign",
+        "line": 36,
+        "code": "local text",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "informations",
+        "line": 38,
+        "children": [
+          {
+            "node_type": "for",
+            "line": 39,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "not text",
+                "line": 40,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "text",
+                    "instruction_type": "LocalAssign",
+                    "line": 41,
+                    "code": "local text = GetInformationText(information, contextParameters)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "if",
+                    "condition": "text",
+                    "line": 43,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 44,
+                        "code": "featurePortrayal:AddInstructions('LocalOffset:0,7.02;TextAlignHorizontal:Center;FontSize:10;FontColor:CHBLK')",
+                        "instruction_type": "text",
+                        "values": {
+                          "LocalOffset": {
+                            "x": "0",
+                            "y": "7.02"
+                          },
+                          "TextAlignHorizontal": "Center",
+                          "FontSize": "10",
+                          "FontColor": "CHBLK"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 45,
+                        "code": "featurePortrayal:AddTextInstruction(EncodeString(text), 24, 24, 25010, 18)",
+                        "instruction_type": "text_instruction",
+                        "values": {
+                          "raw_text": "EncodeString(text)",
+                          "text_vw_group": 24,
+                          "text_priority": 24,
+                          "view_group": 25010,
+                          "priority": 18,
+                          "hover": false
+                        },
+                        "has_var": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

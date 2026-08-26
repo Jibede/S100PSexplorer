@@ -1,0 +1,476 @@
+[
+  {
+    "node_type": "function",
+    "name": "SeabedArea",
+    "line": 2,
+    "children": [
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 41,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 43,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 46,
+            "children": []
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 49,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 50,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 53,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 55,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CHGRD')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "thickness": 0.32,
+              "color": "CHGRD"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 56,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface and contextParameters.PlainBoundaries",
+        "line": 58,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.waterLevelEffect == 3 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface",
+            "line": 59,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 61,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 62,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9",
+            "line": 64,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 66,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "RCKLDG01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 67,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 68,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11",
+            "line": 69,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 71,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "RCKLDG01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 72,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 73,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14",
+            "line": 74,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 76,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "RCKLDG01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 77,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 78,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface",
+            "line": 79,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 81,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 82,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 85,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 85,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 88,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 92,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.waterLevelEffect == 3 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface",
+            "line": 93,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 95,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 96,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 9",
+            "line": 98,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 100,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "RCKLDG01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 101,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 102,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 11",
+            "line": 103,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 105,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "RCKLDG01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 106,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 107,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface == 14",
+            "line": 108,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 110,
+                "code": "featurePortrayal:AddInstructions('AreaFillReference:RCKLDG01')",
+                "instruction_type": "area_fill",
+                "values": {
+                  "AreaFillReference": "RCKLDG01"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 111,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 112,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "elseif",
+            "condition": "feature.waterLevelEffect == 4 and feature.surfaceCharacteristics[1] and feature.surfaceCharacteristics[1].natureOfSurface",
+            "line": 113,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 115,
+                "code": "featurePortrayal:SimpleLineStyle('dash', 0.32, 'CHGRD')",
+                "instruction_type": "line_style",
+                "values": {
+                  "style": "dash",
+                  "thickness": 0.32,
+                  "color": "CHGRD"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 116,
+                "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                "instruction_type": "line_instruction",
+                "values": {
+                  "LineInstruction": "_simple_"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 119,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "contextParameters.RadarOverlay",
+                "line": 119,
+                "children": []
+              },
+              {
+                "node_type": "else",
+                "line": 122,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 127,
+        "children": []
+      },
+      {
+        "node_type": "if",
+        "condition": "#featurePortrayal.DrawingInstructions == 0",
+        "line": 130,
+        "children": []
+      }
+    ]
+  }
+]

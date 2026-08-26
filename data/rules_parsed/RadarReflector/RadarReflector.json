@@ -1,0 +1,58 @@
+[
+  {
+    "node_type": "function",
+    "name": "RadarReflector",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 8,
+            "code": "viewingGroup = 27230",
+            "value": 27230
+          },
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 9,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 12,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 14,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:RADRFL03')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "RADRFL03"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 16,
+        "children": []
+      }
+    ]
+  }
+]

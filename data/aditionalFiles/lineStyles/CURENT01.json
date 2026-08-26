@@ -1,0 +1,27 @@
+{
+  "intervalLength": "12",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "dash": [
+    {
+      "start": "0",
+      "length": "9"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMCURNT1",
+      "position": "2.5"
+    },
+    {
+      "code": "EMCURNT1",
+      "position": "4"
+    },
+    {
+      "code": "EMCURNT1",
+      "position": "9"
+    }
+  ]
+}

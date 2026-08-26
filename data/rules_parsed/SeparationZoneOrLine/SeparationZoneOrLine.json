@@ -1,0 +1,79 @@
+[
+  {
+    "node_type": "function",
+    "name": "SeparationZoneOrLine",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup = 25010",
+        "value": 25010
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Curve",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "contextParameters.RadarOverlay",
+            "line": 7,
+            "children": []
+          },
+          {
+            "node_type": "else",
+            "line": 10,
+            "children": []
+          },
+          {
+            "node_type": "hit",
+            "line": 12,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 1.92, 'TRFCF')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "thickness": 1.92,
+              "color": "TRFCF"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 13,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 14,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 20,
+            "code": "featurePortrayal:AddInstructions('ColorFill:TRFCF,0.75')",
+            "instruction_type": "color_fill",
+            "values": {
+              "ColorFill": "TRFCF,0.75"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 22,
+        "children": []
+      }
+    ]
+  }
+]

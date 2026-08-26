@@ -1,0 +1,19 @@
+{
+  "intervalLength": "8.6",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRF"
+  },
+  "dash": [
+    {
+      "start": "1",
+      "length": "6"
+    }
+  ],
+  "symbol": [
+    {
+      "code": "EMAREGR2",
+      "position": "4"
+    }
+  ]
+}

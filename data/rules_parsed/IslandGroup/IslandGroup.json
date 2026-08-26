@@ -1,0 +1,74 @@
+[
+  {
+    "node_type": "function",
+    "name": "IslandGroup",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 10,
+        "code": "local viewingGroup = 21060",
+        "value": 21060
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 14,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.featureName[1] and feature.featureName[1].name",
+            "line": 18,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 19,
+                "code": "featurePortrayal:AddInstructions('LocalOffset:0,0;TextAlignHorizontal:Center;TextAlignVertical:Center;FontSize:10;FontColor:CHBLK')",
+                "instruction_type": "text",
+                "values": {
+                  "LocalOffset": {
+                    "x": "0",
+                    "y": "0"
+                  },
+                  "TextAlignHorizontal": "Center",
+                  "TextAlignVertical": "Center",
+                  "FontSize": "10",
+                  "FontColor": "CHBLK"
+                },
+                "has_var": false
+              },
+              {
+                "node_type": "hit",
+                "line": 20,
+                "code": "featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters), '%s'), 21, 24, viewingGroup, 15)",
+                "instruction_type": "text_instruction",
+                "values": {
+                  "raw_text": "EncodeString(GetFeatureName(feature,contextParameters),%s)",
+                  "text_vw_group": 21,
+                  "text_priority": 24,
+                  "view_group": "viewingGroup",
+                  "priority": 15,
+                  "hover": false
+                },
+                "has_var": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.None",
+        "line": 22,
+        "children": []
+      },
+      {
+        "node_type": "else",
+        "line": 25,
+        "children": []
+      }
+    ]
+  }
+]

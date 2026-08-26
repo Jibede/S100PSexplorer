@@ -1,0 +1,41 @@
+[
+  {
+    "node_type": "hit",
+    "line": 17,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:PILPNT02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "PILPNT02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 25,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:PILPNT01')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "PILPNT01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Curve"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 33,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:PILPNT01')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "PILPNT01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

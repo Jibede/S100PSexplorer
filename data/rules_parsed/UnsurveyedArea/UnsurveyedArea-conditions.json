@@ -1,0 +1,56 @@
+[
+  {
+    "node_type": "hit",
+    "line": 12,
+    "code": "featurePortrayal:AddInstructions('ColorFill:NODTA')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "NODTA"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 13,
+    "code": "featurePortrayal:AddInstructions('AreaFillReference:NODATA03')",
+    "instruction_type": "area_fill",
+    "values": {
+      "AreaFillReference": "NODATA03"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 14,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CHGRD')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.64,
+      "color": "CHGRD"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 15,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Surface"
+    ]
+  }
+]

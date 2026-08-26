@@ -1,0 +1,604 @@
+[
+  {
+    "node_type": "function",
+    "name": "WRECKS05",
+    "line": 13,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "DEPTH_VALUE",
+        "instruction_type": "LocalAssign",
+        "line": 16,
+        "code": "local DEPTH_VALUE = feature.valueOfSounding or feature.defaultClearanceDepth",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "DEPTH_VALUE == nil",
+        "line": 17,
+        "children": []
+      },
+      {
+        "node_type": "var",
+        "name": "hazardSymbol",
+        "instruction_type": "LocalAssign",
+        "line": 21,
+        "code": "local hazardSymbol, viewingGroup = UDWHAZ05(feature, featurePortrayal, contextParameters, DEPTH_VALUE, originalViewingGroup)",
+        "value": 1
+      },
+      {
+        "node_type": "var",
+        "name": "qualitySymbol",
+        "instruction_type": "LocalAssign",
+        "line": 22,
+        "code": "local qualitySymbol = QUAPNT02(feature, featurePortrayal, contextParameters)",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 24,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "hazardSymbol",
+            "line": 25,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 26,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "hazardSymbol"
+                },
+                "has_var": true
+              },
+              {
+                "node_type": "if",
+                "condition": "qualitySymbol",
+                "line": 28,
+                "children": []
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 33,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "feature.valueOfSounding",
+                "line": 33,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "feature.valueOfSounding <= contextParameters.SafetyDepth",
+                    "line": 34,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 35,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:DANGER01')",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "DANGER01"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 37,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 37,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:DANGER02')",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "DANGER02"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "var",
+                    "name": "symbols",
+                    "instruction_type": "LocalAssign",
+                    "line": 40,
+                    "code": "local symbols = SNDFRM04(feature, featurePortrayal, contextParameters, feature.Point, DEPTH_VALUE)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "for",
+                    "line": 42,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 43,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "symbol"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 46,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "feature.categoryOfWreck",
+                    "line": 46,
+                    "children": [
+                      {
+                        "node_type": "if",
+                        "condition": "feature.categoryOfWreck == 1 and feature.waterLevelEffect == 3",
+                        "line": 47,
+                        "children": [
+                          {
+                            "node_type": "hit",
+                            "line": 48,
+                            "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS04')",
+                            "instruction_type": "symbol",
+                            "values": {
+                              "PointInstruction": "WRECKS04"
+                            },
+                            "has_var": false
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "elseif",
+                        "condition": "feature.categoryOfWreck == 2 and feature.waterLevelEffect == 3",
+                        "line": 49,
+                        "children": [
+                          {
+                            "node_type": "hit",
+                            "line": 50,
+                            "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS05')",
+                            "instruction_type": "symbol",
+                            "values": {
+                              "PointInstruction": "WRECKS05"
+                            },
+                            "has_var": false
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "elseif",
+                        "condition": "contains(feature.categoryOfWreck, {\n    4,\n    5,\n}) or contains(feature.waterLevelEffect, {\n    1,\n    2,\n    3,\n    4,\n})",
+                        "line": 51,
+                        "children": [
+                          {
+                            "node_type": "hit",
+                            "line": 52,
+                            "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS01')",
+                            "instruction_type": "symbol",
+                            "values": {
+                              "PointInstruction": "WRECKS01"
+                            },
+                            "has_var": false
+                          }
+                        ]
+                      },
+                      {
+                        "node_type": "else",
+                        "line": 54,
+                        "children": [
+                          {
+                            "node_type": "hit",
+                            "line": 54,
+                            "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS05')",
+                            "instruction_type": "symbol",
+                            "values": {
+                              "PointInstruction": "WRECKS05"
+                            },
+                            "has_var": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 57,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 57,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS05')",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "WRECKS05"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "if",
+                "condition": "qualitySymbol",
+                "line": 61,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 67,
+        "children": [
+          {
+            "node_type": "for",
+            "line": 67,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "spatialQuality",
+                "instruction_type": "LocalAssign",
+                "line": 70,
+                "code": "local spatialQuality = curveAssociation:GetInformationAssociation(unpack(sqParams))",
+                "value": 1
+              },
+              {
+                "node_type": "var",
+                "name": "qualityOfPosition",
+                "instruction_type": "LocalAssign",
+                "line": 71,
+                "code": "local qualityOfPosition = spatialQuality and spatialQuality.qualityOfHorizontalMeasurement",
+                "value": 1
+              },
+              {
+                "node_type": "if",
+                "condition": "qualityOfPosition and qualityOfPosition ~= 1 and qualityOfPosition ~= 10 and qualityOfPosition ~= 11",
+                "line": 73,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 74,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:LOWACC41')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "LOWACC41"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "hazardSymbol",
+                "line": 75,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 76,
+                    "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CHBLK')",
+                    "instruction_type": "line_style",
+                    "values": {
+                      "style": "dot",
+                      "thickness": 0.64,
+                      "color": "CHBLK"
+                    },
+                    "has_var": false
+                  },
+                  {
+                    "node_type": "hit",
+                    "line": 77,
+                    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                    "instruction_type": "line_instruction",
+                    "values": {
+                      "LineInstruction": "_simple_"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.valueOfSounding",
+                "line": 78,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "feature.valueOfSounding <= contextParameters.SafetyDepth",
+                    "line": 79,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 80,
+                        "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CHBLK')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "dot",
+                          "thickness": 0.64,
+                          "color": "CHBLK"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 81,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 83,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 83,
+                        "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHBLK')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "dash",
+                          "thickness": 0.64,
+                          "color": "CHBLK"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 84,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 87,
+                "children": [
+                  {
+                    "node_type": "if",
+                    "condition": "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2",
+                    "line": 87,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 88,
+                        "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "solid",
+                          "thickness": 0.64,
+                          "color": "CSTLN"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 89,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "elseif",
+                    "condition": "feature.waterLevelEffect == 4",
+                    "line": 90,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 91,
+                        "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CSTLN')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "dash",
+                          "thickness": 0.64,
+                          "color": "CSTLN"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 92,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  },
+                  {
+                    "node_type": "else",
+                    "line": 94,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 94,
+                        "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CSTLN')",
+                        "instruction_type": "line_style",
+                        "values": {
+                          "style": "dot",
+                          "thickness": 0.64,
+                          "color": "CSTLN"
+                        },
+                        "has_var": false
+                      },
+                      {
+                        "node_type": "hit",
+                        "line": 95,
+                        "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+                        "instruction_type": "line_instruction",
+                        "values": {
+                          "LineInstruction": "_simple_"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "feature.valueOfSounding",
+            "line": 102,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "hazardSymbol",
+                "line": 103,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 104,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "hazardSymbol"
+                    },
+                    "has_var": true
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 106,
+                "children": [
+                  {
+                    "node_type": "var",
+                    "name": "symbols",
+                    "instruction_type": "LocalAssign",
+                    "line": 106,
+                    "code": "local symbols = SNDFRM04(feature, featurePortrayal, contextParameters, nil, DEPTH_VALUE)",
+                    "value": 1
+                  },
+                  {
+                    "node_type": "for",
+                    "line": 108,
+                    "children": [
+                      {
+                        "node_type": "hit",
+                        "line": 109,
+                        "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+                        "instruction_type": "symbol",
+                        "values": {
+                          "PointInstruction": "symbol"
+                        },
+                        "has_var": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 113,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2",
+                "line": 113,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 114,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "CHBRN"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.waterLevelEffect == 4",
+                "line": 115,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 116,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:DEPIT')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "DEPIT"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "else",
+                "line": 118,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 118,
+                    "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS')",
+                    "instruction_type": "color_fill",
+                    "values": {
+                      "ColorFill": "DEPVS"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "if",
+                "condition": "hazardSymbol",
+                "line": 121,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 122,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "hazardSymbol"
+                    },
+                    "has_var": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "qualitySymbol",
+            "line": 126,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]

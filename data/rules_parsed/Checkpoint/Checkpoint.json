@@ -1,0 +1,72 @@
+[
+  {
+    "node_type": "function",
+    "name": "Checkpoint",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 8,
+            "code": "viewingGroup = 32410",
+            "value": 32410
+          },
+          {
+            "node_type": "hit",
+            "line": 10,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:CHKPNT01')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "CHKPNT01"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "elseif",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 11,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 13,
+            "code": "viewingGroup = 32410",
+            "value": 32410
+          },
+          {
+            "node_type": "hit",
+            "line": 15,
+            "code": "featurePortrayal:AddInstructions('PointInstruction:POSGEN04')",
+            "instruction_type": "symbol",
+            "values": {
+              "PointInstruction": "POSGEN04"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 17,
+        "children": []
+      }
+    ]
+  }
+]

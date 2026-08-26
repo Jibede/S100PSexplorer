@@ -1,0 +1,191 @@
+[
+  {
+    "node_type": "function",
+    "name": "SEABED01",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "Colour",
+        "instruction_type": "LocalAssign",
+        "line": 9,
+        "code": "local Colour = 'DEPIT'",
+        "value": "DEPIT"
+      },
+      {
+        "node_type": "var",
+        "name": "Shallow",
+        "instruction_type": "LocalAssign",
+        "line": 10,
+        "code": "local Shallow = true",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "not contextParameters.FourShades",
+        "line": 12,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "depthRangeMinimumValue >= scaledDecimalZero and (not depthRangeMaximumValue or depthRangeMaximumValue > scaledDecimalZero)",
+            "line": 14,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "Colour",
+                "instruction_type": "Assign",
+                "line": 15,
+                "code": "Colour = 'DEPVS'",
+                "value": "DEPVS"
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "depthRangeMinimumValue >= contextParameters.SafetyContour and (not depthRangeMaximumValue or depthRangeMaximumValue > contextParameters.SafetyContour)",
+            "line": 18,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "Colour",
+                "instruction_type": "Assign",
+                "line": 19,
+                "code": "Colour = 'DEPDW'",
+                "value": "DEPDW"
+              },
+              {
+                "node_type": "var",
+                "name": "Shallow",
+                "instruction_type": "Assign",
+                "line": 20,
+                "code": "Shallow = false",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 24,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "depthRangeMinimumValue >= scaledDecimalZero and (not depthRangeMaximumValue or depthRangeMaximumValue > scaledDecimalZero)",
+            "line": 24,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "Colour",
+                "instruction_type": "Assign",
+                "line": 25,
+                "code": "Colour = 'DEPVS'",
+                "value": "DEPVS"
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "depthRangeMinimumValue >= contextParameters.ShallowContour and (not depthRangeMaximumValue or depthRangeMaximumValue > contextParameters.ShallowContour)",
+            "line": 28,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "Colour",
+                "instruction_type": "Assign",
+                "line": 29,
+                "code": "Colour = 'DEPMS'",
+                "value": "DEPMS"
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "depthRangeMinimumValue >= contextParameters.SafetyContour and (not depthRangeMaximumValue or depthRangeMaximumValue > contextParameters.SafetyContour)",
+            "line": 32,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "Colour",
+                "instruction_type": "Assign",
+                "line": 33,
+                "code": "Colour = 'DEPMD'",
+                "value": "DEPMD"
+              },
+              {
+                "node_type": "var",
+                "name": "Shallow",
+                "instruction_type": "Assign",
+                "line": 34,
+                "code": "Shallow = false",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "node_type": "if",
+            "condition": "depthRangeMinimumValue >= contextParameters.DeepContour and (not depthRangeMaximumValue or depthRangeMaximumValue > contextParameters.DeepContour)",
+            "line": 37,
+            "children": [
+              {
+                "node_type": "var",
+                "name": "Colour",
+                "instruction_type": "Assign",
+                "line": 38,
+                "code": "Colour = 'DEPDW'",
+                "value": "DEPDW"
+              },
+              {
+                "node_type": "var",
+                "name": "Shallow",
+                "instruction_type": "Assign",
+                "line": 39,
+                "code": "Shallow = false",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "Shallow",
+        "line": 45,
+        "children": []
+      },
+      {
+        "node_type": "hit",
+        "line": 49,
+        "code": "featurePortrayal:AddInstructions('ColorFill:' .. Colour)",
+        "instruction_type": "color_fill",
+        "values": {
+          "ColorFill": "Colour"
+        },
+        "has_var": true
+      },
+      {
+        "node_type": "if",
+        "condition": "Shallow",
+        "line": 51,
+        "children": [
+          {
+            "node_type": "hit",
+            "line": 55,
+            "code": "featurePortrayal:AddInstructions('AreaFillReference:DIAMOND1')",
+            "instruction_type": "area_fill",
+            "values": {
+              "AreaFillReference": "DIAMOND1"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "if",
+        "condition": "Shallow",
+        "line": 61,
+        "children": []
+      }
+    ]
+  }
+]

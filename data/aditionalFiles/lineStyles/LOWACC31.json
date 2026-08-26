@@ -1,0 +1,13 @@
+{
+  "intervalLength": "3",
+  "pen": {
+    "width": "0.32",
+    "color": "CHGRD"
+  },
+  "symbol": [
+    {
+      "code": "EMLOWAC31",
+      "position": "2.36"
+    }
+  ]
+}

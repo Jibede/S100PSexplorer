@@ -1,0 +1,256 @@
+[
+  {
+    "node_type": "function",
+    "name": "VirtualAISAidToNavigation",
+    "line": 6,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 7,
+        "code": "local viewingGroup = 27240",
+        "value": 27240
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Point",
+        "line": 9,
+        "children": [
+          {
+            "node_type": "if",
+            "condition": "feature.virtualAISAidToNavigationType == nil or feature.virtualAISAidToNavigationType < 1 or feature.virtualAISAidToNavigationType > 12",
+            "line": 14,
+            "children": [
+              {
+                "node_type": "hit",
+                "line": 18,
+                "code": "featurePortrayal:AddInstructions('PointInstruction:VATON00')",
+                "instruction_type": "symbol",
+                "values": {
+                  "PointInstruction": "VATON00"
+                },
+                "has_var": false
+              }
+            ]
+          },
+          {
+            "node_type": "else",
+            "line": 20,
+            "children": [
+              {
+                "node_type": "if",
+                "condition": "feature.virtualAISAidToNavigationType == 1",
+                "line": 20,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 22,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON01')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON01"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 2",
+                "line": 23,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 25,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON02')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON02"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 3",
+                "line": 26,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 28,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON03')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON03"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 4",
+                "line": 29,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 31,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON04')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON04"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 5",
+                "line": 32,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 34,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON05')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON05"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 6",
+                "line": 35,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 37,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON06')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON06"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 7",
+                "line": 38,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 40,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON07')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON07"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 8",
+                "line": 41,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 43,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON08')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON08"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 9",
+                "line": 44,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 46,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON09')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON09"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 10",
+                "line": 47,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 49,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON10')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON10"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 11",
+                "line": 50,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 52,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON11')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON11"
+                    },
+                    "has_var": false
+                  }
+                ]
+              },
+              {
+                "node_type": "elseif",
+                "condition": "feature.virtualAISAidToNavigationType == 12",
+                "line": 53,
+                "children": [
+                  {
+                    "node_type": "hit",
+                    "line": 55,
+                    "code": "featurePortrayal:AddInstructions('PointInstruction:VATON12')",
+                    "instruction_type": "symbol",
+                    "values": {
+                      "PointInstruction": "VATON12"
+                    },
+                    "has_var": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 59,
+        "children": []
+      }
+    ]
+  }
+]

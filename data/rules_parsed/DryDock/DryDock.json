@@ -1,0 +1,69 @@
+[
+  {
+    "node_type": "function",
+    "name": "DryDock",
+    "line": 3,
+    "children": [
+      {
+        "node_type": "var",
+        "name": "viewingGroup",
+        "instruction_type": "LocalAssign",
+        "line": 4,
+        "code": "local viewingGroup",
+        "value": 1
+      },
+      {
+        "node_type": "if",
+        "condition": "feature.PrimitiveType == PrimitiveType.Surface",
+        "line": 6,
+        "children": [
+          {
+            "node_type": "var",
+            "name": "viewingGroup",
+            "instruction_type": "Assign",
+            "line": 8,
+            "code": "viewingGroup = 32440",
+            "value": 32440
+          },
+          {
+            "node_type": "hit",
+            "line": 10,
+            "code": "featurePortrayal:AddInstructions('ColorFill:LANDA')",
+            "instruction_type": "color_fill",
+            "values": {
+              "ColorFill": "LANDA"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 11,
+            "code": "featurePortrayal:SimpleLineStyle('solid', 0.32, 'CSTLN')",
+            "instruction_type": "line_style",
+            "values": {
+              "style": "solid",
+              "thickness": 0.32,
+              "color": "CSTLN"
+            },
+            "has_var": false
+          },
+          {
+            "node_type": "hit",
+            "line": 12,
+            "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+            "instruction_type": "line_instruction",
+            "values": {
+              "LineInstruction": "_simple_"
+            },
+            "has_var": false
+          }
+        ]
+      },
+      {
+        "node_type": "else",
+        "line": 14,
+        "children": []
+      }
+    ]
+  }
+]

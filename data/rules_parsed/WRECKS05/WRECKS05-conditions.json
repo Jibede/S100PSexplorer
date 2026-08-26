@@ -1,0 +1,387 @@
+[
+  {
+    "node_type": "hit",
+    "line": 26,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": 1
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "hazardSymbol"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 35,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DANGER01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DANGER01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.valueOfSounding",
+      "feature.valueOfSounding <= contextParameters.SafetyDepth"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 37,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:DANGER02')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "DANGER02"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 43,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "symbol"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 48,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS04')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WRECKS04"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfWreck",
+      "feature.categoryOfWreck == 1 and feature.waterLevelEffect == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 50,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WRECKS05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfWreck",
+      "feature.categoryOfWreck == 2 and feature.waterLevelEffect == 3"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 52,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS01')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WRECKS01"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfWreck",
+      "contains(feature.categoryOfWreck, {\n    4,\n    5,\n}) or contains(feature.waterLevelEffect, {\n    1,\n    2,\n    3,\n    4,\n})"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 54,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WRECKS05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point",
+      "feature.categoryOfWreck"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 57,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:WRECKS05')",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "WRECKS05"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.PrimitiveType == PrimitiveType.Point"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 74,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:LOWACC41')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "LOWACC41"
+    },
+    "has_var": false,
+    "conditions": [
+      "qualityOfPosition and qualityOfPosition ~= 1 and qualityOfPosition ~= 10 and qualityOfPosition ~= 11"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 76,
+    "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dot",
+      "thickness": 0.64,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "hazardSymbol"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 77,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "hazardSymbol"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 80,
+    "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dot",
+      "thickness": 0.64,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.valueOfSounding",
+      "feature.valueOfSounding <= contextParameters.SafetyDepth"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 81,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.valueOfSounding",
+      "feature.valueOfSounding <= contextParameters.SafetyDepth"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 83,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CHBLK')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.64,
+      "color": "CHBLK"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 84,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 88,
+    "code": "featurePortrayal:SimpleLineStyle('solid', 0.64, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "solid",
+      "thickness": 0.64,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 89,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 91,
+    "code": "featurePortrayal:SimpleLineStyle('dash', 0.64, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dash",
+      "thickness": 0.64,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 92,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 94,
+    "code": "featurePortrayal:SimpleLineStyle('dot', 0.64, 'CSTLN')",
+    "instruction_type": "line_style",
+    "values": {
+      "style": "dot",
+      "thickness": 0.64,
+      "color": "CSTLN"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
+    "line": 95,
+    "code": "featurePortrayal:AddInstructions('LineInstruction:_simple_')",
+    "instruction_type": "line_instruction",
+    "values": {
+      "LineInstruction": "_simple_"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
+    "line": 104,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": 1
+    },
+    "has_var": true,
+    "conditions": [
+      "feature.valueOfSounding",
+      "hazardSymbol"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 109,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. symbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": "symbol"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.valueOfSounding"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 114,
+    "code": "featurePortrayal:AddInstructions('ColorFill:CHBRN')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "CHBRN"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 1 or feature.waterLevelEffect == 2"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 116,
+    "code": "featurePortrayal:AddInstructions('ColorFill:DEPIT')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "DEPIT"
+    },
+    "has_var": false,
+    "conditions": [
+      "feature.waterLevelEffect == 4"
+    ]
+  },
+  {
+    "node_type": "hit",
+    "line": 118,
+    "code": "featurePortrayal:AddInstructions('ColorFill:DEPVS')",
+    "instruction_type": "color_fill",
+    "values": {
+      "ColorFill": "DEPVS"
+    },
+    "has_var": false,
+    "conditions": []
+  },
+  {
+    "node_type": "hit",
+    "line": 122,
+    "code": "featurePortrayal:AddInstructions('PointInstruction:' .. hazardSymbol)",
+    "instruction_type": "symbol",
+    "values": {
+      "PointInstruction": 1
+    },
+    "has_var": true,
+    "conditions": [
+      "hazardSymbol"
+    ]
+  }
+]
