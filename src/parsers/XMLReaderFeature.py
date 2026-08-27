@@ -41,9 +41,9 @@ class XMLReaderFeature:
         "S100_FC_FeatureTypes": "_parse_feature_type",
     }
 
-    def __init__(self, path: str, output_dir="./data/featureCatalog"):
-        self.file = Path(path)
-        self.output_dir = Path(output_dir)
+    def __init__(self, path: Path, output_dir: Path = Path("./data/featureCatalog")):
+        self.file = path
+        self.output_dir = output_dir
 
         if not self.file.exists():
             LOGGER.error("No file found for this pattern: %s", path)
@@ -51,7 +51,7 @@ class XMLReaderFeature:
     ###################################################################################
     #                            MAIN FUNCTION                                        #
     ###################################################################################
-    
+
     def get_info(self) -> None:
         """The main function that gets the information from Feature Catalog and genarate parsed JSON files based on them"""
 
@@ -91,7 +91,7 @@ class XMLReaderFeature:
     ###################################################################################
     #                        TREE FUNCTIONS                                           #
     ###################################################################################
-    
+
     def _get_root(self, file: str) -> ElementTree:
         """Get the root element of a XML tree
 
@@ -123,7 +123,7 @@ class XMLReaderFeature:
     ###################################################################################
     #                        READ AND WRITE FILES FUNCTION                            #
     ###################################################################################
-    
+
     def _save_json(self, data: Any, file_name: str) -> None:
         """Save the data into a JSON file
 
@@ -149,7 +149,7 @@ class XMLReaderFeature:
     ###################################################################################
     #                            XML TRAVERSAL UTILITIES                              #
     ###################################################################################
-    
+
     def _dispatch(self, tag: str) -> callable:
         """Retrieves the appropriaten parsing handler for a given XML tag
 
@@ -293,7 +293,7 @@ class XMLReaderFeature:
     ###################################################################################
     #                          FEATURE CATALOG PARSERS                                #
     ###################################################################################
-    
+
     def _parse_general_groups(self, e: Element, tag: str) -> Dict:
         """Parses a general group element [name, scope, fieldOfApplication, versionNumber, versionDate, productId] into a dictionary
 
@@ -529,7 +529,7 @@ class XMLReaderFeature:
         """
         def_ref_group = self._find(e, "definitionReference")
 
-        return(
+        return (
             {
                 "scr_identifier": self._text(def_ref_group, "sourceIdentifier"),
                 "definition_ref": self._get_attr(

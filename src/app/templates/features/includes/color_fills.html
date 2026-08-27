@@ -22,7 +22,8 @@
         {% set default = (conditions_check | reject('in', default_conditions) | list | length == 0) %}
       {% endif %}
 
-      <tr class="{% if default%} default {%endif%}">
+      <tr class="{% if default%} default {%endif%} clickable"
+           onclick="window.location.href='/colors/{{colorfill['code']}}'">
         <td>
           {{draw_color.rendre_color_fill(colorfill)}}
         </td>

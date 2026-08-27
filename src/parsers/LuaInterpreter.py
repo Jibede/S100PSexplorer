@@ -49,7 +49,8 @@ class LuaInterpreter:
     NEGATION_PREFIX = "NOT ("
 
     def __init__(self, path: str):
-        self.files = glob.glob(path)
+        self.files = list(path.parent.glob(path.name))
+        
         self.local_var = []
         self.related_symbols = defaultdict(
             lambda: defaultdict(lambda: defaultdict(set))
@@ -70,10 +71,9 @@ class LuaInterpreter:
 
         LOGGER.info(f"{'#' * 30} GETTING RULES DATA {'#' * 30}")
 
-        for file in self.files:
+        for path in self.files:
             self.local_var = []
 
-            path = Path(file)
             if not path.exists():
                 LOGGER.error(f"No file found for this pattern: {path}")
                 continue

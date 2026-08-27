@@ -29,7 +29,7 @@ class XMLReaderAditionalFiles:
     #                            MAIN FUNCTION                                        #
     ###################################################################################
 
-    def get_info(self, file_path: str):
+    def get_info(self, file_path: Path):
         """The main function that gets the information from [areaFills, colorProfiles and lineStyles] and generate JSON files for each
 
         Args:
@@ -43,17 +43,16 @@ class XMLReaderAditionalFiles:
         dt_related_color = self._read_json(path_file="data/related_colors.json")
         self.colors_related = dt_related_color["line_style"]
         
-        files = glob.glob(file_path)
+        files = list(file_path.parent.glob(file_path.name))
 
-        for file in files:
+        for path in files:
             self.data = {}
             self.data_line = []
 
-            path = Path(file)
             self.file = path.stem
             self.dir = path.parent.name
 
-            root = self._get_root(file)
+            root = self._get_root(path)
             if root is None:
                 LOGGER.warning(
                     f"THE FILE {self.dir} -> {self.file} WON'T BE PROCESSED DUE TO AN ERROR"
@@ -130,11 +129,11 @@ class XMLReaderAditionalFiles:
     #                               TREE FUNCTIONS                                    #
     ###################################################################################
     
-    def _get_root(self, file: str) -> ElementTree:
+    def _get_root(self, file: Path) -> ElementTree:
         """Get the root element of a XML tree
 
         Args:
-            file (str): The XML file
+            file (Path): The XML file path
 
         Returns:
              ElementTree[str]: Root element of the tree
