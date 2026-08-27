@@ -9,22 +9,24 @@
   {% if 'rule' in linked_rules %}
     {% set title = 'Linked Rules'%}
     {% set dataset = data_rules%}
+    {% set page = 'rules' %}
     {% include 'visualisation/includes/sections/linked_features.html' %}
-  {% endif %} 
+    {% endif %} 
 
-  {% set match_rules = namespace(found=false) %}
+    {% set match_rules = namespace(found=false) %}
   {% if 'rule' in linked_rules %}
     {% for rule in linked_rules['rule'] %} 
-      {% if rule in data_ft %} 
-        {% set match_rules.found = true %} 
-      {% endif %}
-
+    {% if rule in data_ft %} 
+    {% set match_rules.found = true %} 
+    {% endif %}
+    
     {% endfor %} 
-  {% endif %} 
-  
-  {% if match_rules.found %}
+    {% endif %} 
+    
+    {% if match_rules.found %}
     {% set title = 'Linked Features'%}
     {% set dataset = data_ft %}
+    {% set page = 'features' %}
     {% include 'visualisation/includes/sections/linked_features.html' %}
   {% endif %}
   

@@ -23,7 +23,7 @@
             {% endfor %}
 
             {% set item = dataset.get(rule, {}) %}
-            <tr class="clickable" onclick="window.location.href='/features/{{rule}}'">
+            <tr class="clickable" onclick="window.location.href='/{{page}}/{{rule}}'">
                 <td class="mono">{{ item.get('name', 'N/A') }}</td>
                 <td class="mono">
                 {{ item.get('definition').capitalize() if item.get('definition') else item.get('description').capitalize()}}

@@ -13,6 +13,8 @@
   {% if 'rule' in linked_rules %}
     {% set title = 'Linked Rules'%}
     {% set dataset = data_rules %}
+    {% set page = 'rules' %}
+
     {% include 'visualisation/includes/sections/linked_features.html' %}
   {% endif %} 
 
@@ -28,6 +30,8 @@
   {% if match_rules.found %}
     {% set title = 'Linked Feature' %}
     {% set dataset = data_ft %}
+    {% set page = 'features' %}
+
     {% include 'visualisation/includes/sections/linked_features.html' %}
   {% endif %}
 
