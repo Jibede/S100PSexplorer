@@ -1,4 +1,4 @@
-# Analyseur S-101
+# Analyzer S-101
 
 **A web application designed to visualize the International Hydrographic Organization (IHO) S-101 norme for standard for Eletronic Navigational Charts (ENCs)**
 
