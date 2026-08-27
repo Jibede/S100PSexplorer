@@ -47,30 +47,17 @@ pip install -r requirements.txt
 
 ## 🛠️ Usage
 
-Running the application requires a simple two-step process:
+1. Start the Application
 
-- Building the data context
-- Starting the server
-
-1. Data Preparation
-
-Run the build script to parse the catalogues and generate the necessary data structures.
-
-```bash
-python build_data.py
-```
-
-2. Start the Application
-
-Lauch the Flask web server.
+* Lauch the Flask web server.
 
 ```bash
 python run.py
 ```
 
-3. Access the Application
+2. Access the Application
 
-Once the server is running, open your web browser and navigate to:
+* Once the server is running, open your web browser and navigate to:
 
 ```plaintext
 http://localhost:5000
