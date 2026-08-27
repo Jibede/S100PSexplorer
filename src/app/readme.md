@@ -1,4 +1,4 @@
-# App Module - Web Application
+# 🗂️ App Module - Web Application (`src/app/`)
 
 This directory contains the core web application. It manages the routing, data handling, and user interface for exploring and visualizing marine chart features, attributes, and portrayal rules.
 

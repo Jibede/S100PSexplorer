@@ -38,7 +38,7 @@
                 {% endif %}
                 
                 <option value="{{code}}" data-rgb="{{current_rgb}}" {% if code == ns.chosen_color %} selected {% endif %}>
-                    {{ code }} [{{ color['name'].capitalize() }}]
+                    {{ code }} [{{' '.join(color['name'].capitalize().split("_")) }}]
                 </option>
             {% endfor %}
         </select>
