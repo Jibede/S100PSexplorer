@@ -21,7 +21,7 @@ function AnchorBerth(feature, featurePortrayal, contextParameters)
 		end
 		featurePortrayal:AddInstructions('PointInstruction:' .. symbol)
 		if feature.featureName[1] and feature.featureName[1].name then
-			featurePortrayal:AddInstructions('LocalOffset:43.51,37;FontSize:45;FontColor:DEPIT')
+			featurePortrayal:AddInstructions('LocalOffset:3.51,0;FontSize:10;FontColor:CHBLK')
 			featurePortrayal:AddTextInstruction(EncodeString(GetFeatureName(feature, contextParameters), 'Nr %s'), 29, 24, 26220, 15)
 		end
 	elseif feature.PrimitiveType == PrimitiveType.Surface then

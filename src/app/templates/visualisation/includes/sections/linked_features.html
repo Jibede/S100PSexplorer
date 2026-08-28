@@ -25,15 +25,17 @@
             {% set item = dataset.get(rule, {}) %}
             <tr class="clickable" onclick="window.location.href='/{{page}}/{{rule}}'">
                 <td class="mono">{{ item.get('name', 'N/A') }}</td>
+
                 <td class="mono">
                 {{ item.get('definition').capitalize() if item.get('definition') else item.get('description').capitalize()}}
                 </td>
+                
                 <td class="mono">
-                <ul>
-                    {%for condition in ns.conditions%}
-                    <li>{{condition}}</li>
-                    {%endfor%}
-                </ul>
+                  <ul>
+                      {%for condition in ns.conditions%}
+                      <li>{{condition}}</li>
+                      {%endfor%}
+                  </ul>
                 </td>
             </tr>
         {% endif %} 

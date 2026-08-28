@@ -16,7 +16,7 @@ def home():
 def files_export():
 
     root_projet = os.path.abspath(os.path.join(current_app.root_path, "..", "..", ".."))
-    DATA_DIR = Path(root_projet) / "source" / "rules"
+    DATA_DIR = Path(root_projet) / "raw" / "rules"
 
     files = []
     if DATA_DIR.exists():

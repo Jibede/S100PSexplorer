@@ -16,7 +16,7 @@ def save_file():
     
     base_rules = Path('data/rules_parsed')
     file_path = base_rules / f'{new_data.get('file')}/{file_name}-conditions.json'
-    rule_path = Path('source') / 'rules' / f'{file_name}.lua'
+    rule_path = Path('raw') / 'rules' / f'{file_name}.lua'
     
     data = dict(list(new_data.items())[1:])
     

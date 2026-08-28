@@ -68,7 +68,7 @@ upload_file_bp = Blueprint("upload_file", __name__)
 @upload_file_bp.route("/upload_file", methods=["POST"])
 def upload_file():
     root_projet = os.path.abspath(os.path.join(current_app.root_path, "..", "..", ".."))
-    DATA_DIR = os.path.join(root_projet, "source")
+    DATA_DIR = os.path.join(root_projet, "raw")
     os.makedirs(DATA_DIR, exist_ok=True)
 
     if "file" not in request.files:

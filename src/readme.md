@@ -14,6 +14,7 @@ Contains the core web application and user interface.
 * Houses the backend routing logic (e.g., Flask routes).
 * Contains the HTML templates and frontend assets used to render the interface (such as the parameter editing fields and preview pages).
 * Manages the interaction between the parsed backend data and the end-user.
+    * *For deeper technical details, see the [Parsers README](./app/README.md).*
 
 ### 2. 🗂️ `parsers/`
 The data extraction and transformation engine.

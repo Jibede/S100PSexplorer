@@ -8,10 +8,9 @@
       <!-- Option Sélectionner Tout -->
       <label style="display: block; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #ccc;">
         <input type="checkbox" id="selectAll" />
-        <strong class="mono">Sélectionner tout</strong>
+        <b class="mono">Select All</b>
       </label>
 
-      <!-- Liste dynamique des files -->
       <div id="fileList">
         {% for file in files %}
           <label style="display: block; margin-bottom: 5px;">
@@ -19,7 +18,7 @@
             <span class="mono">{{ file }}</span>
           </label>
         {% else %}
-          <p class="mono" style="color: grey;">Aucun file disponible pour l'export.</p>
+          <p class="mono" style="color: grey;">No files are available for export</p>
         {% endfor %}
       </div>
     </div>

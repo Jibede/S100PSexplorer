@@ -448,7 +448,8 @@ class LuaInterpreter:
             return self._build_tree_body(node.body)
 
         if isinstance(node, Assign):
-            return [self._build_var_node(node)]
+            var_node = self._build_var_node(node)
+            return [var_node] if var_node else []
 
         return []
 
@@ -570,7 +571,7 @@ class LuaInterpreter:
         value = self._assign_value(node)
         name = self._assign_target_name(node)
 
-        if not value or not name:
+        if value is None or name is None:
             return {}
 
         # Add the variable to the variables array to verify whether the other functions use it
@@ -609,11 +610,11 @@ class LuaInterpreter:
             str | None: The literal value
         """
 
-        value = 1
         var_val = node.values[0] if node.values else None
-        if var_val is None:
-            return value
+        if var_val is None or var_val.display_name == 'Nil':
+            return None
 
+        value = 1
         if var_val.display_name == "UMinusOp":
             var_val = var_val.operand
             value *= -1
