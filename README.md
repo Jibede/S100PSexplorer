@@ -1,6 +1,7 @@
 # Analyzer S-100
 
 **A web application designed to visualize the International Hydrographic Organization (IHO) S-101 standard for Electronic Navigational Charts (ENCs)**
+
 **A web application can be used for S-100 standards with Lua rules**
 
 ## 📂 Project Structure
