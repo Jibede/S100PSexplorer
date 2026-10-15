@@ -1,0 +1,44 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border: 1px solid var(--chart-line);
+    font-size: 13px;
+}
+
+table th {
+    text-align: left;
+    background: #eae3cf;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--chart-line);
+}
+
+table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--chart-line);
+    vertical-align: top;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+tbody td {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover td {
+    background-color: var(--teal-soft);
+}
+
+tbody tr:hover td:first-child {
+    box-shadow: inset 4px 0 0 var(--teal);
+}
+
+tbody a:hover {
+    text-decoration: underline;
+}

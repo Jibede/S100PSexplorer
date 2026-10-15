@@ -1,0 +1,27 @@
+
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Titres des sections */
+section > h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin: 0 0 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Trait horizontal après le titre */
+section > h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--chart-line);
+}

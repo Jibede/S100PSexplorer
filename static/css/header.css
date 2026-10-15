@@ -1,0 +1,51 @@
+header {
+    background: linear-gradient(90deg, var(--navy-deep), var(--navy), var(--teal));
+    color: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+    z-index: 20;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+
+header.compact {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+header.compact h1 {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+header.compact p:first-of-type {
+    font-size: 12px;
+    margin: 0;
+}
+
+header.compact p:last-of-type {
+    display: none;
+}
+
+body.index-page {
+    padding-top: 200px;
+}
+
+body.index-page:has(header.compact) {
+    padding-top: 120px;
+}
