@@ -1,9 +1,0 @@
-website:
-  name: "S100 PS Explorer"
-  basedir : "D:/10 - travail/test_git_psexplorer"
-  dirs:
-    official_dir: "FCxml/official"
-    dev_dir: "FCxml/dev"
-    others : "FCxml/others"
-  output_html: "FCxml/index.html"
-  html_extension: ".htm"                                #commonly .html or .htm
