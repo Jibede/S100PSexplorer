@@ -25,3 +25,18 @@ section > h2::after {
     height: 1px;
     background: var(--chart-line);
 }
+
+body.fc-page h1 {
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--navy);
+    color: var(--white);
+    margin: 0;
+    width: 100%;
+}
+
+body.fc-page h4 {
+    background: var(--teal);
+    color: var(--white);
+    padding: 10px;
+}

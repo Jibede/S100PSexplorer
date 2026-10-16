@@ -42,3 +42,20 @@ tbody tr:hover td:first-child {
 tbody a:hover {
     text-decoration: underline;
 }
+
+body.fc-page table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+body.fc-page th,
+body.fc-page td {
+    border: 1px solid var(--chart-line);
+    padding: 8px;
+    text-align: left;
+}
+
+body.fc-page th {
+    background: var(--teal-soft);
+}
