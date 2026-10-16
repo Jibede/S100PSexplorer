@@ -1,111 +1,17 @@
 
     <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8"><title>S100 PS Explorer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        :root {
-            --primary: #003a8f;
-            --secondary: #0066cc;
-            --background: #f4f6f8;
-            --card: #ffffff;
-            --text: #2c2c2c;
-            --muted: #6c757d;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-            background-color: var(--background);
-            color: var(--text);
-        }
-
-        header {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2.5rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
-
-        header p {
-            margin-top: 0.8rem;
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        section {
-            background-color: var(--card);
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        section h2 {
-            margin-top: 0;
-            color: var(--primary);
-            border-bottom: 3px solid #e3e7eb;
-            padding-bottom: 0.6rem;
-        }
-
-        section p.description {
-            margin: 1rem 0 1.5rem 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            margin: 0.8rem 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--secondary);
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #e9ecef;
-            padding: 1.2rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        footer span {
-            color: var(--primary);
-            font-weight: 600;
-        }
-    </style>
-</head>
-<body>
+        <html lang="fr">
+            <head>
+                <meta charset="UTF-8"><title>S100 PS Explorer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./static/css/style.css">
+    </head>
+<body class="index-page">
 
 <header>
     <h1>S-100 Feature Catalogs</h1>
     <p>S-100 PS explorer : Tool to explore S-100 standards</p>
-    <p>created 18/05/2026 </p>
+    <p>created 16/10/2026 </p>
 </header>
 
 <main>
@@ -170,10 +76,38 @@
         </tr>
         
         <tr>
+            <td>S-122</td>
+            <td><a href=./official/122_FC_2.0.0.htm>Marine Protected Area</a></td>
+            <td>2.0.0</td>
+            <td><a href="././official/122_FC_2.0.0.xml">XML</a></td>
+        </tr>
+        
+        <tr>
+            <td>S-123</td>
+            <td><a href=./official/123_FC_2.0.0.htm>Marine Radio Services</a></td>
+            <td>2.0.0</td>
+            <td><a href="././official/123_FC_2.0.0.xml">XML</a></td>
+        </tr>
+        
+        <tr>
             <td>S-124</td>
             <td><a href=./official/124_FC_2.0.0.htm>Navigational Warnings</a></td>
             <td>2.0.0</td>
             <td><a href="././official/124_FC_2.0.0.xml">XML</a></td>
+        </tr>
+        
+        <tr>
+            <td>S-125</td>
+            <td><a href=./official/125_Feature_Catalogue_1.0.0.htm>Marine Aids to Navigation (AtoN)</a></td>
+            <td>1.0.0</td>
+            <td><a href="././official/125_Feature_Catalogue_1.0.0.xml">XML</a></td>
+        </tr>
+        
+        <tr>
+            <td>S-127</td>
+            <td><a href=./official/127_FC_2.0.0.htm>Feature Catalogue for S-127</a></td>
+            <td>2.0.0</td>
+            <td><a href="././official/127_FC_2.0.0.xml">XML</a></td>
         </tr>
         
         <tr>
@@ -191,10 +125,17 @@
         </tr>
         
         <tr>
+            <td>S-130</td>
+            <td><a href=./official/130_FC_2.0.0.htm>Polygonal Demarcations of Global Sea Areas</a></td>
+            <td>2.0.0</td>
+            <td><a href="././official/130_FC_2.0.0.xml">XML</a></td>
+        </tr>
+        
+        <tr>
             <td>S-131</td>
-            <td><a href=./official/131_1_0_0_20230315_FC.htm>Feature Catalogue for S-131</a></td>
-            <td>1.0.0</td>
-            <td><a href="././official/131_1_0_0_20230315_FC.xml">XML</a></td>
+            <td><a href=./official/131_FC_2.0.0.htm>Feature Catalogue for S-131</a></td>
+            <td>2.0.0</td>
+            <td><a href="././official/131_FC_2.0.0.xml">XML</a></td>
         </tr>
         
         <tr>
@@ -205,24 +146,17 @@
         </tr>
         
         <tr>
+            <td>S-401</td>
+            <td><a href=./official/401_Feature_Catalogue_1.3.0_Unsigned.htm>Inland Electronic Navigational Chart</a></td>
+            <td>1.3.0</td>
+            <td><a href="././official/401_Feature_Catalogue_1.3.0_Unsigned.xml">XML</a></td>
+        </tr>
+        
+        <tr>
             <td>None</td>
             <td><a href=./official/S-121_FC_1.0.0.htm>S121 Product Specification</a></td>
             <td>1.0.0.46</td>
             <td><a href="././official/S-121_FC_1.0.0.xml">XML</a></td>
-        </tr>
-        
-        <tr>
-            <td>None</td>
-            <td><a href=./official/S-122_EN_MPA_Product_Specification_Feature_Catalogue_Ed1.0.0.htm>Feature Catalogue for S-122</a></td>
-            <td>1.0.0</td>
-            <td><a href="././official/S-122_EN_MPA_Product_Specification_Feature_Catalogue_Ed1.0.0.xml">XML</a></td>
-        </tr>
-        
-        <tr>
-            <td>None</td>
-            <td><a href=./official/S-123_EN_MRS_Product_Specification_Feature_Catalogue_Ed1.0.0.htm>Feature Catalogue for S-123</a></td>
-            <td>1.0.0</td>
-            <td><a href="././official/S-123_EN_MRS_Product_Specification_Feature_Catalogue_Ed1.0.0.xml">XML</a></td>
         </tr>
         
         <tr>
@@ -253,13 +187,6 @@
             <td><a href="././official/S-401 Feature_Catalogue_edition_1.2.0.xml">XML</a></td>
         </tr>
         
-        <tr>
-            <td>None</td>
-            <td><a href=./official/S127FC.htm>Feature Catalogue for S-127</a></td>
-            <td>1.0.0-20181129</td>
-            <td><a href="././official/S127FC.xml">XML</a></td>
-        </tr>
-        
             </tbody>
         </table>
     </section>
@@ -274,8 +201,8 @@
             </ol>
             </p>
 
-           
-                
+
+
             </section><section>
         <h2>Notes</h2>
         <p class="description">
@@ -283,14 +210,14 @@
             <br> Les normes en version inférieure à 2.0.0 sont des normes encore en cours de développement et les Feature Catalog peuvent ne pas être matures et présenter des anomalies.
             Les catalogues en développement sont en cours de spécification, d’expérimentation ou de test, et susceptibles d’évoluer. 
             Ces versions ne sont pas destinées à un usage opérationnel. Ils sont téléchargés pour la plupart depuis le <a href="https://github.com/iho-ohi/">github de l'OHI</a>.
-            
-            N'hésitez pas à contacter <a href="mailto:jean-baptiste.dodeur@shom.fr">JB Dodeur</a> pour une mise à jour ou créer une issue sur la <a href="https://github.com/Jibede/S100PSexplorer">page github</a>.
+
+            N'hésitez pas à contacter <a href="mailto:dodeur@shom.fr">JB Dodeur</a> pour une mise à jour ou créer une issue sur la <a href="https://github.com/iho-ohi/S100Infrastructure/tree/main/S100PS%20Explorer">page github</a>.
         </p>
         <p class="description">
             Official published features catalog (FC) are from the <a href="https://registry.iho.int/productspec/list.do">IHO registry</a>.
             <br> Standards in a version minus than 2.0.0 are still in development, and their FC may not be mature and include errors or mistypos and subjects to regular evolutions.
             These versions are not meant to an operational use. They are, for the most, from the  <a href="https://github.com/iho-ohi/">IHO github</a>.
-            <br>Feel free to contact <a href="mailto:jean-baptiste.dodeur@shom.fr">JB Dodeur</a> for any information, or log an issue on the <a href="https://github.com/Jibede/S100PSexplorer">github page</a>.
+            <br>Feel free to contact <a href="mailto:dodeur@shom.fr">JB Dodeur</a> for any information, or log an issue on the <a href="https://github.com/iho-ohi/S100Infrastructure/tree/main/S100PS%20Explorer">github page</a>.
         </p>
         <ul>
             </ul>
@@ -300,6 +227,21 @@
 <footer>
     <span>v1</span>
 </footer>
+
+<script>
+    const header = document.querySelector("header");
+
+    function updateHeader() {
+        if (window.scrollY > 150) {
+            header.classList.add("compact");
+        } else if (window.scrollY === 0) {
+            header.classList.remove("compact");
+        }
+    }
+
+    window.addEventListener("scroll", updateHeader);
+    updateHeader();
+</script>
 
 </body>
 </html>
