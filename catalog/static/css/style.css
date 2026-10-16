@@ -1,10 +1,10 @@
-@import url('./colors.css');
-@import url('./header.css');
-@import url('./sections.css');
-@import url('./footer.css');
-@import url('./tables.css');
-@import url('./fonts.css');
-@import url('./fc.css');
+@import url('colors.css');
+@import url('header.css');
+@import url('sections.css');
+@import url('footer.css');
+@import url('tables.css');
+@import url('fonts.css');
+@import url('fc.css');
 
 body {
     margin: 0;
