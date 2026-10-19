@@ -1,0 +1,61 @@
+
+body.fc-page .sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 16px 14px;
+    overflow-y: auto;
+    border-right: 1px solid var(--chart-line);
+    background: var(--navy-deep);
+    color: #e6ebf0;
+}
+
+body.fc-page .sidebar h2 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #a6b8c9;
+    margin: 18px 0 10px;
+}
+
+body.fc-page .sidebar h2:first-child {
+    margin-top: 0;
+}
+
+body.fc-page .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body.fc-page .sidebar li {
+    margin: 2px 0;
+}
+
+body.fc-page .sidebar li a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    color: #e6ebf0;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+body.fc-page .sidebar li a:hover {
+    background-color: #12335a;
+    color: var(--white);
+    text-decoration: none;
+}
+
+body.fc-page .sidebar li a.is-selected {
+    background-color: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+}
+
+body.fc-page .sidebar li a:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: -2px;
+}

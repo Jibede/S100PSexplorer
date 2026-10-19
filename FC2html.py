@@ -873,15 +873,16 @@ def wrap_html_page(title,sidebar, top_nav, left_column, right_column):
         '<html><head><title>',title,'</title><meta charset="UTF-8">',
         '<link rel="stylesheet" href="../static/css/style.css">',
         '</head><body class="fc-page">',
-        '<div style="position: fixed; top: 0; left: 0; right: 0;"><h1>',title,'</h1></div>',
-        '<div style="display: flex; width: 100%; margin-top: 70px;">',
+        '<div class="fc-title-bar"><h1>', title, '</h1></div>',
+        '<div class = "fc-layout">',
         sidebar,
         '<div class="content">',
         top_nav,
         '<div class="columns">',
         left_column,
         right_column,
-        '</div></div></div></body></html>'
+        '</div></div></div>',
+        '<script src="../static/js/fc-sidebar.js"></script></body></html>'
     ])
 
 def generate_html_from_fc (title, data_dict):
