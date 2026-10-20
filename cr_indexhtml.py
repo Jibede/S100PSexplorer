@@ -172,10 +172,14 @@ def main():
     html.append(f"""
 <body class="index-page">
 
-<header>
-    <h1>S-100 Feature Catalogs</h1>
-    <p>S-100 PS explorer : Tool to explore S-100 standards</p>
-    <p>created {date_creation} </p>
+<header class="index-header">
+    <img src="./static/images/iho_logo.png" alt="IHO Logo" class="index-header-logo">
+    <div class="index-header-content">
+        <h1>S-100 Feature Catalogs</h1>
+        <p>S-100 PS explorer : Tool to explore S-100 standards</p>
+        <p>created {date_creation} </p>
+    </div>
+    <img src="./static/images/shom_logo.png" alt="SHOM Logo" class="index-header-logo">
 </header>
 
 <main>

@@ -36,14 +36,14 @@ body.fc-page .top-nav {
     align-items: center;
     gap: 12px;
     background: var(--navy-soft);
-    padding: 6px 162x;
+    padding: 6px 12x;
     border-bottom: 1px solid var(--chart-line);
     font-size: 14px;
 }
 
 body.fc-page .top-nav a {
     display: inline-block;
-    padding: 5px 8x;
+    padding: 5px 8px;
     margin-right: 2px;
     color: var(--navy);
     font-weight: 600;
@@ -70,7 +70,6 @@ body.fc-page .top-nav a.is-selected {
 body.fc-page .top-nav > div {
     line-height: 1.2;
 }
-
 body.fc-page .fc-title-bar {
     position: fixed;
     top: 0;
@@ -79,21 +78,41 @@ body.fc-page .fc-title-bar {
     z-index: 20;
     background: var(--navy);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 120px;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
 }
 
 body.fc-page .fc-title-bar h1 {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    padding: 16px 20px;
     margin: 0;
     color: var(--white);
+    text-align: center;
+}
+
+body.fc-page .fc-title-logo {
+    display: block;
+    max-width: 100%;
+    max-height: 44px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    justify-self: center;
+}
+
+body.fc-page .fc-title-logo:last-child {
+    max-height: 60px;
+    max-width: 120px;
 }
 
 body.fc-page .fc-layout {
     display: flex;
     width: 100%;
-    margin-top: 56px;
+    margin-top: 80px;
 }
 
 body.fc-page .sidebar {
