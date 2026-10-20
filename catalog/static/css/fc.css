@@ -36,14 +36,14 @@ body.fc-page .top-nav {
     align-items: center;
     gap: 12px;
     background: var(--navy-soft);
-    padding: 10px 16px;
+    padding: 6px 162x;
     border-bottom: 1px solid var(--chart-line);
-    font-size: 12px;
+    font-size: 14px;
 }
 
 body.fc-page .top-nav a {
     display: inline-block;
-    padding: 6px 9px;
+    padding: 5px 8x;
     margin-right: 2px;
     color: var(--navy);
     font-weight: 600;
@@ -55,8 +55,7 @@ body.fc-page .top-nav a {
 body.fc-page .top-nav a:hover {
     background: var(--teal);
     color: var(--white);
-    text-decoration: none;
-}
+    text-decoration: none;}
 
 body.fc-page .top-nav a:focus-visible {
     outline: 2px solid var(--amber);
@@ -66,6 +65,10 @@ body.fc-page .top-nav a:focus-visible {
 body.fc-page .top-nav a.is-selected {
     background: var(--amber);
     color: var(--navy-deep);
+}
+
+body.fc-page .top-nav > div {
+    line-height: 1.2;
 }
 
 body.fc-page .fc-title-bar {
@@ -128,7 +131,6 @@ body.fc-page .column tr:hover td {
     background: var(--teal-soft);
 }
 
-/* Listes dans les colonnes des catalogues */
 body.fc-page .column ul {
     list-style-type: disc;
     padding-left: 24px;
