@@ -454,7 +454,11 @@ def generate_sidebar(features, informations, associations_index, roles_index):
     :param informations: liste des informations avec index
     :return: string pour intégration dans fichier xml
     """
-    parts = ['<div class="sidebar" style="resize: horizontal; overflow: auto;"><h2 id="s_features">Feature Types</h2><ul>']
+    parts = [
+        '<div class="sidebar" style="resize: horizontal; overflow: auto;">',
+        '<a class="back-to-index" href="../index.html">← Back to index</a>',
+        '<h2 id="s_features">Feature Types</h2><ul>'
+    ]
     for ft in features:
         for i in features[ft]:
             parts.append(f'<li><a href="#feature_{i["code"]}">{i["name"]}</a></li>')
