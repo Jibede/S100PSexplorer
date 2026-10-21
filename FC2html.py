@@ -551,7 +551,7 @@ def generate_left_column(feature_index,
 
     parts = ['<div class="column"><h2>Feature Details</h2>']
     for letter, ft_list in feature_index.items():
-        parts.append(f'<h3 id="f_letter_{letter}"></h3>')
+        parts.append(f'<h3 id="f_letter_{letter}">~ {letter} ~</h3>')
         for ft in ft_list:
             if not ft['alias']:
                 alias = ''
@@ -688,7 +688,7 @@ def generate_left_column(feature_index,
 
     parts.append('<h2>Information Types</h2>')
     for letter, inf_list, in information_index.items():
-        parts.append(f'<h3 id="i_letter_{letter}"></h3>')
+        parts.append(f'<h3 id="i_letter_{letter}">~ {letter} ~</h3>')
         for info in inf_list:
             if not info['alias']:
                 alias = ''
@@ -817,7 +817,7 @@ def generate_left_column(feature_index,
 
     parts.append('<h2>Associations</h2>')
     for letter, ass_list, in association_index.items():
-        parts.append(f'<h3 id="asso_letter_{letter}"></h3>')
+        parts.append(f'<h3 id="asso_letter_{letter}">~ {letter} ~</h3>')
         for asso in ass_list:
             parts.append(f'<h4 id="asso_{asso["S100FC:code"]}">{asso["S100FC:name"]} ({asso["S100FC:code"]})</h4>')
             try:
@@ -879,7 +879,7 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
     parts = ['<div class="column"><h2 id="a_details" >Attributes Details</h2>']
 
     for letter, attr_list in attribute_index.items():
-        parts.append(f'<h3 id="a_letter_{letter}"></h3>')
+        parts.append(f'<h3 id="a_letter_{letter}">~ {letter} ~</h3>')
         for attr in attr_list:
             if attr["alias"] != None:
                 alias = str(attr["alias"]).replace("[","").replace("]","").replace("'","")
@@ -950,7 +950,7 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
     parts.append('<h2>Roles</h2>')
 
     for letter, role_list, in role_index.items():
-        parts.append(f'<h3 id="role_letter_{letter}"></h3>')
+        parts.append(f'<h3 id="role_letter_{letter}">~ {letter} ~</h3>')
         for role in role_list:
             parts.append(f'<h4 id="r_{role["S100FC:code"]}">{role["S100FC:name"]} ({role["S100FC:code"]})</h4>')
             parts.append(f'<p><strong>Definition:</strong> {role["S100FC:definition"]}</p>')
