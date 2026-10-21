@@ -874,14 +874,15 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
 
 def wrap_html_page(title,sidebar, top_nav, left_column, right_column):
     return '\n'.join([
-        '<html><head><title>',title,'</title><meta charset="UTF-8">',
+        '<!DOCTYPE html>',
+        '<html lang="en"><head><title>',title,'</title><meta charset="UTF-8">',
         '<link rel="stylesheet" href="../static/css/style.css">',
         '</head><body class="fc-page">',
-        '<div class="fc-title-bar"><h1>', '<div class="fc-title-bar">',
+        '<div class="fc-title-bar">',
         '<img src="../static/images/iho_logo.png" alt="Logo de l’OHI" class="fc-title-logo">',
         '<h1>', title, '</h1>',
         '<img src="../static/images/shom_logo.png" alt="Logo du SHOM" class="fc-title-logo">',
-        '</div>', '</h1></div>',
+        '</div>',
         '<div class = "fc-layout">',
         sidebar,
         '<div class="content">',

@@ -161,7 +161,7 @@ def main():
     html = []
     html.append("""
     <!DOCTYPE html>
-        <html lang="fr">
+        <html lang="en">
             <head>
                 <meta charset="UTF-8">""")
     html.append(f"""<title>{TITLE}</title>""")
