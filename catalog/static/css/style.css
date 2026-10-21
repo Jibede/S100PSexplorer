@@ -6,6 +6,7 @@
 @import url('fonts.css');
 @import url('fc.css');
 @import url('fc-sidebar.css');
+@import url('fc-cardinality.css');
 
 body {
     margin: 0;

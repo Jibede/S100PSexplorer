@@ -11,6 +11,12 @@
   --ink-soft: #5b6b75;
   --white: #ffffff;
   --radius: 2px;
+  --burgundy: #9f2633;
+  --burgundy-soft: #fbe8ea;
+  --blue: #225a91;
+  --blue-soft: #e2edf9;
+  --green: #216644;
+  --green-soft: #e4f2ea;
 }
 
 :root {

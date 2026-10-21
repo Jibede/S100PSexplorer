@@ -70,6 +70,45 @@ def extr_upper (upper):
     #print(vals)
     return vals
 
+def parse_cardinality(lower, upper):
+    try:
+        minimum = int(lower)
+    except (ValueError, TypeError):
+        minimum = None
+    if str(upper.get("infini", "")).lower() == "true":
+        maximum = None
+    else:
+        try:
+            maximum = int(upper.get("val"))
+        except (ValueError, TypeError):
+            maximum = None
+
+    return minimum, maximum
+
+def format_cardinality_badges(lower, upper):
+    minimum, maximum = parse_cardinality(lower, upper)
+    badges = []
+
+    if minimum is not None and minimum > 0:
+        label = "Required" if minimum == 1 else f"Min {minimum}"
+        badges.append(
+            f'<span class="cardinality-badge cardinality-required">'
+            f'{label}</span>'
+        )
+
+    if str(upper.get("infini", "")).lower() == "true":
+        badges.append(
+            '<span class="cardinality-badge cardinality-unlimited">'
+            'No max</span>'
+        )
+    elif maximum is not None:
+        badges.append(
+            f'<span class="cardinality-badge cardinality-max">'
+            f'{maximum} max</span>'
+        )
+
+    return " ".join(badges)
+
 def extr_attr_from_feat (attributs):
     """
     extraire les attribut d'un objet dans le xml FC, retourne un dictionnaire simplifié
@@ -555,7 +594,19 @@ def generate_left_column(feature_index,
                         if elem["code"] == ref_code:
                             attr_name = elem["name"]
                     if attr_name:
-                        parts.append(f'<li><a href="#attr_{ref_code}">{attr_name} ({ref_code})</a> [{lower},{val}]{machaine}</li>')
+                        badges = format_cardinality_badges(lower, upper)
+                        minimum, _ = parse_cardinality(lower, upper)
+                        star = (
+                            '<span class="cardinality-star" aria-hidden="true">✱</span>'
+                            if minimum is not None and minimum > 0
+                            else '<span class="cardinality-star" aria-hidden="true"></span>'
+                        )
+                        parts.append(
+                            f'<li>'
+                            f'{star}<a href="#attr_{ref_code}">{attr_name} ({ref_code})</a>'
+                            f' [{lower},{val}] {badges}{machaine}'
+                            f'</li>'
+                        )
                     else:
                         parts.append(f'<li>{ref_code}</li>')
                 parts.append('</ul></p>')
@@ -588,8 +639,12 @@ def generate_left_column(feature_index,
                             parts.append(f'<a href="#feature_{j}">{j}</a>, ')
                     else:
                         feat = ''
+                    badges = format_cardinality_badges(lower, upper)
                     parts.append(
-                        f' via <a href="#asso_{asso}">{asso}</a> as <a href="#r_{role}">{role}</a> role [{lower},{val}]</li>')
+                        f' via <a href="#asso_{asso}">{asso}</a> '
+                        f'as <a href="#r_{role}">{role}</a> '
+                        f'role [{lower},{val}] {badges}</li>'
+                    )
                 parts.append('</ul></p>')
             if ft["assos_i"]:
                 parts.append('<p><strong>Can be associated with information(s):</strong><ul>')
@@ -623,7 +678,12 @@ def generate_left_column(feature_index,
                             parts.append(f'<a href="#info_{j}">{j}</a>, ')
                     else:
                         feat=''
-                    parts.append(f' via <a href="#asso_{asso}">{asso}</a> as <a href="#r_{role}">{role}</a> role [{lower},{val}]</li>')
+                    badges = format_cardinality_badges(lower, upper)
+                    parts.append(
+                        f' via <a href="#asso_{asso}">{asso}</a> '
+                        f'as <a href="#r_{role}">{role}</a> '
+                        f'role [{lower},{val}] {badges}</li>'
+                    )
                 parts.append('</ul></p>')
 
     parts.append('<h2>Information Types</h2>')
@@ -656,7 +716,20 @@ def generate_left_column(feature_index,
                         if elem["code"] == ref_code:
                             attr_name = elem["name"]
                     if attr_name:
-                        parts.append(f'<li><a href="#attr_{ref_code_name}">{ref_code_name}</a> [{lower},{val}]</li>')
+                        badges = format_cardinality_badges(lower, upper)
+                        minimum, _ = parse_cardinality(lower, upper)
+
+                        star = (
+                            '<span class="cardinality-star" aria-hidden="true">✱</span>'
+                            if minimum is not None and minimum > 0
+                            else '<span class="cardinality-star" aria-hidden="true"></span>'
+                        )
+
+                        parts.append(
+                            f'<li>{star}'
+                            f'<a href="#attr_{ref_code_name}">{ref_code_name}</a>'
+                            f' [{lower},{val}] {badges}</li>'
+                        )
                     else:
                         parts.append(f'<li>{ref_code}</li>')
                 parts.append('</ul></p>')
@@ -830,7 +903,20 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
                     if val is None:
                         val = '*'
                     if sub_attr:
-                        parts.append(f'<li><a href=\"#attr_{sub_attr}\">{sub_attr}</a> [{lower},{val}]</li>')
+                        badges = format_cardinality_badges(lower, upper)
+                        minimum, _ = parse_cardinality(lower, upper)
+
+                        star = (
+                            '<span class="cardinality-star" aria-hidden="true">✱</span>'
+                            if minimum is not None and minimum > 0
+                            else '<span class="cardinality-star" aria-hidden="true"></span>'
+                        )
+
+                        parts.append(
+                            f'<li>{star}'
+                            f'<a href=\"#attr_{sub_attr}\">{sub_attr}</a>'
+                            f' [{lower},{val}] {badges}</li>'
+                        )
                     else:
                         parts.append(f'<li>{subref}</li>')
                 parts.append('</ul></p>')
