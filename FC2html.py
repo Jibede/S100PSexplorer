@@ -496,6 +496,10 @@ def generate_sidebar(features, informations, associations_index, roles_index):
     parts = [
         '<div class="sidebar" style="resize: horizontal; overflow: auto;">',
         '<a class="back-to-index" href="../index.html">← Back to index</a>',
+        '<div class="sidebar-search">',
+        '<input type="search" id="catalog-search" placeholder="Search name or code..." aria-label="Search catalog entries">',
+        '<div id="catalog-search-results" aria-live="polite"></div>',
+        '</div>',
         '<h2 id="s_features">Feature Types</h2><ul>'
     ]
     for ft in sorted(features):
@@ -991,7 +995,8 @@ def wrap_html_page(title,sidebar, top_nav, left_column, right_column):
         left_column,
         right_column,
         '</div></div></div>',
-        '<script src="../static/js/fc-sidebar.js"></script></body></html>'
+        '<script src="../static/js/fc-sidebar.js"></script>',
+        '<script src="../static/js/fc-search.js"></script></body></html>'
     ])
 
 def generate_html_from_fc (title, data_dict):
