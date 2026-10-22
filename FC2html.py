@@ -498,24 +498,24 @@ def generate_sidebar(features, informations, associations_index, roles_index):
         '<a class="back-to-index" href="../index.html">← Back to index</a>',
         '<h2 id="s_features">Feature Types</h2><ul>'
     ]
-    for ft in features:
-        for i in features[ft]:
+    for ft in sorted(features):
+        for i in sorted(features[ft], key=lambda x: x["name"].casefold()):
             parts.append(f'<li><a href="#feature_{i["code"]}">{i["name"]}</a></li>')
 
     parts.append('</ul><h2 id="s_informations">Information Types</h2><ul>')
-    for info in informations:
-        for i in informations[info]:
+    for info in sorted(informations):
+        for i in sorted(informations[info], key=lambda x: x["name"].casefold()):
             parts.append(f'<li><a href="#info_{i["code"]}">{i["name"]}</a></li>')
     parts.append('</ul>')
 
     parts.append('</ul><h2 id="s_associations">Associations</h2><ul>')
-    for letter, asso_list in associations_index.items():
-        for i in asso_list:
+    for letter, asso_list in sorted(associations_index.items()):
+        for i in sorted(asso_list, key=lambda x: x["S100FC:name"].casefold()):
             parts.append(f'<li><a href="#asso_{i["S100FC:code"]}">{i["S100FC:name"]}</a></li>')
 
     parts.append('</ul><h2 id="s_roles">Roles</h2><ul>')
-    for letter, role_list in roles_index.items():
-        for i in role_list:
+    for letter, role_list in sorted(roles_index.items()):
+        for i in sorted(role_list, key=lambda x: x["S100FC:name"].casefold()):
             parts.append(f'<li><a href="#r_{i["S100FC:code"]}">{i["S100FC:name"]}</a></li>')
 
     parts.append('</ul></div>')
@@ -551,6 +551,7 @@ def generate_left_column(feature_index,
 
     parts = ['<div class="column"><h2>Feature Details</h2>']
     for letter, ft_list in feature_index.items():
+        ft_list = sorted(ft_list, key=lambda ft: ft["name"].casefold())
         parts.append(f'<h3 id="f_letter_{letter}">~ {letter} ~</h3>')
         for ft in ft_list:
             if not ft['alias']:
@@ -688,6 +689,7 @@ def generate_left_column(feature_index,
 
     parts.append('<h2>Information Types</h2>')
     for letter, inf_list, in information_index.items():
+        inf_list = sorted(inf_list, key=lambda info: info["name"].casefold())
         parts.append(f'<h3 id="i_letter_{letter}">~ {letter} ~</h3>')
         for info in inf_list:
             if not info['alias']:
@@ -817,6 +819,10 @@ def generate_left_column(feature_index,
 
     parts.append('<h2>Associations</h2>')
     for letter, ass_list, in association_index.items():
+        ass_list = sorted(
+            ass_list,
+            key=lambda asso: asso["S100FC:name"].casefold()
+        )
         parts.append(f'<h3 id="asso_letter_{letter}">~ {letter} ~</h3>')
         for asso in ass_list:
             parts.append(f'<h4 id="asso_{asso["S100FC:code"]}">{asso["S100FC:name"]} ({asso["S100FC:code"]})</h4>')
@@ -863,6 +869,10 @@ def test_name_index (code, index):
 
     liste_nom = []
     for letter, attr_list in index.items():
+        attr_list = sorted(
+            attr_list,
+            key=lambda attr: attr["name"].casefold()
+        )
         for i in attr_list:
             liste_nom.append(i['code'])
     if code in liste_nom:
@@ -950,6 +960,10 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
     parts.append('<h2>Roles</h2>')
 
     for letter, role_list, in role_index.items():
+        role_list = sorted(
+            role_list,
+            key=lambda role: role["S100FC:name"].casefold()
+        )
         parts.append(f'<h3 id="role_letter_{letter}">~ {letter} ~</h3>')
         for role in role_list:
             parts.append(f'<h4 id="r_{role["S100FC:code"]}">{role["S100FC:name"]} ({role["S100FC:code"]})</h4>')
