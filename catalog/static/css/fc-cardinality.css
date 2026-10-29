@@ -1,0 +1,41 @@
+body.fc-page .cardinality-badge {
+    display: inline-block;
+    padding: 2px 7px;
+    margin-left: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+body.fc-page .cardinality-required {
+    color: var(--burgundy);
+    background: var(--burgundy-soft);
+    border-color: var(--burgundy);
+}
+
+body.fc-page .cardinality-max {
+    color: var(--blue);
+    background: var(--blue-soft);
+    border-color: var(--blue);
+}
+
+body.fc-page .cardinality-unlimited {
+    color: var(--green);
+    background: var(--green-soft);
+    border-color: var(--green);
+}
+
+body.fc-page .cardinality-star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    margin-right: 4px;
+    color: var(--burgundy);
+    font-size: 0.85em;
+    line-height: 1;
+    vertical-align: middle;
+}

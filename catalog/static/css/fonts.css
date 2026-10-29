@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/SpaceGrotesk[wght].woff2") format("woff2");
+    font-weight: 300 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../fonts/IBMPlexMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IBM Plex Mono";
+    src: url("../fonts/IBMPlexMono-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mono {
+    font-family: "IBM Plex Mono", monospace;
+}

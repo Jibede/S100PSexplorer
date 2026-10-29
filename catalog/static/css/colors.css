@@ -1,0 +1,29 @@
+:root {
+  --navy-soft: #e2e8f0;
+  --navy: #0b2545;
+  --navy-deep: #071b36;
+  --chart: #f1ecdd;
+  --chart-line: #d8cfb4;
+  --teal: #2a6f77;
+  --teal-soft: #dcebea;
+  --amber: #c97c2c;
+  --ink: #13202b;
+  --ink-soft: #5b6b75;
+  --white: #ffffff;
+  --radius: 2px;
+  --burgundy: #9f2633;
+  --burgundy-soft: #fbe8ea;
+  --blue: #225a91;
+  --blue-soft: #e2edf9;
+  --green: #216644;
+  --green-soft: #e4f2ea;
+}
+
+:root {
+    --primary: var(--navy);
+    --secondary: var(--teal);
+    --background: var(--chart);
+    --card: var(--white);
+    --text: var(--ink);
+    --muted: var(--ink-soft);
+}

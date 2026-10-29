@@ -14,7 +14,7 @@ Check if it's in the xml
 def test_coherence_attr (lower, nil, infinite, val):
     """
     teste la cohérence des cardinalités
-    si lower = 0 alors upper ppeut etre nul
+    si lower = 0 alors upper peut etre nul
     si val !=0 alors upper ne peut pas etre infini ni nul
     si upper = 0, lower != 1
 
@@ -69,6 +69,30 @@ def extr_upper (upper):
             "val" : peut_val}
     #print(vals)
     return vals
+
+def parse_cardinality(lower, upper):
+    try:
+        minimum = int(lower)
+    except (ValueError, TypeError):
+        minimum = None
+    if str(upper.get("infini", "")).lower() == "true":
+        maximum = None
+    else:
+        try:
+            maximum = int(upper.get("val"))
+        except (ValueError, TypeError):
+            maximum = None
+
+    return minimum, maximum
+
+def format_cardinality_badges(lower, upper):
+    minimum, maximum = parse_cardinality(lower, upper)
+    if minimum is not None and minimum > 0:
+        return (
+            '<span class="cardinality-badge cardinality-required">'
+            'Mandatory</span>'
+        )
+    return ""
 
 def extr_attr_from_feat (attributs):
     """
@@ -447,35 +471,81 @@ def extr_attr_used_by_complex (dict_attr, dict_complex):
             })
     return resultat
 
-def generate_sidebar(features, informations, associations_index, roles_index):
+def generate_sidebar(features, informations, associations_index, roles_index, attribute_index):
     """
 
     :param features: liste des features avec index
     :param informations: liste des informations avec index
     :return: string pour intégration dans fichier xml
     """
-    parts = ['<div class="sidebar" style="resize: horizontal; overflow: auto;"><h2 id="s_features">Feature Types</h2><ul>']
-    for ft in features:
-        for i in features[ft]:
+    parts = [
+        '<div class="sidebar" style="resize: horizontal; overflow: auto;">',
+        '<div class="sidebar-sticky">',
+        '<a class="back-to-index" href="../index.html">← Back to index</a>',
+        '<div class="sidebar-search">',
+        '<input type="search" id="catalog-search" placeholder="Search name or code..." aria-label="Search catalog entries">',
+        '<button type="button" id="catalog-search-clear" aria-label="Clear search" hidden>×</button>',
+        '<div id="catalog-search-results" aria-live="polite"></div>',
+        '</div>',
+        '</div>',
+        '<div class="sidebar-scroll">',
+        '<h2 id="s_features" class="sidebar-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebar-features">Feature Types <span class="toggle-icon">+</span></h2>',
+        '<ul id="sidebar-features" class="sidebar-category" hidden>'
+    ]
+    for ft in sorted(features):
+        parts.append(
+            f'<li class="sidebar-letter"><a href="#f_letter_{ft}">{ft}</a></li>'
+        )
+        for i in sorted(features[ft], key=lambda x: x["name"].casefold()):
             parts.append(f'<li><a href="#feature_{i["code"]}">{i["name"]}</a></li>')
 
-    parts.append('</ul><h2 id="s_informations">Information Types</h2><ul>')
-    for info in informations:
-        for i in informations[info]:
+    parts.append(
+        '</ul><h2 id="s_informations" class="sidebar-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebar-informations">Information Types <span class="toggle-icon">+</span></h2>'
+        '<ul id="sidebar-informations" class="sidebar-category" hidden>'
+    )
+    for info in sorted(informations):
+        parts.append(
+            f'<li class="sidebar-letter"><a href="#i_letter_{info}">{info}</a></li>'
+        )
+        for i in sorted(informations[info], key=lambda x: x["name"].casefold()):
             parts.append(f'<li><a href="#info_{i["code"]}">{i["name"]}</a></li>')
-    parts.append('</ul>')
 
-    parts.append('</ul><h2 id="s_associations">Associations</h2><ul>')
-    for letter, asso_list in associations_index.items():
-        for i in asso_list:
+    parts.append(
+        '</ul><h2 id="s_associations" class="sidebar-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebar-associations">Associations <span class="toggle-icon">+</span></h2>'
+        '<ul id="sidebar-associations" class="sidebar-category" hidden>'
+    )
+    for letter, asso_list in sorted(associations_index.items()):
+        parts.append(
+            f'<li class="sidebar-letter"><a href="#asso_letter_{letter}">{letter}</a></li>'
+        )
+        for i in sorted(asso_list, key=lambda x: x["S100FC:name"].casefold()):
             parts.append(f'<li><a href="#asso_{i["S100FC:code"]}">{i["S100FC:name"]}</a></li>')
 
-    parts.append('</ul><h2 id="s_roles">Roles</h2><ul>')
-    for letter, role_list in roles_index.items():
-        for i in role_list:
+    parts.append(
+        '</ul><h2 id="s_attributes" class="sidebar-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebar-attributes">Attributes <span class="toggle-icon">+</span></h2>'
+        '<ul id="sidebar-attributes" class="sidebar-category" hidden>'
+    )
+
+    for letter, attr_list in sorted(attribute_index.items()):
+        parts.append(
+            f'<li class="sidebar-letter"><a href="#a_letter_{letter}">{letter}</a></li>'
+        )
+        for attr in sorted(attr_list, key=lambda x: x["name"].casefold()):
+            parts.append(
+                f'<li><a href="#attr_{attr["code"]}">{attr["name"]}</a></li>'
+            )
+    parts.append(
+        '</ul><h2 id="s_roles" class="sidebar-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebar-roles">Roles <span class="toggle-icon">+</span></h2>'
+        '<ul id="sidebar-roles" class="sidebar-category" hidden>'
+    )
+    for letter, role_list in sorted(roles_index.items()):
+        parts.append(
+            f'<li class="sidebar-letter"><a href="#role_letter_{letter}">{letter}</a></li>'
+        )
+        for i in sorted(role_list, key=lambda x: x["S100FC:name"].casefold()):
             parts.append(f'<li><a href="#r_{i["S100FC:code"]}">{i["S100FC:name"]}</a></li>')
 
-    parts.append('</ul></div>')
+    parts.append('</ul></div></div>')
 
     return ''.join(parts)
 
@@ -492,10 +562,55 @@ def generate_top_nav(feature_index, attribute_index, information_index, associat
     parts.append('</div>')
     return ''.join(parts)
 
+def generate_inheritance(feature, features_by_code, attribute_dict, visited=None):
+    if visited is None:
+        visited = set()
+    parent_code = feature.get("supertype")
+    if not parent_code or parent_code in visited:
+        return ""
+    parent = features_by_code.get(parent_code)
+    if parent is None:
+        return f'<p><strong>Inherited from:</strong> {parent_code}</p>'
+    visited = visited | {parent_code}
+    parts = [
+        '<details class="inherited-details" open>',
+        f'<summary>Attributes inherited from: {parent_code}</summary>'
+    ]
+    parts.append(
+        generate_inheritance(parent, features_by_code, attribute_dict, visited)
+    )
+    if parent["attributes"]:
+        parts.append('<ul>')
+        for attr in parent["attributes"]:
+            ref_code = attr["attribut_name"]
+            lower = attr["lower"]
+            upper = attr["upper"]
+            val = "*" if str(upper["infini"]).lower() == "true" else upper["val"]
+            if val is None:
+                val = "*"
+            attr_name = next(
+                (a["name"] for a in attribute_dict if a["code"] == ref_code),
+                ref_code
+            )
+            minimum, _ = parse_cardinality(lower, upper)
+            required = (
+                '<span class="cardinality-badge cardinality-required">Mandatory</span>'
+                if minimum is not None and minimum > 0
+                else ""
+            )
+            parts.append(
+                f'<li><a href="#attr_{ref_code}">{attr_name} ({ref_code})</a>'
+                f' [{lower},{val}] {required}</li>'
+            )
+        parts.append('</ul>')
+    parts.append('</details>')
+    return ''.join(parts)
+
 def generate_left_column(feature_index,
                          information_index,
                          attribute_dict,
-                         association_index):
+                         association_index,
+                         features_by_code):
     """
     v beta pour remplacer plus haut (qui fonctionne mais il y a plus de chose dans beta)
     :param feature_index:
@@ -508,7 +623,8 @@ def generate_left_column(feature_index,
 
     parts = ['<div class="column"><h2>Feature Details</h2>']
     for letter, ft_list in feature_index.items():
-        parts.append(f'<h3 id="f_letter_{letter}"></h3>')
+        ft_list = sorted(ft_list, key=lambda ft: ft["name"].casefold())
+        parts.append(f'<h3 id="f_letter_{letter}">~ {letter} ~</h3>')
         for ft in ft_list:
             if not ft['alias']:
                 alias = ''
@@ -522,9 +638,6 @@ def generate_left_column(feature_index,
             # TODO: f statemanet
             parts.append(f'<p><strong>Primitive:</strong> {list_to_string(ft["primitive"])}</p>')
             #parts.append(f'<p><strong>Primitive:</strong> {str(ft["primitive"]).replace("[","").replace("]","").replace("'","")}</p>')
-
-            if ft["supertype"] != '':
-                parts.append(f'<p><strong>Inherited from : </strong><a href="#feature_{ft["supertype"]}">{ft["supertype"]}</a></p> ')
             if ft["attributes"]:
                 parts.append('<p><strong>Attributes:</strong><ul>')
                 for attr in ft["attributes"]:
@@ -551,10 +664,20 @@ def generate_left_column(feature_index,
                         if elem["code"] == ref_code:
                             attr_name = elem["name"]
                     if attr_name:
-                        parts.append(f'<li><a href="#attr_{ref_code}">{attr_name} ({ref_code})</a> [{lower},{val}]{machaine}</li>')
+                        badges = format_cardinality_badges(lower, upper)
+                        parts.append(
+                            f'<li>'
+                            f'<a href="#attr_{ref_code}">{attr_name} ({ref_code})</a>'
+                            f' [{lower},{val}] {badges}{machaine}'
+                            f'</li>'
+                        )
                     else:
                         parts.append(f'<li>{ref_code}</li>')
                 parts.append('</ul></p>')
+
+            parts.append(
+                generate_inheritance(ft, features_by_code, attribute_dict)
+            )
 
             if ft["assos_f"]:
                 parts.append('<p><strong>Can be associated with feature(s):</strong><ul>')
@@ -584,8 +707,12 @@ def generate_left_column(feature_index,
                             parts.append(f'<a href="#feature_{j}">{j}</a>, ')
                     else:
                         feat = ''
+                    badges = format_cardinality_badges(lower, upper)
                     parts.append(
-                        f' via <a href="#asso_{asso}">{asso}</a> as <a href="#r_{role}">{role}</a> role [{lower},{val}]</li>')
+                        f' via <a href="#asso_{asso}">{asso}</a> '
+                        f'as <a href="#r_{role}">{role}</a> '
+                        f'role [{lower},{val}] {badges}</li>'
+                    )
                 parts.append('</ul></p>')
             if ft["assos_i"]:
                 parts.append('<p><strong>Can be associated with information(s):</strong><ul>')
@@ -619,12 +746,18 @@ def generate_left_column(feature_index,
                             parts.append(f'<a href="#info_{j}">{j}</a>, ')
                     else:
                         feat=''
-                    parts.append(f' via <a href="#asso_{asso}">{asso}</a> as <a href="#r_{role}">{role}</a> role [{lower},{val}]</li>')
+                    badges = format_cardinality_badges(lower, upper)
+                    parts.append(
+                        f' via <a href="#asso_{asso}">{asso}</a> '
+                        f'as <a href="#r_{role}">{role}</a> '
+                        f'role [{lower},{val}] {badges}</li>'
+                    )
                 parts.append('</ul></p>')
 
     parts.append('<h2>Information Types</h2>')
     for letter, inf_list, in information_index.items():
-        parts.append(f'<h3 id="i_letter_{letter}"></h3>')
+        inf_list = sorted(inf_list, key=lambda info: info["name"].casefold())
+        parts.append(f'<h3 id="i_letter_{letter}">~ {letter} ~</h3>')
         for info in inf_list:
             if not info['alias']:
                 alias = ''
@@ -652,7 +785,13 @@ def generate_left_column(feature_index,
                         if elem["code"] == ref_code:
                             attr_name = elem["name"]
                     if attr_name:
-                        parts.append(f'<li><a href="#attr_{ref_code_name}">{ref_code_name}</a> [{lower},{val}]</li>')
+                        badges = format_cardinality_badges(lower, upper)
+
+                        parts.append(
+                            f'<li>'
+                            f'<a href="#attr_{ref_code_name}">{ref_code_name}</a>'
+                            f' [{lower},{val}] {badges}</li>'
+                        )
                     else:
                         parts.append(f'<li>{ref_code}</li>')
                 parts.append('</ul></p>')
@@ -740,7 +879,11 @@ def generate_left_column(feature_index,
 
     parts.append('<h2>Associations</h2>')
     for letter, ass_list, in association_index.items():
-        parts.append(f'<h3 id="asso_letter_{letter}"></h3>')
+        ass_list = sorted(
+            ass_list,
+            key=lambda asso: asso["S100FC:name"].casefold()
+        )
+        parts.append(f'<h3 id="asso_letter_{letter}">~ {letter} ~</h3>')
         for asso in ass_list:
             parts.append(f'<h4 id="asso_{asso["S100FC:code"]}">{asso["S100FC:name"]} ({asso["S100FC:code"]})</h4>')
             try:
@@ -786,6 +929,10 @@ def test_name_index (code, index):
 
     liste_nom = []
     for letter, attr_list in index.items():
+        attr_list = sorted(
+            attr_list,
+            key=lambda attr: attr["name"].casefold()
+        )
         for i in attr_list:
             liste_nom.append(i['code'])
     if code in liste_nom:
@@ -802,7 +949,7 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
     parts = ['<div class="column"><h2 id="a_details" >Attributes Details</h2>']
 
     for letter, attr_list in attribute_index.items():
-        parts.append(f'<h3 id="a_letter_{letter}"></h3>')
+        parts.append(f'<h3 id="a_letter_{letter}">~ {letter} ~</h3>')
         for attr in attr_list:
             if attr["alias"] != None:
                 alias = str(attr["alias"]).replace("[","").replace("]","").replace("'","")
@@ -826,7 +973,12 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
                     if val is None:
                         val = '*'
                     if sub_attr:
-                        parts.append(f'<li><a href=\"#attr_{sub_attr}\">{sub_attr}</a> [{lower},{val}]</li>')
+                        badges = format_cardinality_badges(lower, upper)
+                        parts.append(
+                            f'<li>'
+                            f'<a href=\"#attr_{sub_attr}\">{sub_attr}</a>'
+                            f' [{lower},{val}] {badges}</li>'
+                        )
                     else:
                         parts.append(f'<li>{subref}</li>')
                 parts.append('</ul></p>')
@@ -860,7 +1012,11 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
     parts.append('<h2>Roles</h2>')
 
     for letter, role_list, in role_index.items():
-        parts.append(f'<h3 id="role_letter_{letter}"></h3>')
+        role_list = sorted(
+            role_list,
+            key=lambda role: role["S100FC:name"].casefold()
+        )
+        parts.append(f'<h3 id="role_letter_{letter}">~ {letter} ~</h3>')
         for role in role_list:
             parts.append(f'<h4 id="r_{role["S100FC:code"]}">{role["S100FC:name"]} ({role["S100FC:code"]})</h4>')
             parts.append(f'<p><strong>Definition:</strong> {role["S100FC:definition"]}</p>')
@@ -870,42 +1026,36 @@ def generate_right_column(attribute_index,feature_index,information_index,role_i
 
 def wrap_html_page(title,sidebar, top_nav, left_column, right_column):
     return '\n'.join([
-        '<html><head><title>',title,'</title><meta charset="UTF-8">',
-        '<style>',
-        'body { font-family: Arial; margin: 0; display: flex; height: 100vh; overflow: hidden; }',
-        '.sidebar { width: 250px; background: #f4f4f4; padding: 20px; overflow-y: auto; border-right: 1px solid #ccc; }',
-        '.sidebar h2 { font-size: 1.2em; color: #003366; margin-top: 0; }',
-        '.sidebar ul { list-style: none; padding-left: 0; }',
-        '.sidebar li { margin: 5px 0; }',
-        '.sidebar a { text-decoration: none; color: #003366; }',
-        '.sidebar a:hover { text-decoration: underline; }',
-        '.content { flex: 1; display: flex; flex-direction: column; }',
-        '.columns { display: flex; flex: 1; overflow: hidden; }',
-        '.column { width: 50%; padding: 20px; overflow-y: auto; }',
-        '.top-nav { display: flex; justify-content: space-between; background: #eaeaea; padding: 10px 20px; border-bottom: 1px solid #ccc; font-size: 14px; }',
-        '.top-nav a { margin-right: 10px; color: #003366; text-decoration: none; }',
-        '.top-nav a:hover { text-decoration: underline; }',
-        'table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }',
-        'th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }',
-        'th { background: #e0e0e0; }',
-        'h1 { padding: 20px; background: #003366; color: white; margin: 0; width: 100%; }',
-        'h4 { background: grey; color: white; padding: 10px;}',
-        '</style></head><body>',
-        '<div style="position: fixed; top: 0; left: 0; right: 0;"><h1>',title,'</h1></div>',
-        '<div style="display: flex; width: 100%; margin-top: 70px;">',
+        '<!DOCTYPE html>',
+        '<html lang="en"><head><title>',title,'</title><meta charset="UTF-8">',
+        '<link rel="stylesheet" href="../static/css/style.css">',
+        '<link rel = "icon" type = "image/png" href = "../static/images/S-100.png?v=2" >',
+        '</head><body class="fc-page">',
+        '<div class="fc-title-bar">',
+        '<img src="../static/images/iho_logo.png" alt="Logo de l’OHI" class="fc-title-logo">',
+        '<h1>', title, '</h1>',
+        '<img src="../static/images/shom_logo.png" alt="Logo du SHOM" class="fc-title-logo">',
+        '</div>',
+        '<div class = "fc-layout">',
         sidebar,
         '<div class="content">',
         top_nav,
         '<div class="columns">',
         left_column,
         right_column,
-        '</div></div></div></body></html>'
+        '</div></div></div>',
+        '<script src="../static/js/fc-sidebar.js"></script>',
+        '<script src="../static/js/fc-search.js"></script></body></html>'
     ])
 
 def generate_html_from_fc (title, data_dict):
 
     #extraction des infos
     mes_objets = extr_features_infos(data_dict,'features')
+    features_by_code = {
+        feature["code"]: feature
+        for feature in mes_objets
+    }
     mes_informations = extr_features_infos(data_dict,'informations')
     mes_ac = extr_attributs_complex(data_dict)
     mes_attr = extr_attributs_simpl(data_dict)
@@ -962,14 +1112,20 @@ def generate_html_from_fc (title, data_dict):
     # print(used_by_compl)
     # print('----------------------------')
     # print("info index : ",information_index)
-    sidebar = generate_sidebar(feature_index, information_index, mes_asso, mes_roles)
+    sidebar = generate_sidebar(feature_index, information_index, mes_asso, mes_roles, attribute_index)
     top_nav = generate_top_nav(feature_index,attribute_index, information_index, mes_asso, mes_roles)
     # print("attribute index :",attribute_index)
     right_column = generate_right_column(attribute_index,feature_index,information_index,mes_roles)
 
     attribute_dict = attrs
     association_dict_idx = mes_asso
-    left_column = generate_left_column(feature_index, information_index, attribute_dict, association_dict_idx)
+    left_column = generate_left_column(
+        feature_index,
+        information_index,
+        attribute_dict,
+        association_dict_idx,
+        features_by_code
+    )
     html_content = wrap_html_page(title,sidebar, top_nav, left_column, right_column)
 
     return html_content
